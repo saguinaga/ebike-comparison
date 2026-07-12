@@ -365,7 +365,7 @@
           ? "This model is flagged as not appropriate for a 12-year-old under our Huntington Beach rules checklist. Review local scooter path limits and helmet requirements before riding."
           : bike.e_bike_class === 3
             ? "No — California prohibits riders under 16 from operating Class 3 e-bikes (28 mph assist). Pick a Class 1 or 2 model capped at 20 mph instead."
-            : "Our checklist flags legal concerns for a 12-year-old on this model. Read the Legal notes above and verify current California and HB rules.",
+            : "Our checklist flags legal concerns for a 12-year-old on this model. Expand Legal notes below and verify current California and HB rules.",
       });
     } else {
       const classNote =
@@ -456,20 +456,40 @@
     return items;
   }
 
+  function detailFootnoteHtml({ title, bodyHtml, productId = "" } = {}) {
+    const body = (bodyHtml || "").trim();
+    if (!body) return "";
+    return `<details class="detail-footnote-fold" data-product-id="${escapeHtml(productId)}">
+      <summary class="detail-footnote-link">${escapeHtml(title)}</summary>
+      <div class="detail-footnote-body">${body}</div>
+    </details>`;
+  }
+
+  function legalFootnoteHtml(issues, { productId = "" } = {}) {
+    if (!issues.length) return "";
+    const rows = issues.map((issue) => `<li>${escapeHtml(issue)}</li>`).join("");
+    return detailFootnoteHtml({
+      title: "Legal notes for this ride",
+      bodyHtml: `<ul class="footnote-legal-list">${rows}</ul>`,
+      productId,
+    });
+  }
+
   function faqFootnoteHtml(items, { productId = "" } = {}) {
     if (!items.length) return "";
     const rows = items
       .map(
-        (item) => `<div class="faq-dl-item">
+        (item) => `<div class="footnote-dl-item">
         <dt>${escapeHtml(item.q)}</dt>
         <dd>${escapeHtml(item.a)}</dd>
       </div>`
       )
       .join("");
-    return `<details class="detail-faq-fold" data-product-id="${escapeHtml(productId)}">
-      <summary class="detail-faq-link">Questions about this ride</summary>
-      <dl class="faq-dl">${rows}</dl>
-    </details>`;
+    return detailFootnoteHtml({
+      title: "Questions about this ride",
+      bodyHtml: `<dl class="footnote-dl">${rows}</dl>`,
+      productId,
+    });
   }
 
   let chatDrawerOpen = false;
@@ -1269,9 +1289,7 @@
     const colors = (bike.colors || [])
       .map((c) => `<span class="color-chip"><span class="dot ${c.family}"></span>${c.name}</span>`)
       .join("");
-    const legalIssues = (bike.legal_issues || [])
-      .map((issue) => `<li>${issue}</li>`)
-      .join("");
+    const legalIssues = bike.legal_issues || [];
 
     document.getElementById("detailSpecs").innerHTML = [
       detailSpecBlock("Portability & weight", portabilityBlockHtml(bike, baseline, { detail: true }), {
@@ -1283,7 +1301,6 @@
         className: "detail-spec-block--smart",
       }),
       colors ? detailSpecBlock("Available colors", `<div class="color-chips color-chips--detail">${colors}</div>`) : "",
-      legalIssues ? detailSpecBlock("Legal notes", `<ul class="detail-legal-list">${legalIssues}</ul>`) : "",
     ]
       .filter(Boolean)
       .join("");
@@ -1309,6 +1326,13 @@
     } else {
       similarEl.innerHTML = "";
       similarEl.hidden = true;
+    }
+
+    const legalEl = document.getElementById("detailLegal");
+    if (legalEl) {
+      const html = legalFootnoteHtml(legalIssues, { productId: bike.id });
+      legalEl.innerHTML = html;
+      legalEl.hidden = !html;
     }
 
     const faqEl = document.getElementById("detailFaq");

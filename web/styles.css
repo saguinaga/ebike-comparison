@@ -1133,18 +1133,21 @@ table.compare tbody tr.color-preferred { background: #fffbea; }
 .detail-subfooter {
   margin-top: 48px;
   padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.detail-faq-footnote {
+.detail-footnote {
   max-width: 42rem;
 }
 
-.detail-faq-fold {
+.detail-footnote-fold {
   border: none;
   background: transparent;
 }
 
-.detail-faq-link {
+.detail-footnote-link {
   display: inline;
   font-size: 0.72rem;
   font-weight: 400;
@@ -1156,33 +1159,55 @@ table.compare tbody tr.color-preferred { background: #fffbea; }
   text-decoration-color: rgba(154, 168, 178, 0.45);
 }
 
-.detail-faq-link:hover {
+.detail-footnote-link:hover {
   color: #7a8a96;
 }
 
-.detail-faq-link::-webkit-details-marker {
+.detail-footnote-link::-webkit-details-marker {
   display: none;
 }
 
-.detail-faq-fold[open] .detail-faq-link {
+.detail-footnote-fold[open] .detail-footnote-link {
   margin-bottom: 8px;
 }
 
-.faq-dl {
+.detail-footnote-body {
+  margin-top: 0;
+}
+
+.footnote-legal-list {
+  margin: 8px 0 0;
+  padding: 0 0 0 14px;
+  border-left: 1px solid rgba(200, 210, 218, 0.5);
+  list-style: disc;
+}
+
+.footnote-legal-list li {
+  margin: 0 0 6px;
+  font-size: 0.7rem;
+  line-height: 1.45;
+  color: #a0acb4;
+}
+
+.footnote-legal-list li:last-child {
+  margin-bottom: 0;
+}
+
+.footnote-dl {
   margin: 8px 0 0;
   padding: 0 0 0 14px;
   border-left: 1px solid rgba(200, 210, 218, 0.5);
 }
 
-.faq-dl-item {
+.footnote-dl-item {
   margin: 0 0 10px;
 }
 
-.faq-dl-item:last-child {
+.footnote-dl-item:last-child {
   margin-bottom: 0;
 }
 
-.faq-dl dt {
+.footnote-dl dt {
   margin: 0 0 2px;
   font-size: 0.72rem;
   font-weight: 500;
@@ -1190,7 +1215,7 @@ table.compare tbody tr.color-preferred { background: #fffbea; }
   line-height: 1.35;
 }
 
-.faq-dl dd {
+.footnote-dl dd {
   margin: 0;
   font-size: 0.7rem;
   line-height: 1.45;
