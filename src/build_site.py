@@ -158,6 +158,15 @@ def build(root: Path, min_bikes: int = 18) -> None:
         src = root / "web" / asset
         if not src.exists():
             continue
-        shutil.copy(src, docs / asset)
         stem, ext = asset.rsplit(".", 1)
-        shutil.copy(src, docs / f"{stem}.{asset_version}.{ext}")
+        versioned = f"{stem}.{asset_version}.{ext}"
+        shutil.copy(src, docs / versioned)
+        if asset == "app.js":
+            shim = (
+                "/* Loader for cached index.html still requesting app.js */\n"
+                f'(function(){{var s=document.createElement("script");'
+                f's.src="{versioned}";s.defer=true;document.head.appendChild(s);}})();\n'
+            )
+            (docs / asset).write_text(shim, encoding="utf-8")
+        else:
+            (docs / asset).write_text(f'/* Loader for cached styles.css */\n@import url("{versioned}");\n', encoding="utf-8")

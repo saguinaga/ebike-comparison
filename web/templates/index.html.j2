@@ -8,6 +8,21 @@
   <meta http-equiv="Expires" content="0">
   <title>E-Bike &amp; Scooter Comparison · Surf City HB</title>
   <link rel="stylesheet" href="styles.{{ asset_version }}.css">
+  <script>
+    (function () {
+      var BUILD = "{{ asset_version }}";
+      var key = "ebike_asset_build";
+      try {
+        if (localStorage.getItem(key) !== BUILD) {
+          localStorage.setItem(key, BUILD);
+          if (!sessionStorage.getItem("ebike_bust_" + BUILD)) {
+            sessionStorage.setItem("ebike_bust_" + BUILD, "1");
+            location.reload();
+          }
+        }
+      } catch (_) {}
+    })();
+  </script>
 </head>
 <body>
 {% macro brake_label(display) -%}
