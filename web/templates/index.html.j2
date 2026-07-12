@@ -32,11 +32,11 @@
 <div class="battery-equip">
   <span class="battery-equip-title">Battery &amp; range</span>
   <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> {{ display.range_label }}</li>
-    <li><span class="bf-label">Capacity</span> {{ display.capacity_label }}</li>
-    <li><span class="bf-label">Charging</span> {{ display.charge_label }}{% if display.charge_notes %} <span class="bf-note" title="{{ display.charge_notes }}">ⓘ</span>{% endif %}</li>
+    <li><span class="bf-label">Range</span><span class="fact-value">{{ display.range_label }}</span></li>
+    <li><span class="bf-label">Capacity</span><span class="fact-value">{{ display.capacity_label }}</span></li>
+    <li><span class="bf-label">Charging</span><span class="fact-value">{{ display.charge_label }}{% if display.charge_notes %}<span class="bf-note" title="{{ display.charge_notes }}">ⓘ</span>{% endif %}</span></li>
     {% if display.efficiency_label and display.efficiency_label != '—' %}
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-{{ display.efficiency_rating or 'unknown' }}">{{ display.efficiency_label }}</span></li>
+    <li><span class="bf-label">Efficiency</span><span class="fact-value"><span class="efficiency-tag efficiency-readout efficiency-{{ display.efficiency_rating or 'unknown' }}">{{ display.efficiency_label }}</span></span></li>
     {% endif %}
   </ul>
 </div>
@@ -49,9 +49,7 @@
     {% for group_id, group_label in [('security','Security'),('tracking','Tracking'),('app','App'),('audio','Audio'),('luxury','Premium')] %}
     {% set group_items = checklist | selectattr('group', 'equalto', group_id) | list %}
     {% if group_items %}
-    <li class="feature-group-row"><span class="bf-label">{{ group_label }}</span>
-      <span class="feature-tags">{% for item in group_items %}<span class="feature-tag{% if item.ok %} ok{% else %} miss{% endif %}" title="{{ item.label }}">{{ item.label }}</span>{% endfor %}</span>
-    </li>
+    <li class="feature-group-row"><span class="bf-label">{{ group_label }}</span><span class="feature-tags">{% for item in group_items %}<span class="feature-tag{% if item.ok %} ok{% else %} miss{% endif %}" title="{{ item.label }}">{{ item.label }}</span>{% endfor %}</span></li>
     {% endif %}
     {% endfor %}
   </ul>
