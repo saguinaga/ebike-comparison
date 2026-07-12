@@ -998,7 +998,7 @@
   }
 
   function renderCompareSlot(slotEl, bike) {
-    if (!bike) return;
+    if (!slotEl || !bike) return;
     slotEl.className = "compare-slot";
     slotEl.dataset.id = bike.id;
     const gallery = bike.image_gallery?.length ? bike.image_gallery : bike.image_src ? [bike.image_src] : [];
@@ -1217,8 +1217,9 @@
     });
 
     const diffEl = document.getElementById("compareDiff");
+    const matrixWrap = document.getElementById("compareMatrixWrap");
     const baseline = getBaseline();
-    if (selected.length >= 2) {
+    if (selected.length >= 2 && diffEl) {
       diffEl.hidden = false;
       const prices = selected.map((b) => b.price);
       const safest = selected.reduce((a, b) => (a.safety_score > b.safety_score ? a : b));
@@ -1231,8 +1232,8 @@
       `;
       renderSafetyMatrix(selected);
     } else {
-      diffEl.hidden = true;
-      document.getElementById("compareMatrixWrap").hidden = true;
+      if (diffEl) diffEl.hidden = true;
+      if (matrixWrap) matrixWrap.hidden = true;
     }
   }
 

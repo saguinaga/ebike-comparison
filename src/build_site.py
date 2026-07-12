@@ -1,5 +1,6 @@
 import json
 import shutil
+from datetime import datetime, timezone
 from pathlib import Path
 
 import yaml
@@ -139,7 +140,8 @@ def build(root: Path, min_bikes: int = 18) -> None:
         legal=legal,
         safety=safety,
         main_site_url=main_site,
-        generated_date="2026-07-12",
+        generated_date=datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+        asset_version=datetime.now(timezone.utc).strftime("%Y%m%d%H%M"),
         ebike_count=ebike_count,
         scooter_count=scooter_count,
         bikes_json=json.dumps(bikes_for_js),

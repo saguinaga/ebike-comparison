@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-Bike &amp; Scooter Comparison · Surf City HB</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v={{ asset_version }}">
 </head>
 <body>
 {% macro brake_label(display) -%}
@@ -451,6 +451,6 @@
   <script id="all-bikes-data" type="application/json">{{ all_bikes_json | safe }}</script>
   <script id="app-config" type="application/json">{"defaultBaselineId": "{{ default_baseline_id }}", "mainSiteUrl": "{{ main_site_url }}"}</script>
   <script id="tier-labels-data" type="application/json">{{ tier_labels_json | safe }}</script>
-  <script src="app.js"></script>
+  <script src="app.js?v={{ asset_version }}"></script>
 </body>
 </html>
