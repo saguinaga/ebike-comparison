@@ -48,10 +48,6 @@ bikes:
     brake_type: mechanical_disc
     lights: {front: true, rear: true}
     sources:
-      - platform: amazon
-        url: "https://www.amazon.com/dp/B0DBQRVBX8"
-        price_usd: 449
-        shipping_usd: 0
       - platform: manufacturer
         url: "https://www.iscooterglobal.eu/products/u4-low-step-through-foldable-electric-bike"
         price_usd: 499
@@ -94,7 +90,7 @@ bikes:
     lights: {front: true, rear: true}
     sources:
       - platform: manufacturer
-        url: "https://www.wallkeebike.com/products/wallke-h7-electric-bike"
+        url: "https://wallkeebike.com/products/wallke-h7-step-thru"
         price_usd: 549
         shipping_usd: 0
     colors:
@@ -115,7 +111,7 @@ bikes:
     lights: {front: true, rear: true}
     sources:
       - platform: manufacturer
-        url: "https://lectricebikes.com/products/xp-lite"
+        url: "https://lectricebikes.com/products/xp-lite-lectric-blue-long-range-ebike"
         price_usd: 799
         shipping_usd: 0
     colors:
@@ -171,14 +167,10 @@ bikes:
     motor_w: 500
     brake_type: mechanical_disc
     lights: {front: true, rear: true}
-    sources:
-      - platform: manufacturer
-        url: "https://www.radpowerbikes.com/products/radmission-electric-metro-utility-bike"
-        price_usd: 1199
-        shipping_usd: 0
     colors:
       - {name: White, family: white}
     manual:
+      price_usd: 1199
       image_url: "https://lectricebikes.com/cdn/shop/files/Commuter_-_June_2026_16e79811-eb36-4547-85f7-44c19b9bf9f8.webp?v=1782513926"
 
   - id: velotric-nomad-1
@@ -212,7 +204,7 @@ bikes:
     lights: {front: true, rear: true}
     sources:
       - platform: manufacturer
-        url: "https://lectricebikes.com/products/xp"
+        url: "https://lectricebikes.com/products/xp-green-long-range"
         price_usd: 1299
         shipping_usd: 0
     colors:
@@ -232,7 +224,7 @@ bikes:
     lights: {front: true, rear: true}
     sources:
       - platform: manufacturer
-        url: "https://www.radpowerbikes.com/products/radrunner-3-plus-electric-utility-bike"
+        url: "https://www.radpowerbikes.com/products/radrunner-plus-electric-cargo-utility-bike"
         price_usd: 1599
         shipping_usd: 0
     colors:
@@ -290,7 +282,7 @@ bikes:
     lights: {front: true, rear: true}
     sources:
       - platform: manufacturer
-        url: "https://ridebatch.com/products/batch-e-bike"
+        url: "https://www.batchbicycles.com/ecb-3/"
         price_usd: 1399
         shipping_usd: 0
     colors:
@@ -441,7 +433,7 @@ bikes:
     lights: {front: true, rear: true}
     sources:
       - platform: manufacturer
-        url: "https://super73.com/products/super73-zg"
+        url: "https://super73.com/products/super73-z-miami-core-legacy"
         price_usd: 2195
         shipping_usd: 0
     colors:

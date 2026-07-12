@@ -179,7 +179,7 @@ scooters:
     ul_certified: false
     sources:
       - platform: manufacturer
-        url: "https://unagiscooters.com/products/model-one-classic"
+        url: "https://shop.unagiscooters.com/products/the-scooter"
         price_usd: 990
         shipping_usd: 0
     colors:
