@@ -4,6 +4,7 @@ from pathlib import Path
 
 import yaml
 
+from .battery import battery_wh, load_batteries
 from .colors import normalize_colors
 from .compare_pedal import compare_to_baseline
 from .legal_compliance import evaluate_bike
@@ -29,6 +30,25 @@ def load_config(root: Path) -> tuple:
     return bikes_cfg, bench_cfg
 
 
+def _apply_battery_spec(bike: dict, spec: dict) -> None:
+    if not spec:
+        return
+    mapping = {
+        "voltage_v": "battery_voltage_v",
+        "capacity_ah": "battery_capacity_ah",
+        "capacity_ah_alt": "battery_capacity_ah_alt",
+        "range_miles_pas": "battery_range_miles_pas",
+        "range_miles_throttle": "battery_range_miles_throttle",
+        "charge_hours": "battery_charge_hours",
+        "charge_method": "battery_charge_method",
+        "charge_notes": "battery_charge_notes",
+    }
+    for src, dst in mapping.items():
+        if spec.get(src) is not None:
+            bike[dst] = spec[src]
+    bike["battery_wh"] = battery_wh(bike.get("battery_voltage_v"), bike.get("battery_capacity_ah"))
+
+
 def load_image_galleries(root: Path) -> dict:
     path = root / "config" / "image_galleries.yaml"
     if not path.exists():
@@ -40,6 +60,7 @@ def load_image_galleries(root: Path) -> dict:
 def parse_all(root: Path, scrape_live: bool = True) -> list:
     bikes_cfg, bench_cfg = load_config(root)
     galleries = load_image_galleries(root)
+    batteries = load_batteries(root)
     baseline = bench_cfg["baseline"]
     rider = bench_cfg.get("rider", {})
     cache_dir = root / "data" / "raw"
@@ -49,6 +70,8 @@ def parse_all(root: Path, scrape_live: bool = True) -> list:
     baseline_bike = {**baseline, "is_baseline": True, "tier": "baseline"}
     if baseline_bike.get("id") in galleries:
         baseline_bike = _merge(baseline_bike, galleries[baseline_bike["id"]])
+    if baseline_bike.get("id") in batteries:
+        _apply_battery_spec(baseline_bike, batteries[baseline_bike["id"]])
     if scrape_live:
         try:
             url = baseline["url"]
@@ -81,6 +104,8 @@ def parse_all(root: Path, scrape_live: bool = True) -> list:
         bike = _merge(bike, manual)
         if bike.get("id") in galleries:
             bike = _merge(bike, galleries[bike["id"]])
+        if bike.get("id") in batteries:
+            _apply_battery_spec(bike, batteries[bike["id"]])
         bike["colors"] = normalize_colors(bike.get("colors", []))
         bike.update(compute_landed_prices({**entry, **bike}))
         bike["safety_score"] = compute_safety_score(bike)

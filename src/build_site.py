@@ -5,6 +5,7 @@ from pathlib import Path
 import yaml
 from jinja2 import Environment, FileSystemLoader
 
+from .battery import format_battery
 from .formatting import format_brake, format_usd
 from .images import resolve_bike_images
 
@@ -45,6 +46,7 @@ def build(root: Path, min_bikes: int = 18) -> None:
 
     for bike in all_bikes:
         bike["brake_display"] = format_brake(bike.get("brake_type"))
+        bike["battery_display"] = format_battery(bike)
         imgs = resolve_bike_images(bike, root, docs, cache_dir, fetch_live=True)
         bike["image_src"] = imgs["image_src"]
         bike["image_gallery"] = imgs["image_gallery"]
@@ -102,6 +104,11 @@ def build(root: Path, min_bikes: int = 18) -> None:
             "brakes_rear": b.get("brakes_rear"),
             "reflectors": b.get("reflectors"),
             "speed_limiter": b.get("speed_limiter"),
+            "battery_display": b.get("battery_display", format_battery(b)),
+            "battery_range_miles_pas": b.get("battery_range_miles_pas"),
+            "battery_capacity_ah": b.get("battery_capacity_ah"),
+            "battery_wh": b.get("battery_wh"),
+            "battery_charge_method": b.get("battery_charge_method"),
         }
 
     bikes_for_js = [bike_to_js(b) for b in e_bikes]

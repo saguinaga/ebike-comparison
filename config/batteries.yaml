@@ -1,0 +1,208 @@
+# Manufacturer-stated specs where available; PAS = pedal assist range.
+# charge_method: onboard | removable | removable_keyed
+batteries:
+  firmstrong-urban-lady:
+    voltage_v: null
+    capacity_ah: null
+    range_miles_pas: null
+    charge_method: none
+    charge_notes: "Pedal only — no battery"
+
+  amazon-budget-step-1:
+    voltage_v: 36
+    capacity_ah: 10
+    range_miles_pas: 25
+    range_miles_throttle: 18
+    charge_hours: 4
+    charge_method: removable
+    charge_notes: "Typical 36V 10Ah pack; wall charger included"
+
+  amazon-budget-step-2:
+    voltage_v: 48
+    capacity_ah: 10.4
+    range_miles_pas: 40
+    range_miles_throttle: 25
+    charge_hours: 5
+    charge_method: removable
+    charge_notes: "Samsung-cell pack; key-lock removable battery"
+
+  aliexpress-budget-folder:
+    voltage_v: 48
+    capacity_ah: 10
+    range_miles_pas: 30
+    range_miles_throttle: 20
+    charge_hours: 5
+    charge_method: removable
+    charge_notes: "Varies by seller; plan on 48V 10Ah class pack"
+
+  nakto-camel:
+    voltage_v: 36
+    capacity_ah: 10
+    range_miles_pas: 35
+    range_miles_throttle: 22
+    charge_hours: 4
+    charge_method: removable
+    charge_notes: "Removable 36V battery; charge on or off bike"
+
+  wallke-h7:
+    voltage_v: 48
+    capacity_ah: 12
+    range_miles_pas: 35
+    range_miles_throttle: 25
+    charge_hours: 5
+    charge_method: removable
+    charge_notes: "Hidden-in-frame pack; removable for charging"
+
+  lectric-xp-lite:
+    voltage_v: 48
+    capacity_ah: 10.4
+    range_miles_pas: 45
+    range_miles_throttle: 28
+    charge_hours: 4
+    charge_method: removable_keyed
+    charge_notes: "Keyed removable; 48V 499Wh pack"
+
+  ride1up-portola:
+    voltage_v: 48
+    capacity_ah: 10.4
+    capacity_ah_alt: 13.4
+    range_miles_pas: 32
+    range_miles_throttle: 20
+    charge_hours: 5
+    charge_method: removable
+    charge_notes: "10.4Ah or 13.4Ah options; removable pack"
+
+  aventon-soltera:
+    voltage_v: 36
+    capacity_ah: 10
+    range_miles_pas: 46
+    range_miles_throttle: 30
+    charge_hours: 4
+    charge_method: removable
+    charge_notes: "Hidden battery; removable for indoor charging"
+
+  rad-mission-1:
+    voltage_v: 48
+    capacity_ah: 10
+    range_miles_pas: 45
+    range_miles_throttle: 25
+    charge_hours: 5
+    charge_method: removable
+    charge_notes: "Rad Power 48V pack; charge on or off frame"
+
+  velotric-nomad-1:
+    voltage_v: 48
+    capacity_ah: 10.4
+    range_miles_pas: 55
+    range_miles_throttle: 35
+    charge_hours: 6
+    charge_method: removable_keyed
+    charge_notes: "Removable with key; IPX6-rated pack"
+
+  lectric-xp-3:
+    voltage_v: 48
+    capacity_ah: 14
+    range_miles_pas: 60
+    range_miles_throttle: 35
+    charge_hours: 5
+    charge_method: removable_keyed
+    charge_notes: "48V 672Wh; keyed removable battery"
+
+  radrunner-plus:
+    voltage_v: 48
+    capacity_ah: 14
+    range_miles_pas: 45
+    range_miles_throttle: 28
+    charge_hours: 6
+    charge_method: removable
+    charge_notes: "Large 48V pack; removable for charging"
+
+  ride1up-roadster:
+    voltage_v: 36
+    capacity_ah: 7
+    range_miles_pas: 30
+    range_miles_throttle: 20
+    charge_hours: 4
+    charge_method: onboard
+    charge_notes: "Integrated frame battery; plug in on bike"
+
+  aventon-level:
+    voltage_v: 48
+    capacity_ah: 14.8
+    range_miles_pas: 70
+    range_miles_throttle: 40
+    charge_hours: 6
+    charge_method: removable
+    charge_notes: "Aventon S4 battery; removable pack"
+
+  batch-commuter:
+    voltage_v: 48
+    capacity_ah: 10.4
+    range_miles_pas: 40
+    range_miles_throttle: 28
+    charge_hours: 5
+    charge_method: removable
+    charge_notes: "Standard commuter pack; removable"
+
+  zooz-ultra-ripster:
+    voltage_v: 52
+    capacity_ah: 15
+    range_miles_pas: 40
+    range_miles_throttle: 25
+    charge_hours: 6
+    charge_method: removable
+    charge_notes: "52V pack; compact BMX-style build"
+
+  zooz-ultra-urban:
+    voltage_v: 52
+    capacity_ah: 25
+    range_miles_pas: 60
+    range_miles_throttle: 35
+    charge_hours: 8
+    charge_method: removable
+    charge_notes: "52V 25Ah Thrillmatic mount; high capacity"
+
+  zooz-ultra-flex:
+    voltage_v: 52
+    capacity_ah: 25
+    range_miles_pas: 55
+    range_miles_throttle: 32
+    charge_hours: 8
+    charge_method: removable
+    charge_notes: "52V 25Ah; engineered mount system"
+
+  zooz-ultra-cush:
+    voltage_v: 52
+    capacity_ah: 25
+    range_miles_pas: 55
+    range_miles_throttle: 32
+    charge_hours: 8
+    charge_method: removable
+    charge_notes: "Same 52V 25Ah platform as Ultra Urban"
+
+  jetson-bolt-pro:
+    voltage_v: 36
+    capacity_ah: 6
+    range_miles_pas: 30
+    range_miles_throttle: 15
+    charge_hours: 5
+    charge_method: onboard
+    charge_notes: "36V 6Ah integrated; charge on bike"
+
+  hoverfly-ecompact:
+    voltage_v: 36
+    capacity_ah: 7.8
+    range_miles_pas: 25
+    range_miles_throttle: 15
+    charge_hours: 4
+    charge_method: removable
+    charge_notes: "Compact folding pack; removable"
+
+  super73-zg:
+    voltage_v: 48
+    capacity_ah: 10
+    range_miles_pas: 35
+    range_miles_throttle: 22
+    charge_hours: 5
+    charge_method: removable
+    charge_notes: "Removable battery; Super73 pack"

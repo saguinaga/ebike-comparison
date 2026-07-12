@@ -10,6 +10,16 @@
 {% macro brake_label(display) -%}
 <span class="brake-label{% if display.css_class %} {{ display.css_class }}{% endif %}" title="{{ display.label }}">{%- if not display.glyph %}{{ display.icon }} {%- endif %}{{ display.label }}</span>
 {%- endmacro %}
+{% macro battery_block(display) -%}
+<div class="battery-equip">
+  <span class="battery-equip-title">Battery &amp; range</span>
+  <ul class="battery-facts">
+    <li><span class="bf-label">Range</span> {{ display.range_label }}</li>
+    <li><span class="bf-label">Capacity</span> {{ display.capacity_label }}</li>
+    <li><span class="bf-label">Charging</span> {{ display.charge_label }}{% if display.charge_notes %} <span class="bf-note" title="{{ display.charge_notes }}">ⓘ</span>{% endif %}</li>
+  </ul>
+</div>
+{%- endmacro %}
   <header class="hero" aria-label="Surf City Huntington Beach">
     <div class="hero-scene" aria-hidden="true">
       <div class="hero-sky"></div>
@@ -204,6 +214,7 @@
               {% endfor %}
             </ul>
           </div>
+          {{ battery_block(bike.battery_display) }}
           <div class="card-actions">
             <button type="button" class="btn-compare" data-id="{{ bike.id }}">+ Compare</button>
             <button type="button" class="btn-hide" data-id="{{ bike.id }}" title="Hide from view">Hide</button>
@@ -233,6 +244,7 @@
         <div class="chart-card"><h4>Safety by tier</h4><div id="chartSafetyTier" class="chart-area"></div></div>
         <div class="chart-card"><h4>Equipment pass rate</h4><div id="chartChecklist" class="chart-area"></div></div>
         <div class="chart-card"><h4>Max speed vs safety</h4><div id="chartSpeedSafety" class="chart-area"></div></div>
+        <div class="chart-card"><h4>Range vs price</h4><div id="chartRangePrice" class="chart-area"></div></div>
       </div>
     </section>
 
@@ -259,6 +271,9 @@
             <th data-sort="class" data-type="number">Class</th>
             <th data-sort="legal" data-type="string">Legal</th>
             <th data-sort="speed" data-type="number">Max mph</th>
+            <th data-sort="range" data-type="number">Range mi</th>
+            <th data-sort="battery" data-type="number">Battery</th>
+            <th data-sort="charge" data-type="string">Charging</th>
             <th data-sort="brakes" data-type="string">Brakes</th>
             <th>Buy</th>
           </tr>
@@ -274,6 +289,9 @@
               data-price="{{ bike.landed_price_usd or bike.price_usd }}"
               data-safety="{{ bike.safety_score }}"
               data-speed="{{ bike.max_speed_mph }}"
+              data-range="{{ bike.battery_range_miles_pas or '' }}"
+              data-battery="{{ bike.battery_capacity_ah or '' }}"
+              data-charge="{{ bike.battery_display.charge_label }}"
               data-brakes="{{ bike.brake_type }}">
             <td class="table-photo">
               {% if bike.image_src %}
@@ -286,6 +304,9 @@
             <td>{{ bike.e_bike_class }}</td>
             <td>{{ 'Yes' if bike.legal.legal_for_age else 'No' }}</td>
             <td>{{ bike.max_speed_mph }}</td>
+            <td>{{ bike.battery_display.range_label }}</td>
+            <td>{{ bike.battery_display.capacity_label }}</td>
+            <td>{{ bike.battery_display.charge_label }}</td>
             <td>{{ brake_label(bike.brake_display) }}</td>
             <td class="buy-cell">
               {% if bike.best_buy_url %}
@@ -344,6 +365,15 @@
         <label>Price (USD) <input type="number" id="addBikePrice" min="0" step="1" required></label>
         <label>Max speed (mph) <input type="number" id="addBikeSpeed" min="5" max="35" step="0.5" value="20"></label>
         <label>Class <select id="addBikeClass"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option></select></label>
+        <label>Range PAS (mi) <input type="number" id="addBikeRange" min="0" step="1" placeholder="40"></label>
+        <label>Capacity (Ah) <input type="number" id="addBikeAh" min="0" step="0.1" placeholder="10.4"></label>
+        <label>Voltage (V) <input type="number" id="addBikeVoltage" min="0" step="1" placeholder="48"></label>
+        <label>Charge time (hr) <input type="number" id="addBikeChargeHrs" min="0" step="0.5" placeholder="5"></label>
+        <label>Charging <select id="addBikeChargeMethod">
+          <option value="removable" selected>Removable pack</option>
+          <option value="removable_keyed">Removable (keyed)</option>
+          <option value="onboard">Onboard plug</option>
+        </select></label>
         <label>Brakes <select id="addBikeBrake">
           <option value="rim">Rim</option>
           <option value="mechanical_disc" selected>Mechanical disc</option>

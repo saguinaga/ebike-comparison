@@ -812,6 +812,61 @@ table.compare tbody tr.color-preferred { background: #fffbea; }
   font-size: 0.85rem;
 }
 
+.battery-equip {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--sand-dark);
+}
+
+.battery-equip-title {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: 3px;
+}
+
+.battery-facts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.battery-facts li {
+  display: grid;
+  grid-template-columns: 4.2em 1fr;
+  gap: 4px;
+  padding: 1px 0;
+}
+
+.bf-label {
+  font-weight: 600;
+  color: #666;
+}
+
+.bf-note {
+  cursor: help;
+  color: var(--ocean);
+  font-size: 0.7rem;
+}
+
+.battery-inline {
+  font-size: 0.78rem;
+  color: var(--ocean-deep);
+}
+
+.compare-battery {
+  font-size: 0.75rem;
+  color: #555;
+  margin-top: 2px;
+}
+
+table.compare td:nth-child(n+7) {
+  font-size: 0.8rem;
+}
+
 .safety-equip { margin-top: 2px; }
 .safety-equip-title {
   display: block;

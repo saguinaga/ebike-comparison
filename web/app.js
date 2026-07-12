@@ -17,6 +17,12 @@
     coaster: { icon: "↩️", label: "Coaster", css_class: "brake-coaster" },
   };
   const BRAKE_SCORES = { coaster: 5, rim: 8, mechanical_disc: 18, hydraulic_disc: 25 };
+  const CHARGE_LABELS = {
+    onboard: "Onboard plug",
+    removable: "Removable pack",
+    removable_keyed: "Removable (keyed)",
+    none: "N/A",
+  };
 
   const colorFilter = document.getElementById("colorFilter");
   const speedFilter = document.getElementById("speedFilter");
@@ -54,6 +60,77 @@
     if (Number.isNaN(val)) return "—";
     if (val === Math.floor(val)) return `$${val.toLocaleString()}`;
     return `$${val.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  }
+
+  function formatBattery(bike) {
+    const v = bike.battery_voltage_v;
+    const ah = bike.battery_capacity_ah;
+    const wh = bike.battery_wh || (v && ah ? Math.round(v * ah) : null);
+    const pas = bike.battery_range_miles_pas;
+    const thr = bike.battery_range_miles_throttle;
+    const hrs = bike.battery_charge_hours;
+    const method = bike.battery_charge_method || "";
+    const notes = bike.battery_charge_notes || "";
+    const ahAlt = bike.battery_capacity_ah_alt;
+
+    if (method === "none" || (!v && !ah && !pas)) {
+      return {
+        has_battery: false,
+        capacity_label: "—",
+        range_label: "—",
+        charge_label: "—",
+        summary: "—",
+        charge_notes: notes,
+      };
+    }
+    let capacity_label = "—";
+    if (v && ah) {
+      capacity_label = `${v}V · ${ah}Ah`;
+      if (ahAlt) capacity_label += ` (or ${ahAlt}Ah)`;
+      if (wh) capacity_label += ` · ${wh}Wh`;
+    } else if (ah) capacity_label = `${ah}Ah`;
+
+    const rangeParts = [];
+    if (pas) rangeParts.push(`${pas} mi PAS`);
+    if (thr) rangeParts.push(`${thr} mi throttle`);
+    const range_label = rangeParts.length ? rangeParts.join(" · ") : "—";
+
+    const chargeParts = [];
+    if (hrs) chargeParts.push(`~${hrs} hr`);
+    if (method && method !== "none") chargeParts.push(CHARGE_LABELS[method] || method);
+    const charge_label = chargeParts.length ? chargeParts.join(" · ") : "—";
+
+    return {
+      has_battery: true,
+      capacity_label,
+      range_label,
+      charge_label,
+      charge_notes: notes,
+      summary: range_label !== "—" ? range_label : capacity_label,
+      range_miles: pas,
+      capacity_ah: ah,
+      battery_wh: wh,
+      charge_method: method,
+    };
+  }
+
+  function batteryHtml(bike) {
+    const b = formatBattery(bike);
+    if (!b.has_battery) return `<span class="battery-inline">—</span>`;
+    return `<span class="battery-inline" title="${b.charge_notes || ""}">${b.range_label} · ${b.capacity_label}</span>`;
+  }
+
+  function batteryBlockHtml(bike) {
+    const b = formatBattery(bike);
+    const note = b.charge_notes ? ` <span class="bf-note" title="${b.charge_notes}">ⓘ</span>` : "";
+    return `<div class="battery-equip">
+      <span class="battery-equip-title">Battery &amp; range</span>
+      <ul class="battery-facts">
+        <li><span class="bf-label">Range</span> ${b.range_label}</li>
+        <li><span class="bf-label">Capacity</span> ${b.capacity_label}</li>
+        <li><span class="bf-label">Charging</span> ${b.charge_label}${note}</li>
+      </ul>
+    </div>`;
   }
 
   function formatBrake(brakeType) {
@@ -115,6 +192,7 @@
     if (!bike.safety_score) bike.safety_score = computeSafetyScore(bike);
     if (!bike.safety_checklist?.length) bike.safety_checklist = buildChecklist(bike);
     bike.tier_label = bike.tier_label || tierLabels[bike.tier] || bike.tier;
+    bike.battery_display = formatBattery(bike);
     return bike;
   }
 
@@ -273,8 +351,10 @@
 
     const kind = baseline.is_baseline || baseline.motor_w === 0 ? "Pedal" : `Class ${baseline.e_bike_class || "?"}`;
     const link = baseline.url || baseline.best_buy_url;
+    const bat = formatBattery(baseline);
+    const batLine = bat.has_battery ? ` · ${bat.range_label}` : "";
     details.innerHTML = `
-      <p><strong>${baseline.brand} ${baseline.model}</strong> · ${formatMoney(bikePrice(baseline))} · ${kind} · ${baseline.max_speed_mph || "?"} mph max · ${brakeHtml(baseline)}</p>
+      <p><strong>${baseline.brand} ${baseline.model}</strong> · ${formatMoney(bikePrice(baseline))} · ${kind} · ${baseline.max_speed_mph || "?"} mph max · ${brakeHtml(baseline)}${batLine}</p>
       <p>All “vs baseline” multipliers compare to this bike.${link ? ` <a href="${link}" target="_blank" rel="noopener">Product page →</a>` : ""}</p>
     `;
 
@@ -326,6 +406,18 @@
     renderTierChart("chartSafetyTier", bikes);
     renderChecklistChart("chartChecklist", bikes);
     renderScatterChart("chartSpeedSafety", bikes, (b) => b.max_speed_mph, (b) => b.safety_score, "Max mph", "Safety");
+    const rangeEl = document.getElementById("chartRangePrice");
+    if (rangeEl) {
+      const withRange = bikes.filter((b) => b.battery_display?.range_miles || b.battery_range_miles_pas);
+      renderScatterChart(
+        "chartRangePrice",
+        withRange,
+        (b) => bikePrice(b),
+        (b) => b.battery_display?.range_miles || b.battery_range_miles_pas,
+        "Price",
+        "PAS range (mi)"
+      );
+    }
   }
 
   function renderScatterChart(elId, bikes, xFn, yFn, xLabel, yLabel) {
@@ -452,6 +544,7 @@
       <div>${formatMoney(bike.price)} · Safety <strong>${bike.safety_score}</strong>/100</div>
       <div>Class ${bike.e_bike_class || "?"} · ${bike.max_speed_mph} mph max</div>
       <div>${legalBadge} · ${brakeHtml(bike)}</div>
+      <div class="compare-battery">${batteryHtml(bike)}</div>
       ${vs ? `<div>vs baseline: <strong>${vs.price_multiplier}×</strong> · ${vs.speed_delta_mph >= 0 ? "+" : ""}${vs.speed_delta_mph} mph</div>` : ""}
       <div class="buy-links">${buyLink}</div>
     `;
@@ -484,6 +577,27 @@
       { label: `vs ${baseline.brand} ${baseline.model}`, values: selected.map((b) => b.vs_baseline?.price_multiplier), higherBetter: false, fmt: (v) => (v ? `${v}×` : "—") },
       { label: "Speed delta vs baseline", values: selected.map((b) => b.vs_baseline?.speed_delta_mph), higherBetter: null, fmt: (v) => (v != null ? `${v >= 0 ? "+" : ""}${v} mph` : "—") },
       { label: "Max speed", values: selected.map((b) => b.max_speed_mph), higherBetter: null, fmt: (v) => `${v} mph` },
+      {
+        label: "PAS range",
+        values: selected.map((b) => b.battery_display?.range_miles ?? b.battery_range_miles_pas),
+        higherBetter: true,
+        fmt: (v, b) => formatBattery(b).range_label,
+        bikes: selected,
+      },
+      {
+        label: "Battery",
+        values: selected.map((b) => b.battery_display?.battery_wh ?? b.battery_wh),
+        higherBetter: true,
+        fmt: (v, b) => formatBattery(b).capacity_label,
+        bikes: selected,
+      },
+      {
+        label: "Charging",
+        values: selected.map((b) => 0),
+        higherBetter: null,
+        fmt: (v, b) => formatBattery(b).charge_label,
+        bikes: selected,
+      },
       { label: "Brakes", values: selected.map((b) => b.brake_type), higherBetter: null, fmt: (_, b) => brakeHtml(b), bikes: selected },
     ];
 
@@ -578,6 +692,7 @@
       <p>${bike.tier_label || "Custom"} · ${bike.max_speed_mph} mph · ${brakeHtml(bike)}</p>
       <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">${bike.vs_baseline?.price_multiplier}×</strong> · <span class="vs-speed-delta">${bike.vs_baseline?.speed_delta_mph >= 0 ? "+" : ""}${bike.vs_baseline?.speed_delta_mph} mph</span></p>
       <div class="safety-equip"><span class="safety-equip-title">Safety equipment</span><ul class="checklist checklist-compact">${checklist}</ul></div>
+      ${batteryBlockHtml(bike)}
       <div class="card-actions">
         <button type="button" class="btn-compare" data-id="${bike.id}">+ Compare</button>
         <button type="button" class="btn-hide" data-id="${bike.id}">Hide</button>
@@ -739,6 +854,10 @@
     e.preventDefault();
     const url = document.getElementById("addBikeUrl").value.trim();
     const id = `custom-${Date.now()}`;
+    const rangePas = parseFloat(document.getElementById("addBikeRange").value);
+    const ah = parseFloat(document.getElementById("addBikeAh").value);
+    const voltage = parseFloat(document.getElementById("addBikeVoltage").value);
+    const chargeHrs = parseFloat(document.getElementById("addBikeChargeHrs").value);
     const bike = enrichBike({
       id,
       brand: document.getElementById("addBikeBrand").value.trim(),
@@ -748,6 +867,12 @@
       max_speed_mph: parseFloat(document.getElementById("addBikeSpeed").value),
       e_bike_class: parseInt(document.getElementById("addBikeClass").value, 10),
       brake_type: document.getElementById("addBikeBrake").value,
+      battery_range_miles_pas: Number.isNaN(rangePas) ? null : rangePas,
+      battery_capacity_ah: Number.isNaN(ah) ? null : ah,
+      battery_voltage_v: Number.isNaN(voltage) ? null : voltage,
+      battery_wh: !Number.isNaN(voltage) && !Number.isNaN(ah) ? Math.round(voltage * ah) : null,
+      battery_charge_hours: Number.isNaN(chargeHrs) ? null : chargeHrs,
+      battery_charge_method: document.getElementById("addBikeChargeMethod").value,
       lights: {
         front: document.getElementById("addBikeLightFront").checked,
         rear: document.getElementById("addBikeLightRear").checked,
