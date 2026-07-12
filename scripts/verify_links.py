@@ -39,6 +39,15 @@ def check(url: str, timeout: float) -> tuple[bool, str]:
     return False, "unreachable"
 
 
+def _is_checkable_url(url: str) -> bool:
+    lower = url.lower()
+    if "/s?" in lower or "searchterm=" in lower:
+        return False
+    if "wholesale" in lower or "/w/" in lower:
+        return False
+    return True
+
+
 def collect_urls() -> list[tuple[str, str, str]]:
     out: list[tuple[str, str, str]] = []
     for rel in ("config/bikes.yaml", "config/scooters.yaml"):
@@ -48,8 +57,29 @@ def collect_urls() -> list[tuple[str, str, str]]:
             bid = item.get("id", "?")
             for src in item.get("sources", []):
                 url = (src.get("url") or "").strip()
-                if url:
+                if url and _is_checkable_url(url):
                     out.append((bid, src.get("platform", ""), url))
+
+    retail_path = ROOT / "config" / "retail_sources.yaml"
+    if retail_path.exists():
+        retail = yaml.safe_load(retail_path.read_text(encoding="utf-8")) or {}
+        retailers = retail.get("retailers", {})
+        for bid, entries in (retail.get("products") or {}).items():
+            for entry in entries:
+                if entry.get("skip"):
+                    continue
+                url = (entry.get("url") or "").strip()
+                if not url:
+                    key = entry.get("retailer", "")
+                    url = (retailers.get(key) or {}).get("url", "").strip()
+                if url and _is_checkable_url(url):
+                    out.append((bid, entry.get("retailer", "retail"), url))
+        for kind, entries in (retail.get("defaults") or {}).items():
+            for entry in entries:
+                key = entry.get("retailer", "")
+                url = (retailers.get(key) or {}).get("url", "").strip()
+                if url and _is_checkable_url(url):
+                    out.append((f"default:{kind}", key, url))
     return out
 
 

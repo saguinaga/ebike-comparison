@@ -1,0 +1,66 @@
+# Extra buy channels: Target (HB pickup) and local Huntington Beach shops.
+# in_store_only: true → show link without a scraped price (check in-store / online).
+
+retailers:
+  target:
+    platform: target
+    label: Target
+    delivery_note: Target · pick up in Huntington Beach or ship
+
+  hb_electric:
+    platform: local
+    label: HB Electric Bike
+    delivery_note: In-store · 326 Main St, Huntington Beach
+    url: "https://hbelectricbike.com/"
+
+  riding5_hb:
+    platform: local
+    label: Riding5 (HB)
+    delivery_note: In-store · Huntington Beach
+    url: "https://riding5.com/pages/huntington-beach"
+
+  maninam_motor:
+    platform: local
+    label: Maninam Motor
+    delivery_note: In-store · Huntington Beach
+    url: "https://maninam-motor.com/"
+
+# Shown on every product unless that retailer is already listed for the model.
+defaults:
+  ebike:
+    - retailer: hb_electric
+      in_store_only: true
+  scooter:
+    - retailer: riding5_hb
+      in_store_only: true
+    - retailer: maninam_motor
+      in_store_only: true
+
+# Verified product pages or brand-dealer pages (not search URLs).
+products:
+  segway-ninebot-max-g2:
+    - retailer: target
+      url: "https://www.target.com/p/segway-ninebot-max-g2-electric-scooter-black/-/A-94134000"
+      in_store_only: true
+
+  segway-ninebot-f2:
+    - retailer: target
+      url: "https://www.target.com/p/segway-ninebot-f2-electric-scooter/-/A-1003836140"
+      in_store_only: true
+
+  jetson-bolt-pro:
+    - retailer: target
+      url: "https://www.target.com/p/jetson-bolt-pro-electric-bike-black/-/A-94645848"
+      in_store_only: true
+
+  aventon-soltera:
+    - retailer: hb_electric
+      url: "https://hbelectricbike.com/collections/aventon"
+      in_store_only: true
+      note: Aventon Signature Dealer — call for model availability
+
+  aventon-level:
+    - retailer: hb_electric
+      url: "https://hbelectricbike.com/collections/aventon"
+      in_store_only: true
+      note: Carries Aventon — ask about Level 3 / newer models in stock

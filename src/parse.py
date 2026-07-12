@@ -11,6 +11,7 @@ from .features import build_feature_checklist, format_features_summary
 from .legal_compliance import evaluate_bike
 from .parsers import PARSERS
 from .pricing import compute_landed_prices
+from .retail import augment_sources, load_retail_config
 from .safety_score import build_checklist, compute_safety_score
 from .scrape import fetch_url
 
@@ -130,6 +131,7 @@ def parse_all(root: Path, scrape_live: bool = True) -> list:
     results.append(baseline_bike)
 
     all_entries = list(bikes_cfg.get("bikes", [])) + load_scooters(root)
+    retail_cfg = load_retail_config(root)
 
     for entry in all_entries:
         bike = copy.deepcopy(entry)
@@ -165,7 +167,14 @@ def parse_all(root: Path, scrape_live: bool = True) -> list:
             bike["colors"] = normalize_colors(bike.get("colors", []))
         if bike.get("vehicle_type") != "scooter" and bike.get("id") in ebike_features:
             bike["features"] = {**ebike_features[bike["id"]], **(bike.get("features") or {})}
-        bike.update(compute_landed_prices({**entry, **bike}))
+        vehicle_type = bike.get("vehicle_type", "ebike")
+        bike["sources"] = augment_sources(
+            bike.get("id", ""),
+            vehicle_type,
+            entry.get("sources", []),
+            retail_cfg,
+        )
+        bike.update(compute_landed_prices({**entry, **bike, "sources": bike["sources"]}))
         bike["safety_score"] = compute_safety_score(bike)
         bike["safety_checklist"] = build_checklist(bike)
         if bike.get("features"):

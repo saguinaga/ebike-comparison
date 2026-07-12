@@ -594,10 +594,6 @@ table.compare .table-photo img {
 
 .buy-alt:hover { text-decoration: underline; }
 
-.buy-local {
-  border-left: 3px solid #0d9488;
-}
-
 .buy-links-note {
   margin: 0;
   font-size: 0.72rem;

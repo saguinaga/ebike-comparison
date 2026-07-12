@@ -1506,38 +1506,25 @@
     return (bike.price_sources || []).filter((src) => src.url && !src.is_search_url);
   }
 
-  function buySourcePriceLabel(src) {
-    if (src.in_store_only || src.price_display) return src.price_display || "Check store";
-    if (src.landed_usd != null) return formatMoney(src.landed_usd);
-    return "—";
-  }
-
   function buyLinksHtml(bike) {
     const sources = trustedBuySources(bike);
     const bestSrc =
-      sources.find((src) => src.url === bike.best_buy_url && !src.in_store_only) ||
-      sources.find((src) => !src.in_store_only) ||
-      sources[0] ||
-      null;
+      sources.find((src) => src.url === bike.best_buy_url) || sources[0] || null;
     const best = bestSrc
-      ? `<a class="buy-best${bestSrc.in_store_only ? " buy-local" : ""}" href="${bestSrc.url}" target="_blank" rel="noopener" title="${bestSrc.delivery_note || bike.best_buy_delivery || ""}">
-          ★ ${bestSrc.platform_label || bike.best_buy_platform || "Buy"} ${buySourcePriceLabel(bestSrc)}
+      ? `<a class="buy-best" href="${bestSrc.url}" target="_blank" rel="noopener" title="${bestSrc.delivery_note || bike.best_buy_delivery || ""}">
+          ★ ${bestSrc.platform_label || bike.best_buy_platform || "Buy"} ${formatMoney(bestSrc.landed_usd ?? bike.landed_price_usd ?? bike.price)}
         </a>`
       : "";
     const alts = sources
       .filter((src) => src.url !== bestSrc?.url)
       .map(
         (src) =>
-          `<a class="buy-alt${src.in_store_only ? " buy-local" : ""}" href="${src.url}" target="_blank" rel="noopener" title="${src.delivery_note || ""}">
-            ${src.platform_label} ${buySourcePriceLabel(src)}
+          `<a class="buy-alt" href="${src.url}" target="_blank" rel="noopener" title="${src.delivery_note || ""}">
+            ${src.platform_label} $${src.landed_usd != null ? Math.round(src.landed_usd) : "—"}
           </a>`
       )
       .join("");
-    const localNote =
-      sources.some((src) => src.in_store_only)
-        ? `<p class="buy-links-note">Also check Target (when listed) and Huntington Beach shops — prices vary in-store.</p>`
-        : "";
-    if (best || alts) return `<div class="buy-links">${best}${alts}${localNote}</div>`;
+    if (best || alts) return `<div class="buy-links">${best}${alts}</div>`;
     if (bike.landed_price_usd != null || bike.price != null) {
       return `<p class="buy-links-note">Listed price estimate — no verified retailer link for this model yet.</p>`;
     }

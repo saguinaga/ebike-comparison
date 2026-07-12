@@ -88,6 +88,16 @@
     "battery_wh": 360,
     "weight_lb": 58,
     "weight_notes": "Typical 26\" step-through budget e-bike",
+    "sources": [
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
+      }
+    ],
     "price_sources": [
       {
         "platform": "manual",
@@ -98,7 +108,22 @@
         "landed_usd": 399,
         "delivery_note": "Price estimate",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 399,
@@ -235,6 +260,14 @@
         "url": "https://www.heybike.com/products/mars-2-0",
         "price_usd": 599,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -276,13 +309,29 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://www.heybike.com/products/mars-2-0",
         "item_price_usd": 599.0,
         "shipping_usd": 0.0,
         "landed_usd": 599.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 599.0,
@@ -574,6 +623,14 @@
         "url": "https://www.iscooterglobal.eu/products/u4-low-step-through-foldable-electric-bike",
         "price_usd": 499,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -614,13 +671,29 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://www.iscooterglobal.eu/products/u4-low-step-through-foldable-electric-bike",
         "item_price_usd": 499.0,
         "shipping_usd": 0.0,
         "landed_usd": 499.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 499.0,
@@ -912,6 +985,14 @@
         "url": "https://nakto.com/products/camel-step-thru",
         "price_usd": 469,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -953,13 +1034,29 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://nakto.com/products/camel-step-thru",
         "item_price_usd": 469.0,
         "shipping_usd": 0.0,
         "landed_usd": 469.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 469.0,
@@ -1090,6 +1187,14 @@
         "url": "https://wallkeebike.com/products/wallke-h7-step-thru",
         "price_usd": 549,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -1126,13 +1231,29 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://wallkeebike.com/products/wallke-h7-step-thru",
         "item_price_usd": 549.0,
         "shipping_usd": 0.0,
         "landed_usd": 549.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 549.0,
@@ -1263,6 +1384,14 @@
         "url": "https://lectricebikes.com/products/xp-lite-lectric-blue-long-range-ebike",
         "price_usd": 799,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -1303,13 +1432,29 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://lectricebikes.com/products/xp-lite-lectric-blue-long-range-ebike",
         "item_price_usd": 799.0,
         "shipping_usd": 0.0,
         "landed_usd": 799.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 799.0,
@@ -1601,6 +1746,14 @@
         "url": "https://ride1up.com/product/portola/",
         "price_usd": 995,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -1646,13 +1799,29 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://ride1up.com/product/portola/",
         "item_price_usd": 995.0,
         "shipping_usd": 0.0,
         "landed_usd": 995.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 995.0,
@@ -1944,6 +2113,22 @@
         "url": "https://www.aventon.com/products/soltera-2-5-ebike",
         "price_usd": 999,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/collections/aventon",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": "Aventon Signature Dealer \u2014 call for model availability"
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -1994,13 +2179,43 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://www.aventon.com/products/soltera-2-5-ebike",
         "item_price_usd": 999.0,
         "shipping_usd": 0.0,
         "landed_usd": 999.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/collections/aventon",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach \u2014 Aventon Signature Dealer \u2014 call for model availability",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 999.0,
@@ -2317,6 +2532,16 @@
       "companion_app": true,
       "ride_history": true
     },
+    "sources": [
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
+      }
+    ],
     "price_sources": [
       {
         "platform": "manual",
@@ -2327,7 +2552,22 @@
         "landed_usd": 1199,
         "delivery_note": "Price estimate",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 1199,
@@ -2619,6 +2859,14 @@
         "url": "https://www.velotricbike.com/products/velotric-nomad-1",
         "price_usd": 1099,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -2665,13 +2913,29 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://www.velotricbike.com/products/velotric-nomad-1",
         "item_price_usd": 1099.0,
         "shipping_usd": 0.0,
         "landed_usd": 1099.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 1099.0,
@@ -2963,6 +3227,14 @@
         "url": "https://lectricebikes.com/products/xp-green-long-range",
         "price_usd": 1299,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -3019,13 +3291,29 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://lectricebikes.com/products/xp-green-long-range",
         "item_price_usd": 1299.0,
         "shipping_usd": 0.0,
         "landed_usd": 1299.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 1299.0,
@@ -3317,6 +3605,14 @@
         "url": "https://www.radpowerbikes.com/products/radrunner-plus-electric-cargo-utility-bike",
         "price_usd": 1599,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -3361,13 +3657,29 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://www.radpowerbikes.com/products/radrunner-plus-electric-cargo-utility-bike",
         "item_price_usd": 1599.0,
         "shipping_usd": 0.0,
         "landed_usd": 1599.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 1599.0,
@@ -3659,6 +3971,14 @@
         "url": "https://ride1up.com/product/roadster-v3/",
         "price_usd": 1495,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -3698,13 +4018,29 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://ride1up.com/product/roadster-v3/",
         "item_price_usd": 1495.0,
         "shipping_usd": 0.0,
         "landed_usd": 1495.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 1495.0,
@@ -3996,6 +4332,22 @@
         "url": "https://www.aventon.com/products/level-3-commuter-ebike",
         "price_usd": 1699,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/collections/aventon",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": "Carries Aventon \u2014 ask about Level 3 / newer models in stock"
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -4043,13 +4395,43 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://www.aventon.com/products/level-3-commuter-ebike",
         "item_price_usd": 1699.0,
         "shipping_usd": 0.0,
         "landed_usd": 1699.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/collections/aventon",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach \u2014 Carries Aventon \u2014 ask about Level 3 / newer models in stock",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 1699.0,
@@ -4347,6 +4729,14 @@
         "url": "https://www.batchbicycles.com/ecb-3/",
         "price_usd": 1399,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -4383,13 +4773,29 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://www.batchbicycles.com/ecb-3/",
         "item_price_usd": 1399.0,
         "shipping_usd": 0.0,
         "landed_usd": 1399.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 1399.0,
@@ -4520,6 +4926,14 @@
         "url": "https://zoozbikes.com/products/ultra-ripster-gen-2",
         "price_usd": 2095,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -4564,13 +4978,29 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://zoozbikes.com/products/ultra-ripster-gen-2",
         "item_price_usd": 2095.0,
         "shipping_usd": 0.0,
         "landed_usd": 2095.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 2095.0,
@@ -4867,6 +5297,14 @@
         "url": "https://zoozbikes.com/products/uu-gen4",
         "price_usd": 2595,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -4911,13 +5349,29 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://zoozbikes.com/products/uu-gen4",
         "item_price_usd": 2595.0,
         "shipping_usd": 0.0,
         "landed_usd": 2595.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 2595.0,
@@ -5214,6 +5668,14 @@
         "url": "https://zoozbikes.com/products/ultra-flex-g2-low-bar",
         "price_usd": 3095,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -5257,13 +5719,29 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://zoozbikes.com/products/ultra-flex-g2-low-bar",
         "item_price_usd": 3095.0,
         "shipping_usd": 0.0,
         "landed_usd": 3095.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 3095.0,
@@ -5561,6 +6039,14 @@
         "url": "https://zoozbikes.com/products/ultra-cush",
         "price_usd": 2795,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -5600,13 +6086,29 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://zoozbikes.com/products/ultra-cush",
         "item_price_usd": 2795.0,
         "shipping_usd": 0.0,
         "landed_usd": 2795.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 2795.0,
@@ -5916,6 +6418,22 @@
         "url": "https://www.amazon.com/dp/B0D3NGHMQC",
         "price_usd": 500,
         "shipping_usd": 0
+      },
+      {
+        "platform": "target",
+        "url": "https://www.target.com/p/jetson-bolt-pro-electric-bike-black/-/A-94645848",
+        "retailer": "target",
+        "retailer_label": "Target",
+        "in_store_only": true,
+        "note": null
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -5957,24 +6475,56 @@
       {
         "platform": "amazon",
         "platform_label": "Amazon",
+        "retailer": null,
         "url": "https://www.amazon.com/dp/B0D3NGHMQC",
         "item_price_usd": 500.0,
         "shipping_usd": 0.0,
         "landed_usd": 500.0,
         "delivery_note": "Prime ~1\u20133 days",
         "rewards_note": "5% back on some Chase/Amazon cards",
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
       },
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://ridejetson.com/products/bolt-electric-bike-pro",
         "item_price_usd": 500.0,
         "shipping_usd": 10.0,
         "landed_usd": 510.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
+      },
+      {
+        "platform": "target",
+        "platform_label": "Target",
+        "retailer": "target",
+        "url": "https://www.target.com/p/jetson-bolt-pro-electric-bike-black/-/A-94645848",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "Target \u00b7 pick up in HB or ship",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 500.0,
@@ -6269,6 +6819,14 @@
         "url": "https://www.amazon.com/dp/B0FDWZV38C",
         "price_usd": 500,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -6300,13 +6858,29 @@
       {
         "platform": "amazon",
         "platform_label": "Amazon",
+        "retailer": null,
         "url": "https://www.amazon.com/dp/B0FDWZV38C",
         "item_price_usd": 500.0,
         "shipping_usd": 0.0,
         "landed_usd": 500.0,
         "delivery_note": "Prime ~1\u20133 days",
         "rewards_note": "5% back on some Chase/Amazon cards",
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 500.0,
@@ -6437,6 +7011,14 @@
         "url": "https://super73.com/products/super73-z-miami-core-legacy",
         "price_usd": 2195,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -6477,13 +7059,29 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://super73.com/products/super73-z-miami-core-legacy",
         "item_price_usd": 2195.0,
         "shipping_usd": 0.0,
         "landed_usd": 2195.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 2195.0,
@@ -6776,6 +7374,22 @@
         "url": "https://gotrax.com/products/g4-electric-scooter-for-adults",
         "price_usd": 469,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://riding5.com/pages/huntington-beach",
+        "retailer": "riding5_hb",
+        "retailer_label": "Riding5 (HB)",
+        "in_store_only": true,
+        "note": null
+      },
+      {
+        "platform": "local",
+        "url": "https://maninam-motor.com/",
+        "retailer": "maninam_motor",
+        "retailer_label": "Maninam Motor",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -6814,13 +7428,43 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://gotrax.com/products/g4-electric-scooter-for-adults",
         "item_price_usd": 469.0,
         "shipping_usd": 0.0,
         "landed_usd": 469.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "Maninam Motor",
+        "retailer": "maninam_motor",
+        "url": "https://maninam-motor.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
+      },
+      {
+        "platform": "local",
+        "platform_label": "Riding5 (HB)",
+        "retailer": "riding5_hb",
+        "url": "https://riding5.com/pages/huntington-beach",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 469.0,
@@ -7111,6 +7755,30 @@
         "url": "https://store.segway.com/ninebot-kickscooter-f2",
         "price_usd": 599,
         "shipping_usd": 0
+      },
+      {
+        "platform": "target",
+        "url": "https://www.target.com/p/segway-ninebot-f2-electric-scooter/-/A-1003836140",
+        "retailer": "target",
+        "retailer_label": "Target",
+        "in_store_only": true,
+        "note": null
+      },
+      {
+        "platform": "local",
+        "url": "https://riding5.com/pages/huntington-beach",
+        "retailer": "riding5_hb",
+        "retailer_label": "Riding5 (HB)",
+        "in_store_only": true,
+        "note": null
+      },
+      {
+        "platform": "local",
+        "url": "https://maninam-motor.com/",
+        "retailer": "maninam_motor",
+        "retailer_label": "Maninam Motor",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -7150,13 +7818,57 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://store.segway.com/ninebot-kickscooter-f2",
         "item_price_usd": 599.0,
         "shipping_usd": 0.0,
         "landed_usd": 599.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "Maninam Motor",
+        "retailer": "maninam_motor",
+        "url": "https://maninam-motor.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
+      },
+      {
+        "platform": "local",
+        "platform_label": "Riding5 (HB)",
+        "retailer": "riding5_hb",
+        "url": "https://riding5.com/pages/huntington-beach",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
+      },
+      {
+        "platform": "target",
+        "platform_label": "Target",
+        "retailer": "target",
+        "url": "https://www.target.com/p/segway-ninebot-f2-electric-scooter/-/A-1003836140",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "Target \u00b7 pick up in HB or ship",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 599.0,
@@ -7447,6 +8159,30 @@
         "url": "https://store.segway.com/ninebot-kickscooter-max-g2",
         "price_usd": 899,
         "shipping_usd": 0
+      },
+      {
+        "platform": "target",
+        "url": "https://www.target.com/p/segway-ninebot-max-g2-electric-scooter-black/-/A-94134000",
+        "retailer": "target",
+        "retailer_label": "Target",
+        "in_store_only": true,
+        "note": null
+      },
+      {
+        "platform": "local",
+        "url": "https://riding5.com/pages/huntington-beach",
+        "retailer": "riding5_hb",
+        "retailer_label": "Riding5 (HB)",
+        "in_store_only": true,
+        "note": null
+      },
+      {
+        "platform": "local",
+        "url": "https://maninam-motor.com/",
+        "retailer": "maninam_motor",
+        "retailer_label": "Maninam Motor",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -7488,13 +8224,57 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://store.segway.com/ninebot-kickscooter-max-g2",
         "item_price_usd": 899.0,
         "shipping_usd": 0.0,
         "landed_usd": 899.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "Maninam Motor",
+        "retailer": "maninam_motor",
+        "url": "https://maninam-motor.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
+      },
+      {
+        "platform": "local",
+        "platform_label": "Riding5 (HB)",
+        "retailer": "riding5_hb",
+        "url": "https://riding5.com/pages/huntington-beach",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
+      },
+      {
+        "platform": "target",
+        "platform_label": "Target",
+        "retailer": "target",
+        "url": "https://www.target.com/p/segway-ninebot-max-g2-electric-scooter-black/-/A-94134000",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "Target \u00b7 pick up in HB or ship",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 899.0,
@@ -7785,6 +8565,22 @@
         "url": "https://shop.niu.com/products/niu-kqi3-max-electric-kick-scooter-for-adults",
         "price_usd": 999,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://riding5.com/pages/huntington-beach",
+        "retailer": "riding5_hb",
+        "retailer_label": "Riding5 (HB)",
+        "in_store_only": true,
+        "note": null
+      },
+      {
+        "platform": "local",
+        "url": "https://maninam-motor.com/",
+        "retailer": "maninam_motor",
+        "retailer_label": "Maninam Motor",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -7840,13 +8636,43 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://shop.niu.com/products/niu-kqi3-max-electric-kick-scooter-for-adults",
         "item_price_usd": 999.0,
         "shipping_usd": 0.0,
         "landed_usd": 999.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "Maninam Motor",
+        "retailer": "maninam_motor",
+        "url": "https://maninam-motor.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
+      },
+      {
+        "platform": "local",
+        "platform_label": "Riding5 (HB)",
+        "retailer": "riding5_hb",
+        "url": "https://riding5.com/pages/huntington-beach",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 999.0,
@@ -8137,6 +8963,22 @@
         "url": "https://apolloscooters.co/products/apollo-city-pro",
         "price_usd": 1299,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://riding5.com/pages/huntington-beach",
+        "retailer": "riding5_hb",
+        "retailer_label": "Riding5 (HB)",
+        "in_store_only": true,
+        "note": null
+      },
+      {
+        "platform": "local",
+        "url": "https://maninam-motor.com/",
+        "retailer": "maninam_motor",
+        "retailer_label": "Maninam Motor",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -8184,13 +9026,43 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://apolloscooters.co/products/apollo-city-pro",
         "item_price_usd": 1299.0,
         "shipping_usd": 0.0,
         "landed_usd": 1299.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "Maninam Motor",
+        "retailer": "maninam_motor",
+        "url": "https://maninam-motor.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
+      },
+      {
+        "platform": "local",
+        "platform_label": "Riding5 (HB)",
+        "retailer": "riding5_hb",
+        "url": "https://riding5.com/pages/huntington-beach",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 1299.0,
@@ -8486,6 +9358,22 @@
         "url": "https://shop.unagiscooters.com/products/the-scooter",
         "price_usd": 990,
         "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://riding5.com/pages/huntington-beach",
+        "retailer": "riding5_hb",
+        "retailer_label": "Riding5 (HB)",
+        "in_store_only": true,
+        "note": null
+      },
+      {
+        "platform": "local",
+        "url": "https://maninam-motor.com/",
+        "retailer": "maninam_motor",
+        "retailer_label": "Maninam Motor",
+        "in_store_only": true,
+        "note": null
       }
     ],
     "colors": [
@@ -8533,13 +9421,43 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
+        "retailer": null,
         "url": "https://shop.unagiscooters.com/products/the-scooter",
         "item_price_usd": 990.0,
         "shipping_usd": 0.0,
         "landed_usd": 990.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
-        "is_search_url": false
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "Maninam Motor",
+        "retailer": "maninam_motor",
+        "url": "https://maninam-motor.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
+      },
+      {
+        "platform": "local",
+        "platform_label": "Riding5 (HB)",
+        "retailer": "riding5_hb",
+        "url": "https://riding5.com/pages/huntington-beach",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
       }
     ],
     "landed_price_usd": 990.0,
