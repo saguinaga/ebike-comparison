@@ -11,14 +11,10 @@ bikes:
     motor_w: 350
     brake_type: rim
     lights: {front: false, rear: false}
-    sources:
-      - platform: amazon
-        url: "https://www.amazon.com/s?k=26+inch+step+through+electric+bike+350w"
-        price_usd: 399
-        shipping_usd: 0
     colors:
       - {name: White, family: white}
     manual:
+      price_usd: 399
       image_url: "https://nakto.com/cdn/shop/files/7ffd919d332e404348a14ea30d0bbf23_cbe3c91b-0750-404a-bb90-971ed8fd5b8e.png?v=1748420526"
 
   - id: amazon-budget-step-2
@@ -52,13 +48,13 @@ bikes:
     brake_type: mechanical_disc
     lights: {front: true, rear: true}
     sources:
-      - platform: aliexpress
-        url: "https://www.aliexpress.us/item/1005012173322881.html"
-        price_usd: 359
-        shipping_usd: 79
       - platform: amazon
-        url: "https://www.amazon.com/s?k=iscooter+u4+folding+electric+bike"
+        url: "https://www.amazon.com/dp/B0DBQRVBX8"
         price_usd: 449
+        shipping_usd: 0
+      - platform: manufacturer
+        url: "https://www.iscooterglobal.eu/products/u4-low-step-through-foldable-electric-bike"
+        price_usd: 499
         shipping_usd: 0
     colors:
       - {name: White, family: white}
@@ -81,10 +77,6 @@ bikes:
         url: "https://nakto.com/products/camel-step-thru"
         price_usd: 469
         shipping_usd: 0
-      - platform: amazon
-        url: "https://www.amazon.com/s?k=nakto+camel+electric+bike"
-        price_usd: 499
-        shipping_usd: 0
     colors:
       - {name: White, family: white}
     manual:
@@ -104,10 +96,6 @@ bikes:
       - platform: manufacturer
         url: "https://www.wallkeebike.com/products/wallke-h7-electric-bike"
         price_usd: 549
-        shipping_usd: 0
-      - platform: amazon
-        url: "https://www.amazon.com/s?k=wallke+h7+electric+bike"
-        price_usd: 579
         shipping_usd: 0
     colors:
       - {name: White, family: white}
@@ -129,10 +117,6 @@ bikes:
       - platform: manufacturer
         url: "https://lectricebikes.com/products/xp-lite"
         price_usd: 799
-        shipping_usd: 0
-      - platform: amazon
-        url: "https://www.amazon.com/s?k=lectric+xp+lite"
-        price_usd: 849
         shipping_usd: 0
     colors:
       - {name: White, family: white}

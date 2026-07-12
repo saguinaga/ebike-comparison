@@ -61,14 +61,6 @@
       "front": false,
       "rear": false
     },
-    "sources": [
-      {
-        "platform": "amazon",
-        "url": "https://www.amazon.com/s?k=26+inch+step+through+electric+bike+350w",
-        "price_usd": 399,
-        "shipping_usd": 0
-      }
-    ],
     "colors": [
       {
         "name": "White",
@@ -80,6 +72,7 @@
       }
     ],
     "vehicle_type": "ebike",
+    "price_usd": 399,
     "image_url": "https://lectricebikes.com/cdn/shop/files/white-side_2e68dfc9-b660-4559-9a17-133fb42e0792.webp?v=1776061626",
     "image_urls": [
       "https://lectricebikes.com/cdn/shop/files/white-front.webp?v=1776061626",
@@ -97,22 +90,22 @@
     "weight_notes": "Typical 26\" step-through budget e-bike",
     "price_sources": [
       {
-        "platform": "amazon",
-        "platform_label": "Amazon",
-        "url": "https://www.amazon.com/s?k=26+inch+step+through+electric+bike+350w",
-        "item_price_usd": 399.0,
-        "shipping_usd": 0.0,
-        "landed_usd": 399.0,
-        "delivery_note": "Prime ~1\u20133 days",
-        "rewards_note": "5% back on some Chase/Amazon cards",
-        "is_search_url": true
+        "platform": "manual",
+        "platform_label": "Listed",
+        "url": null,
+        "item_price_usd": 399,
+        "shipping_usd": 0,
+        "landed_usd": 399,
+        "delivery_note": "Price estimate",
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
-    "landed_price_usd": 399.0,
-    "best_buy_url": "https://www.amazon.com/s?k=26+inch+step+through+electric+bike+350w",
-    "best_buy_platform": "Amazon",
-    "best_buy_shipping_usd": 0.0,
-    "best_buy_delivery": "Prime ~1\u20133 days",
+    "landed_price_usd": 399,
+    "best_buy_url": null,
+    "best_buy_platform": "Listed",
+    "best_buy_shipping_usd": 0,
+    "best_buy_delivery": "Price estimate",
     "safety_score": 18,
     "safety_checklist": [
       {
@@ -577,15 +570,15 @@
     },
     "sources": [
       {
-        "platform": "aliexpress",
-        "url": "https://www.aliexpress.us/item/1005012173322881.html",
-        "price_usd": 359,
-        "shipping_usd": 79
+        "platform": "amazon",
+        "url": "https://www.amazon.com/dp/B0DBQRVBX8",
+        "price_usd": 449,
+        "shipping_usd": 0
       },
       {
-        "platform": "amazon",
-        "url": "https://www.amazon.com/s?k=iscooter+u4+folding+electric+bike",
-        "price_usd": 449,
+        "platform": "manufacturer",
+        "url": "https://www.iscooterglobal.eu/products/u4-low-step-through-foldable-electric-bike",
+        "price_usd": 499,
         "shipping_usd": 0
       }
     ],
@@ -625,33 +618,33 @@
     },
     "price_sources": [
       {
-        "platform": "aliexpress",
-        "platform_label": "AliExpress",
-        "url": "https://www.aliexpress.us/item/1005012173322881.html",
-        "item_price_usd": 359.0,
-        "shipping_usd": 79.0,
-        "landed_usd": 438.0,
-        "delivery_note": "~2\u20134 weeks",
-        "rewards_note": null,
-        "is_search_url": false
-      },
-      {
         "platform": "amazon",
         "platform_label": "Amazon",
-        "url": "https://www.amazon.com/s?k=iscooter+u4+folding+electric+bike",
+        "url": "https://www.amazon.com/dp/B0DBQRVBX8",
         "item_price_usd": 449.0,
         "shipping_usd": 0.0,
         "landed_usd": 449.0,
         "delivery_note": "Prime ~1\u20133 days",
         "rewards_note": "5% back on some Chase/Amazon cards",
-        "is_search_url": true
+        "is_search_url": false
+      },
+      {
+        "platform": "manufacturer",
+        "platform_label": "Direct",
+        "url": "https://www.iscooterglobal.eu/products/u4-low-step-through-foldable-electric-bike",
+        "item_price_usd": 499.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 499.0,
+        "delivery_note": "Direct ship",
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
-    "landed_price_usd": 438.0,
-    "best_buy_url": "https://www.aliexpress.us/item/1005012173322881.html",
-    "best_buy_platform": "AliExpress",
-    "best_buy_shipping_usd": 79.0,
-    "best_buy_delivery": "~2\u20134 weeks",
+    "landed_price_usd": 449.0,
+    "best_buy_url": "https://www.amazon.com/dp/B0DBQRVBX8",
+    "best_buy_platform": "Amazon",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Prime ~1\u20133 days",
     "safety_score": 48,
     "safety_checklist": [
       {
@@ -906,7 +899,7 @@
       "e_bike_class": 2
     },
     "vs_baseline": {
-      "price_multiplier": 1.5,
+      "price_multiplier": 1.6,
       "speed_delta_mph": 5,
       "weight_delta_lb": 16.0,
       "brake_upgrade": true,
@@ -935,12 +928,6 @@
         "platform": "manufacturer",
         "url": "https://nakto.com/products/camel-step-thru",
         "price_usd": 469,
-        "shipping_usd": 0
-      },
-      {
-        "platform": "amazon",
-        "url": "https://www.amazon.com/s?k=nakto+camel+electric+bike",
-        "price_usd": 499,
         "shipping_usd": 0
       }
     ],
@@ -990,17 +977,6 @@
         "delivery_note": "Direct ship",
         "rewards_note": null,
         "is_search_url": false
-      },
-      {
-        "platform": "amazon",
-        "platform_label": "Amazon",
-        "url": "https://www.amazon.com/s?k=nakto+camel+electric+bike",
-        "item_price_usd": 499.0,
-        "shipping_usd": 0.0,
-        "landed_usd": 499.0,
-        "delivery_note": "Prime ~1\u20133 days",
-        "rewards_note": "5% back on some Chase/Amazon cards",
-        "is_search_url": true
       }
     ],
     "landed_price_usd": 469.0,
@@ -1131,12 +1107,6 @@
         "url": "https://www.wallkeebike.com/products/wallke-h7-electric-bike",
         "price_usd": 549,
         "shipping_usd": 0
-      },
-      {
-        "platform": "amazon",
-        "url": "https://www.amazon.com/s?k=wallke+h7+electric+bike",
-        "price_usd": 579,
-        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -1180,17 +1150,6 @@
         "delivery_note": "Direct ship",
         "rewards_note": null,
         "is_search_url": false
-      },
-      {
-        "platform": "amazon",
-        "platform_label": "Amazon",
-        "url": "https://www.amazon.com/s?k=wallke+h7+electric+bike",
-        "item_price_usd": 579.0,
-        "shipping_usd": 0.0,
-        "landed_usd": 579.0,
-        "delivery_note": "Prime ~1\u20133 days",
-        "rewards_note": "5% back on some Chase/Amazon cards",
-        "is_search_url": true
       }
     ],
     "landed_price_usd": 549.0,
@@ -1321,12 +1280,6 @@
         "url": "https://lectricebikes.com/products/xp-lite",
         "price_usd": 799,
         "shipping_usd": 0
-      },
-      {
-        "platform": "amazon",
-        "url": "https://www.amazon.com/s?k=lectric+xp+lite",
-        "price_usd": 849,
-        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -1374,17 +1327,6 @@
         "delivery_note": "Direct ship",
         "rewards_note": null,
         "is_search_url": false
-      },
-      {
-        "platform": "amazon",
-        "platform_label": "Amazon",
-        "url": "https://www.amazon.com/s?k=lectric+xp+lite",
-        "item_price_usd": 849.0,
-        "shipping_usd": 0.0,
-        "landed_usd": 849.0,
-        "delivery_note": "Prime ~1\u20133 days",
-        "rewards_note": "5% back on some Chase/Amazon cards",
-        "is_search_url": true
       }
     ],
     "landed_price_usd": 799.0,

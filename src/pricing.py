@@ -12,6 +12,18 @@ DELIVERY_NOTES = {
 }
 
 
+def is_untrusted_buy_url(url: str | None) -> bool:
+    """Search pages and wholesale listings are not acceptable buy links."""
+    if not url:
+        return True
+    lower = url.lower()
+    if "/s?" in lower or "wholesale" in lower or "/w/" in lower:
+        return True
+    if "search" in lower and ("amazon" in lower or "aliexpress" in lower):
+        return True
+    return False
+
+
 def _source_price(src: dict, bike: dict, manual: dict) -> tuple[float, float]:
     """Return (item_price, shipping) for a source entry."""
     item = src.get("price_usd")
@@ -38,7 +50,7 @@ def compute_landed_prices(bike: dict) -> dict:
     for src in bike.get("sources", []):
         platform = src.get("platform", "unknown")
         url = src.get("url")
-        if not url:
+        if not url or is_untrusted_buy_url(url):
             continue
         item, ship = _source_price(src, bike, manual)
         landed = item + ship
@@ -54,17 +66,20 @@ def compute_landed_prices(bike: dict) -> dict:
                 "5% back on some Chase/Amazon cards"
                 if platform == "amazon" else None
             ),
-            "is_search_url": "/s?" in url or "wholesale" in url or "/w/" in url,
+            "is_search_url": False,
         })
 
     if not entries:
         base = bike.get("price_usd") or manual.get("price_usd") or 0
         ship = manual.get("shipping_estimate_usd", 0)
         if base:
+            listed_url = bike.get("url")
+            if is_untrusted_buy_url(listed_url):
+                listed_url = None
             entries.append({
                 "platform": "manual",
                 "platform_label": "Listed",
-                "url": bike.get("url"),
+                "url": listed_url,
                 "item_price_usd": base,
                 "shipping_usd": ship,
                 "landed_usd": base + ship,
