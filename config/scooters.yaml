@@ -106,7 +106,7 @@ scooters:
     ul_certified: true
     sources:
       - platform: manufacturer
-        url: "https://www.niu.com/en-us/product/kqi3-max"
+        url: "https://shop.niu.com/products/niu-kqi3-max-electric-kick-scooter-for-adults"
         price_usd: 999
         shipping_usd: 0
     colors:

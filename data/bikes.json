@@ -7864,7 +7864,7 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://www.niu.com/en-us/product/kqi3-max",
+        "url": "https://shop.niu.com/products/niu-kqi3-max-electric-kick-scooter-for-adults",
         "price_usd": 999,
         "shipping_usd": 0
       }
@@ -7903,7 +7903,11 @@
       "fold_compact": true,
       "ip_rating": "IPX5"
     },
-    "image_url": "https://cdn.sanity.io/images/cd9iwvgl/production/2926859225e2348927354e9469c8494ea8213e77-1200x628.jpg",
+    "image_url": "https://shop.niu.com/cdn/shop/files/KQi3_Max.png?v=1773998080&width=1500",
+    "image_urls": [
+      "https://shop.niu.com/cdn/shop/products/1500_2.jpg?v=1773998080&width=1500",
+      "https://shop.niu.com/cdn/shop/products/1500.jpg?v=1741076118&width=1500"
+    ],
     "battery_voltage_v": 48,
     "battery_capacity_ah": 7.8,
     "battery_range_miles_pas": 31,
@@ -7918,7 +7922,7 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
-        "url": "https://www.niu.com/en-us/product/kqi3-max",
+        "url": "https://shop.niu.com/products/niu-kqi3-max-electric-kick-scooter-for-adults",
         "item_price_usd": 999.0,
         "shipping_usd": 0.0,
         "landed_usd": 999.0,
@@ -7928,7 +7932,7 @@
       }
     ],
     "landed_price_usd": 999.0,
-    "best_buy_url": "https://www.niu.com/en-us/product/kqi3-max",
+    "best_buy_url": "https://shop.niu.com/products/niu-kqi3-max-electric-kick-scooter-for-adults",
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",

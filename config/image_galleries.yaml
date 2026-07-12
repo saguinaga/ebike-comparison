@@ -161,7 +161,10 @@ galleries:
     image_url: "https://segway.imgix.net/catalog/product/cache/d3ec3723470ff918c92e447639eaf984/m/a/max_g2-1_2.png"
 
   niu-kqi3-max:
-    image_url: "https://cdn.sanity.io/images/cd9iwvgl/production/2926859225e2348927354e9469c8494ea8213e77-1200x628.jpg"
+    image_url: "https://shop.niu.com/cdn/shop/files/KQi3_Max.png?v=1773998080&width=1500"
+    image_urls:
+      - "https://shop.niu.com/cdn/shop/products/1500_2.jpg?v=1773998080&width=1500"
+      - "https://shop.niu.com/cdn/shop/products/1500.jpg?v=1741076118&width=1500"
 
   apollo-city-pro:
     image_url: "https://apolloscooters.co/cdn/shop/files/CityPro-new2023_afc1bb3a-4cea-4b53-bfdb-0530456272c0.png?v=1773931277"
