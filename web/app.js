@@ -648,9 +648,9 @@
     const bike = chatContextBike();
     const locNote = locationPromptMessage();
     if (bike) {
-      return `Hey — I'm ${CHAT_AGENT_NAME}. I search our full ride catalog in your browser (no API bill) — specs, comparisons, weight, safety, and legal rules for ${productLabel(bike)}.\n\n${locNote}`;
+      return `Hey — I'm ${CHAT_AGENT_NAME}. I search our full ride catalog in your browser (no API bill) — specs, comparisons, weight, safety, and legal rules for ${productLabel(bike)}. This site was built with Grok, and Grok is often wrong — verify before you buy or ride.\n\n${locNote}`;
     }
-    return `Hey — I'm ${CHAT_AGENT_NAME}. I search our ride catalog locally — try "lightest legal option", "compare Lectric and Rad", or what's safe for a ${config.riderAge || 12}-year-old.\n\n${locNote}`;
+    return `Hey — I'm ${CHAT_AGENT_NAME}. I search our ride catalog locally — try "lightest legal option", "compare Lectric and Rad", or what's safe for a ${config.riderAge || 12}-year-old. Built with Grok; Grok is often wrong — double-check anything important.\n\n${locNote}`;
   }
 
   function chatThinkDelay(ms = 650) {

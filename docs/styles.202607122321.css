@@ -256,6 +256,27 @@ a { color: var(--ocean); }
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
+.hero-grok-notice {
+  margin: 10px auto 0;
+  max-width: 42rem;
+  padding: 8px 12px;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius-md);
+  text-shadow: none;
+}
+
+.hero-grok-notice strong {
+  font-weight: 700;
+}
+
+.grok-disclaimer strong {
+  font-weight: 600;
+}
+
 .quick-links {
   display: flex;
   flex-wrap: wrap;
