@@ -16,27 +16,61 @@ ROOT = Path(__file__).resolve().parents[1]
 UA = "Mozilla/5.0 (compatible; ebike-comparison-link-check/1.0)"
 
 
-def check(url: str, timeout: float) -> tuple[bool, str]:
-    # Windows/Python often lacks CA bundle; verify structure, not TLS chain.
-    ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
+def _ssl_context() -> ssl.SSLContext:
+    # Windows/Python often lacks a CA bundle; check reachability, not TLS chain.
+    try:
+        return ssl._create_unverified_context()
+    except AttributeError:
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        return ctx
+
+
+def _is_transient_error(exc: BaseException) -> bool:
+    msg = str(exc).lower()
+    return any(
+        token in msg
+        for token in (
+            "certificate verify failed",
+            "ssl",
+            "timed out",
+            "timeout",
+            "temporary failure",
+            "connection reset",
+            "connection aborted",
+            "eof occurred",
+        )
+    )
+
+
+def check(url: str, timeout: float, retries: int = 2) -> tuple[bool, str]:
+    ctx = _ssl_context()
     headers = {"User-Agent": UA}
-    for method in ("HEAD", "GET"):
-        try:
-            req = urllib.request.Request(url, method=method, headers=headers)
-            with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
-                if resp.status < 400:
-                    return True, str(resp.status)
-        except urllib.error.HTTPError as exc:
-            if exc.code in (405, 403) and method == "HEAD":
-                continue
-            return False, f"HTTP {exc.code}"
-        except Exception as exc:  # noqa: BLE001
-            if method == "HEAD":
-                continue
-            return False, str(exc)[:80]
-    return False, "unreachable"
+    last_detail = "unreachable"
+
+    for attempt in range(retries + 1):
+        for method in ("HEAD", "GET"):
+            try:
+                req = urllib.request.Request(url, method=method, headers=headers)
+                with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
+                    if resp.status < 400:
+                        return True, str(resp.status)
+            except urllib.error.HTTPError as exc:
+                if exc.code in (405, 403) and method == "HEAD":
+                    continue
+                return False, f"HTTP {exc.code}"
+            except Exception as exc:  # noqa: BLE001
+                last_detail = str(exc)[:80]
+                if method == "HEAD":
+                    continue
+                if _is_transient_error(exc) and attempt < retries:
+                    break
+                return False, last_detail
+        else:
+            return False, last_detail
+
+    return False, last_detail
 
 
 def _is_checkable_url(url: str) -> bool:
@@ -88,8 +122,9 @@ def main() -> int:
     p.add_argument("--timeout", type=float, default=15.0)
     args = p.parse_args()
 
+    urls = collect_urls()
     broken: list[tuple[str, str, str, str]] = []
-    for bid, platform, url in collect_urls():
+    for bid, platform, url in urls:
         ok, detail = check(url, args.timeout)
         mark = "OK" if ok else "BROKEN"
         print(f"{mark} [{detail}] {bid} ({platform}): {url}")
@@ -97,7 +132,7 @@ def main() -> int:
             broken.append((bid, platform, url, detail))
 
     print("---")
-    print(f"Checked {len(collect_urls())} URLs; broken: {len(broken)}")
+    print(f"Checked {len(urls)} URLs; broken: {len(broken)}")
     return 1 if broken else 0
 
 
