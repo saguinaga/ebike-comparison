@@ -7190,7 +7190,7 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://www.segway.com/ninebot-f2/",
+        "url": "https://store.segway.com/ninebot-kickscooter-f2",
         "price_usd": 599,
         "shipping_usd": 0
       }
@@ -7232,7 +7232,7 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
-        "url": "https://www.segway.com/ninebot-f2/",
+        "url": "https://store.segway.com/ninebot-kickscooter-f2",
         "item_price_usd": 599.0,
         "shipping_usd": 0.0,
         "landed_usd": 599.0,
@@ -7242,7 +7242,7 @@
       }
     ],
     "landed_price_usd": 599.0,
-    "best_buy_url": "https://www.segway.com/ninebot-f2/",
+    "best_buy_url": "https://store.segway.com/ninebot-kickscooter-f2",
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
@@ -7526,7 +7526,7 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://www.segway.com/ninebot-max-g2/",
+        "url": "https://store.segway.com/ninebot-kickscooter-max-g2",
         "price_usd": 899,
         "shipping_usd": 0
       }
@@ -7570,7 +7570,7 @@
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
-        "url": "https://www.segway.com/ninebot-max-g2/",
+        "url": "https://store.segway.com/ninebot-kickscooter-max-g2",
         "item_price_usd": 899.0,
         "shipping_usd": 0.0,
         "landed_usd": 899.0,
@@ -7580,7 +7580,7 @@
       }
     ],
     "landed_price_usd": 899.0,
-    "best_buy_url": "https://www.segway.com/ninebot-max-g2/",
+    "best_buy_url": "https://store.segway.com/ninebot-kickscooter-max-g2",
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",

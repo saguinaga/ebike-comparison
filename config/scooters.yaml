@@ -40,7 +40,7 @@ scooters:
     ul_certified: true
     sources:
       - platform: manufacturer
-        url: "https://www.segway.com/ninebot-f2/"
+        url: "https://store.segway.com/ninebot-kickscooter-f2"
         price_usd: 599
         shipping_usd: 0
     colors:
@@ -72,7 +72,7 @@ scooters:
     ul_certified: true
     sources:
       - platform: manufacturer
-        url: "https://www.segway.com/ninebot-max-g2/"
+        url: "https://store.segway.com/ninebot-kickscooter-max-g2"
         price_usd: 899
         shipping_usd: 0
     colors:
