@@ -1,0 +1,38 @@
+{
+  "disclaimer": "Published research cited below. This is not medical advice. Correlation in studies does not prove any single bike causes injury.",
+  "stats": [
+    {
+      "id": "choc-rady-2026",
+      "headline": "Pediatric e-bike trauma linked to speed factors",
+      "detail": "Rady Children's-led study (Feb 2026) examines how speed relates to e-bike injury severity in children and teens, as ED visits continue to rise.",
+      "does_not_mean": "Does not mean every e-bike is dangerous — it highlights speed as a risk factor worth weighing for a 12-year-old.",
+      "source": "CHOC / Rady Children's",
+      "url": "https://care.choc.org/new-rady-childrens-led-e-bike-study-addresses-speed-related-trauma-risk-for-kids-and-teens/",
+      "date": "2026-02-06"
+    },
+    {
+      "id": "cpsc-micromobility",
+      "headline": "CPSC tracks e-bike deaths and injuries nationally",
+      "detail": "CPSC micromobility report (2017–2024) documents deaths, injuries, and hazard patterns across e-bikes and related products.",
+      "does_not_mean": "Does not mean your neighborhood has the same rate — national data sets context, not personal odds.",
+      "source": "U.S. Consumer Product Safety Commission",
+      "url": "https://www.cpsc.gov/s3fs-public/Micromobility_Products-Related_Deaths_Injuries_and_Hazard_Patterns_2017-2024.pdf",
+      "date": "2024"
+    },
+    {
+      "id": "pediatric-rise",
+      "headline": "Children's hospitals report rising pediatric e-bike injuries",
+      "detail": "Multiple pediatric trauma centers report sharp increases in e-bike-related injuries among kids and teens, with many crashes involving vehicles.",
+      "does_not_mean": "Does not mean walking or a pedal bike is risk-free — it means e-bike speed and traffic exposure need planning.",
+      "source": "Children's Hospital Colorado / national pediatric reports",
+      "url": "https://www.huntingtonbeachca.gov/departments/police/about_us/pd_division/alternative_vehicle_safety.php",
+      "date": "2025"
+    }
+  ],
+  "glossary": {
+    "Class 1": "Pedal-assist only, stops assisting at 20 mph",
+    "Class 2": "Throttle allowed, motor stops at 20 mph",
+    "Class 3": "Pedal-assist, stops at 28 mph — illegal to operate under age 16 in California",
+    "ED visit": "Emergency department visit — serious but not the same as a fatality"
+  }
+}

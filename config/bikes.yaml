@@ -1,0 +1,377 @@
+# ~20 solo-commute e-bikes. Manual overrides merge with scraped data.
+bikes:
+  # Tier 1: $300-600
+  - id: amazon-budget-step-1
+    tier: budget
+    brand: Generic
+    model: "26\" Step-Through Budget E-Bike (Amazon)"
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 20
+    motor_w: 350
+    brake_type: rim
+    lights: {front: false, rear: false}
+    sources:
+      - platform: amazon
+        url: "https://www.amazon.com/s?k=electric+bike+26+inch+step+through"
+    colors:
+      - {name: White, family: white}
+    manual:
+      price_usd: 399
+
+  - id: amazon-budget-step-2
+    tier: budget
+    brand: Heybike
+    model: "Mars 2.0"
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 20
+    motor_w: 500
+    brake_type: mechanical_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: amazon
+        url: "https://www.amazon.com/dp/B0CGLZ9QZJ"
+    colors:
+      - {name: White, family: white}
+    manual:
+      price_usd: 549
+
+  - id: aliexpress-budget-folder
+    tier: budget
+    brand: AliExpress
+    model: "350W Folding Step-Through"
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 20
+    motor_w: 350
+    brake_type: rim
+    lights: {front: false, rear: true}
+    sources:
+      - platform: aliexpress
+        url: "https://www.aliexpress.com/w/wholesale-electric-bike-350w.html"
+    colors:
+      - {name: White, family: white}
+    manual:
+      price_usd: 389
+      shipping_estimate_usd: 120
+
+  - id: nakto-camel
+    tier: budget
+    brand: Nakto
+    model: "Camel 26\" Step-Through"
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 20
+    motor_w: 350
+    brake_type: mechanical_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: amazon
+        url: "https://www.amazon.com/s?k=nakto+camel+electric+bike"
+    colors:
+      - {name: White, family: white}
+    manual:
+      price_usd: 499
+
+  - id: wallke-h7
+    tier: budget
+    brand: Wallke
+    model: "H7 26\""
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 20
+    motor_w: 500
+    brake_type: hydraulic_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: amazon
+        url: "https://www.amazon.com/s?k=wallke+h7"
+    colors:
+      - {name: White, family: white}
+    manual:
+      price_usd: 579
+
+  # Tier 2: $600-1200
+  - id: lectric-xp-lite
+    tier: value
+    brand: Lectric
+    model: "XP Lite 2.0"
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 20
+    motor_w: 720
+    brake_type: mechanical_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: manufacturer
+        url: "https://lectricebikes.com/products/xp-lite"
+    colors:
+      - {name: White, family: white}
+    manual:
+      price_usd: 799
+
+  - id: ride1up-portola
+    tier: value
+    brand: Ride1Up
+    model: "Portola"
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 20
+    motor_w: 750
+    brake_type: hydraulic_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: manufacturer
+        url: "https://ride1up.com/product/portola/"
+    colors:
+      - {name: White, family: white}
+    manual:
+      price_usd: 995
+
+  - id: aventon-soltera
+    tier: value
+    brand: Aventon
+    model: "Soltera 2.5"
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 20
+    motor_w: 350
+    brake_type: mechanical_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: manufacturer
+        url: "https://www.aventon.com/products/soltera-ebike"
+    colors:
+      - {name: White, family: white}
+    manual:
+      price_usd: 999
+
+  - id: rad-mission-1
+    tier: value
+    brand: Rad Power
+    model: "RadMission 1"
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 20
+    motor_w: 500
+    brake_type: mechanical_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: manufacturer
+        url: "https://www.radpowerbikes.com/products/radmission-electric-metro-utility-bike"
+    colors:
+      - {name: White, family: white}
+    manual:
+      price_usd: 1199
+
+  - id: velotric-nomad-1
+    tier: value
+    brand: Velotric
+    model: "Nomad 1"
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 20
+    motor_w: 500
+    brake_type: mechanical_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: manufacturer
+        url: "https://www.velotricbike.com/products/velotric-nomad-1"
+    colors:
+      - {name: Sand, family: light_wood}
+    manual:
+      price_usd: 1099
+
+  # Tier 3: $1200-2000
+  - id: lectric-xp-3
+    tier: mid
+    brand: Lectric
+    model: "XP 3.0"
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 20
+    motor_w: 720
+    brake_type: mechanical_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: manufacturer
+        url: "https://lectricebikes.com/products/xp"
+    colors:
+      - {name: White, family: white}
+    manual:
+      price_usd: 1299
+
+  - id: radrunner-plus
+    tier: mid
+    brand: Rad Power
+    model: "RadRunner 3 Plus"
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 20
+    motor_w: 750
+    brake_type: hydraulic_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: manufacturer
+        url: "https://www.radpowerbikes.com/products/radrunner-3-plus-electric-utility-bike"
+    colors:
+      - {name: White, family: white}
+    manual:
+      price_usd: 1599
+
+  - id: ride1up-roadster
+    tier: mid
+    brand: Ride1Up
+    model: "Roadster V3"
+    parser: generic
+    e_bike_class: 1
+    max_speed_mph: 20
+    motor_w: 500
+    brake_type: hydraulic_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: manufacturer
+        url: "https://ride1up.com/product/roadster-v3/"
+    colors:
+      - {name: White, family: white}
+    manual:
+      price_usd: 1495
+
+  - id: aventon-level
+    tier: mid
+    brand: Aventon
+    model: "Level 3"
+    parser: generic
+    e_bike_class: 3
+    max_speed_mph: 28
+    motor_w: 500
+    brake_type: hydraulic_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: manufacturer
+        url: "https://www.aventon.com/products/aventon-level-3-commuter-ebike"
+    colors:
+      - {name: White, family: white}
+    manual:
+      price_usd: 1699
+
+  - id: batch-commuter
+    tier: mid
+    brand: Batch
+    model: "E-Bike Commuter"
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 20
+    motor_w: 500
+    brake_type: mechanical_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: manufacturer
+        url: "https://ridebatch.com/products/batch-e-bike"
+    colors:
+      - {name: Cream, family: light_wood}
+    manual:
+      price_usd: 1399
+
+  # Tier 4: $2000+ Zooz
+  - id: zooz-ultra-ripster
+    tier: premium
+    brand: Zooz
+    model: "Ultra Ripster Gen 2"
+    parser: zooz
+    e_bike_class: 3
+    max_speed_mph: 28
+    motor_w: 750
+    brake_type: hydraulic_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: manufacturer
+        url: "https://zoozbikes.com/products/ultra-ripster-gen-2"
+    colors:
+      - {name: Spark White, family: white}
+    manual:
+      price_usd: 2095
+    friend_recommended: true
+
+  - id: zooz-ultra-urban
+    tier: premium
+    brand: Zooz
+    model: "Ultra Urban"
+    parser: zooz
+    e_bike_class: 3
+    max_speed_mph: 28
+    motor_w: 750
+    brake_type: hydraulic_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: manufacturer
+        url: "https://zoozbikes.com/products/uu-gen4"
+    colors:
+      - {name: Glow Worm, family: light_wood}
+      - {name: Chrome, family: light_wood}
+    manual:
+      price_usd: 2595
+    friend_recommended: true
+
+  - id: zooz-ultra-flex
+    tier: premium
+    brand: Zooz
+    model: "Ultra Flex G2 Low Bar"
+    parser: zooz
+    e_bike_class: 3
+    max_speed_mph: 28
+    motor_w: 750
+    brake_type: hydraulic_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: manufacturer
+        url: "https://zoozbikes.com/products/ultra-flex-g2-low-bar"
+    colors:
+      - {name: Diamond Dust, family: light_wood}
+      - {name: Chrome, family: light_wood}
+    manual:
+      price_usd: 3095
+
+  - id: zooz-ultra-cush
+    tier: premium
+    brand: Zooz
+    model: "Ultra Cush"
+    parser: zooz
+    e_bike_class: 3
+    max_speed_mph: 28
+    motor_w: 750
+    brake_type: hydraulic_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: manufacturer
+        url: "https://zoozbikes.com/products/ultra-cush"
+    colors:
+      - {name: Ultra Cush, family: other}
+    manual:
+      price_usd: 2795
+
+  - id: super73-zg
+    tier: premium
+    brand: Super73
+    model: "ZG"
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 20
+    motor_w: 500
+    brake_type: mechanical_disc
+    lights: {front: true, rear: true}
+    sources:
+      - platform: manufacturer
+        url: "https://super73.com/products/super73-zg"
+    colors:
+      - {name: White, family: white}
+    manual:
+      price_usd: 2195
+
+backups:
+  - id: lectric-one
+    tier: value
+    brand: Lectric
+    model: "ONE"
+    manual: {price_usd: 999}

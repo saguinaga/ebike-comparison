@@ -1,0 +1,51 @@
+{
+  "disclaimer": "Research summary for family discussion — not medical or legal advice. Verify at official sources.",
+  "last_reviewed": "2026-07-12",
+  "california": [
+    {
+      "id": "cvc-21213a",
+      "title": "Under 16 cannot operate Class 3 e-bike",
+      "summary": "A person under 16 years of age shall not operate a class 3 electric bicycle.",
+      "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=21213.",
+      "applies_to_age_12": true,
+      "severity": "illegal"
+    },
+    {
+      "id": "cvc-21212a",
+      "title": "Under 18 helmet required",
+      "summary": "Riders under 18 must wear an ASTM or CPSC approved helmet on streets and bikeways.",
+      "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21212.&lawCode=VEH",
+      "applies_to_age_12": true,
+      "severity": "required"
+    },
+    {
+      "id": "cvc-21201",
+      "title": "Lights and reflectors required at night",
+      "summary": "Bicycles operated at night need a white front light, red rear reflector/light, and side reflectors.",
+      "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21201.&lawCode=VEH",
+      "applies_to_age_12": true,
+      "severity": "required"
+    }
+  ],
+  "huntington_beach": [
+    {
+      "id": "hb-path-10mph",
+      "title": "Beach/park paths: 10 mph max",
+      "summary": "Beach bicycle path and city parks: 10 mph maximum; 5 mph when pedestrians present.",
+      "source": "https://www.huntingtonbeachca.gov/departments/police/about_us/pd_division/alternative_vehicle_safety.php",
+      "severity": "local_limit"
+    },
+    {
+      "id": "hb-training",
+      "title": "HBPD free e-bike training",
+      "summary": "Huntington Beach Police offer free youth e-bike safety training with parent participation.",
+      "source": "https://bit.ly/eBikeRiderTraining",
+      "severity": "recommended"
+    }
+  ],
+  "classes": {
+    "1": {"max_mph": 20, "legal_under_16": true, "description": "Pedal-assist, motor stops at 20 mph"},
+    "2": {"max_mph": 20, "legal_under_16": true, "description": "Throttle-assisted, motor stops at 20 mph"},
+    "3": {"max_mph": 28, "legal_under_16": false, "description": "Pedal-assist, motor stops at 28 mph — illegal for under 16"}
+  }
+}

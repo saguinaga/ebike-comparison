@@ -1,0 +1,2481 @@
+[
+  {
+    "id": "firmstrong-urban-lady",
+    "brand": "Firmstrong",
+    "model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+    "url": "https://www.firmstrong.com/collections/all-bikes-men-women/products/firmstrong-urban-lady-single-speed-womens-26-beach-cruiser-bike?variant=743152903",
+    "variant_id": "743152903",
+    "variant_name": "Vanilla",
+    "price_usd": 289,
+    "frame_style": "step_through",
+    "wheel_size_in": 26,
+    "brake_type": "coaster",
+    "brakes_front": false,
+    "brakes_rear": true,
+    "gears": 1,
+    "weight_lb": 32.5,
+    "tire_width_in": 2.125,
+    "fit_height_min_in": 62,
+    "fit_height_max_in": 71,
+    "cruise_speed_mph": "3-15",
+    "peak_speed_mph": "20-28",
+    "motor_w": 0,
+    "max_speed_mph": 15,
+    "e_bike_class": null,
+    "lights": {
+      "front": false,
+      "rear": false
+    },
+    "colors": [
+      {
+        "name": "Vanilla",
+        "family": "light_wood"
+      },
+      {
+        "name": "White",
+        "family": "white"
+      }
+    ],
+    "is_baseline": true,
+    "tier": "baseline",
+    "field_confidence": {
+      "weight_lb": 0.85
+    }
+  },
+  {
+    "id": "amazon-budget-step-1",
+    "tier": "budget",
+    "brand": "Generic",
+    "model": "26\" Step-Through Budget E-Bike (Amazon)",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 20,
+    "motor_w": 350,
+    "brake_type": "rim",
+    "lights": {
+      "front": false,
+      "rear": false
+    },
+    "sources": [
+      {
+        "platform": "amazon",
+        "url": "https://www.amazon.com/s?k=electric+bike+26+inch+step+through"
+      }
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "family": "white"
+      }
+    ],
+    "price_usd": 399,
+    "price_sources": [
+      {
+        "platform": "amazon",
+        "url": "https://www.amazon.com/s?k=electric+bike+26+inch+step+through",
+        "item_price_usd": 399,
+        "shipping_usd": 0,
+        "landed_usd": 399,
+        "delivery_note": "Prime ~1-3 days",
+        "rewards_note": "Amazon 5% category cards may apply"
+      }
+    ],
+    "landed_price_usd": 399,
+    "safety_score": 18,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "rim",
+        "ok": false
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Missing integrated lights \u2014 add before night rides (CVC \u00a721201)",
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        },
+        {
+          "type": "warning",
+          "text": "Add lights for night"
+        }
+      ],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 1.4,
+      "speed_delta_mph": 5,
+      "brake_upgrade": false,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "amazon-budget-step-2",
+    "tier": "budget",
+    "brand": "Heybike",
+    "model": "Mars 2.0",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 20,
+    "motor_w": 500,
+    "brake_type": "mechanical_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "amazon",
+        "url": "https://www.amazon.com/dp/B0CGLZ9QZJ"
+      }
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "family": "white"
+      }
+    ],
+    "price_usd": 549,
+    "price_sources": [
+      {
+        "platform": "amazon",
+        "url": "https://www.amazon.com/dp/B0CGLZ9QZJ",
+        "item_price_usd": 549,
+        "shipping_usd": 0,
+        "landed_usd": 549,
+        "delivery_note": "Prime ~1-3 days",
+        "rewards_note": "Amazon 5% category cards may apply"
+      }
+    ],
+    "landed_price_usd": 549,
+    "safety_score": 48,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "mechanical_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 1.9,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "aliexpress-budget-folder",
+    "tier": "budget",
+    "brand": "AliExpress",
+    "model": "350W Folding Step-Through",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 20,
+    "motor_w": 350,
+    "brake_type": "rim",
+    "lights": {
+      "front": false,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "aliexpress",
+        "url": "https://www.aliexpress.com/w/wholesale-electric-bike-350w.html"
+      }
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "family": "white"
+      }
+    ],
+    "price_usd": 389,
+    "shipping_estimate_usd": 120,
+    "price_sources": [
+      {
+        "platform": "aliexpress",
+        "url": "https://www.aliexpress.com/w/wholesale-electric-bike-350w.html",
+        "item_price_usd": 389,
+        "shipping_usd": 120,
+        "landed_usd": 509,
+        "delivery_note": "2-4 weeks",
+        "rewards_note": null
+      }
+    ],
+    "landed_price_usd": 509,
+    "safety_score": 28,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "rim",
+        "ok": false
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Missing integrated lights \u2014 add before night rides (CVC \u00a721201)",
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        },
+        {
+          "type": "warning",
+          "text": "Add lights for night"
+        }
+      ],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 1.8,
+      "speed_delta_mph": 5,
+      "brake_upgrade": false,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "nakto-camel",
+    "tier": "budget",
+    "brand": "Nakto",
+    "model": "Camel 26\" Step-Through",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 20,
+    "motor_w": 350,
+    "brake_type": "mechanical_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "amazon",
+        "url": "https://www.amazon.com/s?k=nakto+camel+electric+bike"
+      }
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "family": "white"
+      }
+    ],
+    "price_usd": 499,
+    "price_sources": [
+      {
+        "platform": "amazon",
+        "url": "https://www.amazon.com/s?k=nakto+camel+electric+bike",
+        "item_price_usd": 499,
+        "shipping_usd": 0,
+        "landed_usd": 499,
+        "delivery_note": "Prime ~1-3 days",
+        "rewards_note": "Amazon 5% category cards may apply"
+      }
+    ],
+    "landed_price_usd": 499,
+    "safety_score": 48,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "mechanical_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 1.7,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "wallke-h7",
+    "tier": "budget",
+    "brand": "Wallke",
+    "model": "H7 26\"",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 20,
+    "motor_w": 500,
+    "brake_type": "hydraulic_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "amazon",
+        "url": "https://www.amazon.com/s?k=wallke+h7"
+      }
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "family": "white"
+      }
+    ],
+    "price_usd": 579,
+    "price_sources": [
+      {
+        "platform": "amazon",
+        "url": "https://www.amazon.com/s?k=wallke+h7",
+        "item_price_usd": 579,
+        "shipping_usd": 0,
+        "landed_usd": 579,
+        "delivery_note": "Prime ~1-3 days",
+        "rewards_note": "Amazon 5% category cards may apply"
+      }
+    ],
+    "landed_price_usd": 579,
+    "safety_score": 55,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "hydraulic_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 2.0,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "lectric-xp-lite",
+    "tier": "value",
+    "brand": "Lectric",
+    "model": "XP Lite 2.0",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 20,
+    "motor_w": 720,
+    "brake_type": "mechanical_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://lectricebikes.com/products/xp-lite"
+      }
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "family": "white"
+      }
+    ],
+    "price_usd": 799,
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://lectricebikes.com/products/xp-lite",
+        "item_price_usd": 799,
+        "shipping_usd": 0,
+        "landed_usd": 799,
+        "delivery_note": "Direct ship",
+        "rewards_note": null
+      }
+    ],
+    "landed_price_usd": 799,
+    "safety_score": 48,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "mechanical_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 2.8,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "ride1up-portola",
+    "tier": "value",
+    "brand": "Ride1Up",
+    "model": "Portola",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 20,
+    "motor_w": 750,
+    "brake_type": "hydraulic_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://ride1up.com/product/portola/"
+      }
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "family": "white"
+      }
+    ],
+    "field_confidence": {
+      "price_usd": 0.9
+    },
+    "price_usd": 995,
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://ride1up.com/product/portola/",
+        "item_price_usd": 995,
+        "shipping_usd": 0,
+        "landed_usd": 995,
+        "delivery_note": "Direct ship",
+        "rewards_note": null
+      }
+    ],
+    "landed_price_usd": 995,
+    "safety_score": 55,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "hydraulic_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 3.4,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "aventon-soltera",
+    "tier": "value",
+    "brand": "Aventon",
+    "model": "Soltera 2.5",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 20,
+    "motor_w": 350,
+    "brake_type": "mechanical_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://www.aventon.com/products/soltera-ebike"
+      }
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "family": "white"
+      }
+    ],
+    "field_confidence": {
+      "price_usd": 0.9
+    },
+    "price_usd": 999,
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://www.aventon.com/products/soltera-ebike",
+        "item_price_usd": 999,
+        "shipping_usd": 0,
+        "landed_usd": 999,
+        "delivery_note": "Direct ship",
+        "rewards_note": null
+      }
+    ],
+    "landed_price_usd": 999,
+    "safety_score": 48,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "mechanical_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 3.5,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "rad-mission-1",
+    "tier": "value",
+    "brand": "Rad Power",
+    "model": "RadMission 1",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 20,
+    "motor_w": 500,
+    "brake_type": "mechanical_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://www.radpowerbikes.com/products/radmission-electric-metro-utility-bike"
+      }
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "family": "white"
+      }
+    ],
+    "price_usd": 1199,
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://www.radpowerbikes.com/products/radmission-electric-metro-utility-bike",
+        "item_price_usd": 1199,
+        "shipping_usd": 0,
+        "landed_usd": 1199,
+        "delivery_note": "Direct ship",
+        "rewards_note": null
+      }
+    ],
+    "landed_price_usd": 1199,
+    "safety_score": 48,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "mechanical_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 4.1,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "velotric-nomad-1",
+    "tier": "value",
+    "brand": "Velotric",
+    "model": "Nomad 1",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 20,
+    "motor_w": 500,
+    "brake_type": "mechanical_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://www.velotricbike.com/products/velotric-nomad-1"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Sand",
+        "family": "light_wood"
+      }
+    ],
+    "field_confidence": {
+      "price_usd": 0.9
+    },
+    "price_usd": 1099,
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://www.velotricbike.com/products/velotric-nomad-1",
+        "item_price_usd": 1099,
+        "shipping_usd": 0,
+        "landed_usd": 1099,
+        "delivery_note": "Direct ship",
+        "rewards_note": null
+      }
+    ],
+    "landed_price_usd": 1099,
+    "safety_score": 48,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "mechanical_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 3.8,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "lectric-xp-3",
+    "tier": "mid",
+    "brand": "Lectric",
+    "model": "XP 3.0",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 20,
+    "motor_w": 720,
+    "brake_type": "mechanical_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://lectricebikes.com/products/xp"
+      }
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "family": "white"
+      }
+    ],
+    "price_usd": 1299,
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://lectricebikes.com/products/xp",
+        "item_price_usd": 1299,
+        "shipping_usd": 0,
+        "landed_usd": 1299,
+        "delivery_note": "Direct ship",
+        "rewards_note": null
+      }
+    ],
+    "landed_price_usd": 1299,
+    "safety_score": 48,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "mechanical_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 4.5,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "radrunner-plus",
+    "tier": "mid",
+    "brand": "Rad Power",
+    "model": "RadRunner 3 Plus",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 20,
+    "motor_w": 750,
+    "brake_type": "hydraulic_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://www.radpowerbikes.com/products/radrunner-3-plus-electric-utility-bike"
+      }
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "family": "white"
+      }
+    ],
+    "price_usd": 1599,
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://www.radpowerbikes.com/products/radrunner-3-plus-electric-utility-bike",
+        "item_price_usd": 1599,
+        "shipping_usd": 0,
+        "landed_usd": 1599,
+        "delivery_note": "Direct ship",
+        "rewards_note": null
+      }
+    ],
+    "landed_price_usd": 1599,
+    "safety_score": 55,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "hydraulic_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 5.5,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "ride1up-roadster",
+    "tier": "mid",
+    "brand": "Ride1Up",
+    "model": "Roadster V3",
+    "parser": "generic",
+    "e_bike_class": 1,
+    "max_speed_mph": 20,
+    "motor_w": 500,
+    "brake_type": "hydraulic_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://ride1up.com/product/roadster-v3/"
+      }
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "family": "white"
+      }
+    ],
+    "field_confidence": {
+      "price_usd": 0.9
+    },
+    "price_usd": 1495,
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://ride1up.com/product/roadster-v3/",
+        "item_price_usd": 1495,
+        "shipping_usd": 0,
+        "landed_usd": 1495,
+        "delivery_note": "Direct ship",
+        "rewards_note": null
+      }
+    ],
+    "landed_price_usd": 1495,
+    "safety_score": 55,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "hydraulic_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 1
+    },
+    "vs_baseline": {
+      "price_multiplier": 5.2,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "aventon-level",
+    "tier": "mid",
+    "brand": "Aventon",
+    "model": "Level 3",
+    "parser": "generic",
+    "e_bike_class": 3,
+    "max_speed_mph": 28,
+    "motor_w": 500,
+    "brake_type": "hydraulic_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://www.aventon.com/products/aventon-level-3-commuter-ebike"
+      }
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "family": "white"
+      }
+    ],
+    "price_usd": 1699,
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://www.aventon.com/products/aventon-level-3-commuter-ebike",
+        "item_price_usd": 1699,
+        "shipping_usd": 0,
+        "landed_usd": 1699,
+        "delivery_note": "Direct ship",
+        "rewards_note": null
+      }
+    ],
+    "landed_price_usd": 1699,
+    "safety_score": 50,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "hydraulic_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": false
+      }
+    ],
+    "legal": {
+      "legal_for_age": false,
+      "issues": [
+        "Class 3 \u2014 illegal for under 16 in California (CVC \u00a721213)",
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "danger",
+          "text": "Illegal at age 12"
+        },
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 3
+    },
+    "vs_baseline": {
+      "price_multiplier": 5.9,
+      "speed_delta_mph": 13,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "batch-commuter",
+    "tier": "mid",
+    "brand": "Batch",
+    "model": "E-Bike Commuter",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 20,
+    "motor_w": 500,
+    "brake_type": "mechanical_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://ridebatch.com/products/batch-e-bike"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Cream",
+        "family": "light_wood"
+      }
+    ],
+    "price_usd": 1399,
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://ridebatch.com/products/batch-e-bike",
+        "item_price_usd": 1399,
+        "shipping_usd": 0,
+        "landed_usd": 1399,
+        "delivery_note": "Direct ship",
+        "rewards_note": null
+      }
+    ],
+    "landed_price_usd": 1399,
+    "safety_score": 48,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "mechanical_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 4.8,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "zooz-ultra-ripster",
+    "tier": "premium",
+    "brand": "Zooz",
+    "model": "Ultra Ripster - Gen 2",
+    "parser": "zooz",
+    "e_bike_class": 3,
+    "max_speed_mph": 28,
+    "motor_w": 750,
+    "brake_type": "hydraulic_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://zoozbikes.com/products/ultra-ripster-gen-2"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Spark White",
+        "family": "white"
+      }
+    ],
+    "friend_recommended": true,
+    "field_confidence": {
+      "price_usd": 0.9,
+      "motor_w": 0.7,
+      "brake_type": 0.6
+    },
+    "price_usd": 2095,
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://zoozbikes.com/products/ultra-ripster-gen-2",
+        "item_price_usd": 2095,
+        "shipping_usd": 0,
+        "landed_usd": 2095,
+        "delivery_note": "Direct ship",
+        "rewards_note": null
+      }
+    ],
+    "landed_price_usd": 2095,
+    "safety_score": 50,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "hydraulic_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": false
+      }
+    ],
+    "legal": {
+      "legal_for_age": false,
+      "issues": [
+        "Class 3 \u2014 illegal for under 16 in California (CVC \u00a721213)",
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "danger",
+          "text": "Illegal at age 12"
+        },
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 3
+    },
+    "vs_baseline": {
+      "price_multiplier": 7.2,
+      "speed_delta_mph": 13,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    }
+  },
+  {
+    "id": "zooz-ultra-urban",
+    "tier": "premium",
+    "brand": "Zooz",
+    "model": "Ultra Urban",
+    "parser": "zooz",
+    "e_bike_class": 3,
+    "max_speed_mph": 28,
+    "motor_w": 750,
+    "brake_type": "hydraulic_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://zoozbikes.com/products/uu-gen4"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Glow Worm",
+        "family": "light_wood"
+      },
+      {
+        "name": "Chrome",
+        "family": "light_wood"
+      }
+    ],
+    "friend_recommended": true,
+    "field_confidence": {
+      "price_usd": 0.9,
+      "motor_w": 0.7,
+      "brake_type": 0.6
+    },
+    "price_usd": 2595,
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://zoozbikes.com/products/uu-gen4",
+        "item_price_usd": 2595,
+        "shipping_usd": 0,
+        "landed_usd": 2595,
+        "delivery_note": "Direct ship",
+        "rewards_note": null
+      }
+    ],
+    "landed_price_usd": 2595,
+    "safety_score": 50,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "hydraulic_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": false
+      }
+    ],
+    "legal": {
+      "legal_for_age": false,
+      "issues": [
+        "Class 3 \u2014 illegal for under 16 in California (CVC \u00a721213)",
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "danger",
+          "text": "Illegal at age 12"
+        },
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 3
+    },
+    "vs_baseline": {
+      "price_multiplier": 9.0,
+      "speed_delta_mph": 13,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    }
+  },
+  {
+    "id": "zooz-ultra-flex",
+    "tier": "premium",
+    "brand": "Zooz",
+    "model": "Ultra Flex G2 Low Bar",
+    "parser": "zooz",
+    "e_bike_class": 3,
+    "max_speed_mph": 28,
+    "motor_w": 750,
+    "brake_type": "hydraulic_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://zoozbikes.com/products/ultra-flex-g2-low-bar"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Diamond Dust",
+        "family": "light_wood"
+      },
+      {
+        "name": "Chrome",
+        "family": "light_wood"
+      }
+    ],
+    "field_confidence": {
+      "price_usd": 0.9,
+      "motor_w": 0.7,
+      "brake_type": 0.6
+    },
+    "price_usd": 3095,
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://zoozbikes.com/products/ultra-flex-g2-low-bar",
+        "item_price_usd": 3095,
+        "shipping_usd": 0,
+        "landed_usd": 3095,
+        "delivery_note": "Direct ship",
+        "rewards_note": null
+      }
+    ],
+    "landed_price_usd": 3095,
+    "safety_score": 50,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "hydraulic_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": false
+      }
+    ],
+    "legal": {
+      "legal_for_age": false,
+      "issues": [
+        "Class 3 \u2014 illegal for under 16 in California (CVC \u00a721213)",
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "danger",
+          "text": "Illegal at age 12"
+        },
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 3
+    },
+    "vs_baseline": {
+      "price_multiplier": 10.7,
+      "speed_delta_mph": 13,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "zooz-ultra-cush",
+    "tier": "premium",
+    "brand": "Zooz",
+    "model": "Ultra Cush",
+    "parser": "zooz",
+    "e_bike_class": 3,
+    "max_speed_mph": 28,
+    "motor_w": 750,
+    "brake_type": "hydraulic_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://zoozbikes.com/products/ultra-cush"
+      }
+    ],
+    "colors": [
+      {
+        "name": "Ultra Cush",
+        "family": "other"
+      }
+    ],
+    "field_confidence": {
+      "price_usd": 0.9,
+      "motor_w": 0.7,
+      "brake_type": 0.6
+    },
+    "price_usd": 2795,
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://zoozbikes.com/products/ultra-cush",
+        "item_price_usd": 2795,
+        "shipping_usd": 0,
+        "landed_usd": 2795,
+        "delivery_note": "Direct ship",
+        "rewards_note": null
+      }
+    ],
+    "landed_price_usd": 2795,
+    "safety_score": 50,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "hydraulic_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": false
+      }
+    ],
+    "legal": {
+      "legal_for_age": false,
+      "issues": [
+        "Class 3 \u2014 illegal for under 16 in California (CVC \u00a721213)",
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "danger",
+          "text": "Illegal at age 12"
+        },
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 3
+    },
+    "vs_baseline": {
+      "price_multiplier": 9.7,
+      "speed_delta_mph": 13,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "super73-zg",
+    "tier": "premium",
+    "brand": "Super73",
+    "model": "ZG",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 20,
+    "motor_w": 500,
+    "brake_type": "mechanical_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://super73.com/products/super73-zg"
+      }
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "family": "white"
+      }
+    ],
+    "price_usd": 2195,
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://super73.com/products/super73-zg",
+        "item_price_usd": 2195,
+        "shipping_usd": 0,
+        "landed_usd": 2195,
+        "delivery_note": "Direct ship",
+        "rewards_note": null
+      }
+    ],
+    "landed_price_usd": 2195,
+    "safety_score": 48,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "label": "Brake type",
+        "value": "mechanical_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "label": "Tire width \u2265 2.0\"",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [
+        {
+          "type": "info",
+          "text": "Helmet required (under 18)"
+        }
+      ],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 7.6,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  }
+]

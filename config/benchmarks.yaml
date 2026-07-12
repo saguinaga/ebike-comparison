@@ -1,0 +1,40 @@
+baseline:
+  id: firmstrong-urban-lady
+  brand: Firmstrong
+  model: "Urban Lady Single Speed - Women's 26\" Beach Cruiser"
+  url: "https://www.firmstrong.com/collections/all-bikes-men-women/products/firmstrong-urban-lady-single-speed-womens-26-beach-cruiser-bike?variant=743152903"
+  variant_id: "743152903"
+  variant_name: Vanilla
+  price_usd: 289
+  frame_style: step_through
+  wheel_size_in: 26
+  brake_type: coaster
+  brakes_front: false
+  brakes_rear: true
+  gears: 1
+  weight_lb: 32.5
+  tire_width_in: 2.125
+  fit_height_min_in: 62
+  fit_height_max_in: 71
+  cruise_speed_mph: "3-15"
+  peak_speed_mph: "20-28"
+  motor_w: 0
+  max_speed_mph: 15
+  e_bike_class: null
+  lights:
+    front: false
+    rear: false
+  colors:
+    - name: Vanilla
+      family: light_wood
+    - name: White
+      family: white
+
+rider:
+  age: 12
+  height_in: 62
+  zip: "92646"
+  city: "Huntington Beach"
+  school: "Sowers Middle School"
+
+main_site_url: "https://www.seanaguinaga.com"
