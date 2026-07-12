@@ -7,7 +7,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>E-Bike &amp; Scooter Comparison · Surf City HB</title>
-  <link rel="stylesheet" href="styles.{{ asset_version }}.css">
+  <link rel="stylesheet" href="styles.css?v={{ asset_version }}">
   <script>
     (function () {
       var BUILD = "{{ asset_version }}";
@@ -21,6 +21,28 @@
           }
         }
       } catch (_) {}
+    })();
+  </script>
+  <script>
+    (function () {
+      if (location.search.indexOf("_recover=") !== -1) return;
+      function recover() {
+        try {
+          if (sessionStorage.getItem("ebike_asset_recover")) return;
+          sessionStorage.setItem("ebike_asset_recover", "1");
+        } catch (_) {}
+        var url = new URL(location.href);
+        url.searchParams.set("_recover", String(Date.now()));
+        location.replace(url.toString());
+      }
+      window.addEventListener(
+        "error",
+        function (e) {
+          var t = e.target;
+          if (t && (t.tagName === "SCRIPT" || t.tagName === "LINK")) recover();
+        },
+        true
+      );
     })();
   </script>
 </head>
@@ -493,6 +515,6 @@
   <script id="legal-rules-data" type="application/json">{{ legal_json | safe }}</script>
   <script id="safety-data" type="application/json">{{ safety_json | safe }}</script>
   <script id="faq-data" type="application/json">{{ faq_json | safe }}</script>
-  <script src="app.{{ asset_version }}.js" defer></script>
+  <script src="app.js?v={{ asset_version }}" defer></script>
 </body>
 </html>
