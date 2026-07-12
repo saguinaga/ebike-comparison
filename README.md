@@ -2,7 +2,7 @@
 
 Interactive dashboard comparing ~20 solo-commute e-bikes for a 5'2" 12-year-old in Huntington Beach, CA 92646.
 
-**Live site:** https://seanh2o.github.io/ebike-comparison/
+**Live site:** https://saguinaga.github.io/ebike-comparison/
 
 ## Quick start
 
