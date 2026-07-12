@@ -24,6 +24,15 @@ def cmd_build(args):
     print(f"Built → docs/index.html ({args.min_bikes}+ e-bikes required)")
 
 
+def cmd_deploy(args):
+    src = ROOT / "docs"
+    dest = Path(args.dest).expanduser().resolve()
+    if not src.is_dir():
+        raise SystemExit("Run `python run.py build` first.")
+    shutil.copytree(src, dest, dirs_exist_ok=True)
+    print(f"Deployed → {dest}")
+
+
 def cmd_all(args):
     cmd_scrape(args)
     if not hasattr(args, "min_bikes"):
@@ -43,6 +52,14 @@ def main():
     bp = sub.add_parser("build")
     bp.add_argument("--min-bikes", type=int, default=18)
     bp.set_defaults(func=cmd_build)
+
+    dp = sub.add_parser("deploy", help="Copy docs/ to seanh2o live folder")
+    dp.add_argument(
+        "--dest",
+        default=str(Path.home() / "seanh2o" / "ebike-comparison"),
+        help="Live site folder (default: ~/seanh2o/ebike-comparison)",
+    )
+    dp.set_defaults(func=cmd_deploy)
 
     args = p.parse_args()
     args.func(args)
