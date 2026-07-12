@@ -10,6 +10,7 @@ from .compare_pedal import compare_to_baseline
 from .features import build_feature_checklist, format_features_summary
 from .legal_compliance import evaluate_bike
 from .parsers import PARSERS
+from .price_sync import apply_scraped_prices
 from .pricing import compute_landed_prices
 from .retail import augment_sources, load_retail_config
 from .safety_score import build_checklist, compute_safety_score
@@ -174,6 +175,7 @@ def parse_all(root: Path, scrape_live: bool = True) -> list:
             entry.get("sources", []),
             retail_cfg,
         )
+        apply_scraped_prices(bike, entry.get("sources", []))
         bike.update(compute_landed_prices({**entry, **bike, "sources": bike["sources"]}))
         bike["safety_score"] = compute_safety_score(bike)
         bike["safety_checklist"] = build_checklist(bike)

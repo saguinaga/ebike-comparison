@@ -18,19 +18,19 @@ bikes:
       image_url: "https://nakto.com/cdn/shop/files/7ffd919d332e404348a14ea30d0bbf23_cbe3c91b-0750-404a-bb90-971ed8fd5b8e.png?v=1748420526"
 
   - id: amazon-budget-step-2
-    tier: budget
+    tier: value
     brand: Heybike
     model: "Mars 2.0"
     parser: generic
     e_bike_class: 2
     max_speed_mph: 20
-    motor_w: 500
+    motor_w: 750
     brake_type: mechanical_disc
     lights: {front: true, rear: true}
     sources:
       - platform: manufacturer
         url: "https://www.heybike.com/products/mars-2-0"
-        price_usd: 599
+        price_usd: 999
         shipping_usd: 0
     colors:
       - {name: White, family: white}
@@ -50,7 +50,7 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://www.iscooterglobal.eu/products/u4-low-step-through-foldable-electric-bike"
-        price_usd: 499
+        price_usd: 549
         shipping_usd: 0
     colors:
       - {name: White, family: white}
@@ -71,7 +71,7 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://nakto.com/products/camel-step-thru"
-        price_usd: 469
+        price_usd: 795
         shipping_usd: 0
     colors:
       - {name: White, family: white}
@@ -79,7 +79,7 @@ bikes:
       image_url: "https://nakto.com/cdn/shop/files/7ffd919d332e404348a14ea30d0bbf23_cbe3c91b-0750-404a-bb90-971ed8fd5b8e.png?v=1748420526"
 
   - id: wallke-h7
-    tier: budget
+    tier: value
     brand: Wallke
     model: "H7 26\""
     parser: generic
@@ -91,7 +91,7 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://wallkeebike.com/products/wallke-h7-step-thru"
-        price_usd: 549
+        price_usd: 1449
         shipping_usd: 0
     colors:
       - {name: White, family: white}
@@ -112,7 +112,7 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://lectricebikes.com/products/xp-lite-lectric-blue-long-range-ebike"
-        price_usd: 799
+        price_usd: 999
         shipping_usd: 0
     colors:
       - {name: White, family: white}
@@ -132,7 +132,7 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://ride1up.com/product/portola/"
-        price_usd: 995
+        price_usd: 945
         shipping_usd: 0
     colors:
       - {name: White, family: white}
@@ -150,7 +150,7 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://www.aventon.com/products/soltera-2-5-ebike"
-        price_usd: 999
+        price_usd: 1199
         shipping_usd: 0
     colors:
       - {name: White, family: white}
@@ -174,7 +174,7 @@ bikes:
       image_url: "https://lectricebikes.com/cdn/shop/files/Commuter_-_June_2026_16e79811-eb36-4547-85f7-44c19b9bf9f8.webp?v=1782513926"
 
   - id: velotric-nomad-1
-    tier: value
+    tier: mid
     brand: Velotric
     model: "Nomad 1"
     parser: generic
@@ -186,7 +186,7 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://www.velotricbike.com/products/velotric-nomad-1"
-        price_usd: 1099
+        price_usd: 1899
         shipping_usd: 0
     colors:
       - {name: Sand, family: sand}
@@ -225,7 +225,7 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://www.radpowerbikes.com/products/radrunner-plus-electric-cargo-utility-bike"
-        price_usd: 1599
+        price_usd: 1799
         shipping_usd: 0
     colors:
       - {name: White, family: white}
@@ -283,7 +283,7 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://www.batchbicycles.com/ecb-3/"
-        price_usd: 1399
+        price_usd: 1600
         shipping_usd: 0
     colors:
       - {name: Cream, family: light_wood}
@@ -304,7 +304,7 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://zoozbikes.com/products/ultra-ripster-gen-2"
-        price_usd: 2095
+        price_usd: 2195
         shipping_usd: 0
     colors:
       - {name: Spark White, family: white}
@@ -343,7 +343,7 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://zoozbikes.com/products/ultra-flex-g2-low-bar"
-        price_usd: 3095
+        price_usd: 3195
         shipping_usd: 0
     colors:
       - {name: Diamond Dust, family: light_wood}
@@ -434,7 +434,7 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://super73.com/products/super73-z-miami-core-legacy"
-        price_usd: 2195
+        price_usd: 2445
         shipping_usd: 0
     colors:
       - {name: White, family: white}
