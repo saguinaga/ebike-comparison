@@ -127,6 +127,8 @@ def build(root: Path, min_bikes: int = 18) -> None:
     bikes_for_js = [bike_to_js(b) for b in e_bikes]
     all_bikes_for_js = [bike_to_js(b) for b in all_bikes]
 
+    asset_version = datetime.now(timezone.utc).strftime("%Y%m%d%H%M")
+
     env = Environment(loader=FileSystemLoader(root / "web" / "templates"), autoescape=True)
     env.filters["format_brake"] = format_brake
     env.filters["format_usd"] = format_usd
@@ -141,7 +143,7 @@ def build(root: Path, min_bikes: int = 18) -> None:
         safety=safety,
         main_site_url=main_site,
         generated_date=datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-        asset_version=datetime.now(timezone.utc).strftime("%Y%m%d%H%M"),
+        asset_version=asset_version,
         ebike_count=ebike_count,
         scooter_count=scooter_count,
         bikes_json=json.dumps(bikes_for_js),
@@ -154,5 +156,8 @@ def build(root: Path, min_bikes: int = 18) -> None:
 
     for asset in ("styles.css", "app.js"):
         src = root / "web" / asset
-        if src.exists():
-            shutil.copy(src, docs / asset)
+        if not src.exists():
+            continue
+        shutil.copy(src, docs / asset)
+        stem, ext = asset.rsplit(".", 1)
+        shutil.copy(src, docs / f"{stem}.{asset_version}.{ext}")

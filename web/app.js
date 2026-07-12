@@ -995,7 +995,7 @@
   }
 
   function renderCompareSlot(slotEl, bike) {
-    if (!slotEl || !bike) return;
+    if (!slotEl || !bike) return false;
     slotEl.className = "compare-slot";
     slotEl.dataset.id = bike.id;
     const gallery = bike.image_gallery?.length ? bike.image_gallery : bike.image_src ? [bike.image_src] : [];
@@ -1021,6 +1021,7 @@
       ${vs ? `<div>vs baseline: <strong>${vs.price_multiplier}×</strong> · ${vs.speed_delta_mph >= 0 ? "+" : ""}${vs.speed_delta_mph} mph</div>` : ""}
       <div class="buy-links">${buyLink}</div>
     `;
+    return true;
   }
 
   function openCompareDrawer() {
@@ -1060,7 +1061,7 @@
     const matrixEl = document.getElementById("compareMatrix");
     const wrapEl = document.getElementById("compareMatrixWrap");
     if (!matrixEl || !wrapEl || selected.length < 2) {
-      wrapEl.hidden = true;
+      if (wrapEl) wrapEl.hidden = true;
       return;
     }
     wrapEl.hidden = false;
@@ -1178,7 +1179,7 @@
       } else {
         selected.forEach((bike) => {
           const slot = document.createElement("div");
-          renderCompareSlot(slot, bike);
+          if (!renderCompareSlot(slot, bike)) return;
           slotsContainer.appendChild(slot);
         });
       }
@@ -1521,11 +1522,15 @@
     bikeMap[b.id] = enriched;
     appendCustomBikeCard(enriched);
   });
-  applyBaselineToAll();
-  renderBaselinePanel();
-  applyCardFilters();
-  applyTableFilters();
-  updateComparePanel();
-  renderCharts();
-  handleRoute();
+  try {
+    applyBaselineToAll();
+    renderBaselinePanel();
+    applyCardFilters();
+    applyTableFilters();
+    updateComparePanel();
+    renderCharts();
+    handleRoute();
+  } catch (err) {
+    console.error("E-bike comparison init failed:", err);
+  }
 })();
