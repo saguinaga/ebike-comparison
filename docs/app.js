@@ -81,7 +81,13 @@
   const tableColorFilter = document.getElementById("tableColorFilter");
 
   let compareIds = [];
+  let compareDrawerOpen = false;
   const MAX_COMPARE = 3;
+
+  const compareDrawer = document.getElementById("compareDrawer");
+  const compareFab = document.getElementById("btnCompareFab");
+  const compareFabCount = document.getElementById("compareFabCount");
+  const heroCompareLink = document.getElementById("heroCompareLink");
 
   let hiddenIds = JSON.parse(localStorage.getItem(STORAGE.hidden) || "[]");
   let customBikes = JSON.parse(localStorage.getItem(STORAGE.custom) || "[]");
@@ -992,12 +998,9 @@
   }
 
   function renderCompareSlot(slotEl, bike) {
-    if (!bike) {
-      slotEl.className = "compare-slot empty";
-      slotEl.innerHTML = "Select a bike →";
-      return;
-    }
+    if (!bike) return;
     slotEl.className = "compare-slot";
+    slotEl.dataset.id = bike.id;
     const gallery = bike.image_gallery?.length ? bike.image_gallery : bike.image_src ? [bike.image_src] : [];
     const mainImg = gallery[0];
     const img = mainImg
@@ -1011,6 +1014,7 @@
       : '<span class="badge danger">Illegal age 12</span>';
     const vs = bike.vs_baseline;
     slotEl.innerHTML = `
+      <button type="button" class="compare-slot-remove" data-id="${bike.id}" aria-label="Remove ${bike.brand} ${bike.model} from compare">✕</button>
       <div class="thumb-wrap">${img}</div>
       <strong>${bike.brand} ${bike.model}</strong>
       <div>${formatMoney(bike.price)} · Safety <strong>${bike.safety_score}</strong>/100</div>
@@ -1020,6 +1024,39 @@
       ${vs ? `<div>vs baseline: <strong>${vs.price_multiplier}×</strong> · ${vs.speed_delta_mph >= 0 ? "+" : ""}${vs.speed_delta_mph} mph</div>` : ""}
       <div class="buy-links">${buyLink}</div>
     `;
+  }
+
+  function openCompareDrawer() {
+    if (!compareDrawer || compareIds.length === 0) return;
+    compareDrawerOpen = true;
+    compareDrawer.hidden = false;
+    compareDrawer.setAttribute("aria-hidden", "false");
+    document.body.classList.add("compare-drawer-open");
+  }
+
+  function closeCompareDrawer() {
+    if (!compareDrawer) return;
+    compareDrawerOpen = false;
+    compareDrawer.hidden = true;
+    compareDrawer.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("compare-drawer-open");
+  }
+
+  function toggleCompare(id) {
+    const wasIncluded = compareIds.includes(id);
+    if (wasIncluded) {
+      compareIds = compareIds.filter((x) => x !== id);
+      if (compareIds.length === 0) closeCompareDrawer();
+    } else if (compareIds.length < MAX_COMPARE) {
+      compareIds.push(id);
+      openCompareDrawer();
+    } else {
+      compareIds.shift();
+      compareIds.push(id);
+      openCompareDrawer();
+    }
+    updateComparePanel();
+    if (currentDetailId === id) renderDetailPage(id);
   }
 
   function renderSafetyMatrix(selected) {
@@ -1133,10 +1170,40 @@
   }
 
   function updateComparePanel() {
-    const slots = document.querySelectorAll(".compare-slot");
+    const slotsContainer = document.getElementById("compareSlots");
+    const hint = document.getElementById("compareDrawerHint");
     const selected = compareIds.map((id) => bikeMap[id]).filter(Boolean);
-    compareIds.forEach((id, i) => renderCompareSlot(slots[i], bikeMap[id]));
-    for (let i = compareIds.length; i < MAX_COMPARE; i++) renderCompareSlot(slots[i], null);
+
+    if (slotsContainer) {
+      slotsContainer.innerHTML = "";
+      if (selected.length === 0) {
+        slotsContainer.innerHTML = `<p class="compare-empty-msg">No rides selected yet.</p>`;
+      } else {
+        selected.forEach((bike) => {
+          const slot = document.createElement("div");
+          renderCompareSlot(slot, bike);
+          slotsContainer.appendChild(slot);
+        });
+      }
+    }
+
+    if (hint) {
+      hint.hidden = selected.length >= MAX_COMPARE;
+      hint.textContent =
+        selected.length === 0
+          ? "Add rides with + Compare on any card or detail page (up to 3)."
+          : selected.length < MAX_COMPARE
+            ? `${selected.length} of ${MAX_COMPARE} — add another from browse, or open the safety matrix with 2+.`
+            : "";
+    }
+
+    const hasCompare = compareIds.length > 0;
+    if (compareFab) compareFab.hidden = !hasCompare;
+    if (compareFabCount) compareFabCount.textContent = String(compareIds.length);
+    if (heroCompareLink) {
+      heroCompareLink.hidden = !hasCompare;
+      heroCompareLink.textContent = `Compare (${compareIds.length})`;
+    }
 
     cards().forEach((card) => {
       const btn = card.querySelector(".btn-compare");
@@ -1293,6 +1360,17 @@
   document.getElementById("btnDetailBack")?.addEventListener("click", () => closeDetail());
   window.addEventListener("hashchange", handleRoute);
 
+  document.getElementById("btnCompareFab")?.addEventListener("click", openCompareDrawer);
+  document.getElementById("btnCompareClose")?.addEventListener("click", closeCompareDrawer);
+  document.getElementById("compareDrawerBackdrop")?.addEventListener("click", closeCompareDrawer);
+  heroCompareLink?.addEventListener("click", (e) => {
+    e.preventDefault();
+    openCompareDrawer();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && compareDrawerOpen) closeCompareDrawer();
+  });
+
   document.addEventListener("click", (e) => {
     const cardOpen = e.target.closest(".card-open");
     if (cardOpen?.dataset.id) {
@@ -1330,17 +1408,15 @@
       setBaseline(baseBtn.dataset.id);
       return;
     }
+    const removeCompare = e.target.closest(".compare-slot-remove");
+    if (removeCompare?.dataset.id) {
+      toggleCompare(removeCompare.dataset.id);
+      return;
+    }
     const compareBtn = e.target.closest(".btn-compare");
-    if (compareBtn) {
-      const id = compareBtn.dataset.id;
-      if (compareIds.includes(id)) compareIds = compareIds.filter((x) => x !== id);
-      else if (compareIds.length < MAX_COMPARE) compareIds.push(id);
-      else {
-        compareIds.shift();
-        compareIds.push(id);
-      }
-      updateComparePanel();
-      if (currentDetailId === id) renderDetailPage(id);
+    if (compareBtn?.dataset.id) {
+      toggleCompare(compareBtn.dataset.id);
+      return;
     }
     const restoreOne = e.target.closest(".btn-restore-one");
     if (restoreOne) {

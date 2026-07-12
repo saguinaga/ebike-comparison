@@ -60,7 +60,7 @@
       <p class="hero-sub">22 e-bikes · 6 e-scooters · school &amp; commute · Huntington Beach</p>
       <nav class="quick-links">
         <a href="#bikes">Browse</a>
-        <a href="#compare-panel">Side-by-Side</a>
+        <a href="#" id="heroCompareLink" hidden>Compare</a>
         <a href="#charts-section">Charts</a>
         <a href="#table-section">Table</a>
         <a href="#legal">Laws</a>
@@ -76,20 +76,6 @@
       <button type="button" class="btn-secondary" id="btnRestoreHidden" hidden>Restore hidden (<span id="hiddenCount">0</span>)</button>
       <button type="button" class="btn-ghost" id="btnResetPrefs" title="Clear hidden bikes, custom bikes, and baseline choice">Reset preferences</button>
     </div>
-
-    <section class="compare-panel" id="compare-panel">
-      <h3>⚖️ Side-by-Side Compare <span style="font-weight:normal;font-size:0.85rem;color:#666;">(pick up to 3 from cards below)</span></h3>
-      <div class="compare-slots" id="compareSlots">
-        <div class="compare-slot empty" data-slot="0">Select a bike →</div>
-        <div class="compare-slot empty" data-slot="1">Select a bike →</div>
-        <div class="compare-slot empty" data-slot="2">Select a bike →</div>
-      </div>
-      <div class="compare-diff" id="compareDiff" hidden></div>
-      <div class="compare-matrix-wrap" id="compareMatrixWrap" hidden>
-        <h4>🛡️ Safety Comparison</h4>
-        <div id="compareMatrix"></div>
-      </div>
-    </section>
 
     <section class="section" id="bikes">
       <h2 class="section-title">Browse Rides</h2>
@@ -2523,6 +2509,28 @@
     </svg>
     <p>Surf City HB · Generated 2026-07-12 · <a href="https://www.seanaguinaga.com">seanaguinaga.com</a> · Not legal or medical advice</p>
   </footer>
+
+  <div id="compareDrawer" class="compare-drawer" hidden aria-hidden="true">
+    <div class="compare-drawer-backdrop" id="compareDrawerBackdrop"></div>
+    <aside class="compare-drawer-panel" role="dialog" aria-labelledby="compareDrawerTitle" aria-modal="true">
+      <header class="compare-drawer-header">
+        <h3 id="compareDrawerTitle">Side-by-Side Compare</h3>
+        <button type="button" class="compare-drawer-close" id="btnCompareClose" aria-label="Close compare">✕</button>
+      </header>
+      <div class="compare-drawer-body">
+        <p class="compare-drawer-hint" id="compareDrawerHint">Add rides with <strong>+ Compare</strong> on any card or detail page (up to 3).</p>
+        <div class="compare-slots" id="compareSlots"></div>
+        <div class="compare-diff" id="compareDiff" hidden></div>
+        <div class="compare-matrix-wrap" id="compareMatrixWrap" hidden>
+          <h4>🛡️ Safety Comparison</h4>
+          <div id="compareMatrix"></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <button type="button" class="compare-fab" id="btnCompareFab" hidden aria-controls="compareDrawer">
+    ⚖️ Compare <span class="compare-fab-count" id="compareFabCount">0</span>
+  </button>
 
   <dialog class="modal" id="addBikeModal">
     <form method="dialog" id="addBikeForm">
