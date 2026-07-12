@@ -661,7 +661,6 @@
           ${legalBadge}
           ${smartBadge}
         </div>
-        <span class="card-cta">View details →</span>
       </button>
       <div class="card-actions card-actions-compact">
         <button type="button" class="btn-compare" data-id="${bike.id}">+ Compare</button>

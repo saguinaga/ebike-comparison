@@ -714,8 +714,12 @@ table.compare tbody tr.color-preferred { background: #fffbea; }
   color: inherit;
 }
 
-.bike-card-compact .card-open:hover .card-cta {
-  color: var(--ocean-deep);
+.bike-card-compact .card-open:hover .bike-thumb-compact {
+  box-shadow: inset 0 0 0 2px rgba(10, 110, 143, 0.18);
+}
+
+.bike-card-compact .card-open:hover h3 {
+  color: var(--ocean);
 }
 
 .bike-thumb-compact {
@@ -744,18 +748,6 @@ table.compare tbody tr.color-preferred { background: #fffbea; }
 .badges-compact .badge {
   font-size: 0.58rem;
   padding: 1px 5px;
-}
-
-.card-meta {
-  margin: 0;
-  font-size: 0.68rem;
-  color: #777;
-}
-
-.card-cta {
-  font-size: 0.65rem;
-  color: var(--ocean);
-  margin-top: 2px;
 }
 
 .card-actions-compact {
