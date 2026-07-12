@@ -140,6 +140,7 @@
   <div class="container">
     <div id="browseView">
     <div class="user-controls" id="userControls">
+      <button type="button" class="btn-primary" id="btnWizard">Find my ride</button>
       <button type="button" class="btn-secondary" id="btnAddBike">+ Add bike (URL)</button>
       <button type="button" class="btn-secondary" id="btnRestoreHidden" hidden>Restore hidden (<span id="hiddenCount">0</span>)</button>
       <button type="button" class="btn-ghost" id="btnResetPrefs" title="Clear hidden bikes, custom bikes, and baseline choice">Reset preferences</button>
@@ -196,6 +197,14 @@
         <button class="tier-tab" data-tier="{{ tier }}">{{ label }}</button>
         {% endfor %}
       </div>
+      <section class="wizard-picks" id="wizardPicks" hidden>
+        <div class="wizard-picks-head">
+          <h3 class="wizard-picks-title">Top picks for you</h3>
+          <p class="wizard-picks-note" id="wizardPicksNote"></p>
+          <button type="button" class="btn-ghost btn-wizard-edit" id="btnWizardEdit">Edit answers</button>
+        </div>
+        <div class="wizard-picks-grid" id="wizardPicksGrid"></div>
+      </section>
       <div class="card-grid" id="cardGrid">
         {% for bike in bikes %}
         <article class="bike-card bike-card-compact"
@@ -521,6 +530,69 @@
       <div class="modal-actions">
         <button type="button" class="btn-ghost" id="btnCancelAdd">Cancel</button>
         <button type="submit" class="btn-primary">Save bike</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="modal modal-wizard" id="wizardModal">
+    <form id="wizardForm">
+      <h3>Find your ride</h3>
+      <p class="modal-note">Optional — skip anytime to keep the default Surf City view. We'll tune filters and highlights to match.</p>
+      <div class="wizard-steps" id="wizardSteps">
+        <span class="wizard-step-dot active" data-step="0"></span>
+        <span class="wizard-step-dot" data-step="1"></span>
+        <span class="wizard-step-dot" data-step="2"></span>
+      </div>
+      <div class="wizard-panel" data-wizard-step="0">
+        <h4>About you</h4>
+        <div class="form-grid">
+          <label>Age <input type="number" id="wizardAge" min="8" max="99" value="{{ rider.age }}" required></label>
+          <label>Height (inches) <input type="number" id="wizardHeight" min="40" max="84" value="{{ rider.height_in }}" required></label>
+          <label>City <input type="text" id="wizardCity" value="{{ rider.city }}" placeholder="Huntington Beach" required></label>
+        </div>
+      </div>
+      <div class="wizard-panel" data-wizard-step="1" hidden>
+        <h4>How you'll ride</h4>
+        <label>Ride type
+          <select id="wizardVehicle">
+            <option value="all" selected>E-bikes or scooters</option>
+            <option value="ebike">E-bikes only</option>
+            <option value="scooter">E-scooters only</option>
+          </select>
+        </label>
+        <label>Main use
+          <select id="wizardUse">
+            <option value="school">School / kid commute</option>
+            <option value="commute" selected>Daily commute</option>
+            <option value="errands">Errands &amp; short trips</option>
+            <option value="fun">Fun &amp; exploring</option>
+          </select>
+        </label>
+        <label>Budget cap
+          <select id="wizardBudget">
+            <option value="all">Any price</option>
+            <option value="600">Under $600</option>
+            <option value="1200">Under $1,200</option>
+            <option value="2000">Under $2,000</option>
+          </select>
+        </label>
+      </div>
+      <div class="wizard-panel" data-wizard-step="2" hidden>
+        <h4>What matters most?</h4>
+        <p class="modal-note">1 = don't care · 5 = very important</p>
+        <div class="wizard-priority-grid">
+          <label>Safety <input type="range" id="wizardPriSafety" min="1" max="5" value="4"></label>
+          <label>Low price <input type="range" id="wizardPriPrice" min="1" max="5" value="3"></label>
+          <label>Speed <input type="range" id="wizardPriSpeed" min="1" max="5" value="2"></label>
+          <label>Light / portable <input type="range" id="wizardPriWeight" min="1" max="5" value="3"></label>
+          <label>Range <input type="range" id="wizardPriRange" min="1" max="5" value="3"></label>
+        </div>
+      </div>
+      <div class="modal-actions wizard-actions">
+        <button type="button" class="btn-ghost" id="btnWizardSkip">Skip — use defaults</button>
+        <button type="button" class="btn-secondary" id="btnWizardBack" hidden>Back</button>
+        <button type="button" class="btn-primary" id="btnWizardNext">Next</button>
+        <button type="submit" class="btn-primary" id="btnWizardDone" hidden>See my picks</button>
       </div>
     </form>
   </dialog>
