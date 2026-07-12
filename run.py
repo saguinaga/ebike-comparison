@@ -15,9 +15,7 @@ ROOT = Path(__file__).parent
 def cmd_scrape(args):
     bikes = parse_all(ROOT, scrape_live=not args.offline)
     save_bikes(ROOT, bikes, "bikes.json")
-    reviewed = ROOT / "data" / "bikes_reviewed.json"
-    if not reviewed.exists():
-        shutil.copy(ROOT / "data" / "bikes.json", reviewed)
+    shutil.copy(ROOT / "data" / "bikes.json", ROOT / "data" / "bikes_reviewed.json")
     print(f"Scraped {len(bikes) - 1} e-bikes + baseline → data/bikes.json")
 
 

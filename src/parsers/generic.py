@@ -1,6 +1,8 @@
 import re
 from bs4 import BeautifulSoup
 
+from ..images import extract_image_url
+
 
 def _parse_price(text: str) -> float | None:
     m = re.search(r"\$[\d,]+(?:\.\d{2})?", text or "")
@@ -17,6 +19,11 @@ def parse_generic(html: str, config: dict) -> dict:
     if price:
         result["price_usd"] = price
         result["field_confidence"]["price_usd"] = 0.5
+    img = extract_image_url(html)
+    if img:
+        result["image_url"] = img
+        result["field_confidence"]["image_url"] = 0.5
+
     manual = config.get("manual", {})
     for k, v in manual.items():
         if v is not None:

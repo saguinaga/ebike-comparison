@@ -5,6 +5,9 @@ from pathlib import Path
 import yaml
 from jinja2 import Environment, FileSystemLoader
 
+from .formatting import format_brake, format_usd
+from .images import resolve_bike_images
+
 TIER_LABELS = {
     "budget": "$300–600",
     "value": "$600–1,200",
@@ -31,16 +34,82 @@ def build(root: Path, min_bikes: int = 18) -> None:
     legal = json.loads((root / "data" / "legal_rules.json").read_text(encoding="utf-8"))
     safety = json.loads((root / "data" / "safety_research.json").read_text(encoding="utf-8"))
 
+    all_bikes = bikes
     baseline = next((b for b in bikes if b.get("is_baseline")), bench["baseline"])
     rider = bench.get("rider", {})
     main_site = bench.get("main_site_url", "#")
+
+    docs = root / "docs"
+    docs.mkdir(exist_ok=True)
+    cache_dir = root / "data" / "raw"
+
+    for bike in all_bikes:
+        bike["brake_display"] = format_brake(bike.get("brake_type"))
+        imgs = resolve_bike_images(bike, root, docs, cache_dir, fetch_live=True)
+        bike["image_src"] = imgs["image_src"]
+        bike["image_gallery"] = imgs["image_gallery"]
+
+    e_bikes = [b for b in all_bikes if not b.get("is_baseline")]
+    baseline = next((b for b in all_bikes if b.get("is_baseline")), baseline)
 
     by_tier = {}
     for b in e_bikes:
         tier = b.get("tier", "other")
         by_tier.setdefault(tier, []).append(b)
 
+    def bike_to_js(b: dict) -> dict:
+        legal_b = b.get("legal", {})
+        lights = b.get("lights") or {}
+        best_url = b.get("best_buy_url")
+        if not best_url:
+            for src in b.get("sources", []):
+                if src.get("url"):
+                    best_url = src["url"]
+                    break
+        return {
+            "id": b.get("id"),
+            "brand": b.get("brand"),
+            "model": b.get("model"),
+            "tier": b.get("tier"),
+            "tier_label": TIER_LABELS.get(b.get("tier"), b.get("tier")),
+            "price": b.get("landed_price_usd") or b.get("price_usd"),
+            "price_usd": b.get("price_usd"),
+            "landed_price_usd": b.get("landed_price_usd"),
+            "safety_score": b.get("safety_score"),
+            "safety_checklist": b.get("safety_checklist", []),
+            "e_bike_class": b.get("e_bike_class"),
+            "legal_for_age": legal_b.get("legal_for_age", True),
+            "legal_issues": legal_b.get("issues", []),
+            "max_speed_mph": b.get("max_speed_mph"),
+            "brake_type": b.get("brake_type"),
+            "brake_display": b.get("brake_display", format_brake(b.get("brake_type"))),
+            "motor_w": b.get("motor_w"),
+            "lights": lights,
+            "ul_certified": bool(b.get("ul_certified")),
+            "tire_width_in": b.get("tire_width_in"),
+            "colors": b.get("colors", []),
+            "image_src": b.get("image_src", ""),
+            "image_gallery": b.get("image_gallery", []),
+            "vs_baseline": b.get("vs_baseline", {}),
+            "friend_recommended": b.get("friend_recommended", False),
+            "best_buy_url": best_url,
+            "best_buy_platform": b.get("best_buy_platform"),
+            "best_buy_delivery": b.get("best_buy_delivery"),
+            "price_sources": b.get("price_sources", []),
+            "is_baseline": bool(b.get("is_baseline")),
+            "url": b.get("url") or best_url,
+            "brakes_front": b.get("brakes_front"),
+            "brakes_rear": b.get("brakes_rear"),
+            "reflectors": b.get("reflectors"),
+            "speed_limiter": b.get("speed_limiter"),
+        }
+
+    bikes_for_js = [bike_to_js(b) for b in e_bikes]
+    all_bikes_for_js = [bike_to_js(b) for b in all_bikes]
+
     env = Environment(loader=FileSystemLoader(root / "web" / "templates"), autoescape=True)
+    env.filters["format_brake"] = format_brake
+    env.filters["format_usd"] = format_usd
     template = env.get_template("index.html.j2")
     html = template.render(
         bikes=e_bikes,
@@ -52,10 +121,12 @@ def build(root: Path, min_bikes: int = 18) -> None:
         safety=safety,
         main_site_url=main_site,
         generated_date="2026-07-12",
+        bikes_json=json.dumps(bikes_for_js),
+        all_bikes_json=json.dumps(all_bikes_for_js),
+        default_baseline_id=baseline.get("id", "firmstrong-urban-lady"),
+        tier_labels_json=json.dumps(TIER_LABELS),
     )
 
-    docs = root / "docs"
-    docs.mkdir(exist_ok=True)
     (docs / "index.html").write_text(html, encoding="utf-8")
 
     for asset in ("styles.css", "app.js"):

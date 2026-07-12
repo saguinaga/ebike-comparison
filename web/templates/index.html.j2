@@ -3,35 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E-Bike Comparison · Huntington Beach</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@600;700&display=swap" rel="stylesheet">
+  <title>E-Bike Comparison · Surf City HB</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <h1>E-Bike Comparison</h1>
-    <p>School rides · Surf City streets · {{ bikes|length }} bikes for a 5'2" 12-year-old in HB 92646</p>
-    <nav class="quick-links">
-      <a href="#safety">Safety Stats</a>
-      <a href="#legal">HB Laws</a>
-      <a href="#bikes">Compare Bikes</a>
-      <a href="https://bit.ly/eBikeRiderTraining" target="_blank" rel="noopener">HBPD Training</a>
-    </nav>
+{% macro brake_label(display) -%}
+<span class="brake-label{% if display.css_class %} {{ display.css_class }}{% endif %}" title="{{ display.label }}">{%- if not display.glyph %}{{ display.icon }} {%- endif %}{{ display.label }}</span>
+{%- endmacro %}
+  <header class="hero" aria-label="Surf City Huntington Beach">
+    <div class="hero-scene" aria-hidden="true">
+      <div class="hero-sky"></div>
+      <div class="hero-sun"></div>
+      <svg class="hero-clouds" viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <ellipse cx="180" cy="28" rx="90" ry="18" fill="rgba(255,255,255,0.22)"/>
+        <ellipse cx="260" cy="32" rx="55" ry="12" fill="rgba(255,255,255,0.16)"/>
+        <ellipse cx="820" cy="22" rx="110" ry="20" fill="rgba(255,255,255,0.18)"/>
+        <ellipse cx="940" cy="30" rx="70" ry="14" fill="rgba(255,255,255,0.12)"/>
+      </svg>
+      <svg class="pier-silhouette" viewBox="0 0 400 60" preserveAspectRatio="xMidYMax meet">
+        <rect x="0" y="38" width="400" height="3" fill="rgba(0,0,0,0.18)"/>
+        <rect x="20" y="12" width="4" height="29" fill="rgba(0,0,0,0.22)"/>
+        <rect x="60" y="18" width="4" height="23" fill="rgba(0,0,0,0.2)"/>
+        <rect x="100" y="10" width="4" height="31" fill="rgba(0,0,0,0.24)"/>
+        <rect x="140" y="16" width="4" height="25" fill="rgba(0,0,0,0.2)"/>
+        <rect x="180" y="8" width="4" height="33" fill="rgba(0,0,0,0.26)"/>
+        <rect x="220" y="14" width="4" height="27" fill="rgba(0,0,0,0.2)"/>
+        <rect x="260" y="11" width="4" height="30" fill="rgba(0,0,0,0.22)"/>
+        <rect x="300" y="17" width="4" height="24" fill="rgba(0,0,0,0.18)"/>
+        <rect x="340" y="13" width="4" height="28" fill="rgba(0,0,0,0.2)"/>
+        <rect x="380" y="20" width="4" height="21" fill="rgba(0,0,0,0.16)"/>
+      </svg>
+      <div class="hero-ocean">
+        <svg class="waves waves-back" viewBox="0 0 1440 100" preserveAspectRatio="none">
+          <path d="M0,55 C180,30 360,70 540,50 C720,30 900,65 1080,48 C1260,32 1380,58 1440,45 L1440,100 L0,100 Z" fill="rgba(255,255,255,0.08)"/>
+        </svg>
+        <svg class="waves waves-mid" viewBox="0 0 1440 100" preserveAspectRatio="none">
+          <path d="M0,62 C200,38 400,72 600,52 C800,34 1000,68 1200,50 C1320,40 1400,60 1440,52 L1440,100 L0,100 Z" fill="rgba(255,255,255,0.14)"/>
+        </svg>
+        <svg class="waves waves-front" viewBox="0 0 1440 100" preserveAspectRatio="none">
+          <path d="M0,70 C160,48 320,78 480,60 C640,44 800,74 960,58 C1120,44 1280,72 1440,62 L1440,100 L0,100 Z" fill="rgba(255,255,255,0.22)"/>
+        </svg>
+      </div>
+      <div class="hero-shore"></div>
+      <svg class="palm palm-left" viewBox="0 0 140 220" fill="currentColor">
+        <path d="M68 218 L68 95 Q68 88 72 82 L68 218Z" opacity="0.9"/>
+        <path d="M72 82 Q20 55 8 18 Q35 42 58 72 Q30 35 42 5 Q58 38 68 68 Q72 30 95 8 Q78 42 72 72 Q98 40 118 12 Q95 48 74 78 Q115 55 132 28 Q100 62 72 82Z"/>
+      </svg>
+      <svg class="palm palm-right" viewBox="0 0 140 220" fill="currentColor">
+        <path d="M68 218 L68 95 Q68 88 72 82 L68 218Z" opacity="0.9"/>
+        <path d="M72 82 Q20 55 8 18 Q35 42 58 72 Q30 35 42 5 Q58 38 68 68 Q72 30 95 8 Q78 42 72 72 Q98 40 118 12 Q95 48 74 78 Q115 55 132 28 Q100 62 72 82Z"/>
+      </svg>
+    </div>
+    <div class="hero-content">
+      <span class="hero-badge">Surf City · Huntington Beach</span>
+      <h1>E-Bike Comparison</h1>
+      <p class="hero-sub">{{ bikes|length }} bikes · school &amp; commute rides · 5'2" rider baseline</p>
+      <nav class="quick-links">
+        <a href="#compare-panel">Side-by-Side</a>
+        <a href="#charts-section">Charts</a>
+        <a href="#table-section">Table</a>
+        <a href="#legal">Laws</a>
+        <a href="#safety">Safety</a>
+      </nav>
+    </div>
   </header>
-  <div class="wave-divider"></div>
 
   <div class="container">
-    <section class="baseline-panel" id="baseline">
-      <h2 class="section-title">Baseline: {{ baseline.model }}</h2>
-      <p><strong>${{ baseline.price_usd }}</strong> · Coaster brake · Single speed · Fits 5'2"–5'11" · Cruise 3–15 mph · Peak to 20–28 mph</p>
-      <p>Your daughter's current bike. <a href="{{ baseline.url }}" target="_blank" rel="noopener">View on Firmstrong →</a></p>
+    <section class="baseline-panel" id="baselinePanel">
+      <div id="baselineMedia" class="bike-media"></div>
+      <div class="baseline-info">
+        <h2 class="section-title" style="margin:0;border:0;padding:0;">Comparison baseline</h2>
+        <label class="baseline-picker">Compare against
+          <select id="baselineSelect" aria-label="Select comparison baseline"></select>
+        </label>
+        <div id="baselineDetails"></div>
+      </div>
+    </section>
+
+    <div class="user-controls" id="userControls">
+      <button type="button" class="btn-secondary" id="btnAddBike">+ Add bike (URL)</button>
+      <button type="button" class="btn-secondary" id="btnRestoreHidden" hidden>Restore hidden (<span id="hiddenCount">0</span>)</button>
+      <button type="button" class="btn-ghost" id="btnResetPrefs" title="Clear hidden bikes, custom bikes, and baseline choice">Reset preferences</button>
+    </div>
+
+    <section class="compare-panel" id="compare-panel">
+      <h3>⚖️ Side-by-Side Compare <span style="font-weight:normal;font-size:0.85rem;color:#666;">(pick up to 3 from cards below)</span></h3>
+      <div class="compare-slots" id="compareSlots">
+        <div class="compare-slot empty" data-slot="0">Select a bike →</div>
+        <div class="compare-slot empty" data-slot="1">Select a bike →</div>
+        <div class="compare-slot empty" data-slot="2">Select a bike →</div>
+      </div>
+      <div class="compare-diff" id="compareDiff" hidden></div>
+      <div class="compare-matrix-wrap" id="compareMatrixWrap" hidden>
+        <h4>🛡️ Safety Comparison</h4>
+        <div id="compareMatrix"></div>
+      </div>
     </section>
 
     <section class="section" id="bikes">
-      <h2 class="section-title">Compare E-Bikes</h2>
-      <div class="filter-bar">
-        <label><input type="checkbox" id="colorFilter" checked> Show only white / light wood colors</label>
+      <h2 class="section-title">Browse Bikes</h2>
+      <div class="toolbar" id="cardToolbar">
+        <label><input type="checkbox" id="colorFilter"> Highlight beach tones <span class="filter-hint">(white, sand, vanilla, light wood)</span></label>
+        <label>Max speed
+          <select id="speedFilter">
+            <option value="all">Any</option>
+            <option value="under20">Under 20 mph</option>
+            <option value="20">20 mph</option>
+            <option value="28">28 mph</option>
+          </select>
+        </label>
+        <label>Legal for age 12
+          <select id="legalFilter">
+            <option value="all">All</option>
+            <option value="yes">Legal only</option>
+            <option value="no">Illegal only</option>
+          </select>
+        </label>
+        <label>Max price
+          <select id="priceFilter">
+            <option value="all">Any</option>
+            <option value="600">Under $600</option>
+            <option value="1200">Under $1,200</option>
+            <option value="2000">Under $2,000</option>
+          </select>
+        </label>
       </div>
       <div class="tier-tabs" id="tierTabs">
         <button class="tier-tab active" data-tier="all">All</button>
@@ -41,67 +136,163 @@
       </div>
       <div class="card-grid" id="cardGrid">
         {% for bike in bikes %}
-        <article class="bike-card" data-tier="{{ bike.tier }}" data-colors="{{ bike.colors | map(attribute='family') | join(',') }}">
+        <article class="bike-card"
+          data-id="{{ bike.id }}"
+          data-tier="{{ bike.tier }}"
+          data-price="{{ bike.landed_price_usd or bike.price_usd }}"
+          data-legal="{{ 'yes' if bike.legal.legal_for_age else 'no' }}"
+          data-colors="{{ bike.colors | map(attribute='family') | join(',') }}"
+          data-class="{{ bike.e_bike_class }}"
+          data-speed="{{ bike.max_speed_mph }}">
+          <div class="bike-media">
+            <div class="bike-thumb">
+              {% if bike.image_gallery %}
+              <img class="bike-main-img" src="{{ bike.image_gallery[0] }}" alt="{{ bike.brand }} {{ bike.model }}" loading="lazy">
+              {% elif bike.image_src %}
+              <img class="bike-main-img" src="{{ bike.image_src }}" alt="{{ bike.brand }} {{ bike.model }}" loading="lazy">
+              {% else %}
+              <span class="placeholder-icon">🚲</span>
+              {% endif %}
+            </div>
+            {% if bike.image_gallery | length > 1 %}
+            <div class="gallery-thumbs" role="group" aria-label="{{ bike.brand }} {{ bike.model }} photos">
+              {% for img in bike.image_gallery %}
+              <button type="button" class="gallery-thumb{% if loop.first %} active{% endif %}" data-src="{{ img }}" aria-label="Photo {{ loop.index }}">
+                <img src="{{ img }}" alt="" loading="lazy">
+              </button>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
           <h3>{{ bike.brand }} {{ bike.model }}</h3>
-          <div class="price-big">${{ bike.landed_price_usd or bike.price_usd }}</div>
+          <div class="price-big">${{ bike.landed_price_usd or bike.price_usd }} <span class="price-note">landed</span></div>
+          <div class="buy-links">
+            {% if bike.best_buy_url %}
+            <a class="buy-best" href="{{ bike.best_buy_url }}" target="_blank" rel="noopener" title="{{ bike.best_buy_delivery }}">
+              ★ {{ bike.best_buy_platform }} ${{ bike.landed_price_usd }}{% if bike.best_buy_shipping_usd %} (+${{ bike.best_buy_shipping_usd|int }} ship){% endif %}
+            </a>
+            {% endif %}
+            {% for src in bike.price_sources %}
+            {% if src.url and src.url != bike.best_buy_url %}
+            <a class="buy-alt" href="{{ src.url }}" target="_blank" rel="noopener" title="{{ src.delivery_note }}">
+              {{ src.platform_label }} ${{ src.landed_usd|int }}{% if src.is_search_url %} ↗{% endif %}
+            </a>
+            {% endif %}
+            {% endfor %}
+          </div>
           <div class="badges">
-            <span class="badge sage">Safety {{ bike.safety_score }}/100</span>
+            <span class="badge ok">Safety {{ bike.safety_score }}</span>
             {% if bike.legal.legal_for_age %}
-            <span class="badge sage">Legal at 12</span>
+            <span class="badge ok">Legal</span>
             {% else %}
-            <span class="badge danger">Illegal at 12</span>
+            <span class="badge danger">Class {{ bike.e_bike_class }} ✗</span>
             {% endif %}
-            {% if bike.friend_recommended %}
-            <span class="badge info">Friend recommended</span>
-            {% endif %}
-            <span class="badge info">Class {{ bike.e_bike_class }}</span>
+            {% if bike.friend_recommended %}<span class="badge info">Recommended</span>{% endif %}
           </div>
-          <p>{{ tier_labels.get(bike.tier, bike.tier) }} · {{ bike.max_speed_mph }} mph · {{ bike.brake_type | replace('_', ' ') }}</p>
-          <p>vs Firmstrong: <strong>{{ bike.vs_baseline.price_multiplier }}×</strong> price · +{{ bike.vs_baseline.speed_delta_mph }} mph</p>
-          <div class="color-swatches">
+          <p>{{ tier_labels.get(bike.tier, bike.tier) }} · {{ bike.max_speed_mph }} mph · {{ brake_label(bike.brake_display) }}</p>
+          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">{{ bike.vs_baseline.price_multiplier }}×</strong> · <span class="vs-speed-delta">+{{ bike.vs_baseline.speed_delta_mph }} mph</span></p>
+          <div class="color-chips">
             {% for c in bike.colors %}
-            <span class="swatch {{ c.family }}" title="{{ c.name }}"></span>
+            <span class="color-chip"><span class="dot {{ c.family }}"></span>{{ c.name }}</span>
             {% endfor %}
           </div>
-          {% if bike.tier == 'budget' %}
-          <ul class="checklist">
-            {% for item in bike.safety_checklist %}
-            <li class="{{ 'ok' if item.ok else 'miss' }}">{{ item.label }}</li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-          {% for badge in bike.legal.badges %}
-          <span class="badge {{ badge.type }}">{{ badge.text }}</span>
-          {% endfor %}
+          <div class="safety-equip">
+            <span class="safety-equip-title">Safety equipment</span>
+            <ul class="checklist checklist-compact">
+              {% for item in bike.safety_checklist %}
+              <li class="{{ 'ok' if item.ok else 'miss' }}">{{ item.label }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="card-actions">
+            <button type="button" class="btn-compare" data-id="{{ bike.id }}">+ Compare</button>
+            <button type="button" class="btn-hide" data-id="{{ bike.id }}" title="Hide from view">Hide</button>
+            <button type="button" class="btn-baseline" data-id="{{ bike.id }}" title="Use as comparison baseline">Set baseline</button>
+          </div>
         </article>
         {% endfor %}
       </div>
     </section>
 
+    <div class="wave-section" aria-hidden="true">
+      <svg class="shore-wave shore-wave-top" viewBox="0 0 1200 48" preserveAspectRatio="none">
+        <path d="M0,24 C150,4 300,40 450,20 C600,6 750,36 900,18 C1050,4 1125,28 1200,16 L1200,0 L0,0 Z" fill="var(--ocean-light)" opacity="0.35"/>
+        <path d="M0,32 C200,14 400,44 600,26 C800,10 1000,40 1200,24 L1200,48 L0,48 Z" fill="var(--ocean)" opacity="0.2"/>
+      </svg>
+      <svg class="shore-wave shore-wave-bottom" viewBox="0 0 1200 48" preserveAspectRatio="none">
+        <path d="M0,20 C180,38 360,8 540,28 C720,42 900,12 1080,30 C1140,36 1170,22 1200,26 L1200,48 L0,48 Z" fill="var(--sand-dark)" opacity="0.55"/>
+        <path d="M0,30 C240,12 480,40 720,22 C960,8 1080,34 1200,28 L1200,48 L0,48 Z" fill="var(--foam)"/>
+      </svg>
+    </div>
+
+    <section class="section" id="charts-section">
+      <h2 class="section-title">Safety Snapshots</h2>
+      <p class="section-note">Based on visible bikes (respects hide &amp; filters). Updates as you narrow the list.</p>
+      <div class="charts-grid">
+        <div class="chart-card"><h4>Safety vs price</h4><div id="chartSafetyPrice" class="chart-area"></div></div>
+        <div class="chart-card"><h4>Safety by tier</h4><div id="chartSafetyTier" class="chart-area"></div></div>
+        <div class="chart-card"><h4>Equipment pass rate</h4><div id="chartChecklist" class="chart-area"></div></div>
+        <div class="chart-card"><h4>Max speed vs safety</h4><div id="chartSpeedSafety" class="chart-area"></div></div>
+      </div>
+    </section>
+
     <section class="section" id="table-section">
-      <h2 class="section-title">Sortable Overview</h2>
+      <h2 class="section-title">Overview Table</h2>
+      <p style="font-size:0.85rem;color:#666;margin:-8px 0 10px;">Click column headers to sort. Use filters to narrow results.</p>
+      <div class="table-toolbar">
+        <label>Tier <select id="tableTierFilter"><option value="all">All</option>
+          {% for tier, label in tier_labels.items() if tier != 'baseline' %}
+          <option value="{{ tier }}">{{ label }}</option>
+          {% endfor %}
+        </select></label>
+        <label>Class <select id="tableClassFilter"><option value="all">All</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label>
+        <label>Legal <select id="tableLegalFilter"><option value="all">All</option><option value="yes">Legal</option><option value="no">Illegal</option></select></label>
+        <label><input type="checkbox" id="tableColorFilter"> Highlight beach tones <span class="filter-hint">(white, sand, vanilla, light wood)</span></label>
+      </div>
       <table class="compare" id="compareTable">
         <thead>
           <tr>
-            <th>Bike</th>
-            <th>Price</th>
-            <th>Safety</th>
-            <th>Class</th>
-            <th>Legal 12?</th>
-            <th>Max mph</th>
-            <th>Brakes</th>
+            <th class="col-photo">Photo</th>
+            <th data-sort="name" data-type="string">Bike</th>
+            <th data-sort="price" data-type="number">Price</th>
+            <th data-sort="safety" data-type="number">Safety</th>
+            <th data-sort="class" data-type="number">Class</th>
+            <th data-sort="legal" data-type="string">Legal</th>
+            <th data-sort="speed" data-type="number">Max mph</th>
+            <th data-sort="brakes" data-type="string">Brakes</th>
+            <th>Buy</th>
           </tr>
         </thead>
         <tbody>
           {% for bike in bikes %}
-          <tr data-tier="{{ bike.tier }}">
+          <tr data-id="{{ bike.id }}"
+              data-tier="{{ bike.tier }}"
+              data-class="{{ bike.e_bike_class }}"
+              data-legal="{{ 'yes' if bike.legal.legal_for_age else 'no' }}"
+              data-colors="{{ bike.colors | map(attribute='family') | join(',') }}"
+              data-name="{{ bike.brand }} {{ bike.model }}"
+              data-price="{{ bike.landed_price_usd or bike.price_usd }}"
+              data-safety="{{ bike.safety_score }}"
+              data-speed="{{ bike.max_speed_mph }}"
+              data-brakes="{{ bike.brake_type }}">
+            <td class="table-photo">
+              {% if bike.image_src %}
+              <img src="{{ bike.image_src }}" alt="{{ bike.brand }} {{ bike.model }}" loading="lazy" title="{{ bike.brand }} {{ bike.model }}">
+              {% else %}—{% endif %}
+            </td>
             <td>{{ bike.brand }} {{ bike.model }}</td>
-            <td>${{ bike.landed_price_usd or bike.price_usd }}</td>
+            <td>{{ (bike.landed_price_usd or bike.price_usd) | format_usd }}</td>
             <td>{{ bike.safety_score }}</td>
             <td>{{ bike.e_bike_class }}</td>
-            <td>{{ 'Yes' if bike.legal.legal_for_age else 'NO' }}</td>
+            <td>{{ 'Yes' if bike.legal.legal_for_age else 'No' }}</td>
             <td>{{ bike.max_speed_mph }}</td>
-            <td>{{ bike.brake_type }}</td>
+            <td>{{ brake_label(bike.brake_display) }}</td>
+            <td class="buy-cell">
+              {% if bike.best_buy_url %}
+              <a href="{{ bike.best_buy_url }}" target="_blank" rel="noopener">{{ bike.best_buy_platform }}</a>
+              {% if bike.price_sources|length > 1 %}<span class="alt-count">+{{ bike.price_sources|length - 1 }}</span>{% endif %}
+              {% else %}—{% endif %}
+            </td>
           </tr>
           {% endfor %}
         </tbody>
@@ -109,19 +300,13 @@
     </section>
 
     <section class="section" id="legal">
-      <h2 class="section-title">Legal: California + Huntington Beach</h2>
-      <p class="disclaimer">{{ legal.disclaimer }}</p>
+      <h2 class="section-title">California + Huntington Beach</h2>
+      <p class="disclaimer">{{ legal.disclaimer }} Helmets required under 18 (assumed for all rides).</p>
       {% for rule in legal.california %}
-      <div class="legal-item">
-        <strong>{{ rule.title }}</strong>
-        <p>{{ rule.summary }} <a href="{{ rule.source }}" target="_blank" rel="noopener">Source →</a></p>
-      </div>
+      <div class="legal-item"><strong>{{ rule.title }}</strong> — {{ rule.summary }} <a href="{{ rule.source }}" target="_blank" rel="noopener">Source</a></div>
       {% endfor %}
       {% for rule in legal.huntington_beach %}
-      <div class="legal-item">
-        <strong>{{ rule.title }}</strong>
-        <p>{{ rule.summary }} <a href="{{ rule.source }}" target="_blank" rel="noopener">Source →</a></p>
-      </div>
+      <div class="legal-item"><strong>{{ rule.title }}</strong> — {{ rule.summary }} <a href="{{ rule.source }}" target="_blank" rel="noopener">Source</a></div>
       {% endfor %}
     </section>
 
@@ -132,17 +317,68 @@
       <div class="stat-card">
         <strong>{{ stat.headline }}</strong>
         <p>{{ stat.detail }}</p>
-        <p class="does-not"><em>What this does NOT mean:</em> {{ stat.does_not_mean }}</p>
-        <a href="{{ stat.url }}" target="_blank" rel="noopener">{{ stat.source }} ({{ stat.date }}) →</a>
+        <p class="does-not"><em>Does NOT mean:</em> {{ stat.does_not_mean }}</p>
+        <a href="{{ stat.url }}" target="_blank" rel="noopener">{{ stat.source }} ({{ stat.date }})</a>
       </div>
       {% endfor %}
     </section>
   </div>
 
   <footer class="footer">
-    <p><a href="{{ main_site_url }}">← Back to main site</a> · Generated {{ generated_date }}</p>
-    <p>Not medical or legal advice. Verify laws and fit before buying.</p>
+    <svg class="footer-waves" viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,28 C200,8 400,44 600,24 C800,6 1000,40 1200,20 L1200,56 L0,56 Z" fill="rgba(255,255,255,0.12)"/>
+      <path d="M0,36 C180,18 360,48 540,30 C720,14 900,46 1080,32 C1140,26 1175,38 1200,34 L1200,56 L0,56 Z" fill="rgba(255,255,255,0.08)"/>
+    </svg>
+    <p>Surf City HB · Generated {{ generated_date }} · <a href="{{ main_site_url }}">seanaguinaga.com</a> · Not legal or medical advice</p>
   </footer>
+
+  <dialog class="modal" id="addBikeModal">
+    <form method="dialog" id="addBikeForm">
+      <h3>Add a bike</h3>
+      <p class="modal-note">Saved in this browser only. Paste a product URL — we’ll try to pull name &amp; image; you confirm price, speed, and brakes.</p>
+      <label>Product URL <input type="url" id="addBikeUrl" placeholder="https://…" required></label>
+      <button type="button" class="btn-secondary" id="btnFetchUrl">Try fetch</button>
+      <div class="form-grid">
+        <label>Brand <input type="text" id="addBikeBrand" required></label>
+        <label>Model <input type="text" id="addBikeModel" required></label>
+        <label>Price (USD) <input type="number" id="addBikePrice" min="0" step="1" required></label>
+        <label>Max speed (mph) <input type="number" id="addBikeSpeed" min="5" max="35" step="0.5" value="20"></label>
+        <label>Class <select id="addBikeClass"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option></select></label>
+        <label>Brakes <select id="addBikeBrake">
+          <option value="rim">Rim</option>
+          <option value="mechanical_disc" selected>Mechanical disc</option>
+          <option value="hydraulic_disc">Hydraulic disc</option>
+          <option value="coaster">Coaster</option>
+        </select></label>
+      </div>
+      <div class="form-checks">
+        <label><input type="checkbox" id="addBikeLightFront"> Front light</label>
+        <label><input type="checkbox" id="addBikeLightRear"> Rear light</label>
+        <label><input type="checkbox" id="addBikeUl"> UL battery cert</label>
+      </div>
+      <p id="addBikeStatus" class="modal-status" aria-live="polite"></p>
+      <div class="modal-actions">
+        <button type="button" class="btn-ghost" id="btnCancelAdd">Cancel</button>
+        <button type="submit" class="btn-primary">Save bike</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="restoreModal">
+    <form method="dialog">
+      <h3>Hidden bikes</h3>
+      <ul id="hiddenBikeList" class="hidden-bike-list"></ul>
+      <div class="modal-actions">
+        <button type="button" class="btn-secondary" id="btnRestoreAll">Restore all</button>
+        <button type="submit" class="btn-primary">Done</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script id="bikes-data" type="application/json">{{ bikes_json | safe }}</script>
+  <script id="all-bikes-data" type="application/json">{{ all_bikes_json | safe }}</script>
+  <script id="app-config" type="application/json">{"defaultBaselineId": "{{ default_baseline_id }}", "mainSiteUrl": "{{ main_site_url }}"}</script>
+  <script id="tier-labels-data" type="application/json">{{ tier_labels_json | safe }}</script>
   <script src="app.js"></script>
 </body>
 </html>

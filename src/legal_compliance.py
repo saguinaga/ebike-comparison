@@ -21,9 +21,6 @@ def evaluate_bike(bike: dict, rider_age: int = 12) -> dict:
             issues.append("Class 3 — illegal for under 16 in California (CVC §21213)")
             badges.append({"type": "danger", "text": "Illegal at age 12"})
 
-    if rider_age < 18:
-        badges.append({"type": "info", "text": "Helmet required (under 18)"})
-
     if not lights.get("front") or not lights.get("rear"):
         issues.append("Missing integrated lights — add before night rides (CVC §21201)")
         badges.append({"type": "warning", "text": "Add lights for night"})

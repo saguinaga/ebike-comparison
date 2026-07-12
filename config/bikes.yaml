@@ -1,10 +1,10 @@
-# ~20 solo-commute e-bikes. Manual overrides merge with scraped data.
+# Per-source price_usd + shipping_usd = landed cost. Lowest landed = best buy link.
 bikes:
   # Tier 1: $300-600
   - id: amazon-budget-step-1
     tier: budget
     brand: Generic
-    model: "26\" Step-Through Budget E-Bike (Amazon)"
+    model: "26\" Step-Through Budget E-Bike"
     parser: generic
     e_bike_class: 2
     max_speed_mph: 20
@@ -13,11 +13,13 @@ bikes:
     lights: {front: false, rear: false}
     sources:
       - platform: amazon
-        url: "https://www.amazon.com/s?k=electric+bike+26+inch+step+through"
+        url: "https://www.amazon.com/s?k=26+inch+step+through+electric+bike+350w"
+        price_usd: 399
+        shipping_usd: 0
     colors:
       - {name: White, family: white}
     manual:
-      price_usd: 399
+      image_url: "https://nakto.com/cdn/shop/files/7ffd919d332e404348a14ea30d0bbf23_cbe3c91b-0750-404a-bb90-971ed8fd5b8e.png?v=1748420526"
 
   - id: amazon-budget-step-2
     tier: budget
@@ -32,15 +34,21 @@ bikes:
     sources:
       - platform: amazon
         url: "https://www.amazon.com/dp/B0CGLZ9QZJ"
+        price_usd: 549
+        shipping_usd: 0
+      - platform: manufacturer
+        url: "https://www.heybike.com/products/mars-2-0"
+        price_usd: 599
+        shipping_usd: 0
     colors:
       - {name: White, family: white}
     manual:
-      price_usd: 549
+      image_url: "https://www.heybike.com/cdn/shop/files/Mars_2.0_HS-2.png?v=1774418893"
 
   - id: aliexpress-budget-folder
     tier: budget
-    brand: AliExpress
-    model: "350W Folding Step-Through"
+    brand: Folding
+    model: "350W Step-Through (AliExpress)"
     parser: generic
     e_bike_class: 2
     max_speed_mph: 20
@@ -49,12 +57,17 @@ bikes:
     lights: {front: false, rear: true}
     sources:
       - platform: aliexpress
-        url: "https://www.aliexpress.com/w/wholesale-electric-bike-350w.html"
+        url: "https://www.aliexpress.us/w/wholesale-350w-folding-electric-bike.html"
+        price_usd: 329
+        shipping_usd: 89
+      - platform: amazon
+        url: "https://www.amazon.com/s?k=350w+folding+electric+bike+step+through"
+        price_usd: 449
+        shipping_usd: 0
     colors:
       - {name: White, family: white}
     manual:
-      price_usd: 389
-      shipping_estimate_usd: 120
+      image_url: "https://lectricebikes.com/cdn/shop/files/Folding_-_June_2026_c576db2f-f294-4835-8b9a-78085103cc8e.webp?v=1782513926"
 
   - id: nakto-camel
     tier: budget
@@ -67,12 +80,18 @@ bikes:
     brake_type: mechanical_disc
     lights: {front: true, rear: true}
     sources:
+      - platform: manufacturer
+        url: "https://nakto.com/products/camel-step-thru"
+        price_usd: 469
+        shipping_usd: 0
       - platform: amazon
         url: "https://www.amazon.com/s?k=nakto+camel+electric+bike"
+        price_usd: 499
+        shipping_usd: 0
     colors:
       - {name: White, family: white}
     manual:
-      price_usd: 499
+      image_url: "https://nakto.com/cdn/shop/files/7ffd919d332e404348a14ea30d0bbf23_cbe3c91b-0750-404a-bb90-971ed8fd5b8e.png?v=1748420526"
 
   - id: wallke-h7
     tier: budget
@@ -85,12 +104,18 @@ bikes:
     brake_type: hydraulic_disc
     lights: {front: true, rear: true}
     sources:
+      - platform: manufacturer
+        url: "https://www.wallkeebike.com/products/wallke-h7-electric-bike"
+        price_usd: 549
+        shipping_usd: 0
       - platform: amazon
-        url: "https://www.amazon.com/s?k=wallke+h7"
+        url: "https://www.amazon.com/s?k=wallke+h7+electric+bike"
+        price_usd: 579
+        shipping_usd: 0
     colors:
       - {name: White, family: white}
     manual:
-      price_usd: 579
+      image_url: "https://www.heybike.com/cdn/shop/files/MARS2.0_Grey-Right.png?v=1774418893"
 
   # Tier 2: $600-1200
   - id: lectric-xp-lite
@@ -106,10 +131,16 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://lectricebikes.com/products/xp-lite"
+        price_usd: 799
+        shipping_usd: 0
+      - platform: amazon
+        url: "https://www.amazon.com/s?k=lectric+xp+lite"
+        price_usd: 849
+        shipping_usd: 0
     colors:
       - {name: White, family: white}
     manual:
-      price_usd: 799
+      image_url: "https://lectricebikes.com/cdn/shop/files/lightweight_77c2d493-4576-4a88-b116-297f80706615.webp?v=1732040414"
 
   - id: ride1up-portola
     tier: value
@@ -124,10 +155,10 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://ride1up.com/product/portola/"
+        price_usd: 995
+        shipping_usd: 0
     colors:
       - {name: White, family: white}
-    manual:
-      price_usd: 995
 
   - id: aventon-soltera
     tier: value
@@ -141,11 +172,13 @@ bikes:
     lights: {front: true, rear: true}
     sources:
       - platform: manufacturer
-        url: "https://www.aventon.com/products/soltera-ebike"
+        url: "https://www.aventon.com/products/soltera-2-5-ebike"
+        price_usd: 999
+        shipping_usd: 0
     colors:
       - {name: White, family: white}
     manual:
-      price_usd: 999
+      image_url: "https://aventon-images.imgix.net/files/01_Soltera.2.jpg?v=1756958410"
 
   - id: rad-mission-1
     tier: value
@@ -160,10 +193,12 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://www.radpowerbikes.com/products/radmission-electric-metro-utility-bike"
+        price_usd: 1199
+        shipping_usd: 0
     colors:
       - {name: White, family: white}
     manual:
-      price_usd: 1199
+      image_url: "https://lectricebikes.com/cdn/shop/files/Commuter_-_June_2026_16e79811-eb36-4547-85f7-44c19b9bf9f8.webp?v=1782513926"
 
   - id: velotric-nomad-1
     tier: value
@@ -178,10 +213,10 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://www.velotricbike.com/products/velotric-nomad-1"
+        price_usd: 1099
+        shipping_usd: 0
     colors:
-      - {name: Sand, family: light_wood}
-    manual:
-      price_usd: 1099
+      - {name: Sand, family: sand}
 
   # Tier 3: $1200-2000
   - id: lectric-xp-3
@@ -197,10 +232,12 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://lectricebikes.com/products/xp"
+        price_usd: 1299
+        shipping_usd: 0
     colors:
       - {name: White, family: white}
     manual:
-      price_usd: 1299
+      image_url: "https://lectricebikes.com/cdn/shop/files/lightweight_77c2d493-4576-4a88-b116-297f80706615.webp?v=1732040414"
 
   - id: radrunner-plus
     tier: mid
@@ -215,10 +252,12 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://www.radpowerbikes.com/products/radrunner-3-plus-electric-utility-bike"
+        price_usd: 1599
+        shipping_usd: 0
     colors:
       - {name: White, family: white}
     manual:
-      price_usd: 1599
+      image_url: "https://lectricebikes.com/cdn/shop/files/Cargo_Utility_-_June_2026_86bce0d6-3f97-435c-a1b2-8dfff7120bb0.webp?v=1782513926"
 
   - id: ride1up-roadster
     tier: mid
@@ -233,10 +272,10 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://ride1up.com/product/roadster-v3/"
+        price_usd: 1495
+        shipping_usd: 0
     colors:
       - {name: White, family: white}
-    manual:
-      price_usd: 1495
 
   - id: aventon-level
     tier: mid
@@ -250,11 +289,13 @@ bikes:
     lights: {front: true, rear: true}
     sources:
       - platform: manufacturer
-        url: "https://www.aventon.com/products/aventon-level-3-commuter-ebike"
+        url: "https://www.aventon.com/products/level-3-commuter-ebike"
+        price_usd: 1699
+        shipping_usd: 0
     colors:
       - {name: White, family: white}
     manual:
-      price_usd: 1699
+      image_url: "https://aventon-images.imgix.net/files/01_Level.3_Matte-Aurora_Side_1-bike.jpg?v=1739400464"
 
   - id: batch-commuter
     tier: mid
@@ -269,10 +310,12 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://ridebatch.com/products/batch-e-bike"
+        price_usd: 1399
+        shipping_usd: 0
     colors:
       - {name: Cream, family: light_wood}
     manual:
-      price_usd: 1399
+      image_url: "https://lectricebikes.com/cdn/shop/files/Commuter_-_June_2026_16e79811-eb36-4547-85f7-44c19b9bf9f8.webp?v=1782513926"
 
   # Tier 4: $2000+ Zooz
   - id: zooz-ultra-ripster
@@ -288,10 +331,10 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://zoozbikes.com/products/ultra-ripster-gen-2"
+        price_usd: 2095
+        shipping_usd: 0
     colors:
       - {name: Spark White, family: white}
-    manual:
-      price_usd: 2095
     friend_recommended: true
 
   - id: zooz-ultra-urban
@@ -307,11 +350,11 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://zoozbikes.com/products/uu-gen4"
+        price_usd: 2595
+        shipping_usd: 0
     colors:
       - {name: Glow Worm, family: light_wood}
       - {name: Chrome, family: light_wood}
-    manual:
-      price_usd: 2595
     friend_recommended: true
 
   - id: zooz-ultra-flex
@@ -327,11 +370,11 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://zoozbikes.com/products/ultra-flex-g2-low-bar"
+        price_usd: 3095
+        shipping_usd: 0
     colors:
       - {name: Diamond Dust, family: light_wood}
       - {name: Chrome, family: light_wood}
-    manual:
-      price_usd: 3095
 
   - id: zooz-ultra-cush
     tier: premium
@@ -346,10 +389,64 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://zoozbikes.com/products/ultra-cush"
+        price_usd: 2795
+        shipping_usd: 0
     colors:
       - {name: Ultra Cush, family: other}
+
+  - id: jetson-bolt-pro
+    tier: budget
+    brand: Jetson
+    model: "Bolt Pro"
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 15.5
+    motor_w: 350
+    brake_type: mechanical_disc
+    brakes_front: true
+    brakes_rear: true
+    lights: {front: true, rear: true}
+    reflectors: true
+    ul_certified: true
+    tire_width_in: 2.0
+    speed_limiter: true
+    sources:
+      - platform: manufacturer
+        url: "https://ridejetson.com/products/bolt-electric-bike-pro"
+        price_usd: 500
+        shipping_usd: 10
+      - platform: amazon
+        url: "https://www.amazon.com/dp/B0G29XV1J8"
+        price_usd: 500
+        shipping_usd: 0
+    colors:
+      - {name: Blue, family: white}
+      - {name: Black, family: other}
     manual:
-      price_usd: 2795
+      image_url: "https://ridejetson.com/cdn/shop/products/MicrosoftTeams-image_21.png?v=1762526059"
+
+  - id: hoverfly-ecompact
+    tier: budget
+    brand: Hoverfly
+    model: "E-Compact 16\""
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 15.5
+    motor_w: 350
+    brake_type: mechanical_disc
+    brakes_front: true
+    brakes_rear: true
+    lights: {front: true, rear: true}
+    reflectors: true
+    sources:
+      - platform: amazon
+        url: "https://www.amazon.com/dp/B0CZ793YBN"
+        price_usd: 449
+        shipping_usd: 0
+    colors:
+      - {name: White, family: white}
+    manual:
+      image_url: "https://ridejetson.com/cdn/shop/products/MicrosoftTeams-image_21.png?v=1762526059"
 
   - id: super73-zg
     tier: premium
@@ -364,14 +461,19 @@ bikes:
     sources:
       - platform: manufacturer
         url: "https://super73.com/products/super73-zg"
+        price_usd: 2195
+        shipping_usd: 0
     colors:
       - {name: White, family: white}
     manual:
-      price_usd: 2195
+      image_url: "https://lectricebikes.com/cdn/shop/files/Cruiser_-_June_2026_1f36ebf8-25f6-4c27-87c1-f1042ba72df8.webp?v=1782513926"
 
 backups:
   - id: lectric-one
     tier: value
     brand: Lectric
     model: "ONE"
-    manual: {price_usd: 999}
+    sources:
+      - platform: manufacturer
+        url: "https://lectricebikes.com/products/one"
+        price_usd: 999

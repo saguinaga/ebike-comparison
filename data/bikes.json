@@ -38,15 +38,16 @@
     ],
     "is_baseline": true,
     "tier": "baseline",
-    "field_confidence": {
-      "weight_lb": 0.85
-    }
+    "image_url": "http://www.firmstrong.com/cdn/shop/products/Firmstrong_Urban_Lady_Single_Speed_Beach_Cruiser_Bicycle_26-Inch_Mint_Green_medium.jpg?v=1516946946",
+    "image_urls": [
+      "https://www.firmstrong.com/cdn/shop/products/Firmstrong_Urban_Lady_Single_Speed_Beach_Cruiser_Bicycle_26-Inch_White_w__Pink_Rims_1024x1024.jpg?v=1463486850"
+    ]
   },
   {
     "id": "amazon-budget-step-1",
     "tier": "budget",
     "brand": "Generic",
-    "model": "26\" Step-Through Budget E-Bike (Amazon)",
+    "model": "26\" Step-Through Budget E-Bike",
     "parser": "generic",
     "e_bike_class": 2,
     "max_speed_mph": 20,
@@ -59,7 +60,9 @@
     "sources": [
       {
         "platform": "amazon",
-        "url": "https://www.amazon.com/s?k=electric+bike+26+inch+step+through"
+        "url": "https://www.amazon.com/s?k=26+inch+step+through+electric+bike+350w",
+        "price_usd": 399,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -68,71 +71,90 @@
         "family": "white"
       }
     ],
-    "price_usd": 399,
+    "image_url": "https://lectricebikes.com/cdn/shop/files/white-side_2e68dfc9-b660-4559-9a17-133fb42e0792.webp?v=1776061626",
+    "image_urls": [
+      "https://lectricebikes.com/cdn/shop/files/white-front.webp?v=1776061626",
+      "https://nakto.com/cdn/shop/files/15.png?v=1748420526"
+    ],
     "price_sources": [
       {
         "platform": "amazon",
-        "url": "https://www.amazon.com/s?k=electric+bike+26+inch+step+through",
-        "item_price_usd": 399,
-        "shipping_usd": 0,
-        "landed_usd": 399,
-        "delivery_note": "Prime ~1-3 days",
-        "rewards_note": "Amazon 5% category cards may apply"
+        "platform_label": "Amazon",
+        "url": "https://www.amazon.com/s?k=26+inch+step+through+electric+bike+350w",
+        "item_price_usd": 399.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 399.0,
+        "delivery_note": "Prime ~1\u20133 days",
+        "rewards_note": "5% back on some Chase/Amazon cards",
+        "is_search_url": true
       }
     ],
-    "landed_price_usd": 399,
+    "landed_price_usd": 399.0,
+    "best_buy_url": "https://www.amazon.com/s?k=26+inch+step+through+electric+bike+350w",
+    "best_buy_platform": "Amazon",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Prime ~1\u20133 days",
     "safety_score": 18,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Rim Brake",
         "value": "rim",
         "ok": false
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": false,
         "ok": false
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": true
@@ -145,10 +167,6 @@
         "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
       ],
       "badges": [
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
-        },
         {
           "type": "warning",
           "text": "Add lights for night"
@@ -182,7 +200,15 @@
     "sources": [
       {
         "platform": "amazon",
-        "url": "https://www.amazon.com/dp/B0CGLZ9QZJ"
+        "url": "https://www.amazon.com/dp/B0CGLZ9QZJ",
+        "price_usd": 549,
+        "shipping_usd": 0
+      },
+      {
+        "platform": "manufacturer",
+        "url": "https://www.heybike.com/products/mars-2-0",
+        "price_usd": 599,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -191,71 +217,102 @@
         "family": "white"
       }
     ],
-    "price_usd": 549,
+    "image_url": "https://www.heybike.com/cdn/shop/files/Mars_2.0_HS-2.png?v=1774418893",
+    "image_urls": [
+      "https://www.heybike.com/cdn/shop/files/MARS2.0_Grey-Right.png?v=1774418893",
+      "https://www.heybike.com/cdn/shop/files/Mars_2.0_Folding_Size_d7c65dd9-a694-4135-a82d-512a63d1b143.png?v=1774418893",
+      "https://www.heybike.com/cdn/shop/files/Mars_2.0_CD.png?v=1774418893"
+    ],
     "price_sources": [
       {
         "platform": "amazon",
+        "platform_label": "Amazon",
         "url": "https://www.amazon.com/dp/B0CGLZ9QZJ",
-        "item_price_usd": 549,
-        "shipping_usd": 0,
-        "landed_usd": 549,
-        "delivery_note": "Prime ~1-3 days",
-        "rewards_note": "Amazon 5% category cards may apply"
+        "item_price_usd": 549.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 549.0,
+        "delivery_note": "Prime ~1\u20133 days",
+        "rewards_note": "5% back on some Chase/Amazon cards",
+        "is_search_url": false
+      },
+      {
+        "platform": "manufacturer",
+        "platform_label": "Direct",
+        "url": "https://www.heybike.com/products/mars-2-0",
+        "item_price_usd": 599.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 599.0,
+        "delivery_note": "Direct ship",
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
-    "landed_price_usd": 549,
+    "landed_price_usd": 549.0,
+    "best_buy_url": "https://www.amazon.com/dp/B0CGLZ9QZJ",
+    "best_buy_platform": "Amazon",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Prime ~1\u20133 days",
     "safety_score": 48,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Mechanical Disc",
         "value": "mechanical_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": true
@@ -266,12 +323,7 @@
       "issues": [
         "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
       ],
-      "badges": [
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
-        }
-      ],
+      "badges": [],
       "e_bike_class": 2
     },
     "vs_baseline": {
@@ -286,8 +338,8 @@
   {
     "id": "aliexpress-budget-folder",
     "tier": "budget",
-    "brand": "AliExpress",
-    "model": "350W Folding Step-Through",
+    "brand": "Folding",
+    "model": "350W Step-Through (AliExpress)",
     "parser": "generic",
     "e_bike_class": 2,
     "max_speed_mph": 20,
@@ -300,7 +352,15 @@
     "sources": [
       {
         "platform": "aliexpress",
-        "url": "https://www.aliexpress.com/w/wholesale-electric-bike-350w.html"
+        "url": "https://www.aliexpress.us/w/wholesale-350w-folding-electric-bike.html",
+        "price_usd": 329,
+        "shipping_usd": 89
+      },
+      {
+        "platform": "amazon",
+        "url": "https://www.amazon.com/s?k=350w+folding+electric+bike+step+through",
+        "price_usd": 449,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -309,72 +369,101 @@
         "family": "white"
       }
     ],
-    "price_usd": 389,
-    "shipping_estimate_usd": 120,
+    "image_url": "https://lectricebikes.com/cdn/shop/files/white-folded.webp?v=1776061626",
+    "image_urls": [
+      "https://lectricebikes.com/cdn/shop/files/lite-white_a6ef01c7-4607-4639-b0c4-09846a407fc9.png?v=1768990516",
+      "https://www.heybike.com/cdn/shop/files/Mars_2.0_Folding_Size_d7c65dd9-a694-4135-a82d-512a63d1b143.png?v=1774418893"
+    ],
     "price_sources": [
       {
         "platform": "aliexpress",
-        "url": "https://www.aliexpress.com/w/wholesale-electric-bike-350w.html",
-        "item_price_usd": 389,
-        "shipping_usd": 120,
-        "landed_usd": 509,
-        "delivery_note": "2-4 weeks",
-        "rewards_note": null
+        "platform_label": "AliExpress",
+        "url": "https://www.aliexpress.us/w/wholesale-350w-folding-electric-bike.html",
+        "item_price_usd": 329.0,
+        "shipping_usd": 89.0,
+        "landed_usd": 418.0,
+        "delivery_note": "~2\u20134 weeks",
+        "rewards_note": null,
+        "is_search_url": true
+      },
+      {
+        "platform": "amazon",
+        "platform_label": "Amazon",
+        "url": "https://www.amazon.com/s?k=350w+folding+electric+bike+step+through",
+        "item_price_usd": 449.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 449.0,
+        "delivery_note": "Prime ~1\u20133 days",
+        "rewards_note": "5% back on some Chase/Amazon cards",
+        "is_search_url": true
       }
     ],
-    "landed_price_usd": 509,
+    "landed_price_usd": 418.0,
+    "best_buy_url": "https://www.aliexpress.us/w/wholesale-350w-folding-electric-bike.html",
+    "best_buy_platform": "AliExpress",
+    "best_buy_shipping_usd": 89.0,
+    "best_buy_delivery": "~2\u20134 weeks",
     "safety_score": 28,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Rim Brake",
         "value": "rim",
         "ok": false
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": true
@@ -388,10 +477,6 @@
       ],
       "badges": [
         {
-          "type": "info",
-          "text": "Helmet required (under 18)"
-        },
-        {
           "type": "warning",
           "text": "Add lights for night"
         }
@@ -399,7 +484,7 @@
       "e_bike_class": 2
     },
     "vs_baseline": {
-      "price_multiplier": 1.8,
+      "price_multiplier": 1.4,
       "speed_delta_mph": 5,
       "brake_upgrade": false,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
@@ -423,8 +508,16 @@
     },
     "sources": [
       {
+        "platform": "manufacturer",
+        "url": "https://nakto.com/products/camel-step-thru",
+        "price_usd": 469,
+        "shipping_usd": 0
+      },
+      {
         "platform": "amazon",
-        "url": "https://www.amazon.com/s?k=nakto+camel+electric+bike"
+        "url": "https://www.amazon.com/s?k=nakto+camel+electric+bike",
+        "price_usd": 499,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -433,71 +526,102 @@
         "family": "white"
       }
     ],
-    "price_usd": 499,
+    "image_url": "https://nakto.com/cdn/shop/files/7ffd919d332e404348a14ea30d0bbf23_cbe3c91b-0750-404a-bb90-971ed8fd5b8e.png?v=1748420526",
+    "image_urls": [
+      "https://nakto.com/cdn/shop/files/15.png?v=1748420526",
+      "https://nakto.com/cdn/shop/files/Camelstep-thrublack_d7b89c8c-8834-4957-b8da-273924f17a3a.png?v=1748420526",
+      "https://nakto.com/cdn/shop/files/camel_1.png?v=1748420500"
+    ],
     "price_sources": [
       {
+        "platform": "manufacturer",
+        "platform_label": "Direct",
+        "url": "https://nakto.com/products/camel-step-thru",
+        "item_price_usd": 469.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 469.0,
+        "delivery_note": "Direct ship",
+        "rewards_note": null,
+        "is_search_url": false
+      },
+      {
         "platform": "amazon",
+        "platform_label": "Amazon",
         "url": "https://www.amazon.com/s?k=nakto+camel+electric+bike",
-        "item_price_usd": 499,
-        "shipping_usd": 0,
-        "landed_usd": 499,
-        "delivery_note": "Prime ~1-3 days",
-        "rewards_note": "Amazon 5% category cards may apply"
+        "item_price_usd": 499.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 499.0,
+        "delivery_note": "Prime ~1\u20133 days",
+        "rewards_note": "5% back on some Chase/Amazon cards",
+        "is_search_url": true
       }
     ],
-    "landed_price_usd": 499,
+    "landed_price_usd": 469.0,
+    "best_buy_url": "https://nakto.com/products/camel-step-thru",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 48,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Mechanical Disc",
         "value": "mechanical_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": true
@@ -508,16 +632,11 @@
       "issues": [
         "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
       ],
-      "badges": [
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
-        }
-      ],
+      "badges": [],
       "e_bike_class": 2
     },
     "vs_baseline": {
-      "price_multiplier": 1.7,
+      "price_multiplier": 1.6,
       "speed_delta_mph": 5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
@@ -541,8 +660,16 @@
     },
     "sources": [
       {
+        "platform": "manufacturer",
+        "url": "https://www.wallkeebike.com/products/wallke-h7-electric-bike",
+        "price_usd": 549,
+        "shipping_usd": 0
+      },
+      {
         "platform": "amazon",
-        "url": "https://www.amazon.com/s?k=wallke+h7"
+        "url": "https://www.amazon.com/s?k=wallke+h7+electric+bike",
+        "price_usd": 579,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -551,71 +678,101 @@
         "family": "white"
       }
     ],
-    "price_usd": 579,
+    "image_url": "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
+    "image_urls": [
+      "https://www.heybike.com/cdn/shop/files/MARS2.0_Grey-Right.png?v=1774418893",
+      "https://lectricebikes.com/cdn/shop/files/white-side_2e68dfc9-b660-4559-9a17-133fb42e0792.webp?v=1776061626"
+    ],
     "price_sources": [
       {
+        "platform": "manufacturer",
+        "platform_label": "Direct",
+        "url": "https://www.wallkeebike.com/products/wallke-h7-electric-bike",
+        "item_price_usd": 549.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 549.0,
+        "delivery_note": "Direct ship",
+        "rewards_note": null,
+        "is_search_url": false
+      },
+      {
         "platform": "amazon",
-        "url": "https://www.amazon.com/s?k=wallke+h7",
-        "item_price_usd": 579,
-        "shipping_usd": 0,
-        "landed_usd": 579,
-        "delivery_note": "Prime ~1-3 days",
-        "rewards_note": "Amazon 5% category cards may apply"
+        "platform_label": "Amazon",
+        "url": "https://www.amazon.com/s?k=wallke+h7+electric+bike",
+        "item_price_usd": 579.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 579.0,
+        "delivery_note": "Prime ~1\u20133 days",
+        "rewards_note": "5% back on some Chase/Amazon cards",
+        "is_search_url": true
       }
     ],
-    "landed_price_usd": 579,
+    "landed_price_usd": 549.0,
+    "best_buy_url": "https://www.wallkeebike.com/products/wallke-h7-electric-bike",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 55,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Hydraulic Disc",
         "value": "hydraulic_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": true
@@ -626,16 +783,11 @@
       "issues": [
         "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
       ],
-      "badges": [
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
-        }
-      ],
+      "badges": [],
       "e_bike_class": 2
     },
     "vs_baseline": {
-      "price_multiplier": 2.0,
+      "price_multiplier": 1.9,
       "speed_delta_mph": 5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
@@ -660,7 +812,15 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://lectricebikes.com/products/xp-lite"
+        "url": "https://lectricebikes.com/products/xp-lite",
+        "price_usd": 799,
+        "shipping_usd": 0
+      },
+      {
+        "platform": "amazon",
+        "url": "https://www.amazon.com/s?k=lectric+xp+lite",
+        "price_usd": 849,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -669,71 +829,103 @@
         "family": "white"
       }
     ],
-    "price_usd": 799,
+    "image_url": "https://lectricebikes.com/cdn/shop/files/lite-white_a6ef01c7-4607-4639-b0c4-09846a407fc9.png?v=1768990516",
+    "image_urls": [
+      "https://lectricebikes.com/cdn/shop/files/white-side_2e68dfc9-b660-4559-9a17-133fb42e0792.webp?v=1776061626",
+      "https://lectricebikes.com/cdn/shop/files/white-folded.webp?v=1776061626",
+      "https://lectricebikes.com/cdn/shop/files/white-front.webp?v=1776061626",
+      "https://lectricebikes.com/cdn/shop/files/XPL-White_f9e208a7-9b91-4c18-941b-d377f251cb05.jpg?v=1768990516"
+    ],
     "price_sources": [
       {
         "platform": "manufacturer",
+        "platform_label": "Direct",
         "url": "https://lectricebikes.com/products/xp-lite",
-        "item_price_usd": 799,
-        "shipping_usd": 0,
-        "landed_usd": 799,
+        "item_price_usd": 799.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 799.0,
         "delivery_note": "Direct ship",
-        "rewards_note": null
+        "rewards_note": null,
+        "is_search_url": false
+      },
+      {
+        "platform": "amazon",
+        "platform_label": "Amazon",
+        "url": "https://www.amazon.com/s?k=lectric+xp+lite",
+        "item_price_usd": 849.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 849.0,
+        "delivery_note": "Prime ~1\u20133 days",
+        "rewards_note": "5% back on some Chase/Amazon cards",
+        "is_search_url": true
       }
     ],
-    "landed_price_usd": 799,
+    "landed_price_usd": 799.0,
+    "best_buy_url": "https://lectricebikes.com/products/xp-lite",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 48,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Mechanical Disc",
         "value": "mechanical_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": true
@@ -744,12 +936,7 @@
       "issues": [
         "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
       ],
-      "badges": [
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
-        }
-      ],
+      "badges": [],
       "e_bike_class": 2
     },
     "vs_baseline": {
@@ -778,7 +965,9 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://ride1up.com/product/portola/"
+        "url": "https://ride1up.com/product/portola/",
+        "price_usd": 995,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -787,74 +976,91 @@
         "family": "white"
       }
     ],
-    "field_confidence": {
-      "price_usd": 0.9
-    },
-    "price_usd": 995,
+    "image_url": "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
+    "image_urls": [
+      "https://ride1up.com/wp-content/uploads/2023/07/Portola-Gallery-01-jpg.webp",
+      "https://ride1up.com/wp-content/uploads/2023/07/Portola-Gallery-02-jpg.webp",
+      "https://ride1up.com/wp-content/uploads/2023/07/Portola-Gallery-03-jpg.webp"
+    ],
     "price_sources": [
       {
         "platform": "manufacturer",
+        "platform_label": "Direct",
         "url": "https://ride1up.com/product/portola/",
-        "item_price_usd": 995,
-        "shipping_usd": 0,
-        "landed_usd": 995,
+        "item_price_usd": 995.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 995.0,
         "delivery_note": "Direct ship",
-        "rewards_note": null
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
-    "landed_price_usd": 995,
+    "landed_price_usd": 995.0,
+    "best_buy_url": "https://ride1up.com/product/portola/",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 55,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Hydraulic Disc",
         "value": "hydraulic_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": true
@@ -865,12 +1071,7 @@
       "issues": [
         "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
       ],
-      "badges": [
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
-        }
-      ],
+      "badges": [],
       "e_bike_class": 2
     },
     "vs_baseline": {
@@ -899,7 +1100,9 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://www.aventon.com/products/soltera-ebike"
+        "url": "https://www.aventon.com/products/soltera-2-5-ebike",
+        "price_usd": 999,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -908,74 +1111,91 @@
         "family": "white"
       }
     ],
-    "field_confidence": {
-      "price_usd": 0.9
-    },
-    "price_usd": 999,
+    "image_url": "https://aventon-images.imgix.net/files/01_Soltera.2.jpg?v=1756958410",
+    "image_urls": [
+      "https://aventon-images.imgix.net/files/Baja-Soltera-2.5-6.jpg?v=1756958410",
+      "https://aventon-images.imgix.net/files/Soltera-2.5-Midnight-02.jpg?v=1756958410",
+      "https://aventon-images.imgix.net/files/Soltera2.5lifestyle01.jpg?v=1756958412"
+    ],
     "price_sources": [
       {
         "platform": "manufacturer",
-        "url": "https://www.aventon.com/products/soltera-ebike",
-        "item_price_usd": 999,
-        "shipping_usd": 0,
-        "landed_usd": 999,
+        "platform_label": "Direct",
+        "url": "https://www.aventon.com/products/soltera-2-5-ebike",
+        "item_price_usd": 999.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 999.0,
         "delivery_note": "Direct ship",
-        "rewards_note": null
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
-    "landed_price_usd": 999,
+    "landed_price_usd": 999.0,
+    "best_buy_url": "https://www.aventon.com/products/soltera-2-5-ebike",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 48,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Mechanical Disc",
         "value": "mechanical_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": true
@@ -986,12 +1206,7 @@
       "issues": [
         "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
       ],
-      "badges": [
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
-        }
-      ],
+      "badges": [],
       "e_bike_class": 2
     },
     "vs_baseline": {
@@ -1020,7 +1235,9 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://www.radpowerbikes.com/products/radmission-electric-metro-utility-bike"
+        "url": "https://www.radpowerbikes.com/products/radmission-electric-metro-utility-bike",
+        "price_usd": 1199,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -1029,71 +1246,90 @@
         "family": "white"
       }
     ],
-    "price_usd": 1199,
+    "image_url": "https://ride1up.com/wp-content/uploads/2026/03/RV3-MedLrg_Grn-scaled.webp",
+    "image_urls": [
+      "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
+      "https://lectricebikes.com/cdn/shop/files/XP4-TEMPEST_GREY_STEP_OVER-BF-STUDIO_CAROUSEL.jpg?v=1774327498"
+    ],
     "price_sources": [
       {
         "platform": "manufacturer",
+        "platform_label": "Direct",
         "url": "https://www.radpowerbikes.com/products/radmission-electric-metro-utility-bike",
-        "item_price_usd": 1199,
-        "shipping_usd": 0,
-        "landed_usd": 1199,
+        "item_price_usd": 1199.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 1199.0,
         "delivery_note": "Direct ship",
-        "rewards_note": null
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
-    "landed_price_usd": 1199,
+    "landed_price_usd": 1199.0,
+    "best_buy_url": "https://www.radpowerbikes.com/products/radmission-electric-metro-utility-bike",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 48,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Mechanical Disc",
         "value": "mechanical_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": true
@@ -1104,12 +1340,7 @@
       "issues": [
         "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
       ],
-      "badges": [
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
-        }
-      ],
+      "badges": [],
       "e_bike_class": 2
     },
     "vs_baseline": {
@@ -1138,83 +1369,102 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://www.velotricbike.com/products/velotric-nomad-1"
+        "url": "https://www.velotricbike.com/products/velotric-nomad-1",
+        "price_usd": 1099,
+        "shipping_usd": 0
       }
     ],
     "colors": [
       {
         "name": "Sand",
-        "family": "light_wood"
+        "family": "sand"
       }
     ],
-    "field_confidence": {
-      "price_usd": 0.9
-    },
-    "price_usd": 1099,
+    "image_url": "https://www.velotricbike.com/cdn/shop/files/N1_Plus_HS_forest_1.png?v=1722237926&width=1200",
+    "image_urls": [
+      "https://www.velotricbike.com/cdn/shop/files/N1_Plus_ST_forest_1_grande.png?v=1722237925",
+      "https://www.velotricbike.com/cdn/shop/files/N1_Plus_HS_indigogrey_2_grande.png?v=1722237926",
+      "https://www.velotricbike.com/cdn/shop/files/N1_Plus_ST_indigogrey_1_grande.png?v=1722237926"
+    ],
     "price_sources": [
       {
         "platform": "manufacturer",
+        "platform_label": "Direct",
         "url": "https://www.velotricbike.com/products/velotric-nomad-1",
-        "item_price_usd": 1099,
-        "shipping_usd": 0,
-        "landed_usd": 1099,
+        "item_price_usd": 1099.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 1099.0,
         "delivery_note": "Direct ship",
-        "rewards_note": null
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
-    "landed_price_usd": 1099,
+    "landed_price_usd": 1099.0,
+    "best_buy_url": "https://www.velotricbike.com/products/velotric-nomad-1",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 48,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Mechanical Disc",
         "value": "mechanical_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": true
@@ -1225,12 +1475,7 @@
       "issues": [
         "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
       ],
-      "badges": [
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
-        }
-      ],
+      "badges": [],
       "e_bike_class": 2
     },
     "vs_baseline": {
@@ -1259,7 +1504,9 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://lectricebikes.com/products/xp"
+        "url": "https://lectricebikes.com/products/xp",
+        "price_usd": 1299,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -1268,71 +1515,92 @@
         "family": "white"
       }
     ],
-    "price_usd": 1299,
+    "image_url": "https://lectricebikes.com/cdn/shop/files/XP4-T-BXP_114a4807-a772-4a64-9699-348d007460c7.png?v=1768038905",
+    "image_urls": [
+      "https://lectricebikes.com/cdn/shop/files/BXP-side2.png?v=1776060550",
+      "https://lectricebikes.com/cdn/shop/files/BXP-folded.jpg?v=1775105952",
+      "https://lectricebikes.com/cdn/shop/files/BXP-front.png?v=1775105952",
+      "https://lectricebikes.com/cdn/shop/files/XP4-TEMPEST_GREY_STEP_OVER-BF-STUDIO_CAROUSEL.jpg?v=1774327498"
+    ],
     "price_sources": [
       {
         "platform": "manufacturer",
+        "platform_label": "Direct",
         "url": "https://lectricebikes.com/products/xp",
-        "item_price_usd": 1299,
-        "shipping_usd": 0,
-        "landed_usd": 1299,
+        "item_price_usd": 1299.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 1299.0,
         "delivery_note": "Direct ship",
-        "rewards_note": null
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
-    "landed_price_usd": 1299,
+    "landed_price_usd": 1299.0,
+    "best_buy_url": "https://lectricebikes.com/products/xp",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 48,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Mechanical Disc",
         "value": "mechanical_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": true
@@ -1343,12 +1611,7 @@
       "issues": [
         "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
       ],
-      "badges": [
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
-        }
-      ],
+      "badges": [],
       "e_bike_class": 2
     },
     "vs_baseline": {
@@ -1377,7 +1640,9 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://www.radpowerbikes.com/products/radrunner-3-plus-electric-utility-bike"
+        "url": "https://www.radpowerbikes.com/products/radrunner-3-plus-electric-utility-bike",
+        "price_usd": 1599,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -1386,71 +1651,90 @@
         "family": "white"
       }
     ],
-    "price_usd": 1599,
+    "image_url": "https://lectricebikes.com/cdn/shop/files/XP4-T-BXP_114a4807-a772-4a64-9699-348d007460c7.png?v=1768038905",
+    "image_urls": [
+      "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
+      "https://lectricebikes.com/cdn/shop/files/BXP-plain_9a05d19c-0b7e-4334-9899-a6fb338f8d7f.jpg?v=1775105952"
+    ],
     "price_sources": [
       {
         "platform": "manufacturer",
+        "platform_label": "Direct",
         "url": "https://www.radpowerbikes.com/products/radrunner-3-plus-electric-utility-bike",
-        "item_price_usd": 1599,
-        "shipping_usd": 0,
-        "landed_usd": 1599,
+        "item_price_usd": 1599.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 1599.0,
         "delivery_note": "Direct ship",
-        "rewards_note": null
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
-    "landed_price_usd": 1599,
+    "landed_price_usd": 1599.0,
+    "best_buy_url": "https://www.radpowerbikes.com/products/radrunner-3-plus-electric-utility-bike",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 55,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Hydraulic Disc",
         "value": "hydraulic_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": true
@@ -1461,12 +1745,7 @@
       "issues": [
         "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
       ],
-      "badges": [
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
-        }
-      ],
+      "badges": [],
       "e_bike_class": 2
     },
     "vs_baseline": {
@@ -1495,7 +1774,9 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://ride1up.com/product/roadster-v3/"
+        "url": "https://ride1up.com/product/roadster-v3/",
+        "price_usd": 1495,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -1504,74 +1785,90 @@
         "family": "white"
       }
     ],
-    "field_confidence": {
-      "price_usd": 0.9
-    },
-    "price_usd": 1495,
+    "image_url": "https://ride1up.com/wp-content/uploads/2026/03/RV3-MedLrg_Grn-scaled.webp",
+    "image_urls": [
+      "https://ride1up.com/wp-content/uploads/2026/04/RV3_Sus_-MedLrg_Blk--scaled.webp",
+      "https://ride1up.com/wp-content/uploads/2024/06/RV3-05-copy-jpg.webp"
+    ],
     "price_sources": [
       {
         "platform": "manufacturer",
+        "platform_label": "Direct",
         "url": "https://ride1up.com/product/roadster-v3/",
-        "item_price_usd": 1495,
-        "shipping_usd": 0,
-        "landed_usd": 1495,
+        "item_price_usd": 1495.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 1495.0,
         "delivery_note": "Direct ship",
-        "rewards_note": null
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
-    "landed_price_usd": 1495,
+    "landed_price_usd": 1495.0,
+    "best_buy_url": "https://ride1up.com/product/roadster-v3/",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 55,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Hydraulic Disc",
         "value": "hydraulic_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": true
@@ -1582,12 +1879,7 @@
       "issues": [
         "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
       ],
-      "badges": [
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
-        }
-      ],
+      "badges": [],
       "e_bike_class": 1
     },
     "vs_baseline": {
@@ -1616,7 +1908,9 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://www.aventon.com/products/aventon-level-3-commuter-ebike"
+        "url": "https://www.aventon.com/products/level-3-commuter-ebike",
+        "price_usd": 1699,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -1625,71 +1919,91 @@
         "family": "white"
       }
     ],
-    "price_usd": 1699,
+    "image_url": "https://aventon-images.imgix.net/files/01_Level.3_Matte-Aurora_Side_1-bike.jpg?v=1739400464",
+    "image_urls": [
+      "https://aventon-images.imgix.net/files/01_Level.3_Matte-Black_Side_1-bike.jpg?v=1739400464",
+      "https://aventon-images.imgix.net/files/01_Level.3_Glacier-Mint_Side_1.jpg?v=1739400504",
+      "https://aventon-images.imgix.net/files/01_Level.3_Sand-Stone_Side_1-bike-2.jpg?v=1739400504"
+    ],
     "price_sources": [
       {
         "platform": "manufacturer",
-        "url": "https://www.aventon.com/products/aventon-level-3-commuter-ebike",
-        "item_price_usd": 1699,
-        "shipping_usd": 0,
-        "landed_usd": 1699,
+        "platform_label": "Direct",
+        "url": "https://www.aventon.com/products/level-3-commuter-ebike",
+        "item_price_usd": 1699.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 1699.0,
         "delivery_note": "Direct ship",
-        "rewards_note": null
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
-    "landed_price_usd": 1699,
+    "landed_price_usd": 1699.0,
+    "best_buy_url": "https://www.aventon.com/products/level-3-commuter-ebike",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 50,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Hydraulic Disc",
         "value": "hydraulic_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": false
@@ -1705,10 +2019,6 @@
         {
           "type": "danger",
           "text": "Illegal at age 12"
-        },
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
         }
       ],
       "e_bike_class": 3
@@ -1739,7 +2049,9 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://ridebatch.com/products/batch-e-bike"
+        "url": "https://ridebatch.com/products/batch-e-bike",
+        "price_usd": 1399,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -1748,71 +2060,90 @@
         "family": "light_wood"
       }
     ],
-    "price_usd": 1399,
+    "image_url": "https://aventon-images.imgix.net/files/01_Soltera.2.jpg?v=1756958410",
+    "image_urls": [
+      "https://lectricebikes.com/cdn/shop/files/XP4-TEMPEST_GREY_STEP_OVER-BF-STUDIO_CAROUSEL.jpg?v=1774327498",
+      "https://ride1up.com/wp-content/uploads/2026/03/RV3-MedLrg_Grn-scaled.webp"
+    ],
     "price_sources": [
       {
         "platform": "manufacturer",
+        "platform_label": "Direct",
         "url": "https://ridebatch.com/products/batch-e-bike",
-        "item_price_usd": 1399,
-        "shipping_usd": 0,
-        "landed_usd": 1399,
+        "item_price_usd": 1399.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 1399.0,
         "delivery_note": "Direct ship",
-        "rewards_note": null
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
-    "landed_price_usd": 1399,
+    "landed_price_usd": 1399.0,
+    "best_buy_url": "https://ridebatch.com/products/batch-e-bike",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 48,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Mechanical Disc",
         "value": "mechanical_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": true
@@ -1823,12 +2154,7 @@
       "issues": [
         "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
       ],
-      "badges": [
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
-        }
-      ],
+      "badges": [],
       "e_bike_class": 2
     },
     "vs_baseline": {
@@ -1844,7 +2170,7 @@
     "id": "zooz-ultra-ripster",
     "tier": "premium",
     "brand": "Zooz",
-    "model": "Ultra Ripster - Gen 2",
+    "model": "Ultra Ripster Gen 2",
     "parser": "zooz",
     "e_bike_class": 3,
     "max_speed_mph": 28,
@@ -1857,7 +2183,9 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://zoozbikes.com/products/ultra-ripster-gen-2"
+        "url": "https://zoozbikes.com/products/ultra-ripster-gen-2",
+        "price_usd": 2095,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -1867,76 +2195,90 @@
       }
     ],
     "friend_recommended": true,
-    "field_confidence": {
-      "price_usd": 0.9,
-      "motor_w": 0.7,
-      "brake_type": 0.6
-    },
-    "price_usd": 2095,
+    "image_url": "https://zoozbikes.com/cdn/shop/files/URGEN2-CHROME-FRONT.png?v=1782772196",
+    "image_urls": [
+      "https://zoozbikes.com/cdn/shop/files/URGEN2-CHROME-SIDE.png?v=1782772320",
+      "https://zoozbikes.com/cdn/shop/files/URGEN2-CHROME-TOP.png?v=1782772269"
+    ],
     "price_sources": [
       {
         "platform": "manufacturer",
+        "platform_label": "Direct",
         "url": "https://zoozbikes.com/products/ultra-ripster-gen-2",
-        "item_price_usd": 2095,
-        "shipping_usd": 0,
-        "landed_usd": 2095,
+        "item_price_usd": 2095.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 2095.0,
         "delivery_note": "Direct ship",
-        "rewards_note": null
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
-    "landed_price_usd": 2095,
+    "landed_price_usd": 2095.0,
+    "best_buy_url": "https://zoozbikes.com/products/ultra-ripster-gen-2",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 50,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Hydraulic Disc",
         "value": "hydraulic_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": false
@@ -1952,10 +2294,6 @@
         {
           "type": "danger",
           "text": "Illegal at age 12"
-        },
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
         }
       ],
       "e_bike_class": 3
@@ -1985,7 +2323,9 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://zoozbikes.com/products/uu-gen4"
+        "url": "https://zoozbikes.com/products/uu-gen4",
+        "price_usd": 2595,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -1999,76 +2339,90 @@
       }
     ],
     "friend_recommended": true,
-    "field_confidence": {
-      "price_usd": 0.9,
-      "motor_w": 0.7,
-      "brake_type": 0.6
-    },
-    "price_usd": 2595,
+    "image_url": "https://zoozbikes.com/cdn/shop/files/UUGEN5-GLOWWORM-FRONT.jpg?v=1782842327",
+    "image_urls": [
+      "https://zoozbikes.com/cdn/shop/files/UUGEN5-CHROME-FRONT.jpg?v=1782842327",
+      "https://zoozbikes.com/cdn/shop/files/UUGEN5-GLOWWORM-SIDE.jpg?v=1782842327"
+    ],
     "price_sources": [
       {
         "platform": "manufacturer",
+        "platform_label": "Direct",
         "url": "https://zoozbikes.com/products/uu-gen4",
-        "item_price_usd": 2595,
-        "shipping_usd": 0,
-        "landed_usd": 2595,
+        "item_price_usd": 2595.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 2595.0,
         "delivery_note": "Direct ship",
-        "rewards_note": null
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
-    "landed_price_usd": 2595,
+    "landed_price_usd": 2595.0,
+    "best_buy_url": "https://zoozbikes.com/products/uu-gen4",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 50,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Hydraulic Disc",
         "value": "hydraulic_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": false
@@ -2084,10 +2438,6 @@
         {
           "type": "danger",
           "text": "Illegal at age 12"
-        },
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
         }
       ],
       "e_bike_class": 3
@@ -2117,7 +2467,9 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://zoozbikes.com/products/ultra-flex-g2-low-bar"
+        "url": "https://zoozbikes.com/products/ultra-flex-g2-low-bar",
+        "price_usd": 3095,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -2130,76 +2482,90 @@
         "family": "light_wood"
       }
     ],
-    "field_confidence": {
-      "price_usd": 0.9,
-      "motor_w": 0.7,
-      "brake_type": 0.6
-    },
-    "price_usd": 3095,
+    "image_url": "https://zoozbikes.com/cdn/shop/files/UFGEN3-LOW-CHRM-FRONT.jpg?v=1782769660",
+    "image_urls": [
+      "https://zoozbikes.com/cdn/shop/files/UFGEN3-LOW-CHRM-SIDE.jpg?v=1782769634",
+      "https://zoozbikes.com/cdn/shop/files/UFGEN3-LOW-CHRM-REAR.jpg?v=1782769623"
+    ],
     "price_sources": [
       {
         "platform": "manufacturer",
+        "platform_label": "Direct",
         "url": "https://zoozbikes.com/products/ultra-flex-g2-low-bar",
-        "item_price_usd": 3095,
-        "shipping_usd": 0,
-        "landed_usd": 3095,
+        "item_price_usd": 3095.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 3095.0,
         "delivery_note": "Direct ship",
-        "rewards_note": null
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
-    "landed_price_usd": 3095,
+    "landed_price_usd": 3095.0,
+    "best_buy_url": "https://zoozbikes.com/products/ultra-flex-g2-low-bar",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 50,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Hydraulic Disc",
         "value": "hydraulic_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": false
@@ -2215,10 +2581,6 @@
         {
           "type": "danger",
           "text": "Illegal at age 12"
-        },
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
         }
       ],
       "e_bike_class": 3
@@ -2249,7 +2611,9 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://zoozbikes.com/products/ultra-cush"
+        "url": "https://zoozbikes.com/products/ultra-cush",
+        "price_usd": 2795,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -2258,76 +2622,90 @@
         "family": "other"
       }
     ],
-    "field_confidence": {
-      "price_usd": 0.9,
-      "motor_w": 0.7,
-      "brake_type": 0.6
-    },
-    "price_usd": 2795,
+    "image_url": "https://zoozbikes.com/cdn/shop/files/ULTRACUSH-FRONT.jpg?v=1782778274",
+    "image_urls": [
+      "https://zoozbikes.com/cdn/shop/files/ULTRACUSH-SIDE.jpg?v=1782778285",
+      "https://zoozbikes.com/cdn/shop/files/ULTRACUSH-MOTOR.jpg?v=1782847738"
+    ],
     "price_sources": [
       {
         "platform": "manufacturer",
+        "platform_label": "Direct",
         "url": "https://zoozbikes.com/products/ultra-cush",
-        "item_price_usd": 2795,
-        "shipping_usd": 0,
-        "landed_usd": 2795,
+        "item_price_usd": 2795.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 2795.0,
         "delivery_note": "Direct ship",
-        "rewards_note": null
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
-    "landed_price_usd": 2795,
+    "landed_price_usd": 2795.0,
+    "best_buy_url": "https://zoozbikes.com/products/ultra-cush",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 50,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Hydraulic Disc",
         "value": "hydraulic_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": false
@@ -2343,10 +2721,6 @@
         {
           "type": "danger",
           "text": "Illegal at age 12"
-        },
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
         }
       ],
       "e_bike_class": 3
@@ -2354,6 +2728,304 @@
     "vs_baseline": {
       "price_multiplier": 9.7,
       "speed_delta_mph": 13,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "jetson-bolt-pro",
+    "tier": "budget",
+    "brand": "Jetson",
+    "model": "Bolt Pro",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 15.5,
+    "motor_w": 350,
+    "brake_type": "mechanical_disc",
+    "brakes_front": true,
+    "brakes_rear": true,
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "reflectors": true,
+    "ul_certified": true,
+    "tire_width_in": 2.0,
+    "speed_limiter": true,
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://ridejetson.com/products/bolt-electric-bike-pro",
+        "price_usd": 500,
+        "shipping_usd": 10
+      },
+      {
+        "platform": "amazon",
+        "url": "https://www.amazon.com/dp/B0G29XV1J8",
+        "price_usd": 500,
+        "shipping_usd": 0
+      }
+    ],
+    "colors": [
+      {
+        "name": "Blue",
+        "family": "white"
+      },
+      {
+        "name": "Black",
+        "family": "other"
+      }
+    ],
+    "image_url": "https://ridejetson.com/cdn/shop/products/MicrosoftTeams-image_21.png?v=1762526059",
+    "image_urls": [
+      "https://ridejetson.com/cdn/shop/products/JBLTP-BLK_LS_01_418fe14f-ed07-4190-bbb0-b2279f115c89.jpg?v=1745265756",
+      "https://ridejetson.com/cdn/shop/products/JBLTP-SBL_04.jpg?v=1745265756",
+      "https://ridejetson.com/cdn/shop/products/JBLTP-FGR_02.jpg?v=1745265756"
+    ],
+    "price_sources": [
+      {
+        "platform": "amazon",
+        "platform_label": "Amazon",
+        "url": "https://www.amazon.com/dp/B0G29XV1J8",
+        "item_price_usd": 500.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 500.0,
+        "delivery_note": "Prime ~1\u20133 days",
+        "rewards_note": "5% back on some Chase/Amazon cards",
+        "is_search_url": false
+      },
+      {
+        "platform": "manufacturer",
+        "platform_label": "Direct",
+        "url": "https://ridejetson.com/products/bolt-electric-bike-pro",
+        "item_price_usd": 500.0,
+        "shipping_usd": 10.0,
+        "landed_usd": 510.0,
+        "delivery_note": "Direct ship",
+        "rewards_note": null,
+        "is_search_url": false
+      }
+    ],
+    "landed_price_usd": 500.0,
+    "best_buy_url": "https://www.amazon.com/dp/B0G29XV1J8",
+    "best_buy_platform": "Amazon",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Prime ~1\u20133 days",
+    "safety_score": 63,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "row_label": "Brakes",
+        "label": "Mechanical Disc",
+        "value": "mechanical_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "row_label": "Front brake",
+        "label": "Front brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_brake",
+        "row_label": "Rear brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "row_label": "Front light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "row_label": "Rear light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "row_label": "Reflectors",
+        "label": "Reflectors",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ul_cert",
+        "row_label": "UL battery cert",
+        "label": "UL battery cert",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "tires",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Tires 2.0\" wide",
+        "value": 2.0,
+        "ok": true
+      },
+      {
+        "key": "speed_limiter",
+        "row_label": "Speed limiter",
+        "label": "Speed limiter",
+        "value": true,
+        "ok": true
+      }
+    ],
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 1.7,
+      "speed_delta_mph": 0.5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "hoverfly-ecompact",
+    "tier": "budget",
+    "brand": "Hoverfly",
+    "model": "E-Compact 16\"",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 15.5,
+    "motor_w": 350,
+    "brake_type": "mechanical_disc",
+    "brakes_front": true,
+    "brakes_rear": true,
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "reflectors": true,
+    "sources": [
+      {
+        "platform": "amazon",
+        "url": "https://www.amazon.com/dp/B0CZ793YBN",
+        "price_usd": 449,
+        "shipping_usd": 0
+      }
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "family": "white"
+      }
+    ],
+    "image_url": "https://ridejetson.com/cdn/shop/products/MicrosoftTeams-image_21.png?v=1762526059",
+    "image_urls": [
+      "https://www.heybike.com/cdn/shop/files/Mars_2.0_HS-2.png?v=1774418893"
+    ],
+    "price_sources": [
+      {
+        "platform": "amazon",
+        "platform_label": "Amazon",
+        "url": "https://www.amazon.com/dp/B0CZ793YBN",
+        "item_price_usd": 449.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 449.0,
+        "delivery_note": "Prime ~1\u20133 days",
+        "rewards_note": "5% back on some Chase/Amazon cards",
+        "is_search_url": false
+      }
+    ],
+    "landed_price_usd": 449.0,
+    "best_buy_url": "https://www.amazon.com/dp/B0CZ793YBN",
+    "best_buy_platform": "Amazon",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Prime ~1\u20133 days",
+    "safety_score": 58,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "row_label": "Brakes",
+        "label": "Mechanical Disc",
+        "value": "mechanical_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "row_label": "Front brake",
+        "label": "Front brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_brake",
+        "row_label": "Rear brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "row_label": "Front light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "row_label": "Rear light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "row_label": "Reflectors",
+        "label": "Reflectors",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ul_cert",
+        "row_label": "UL battery cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "row_label": "Speed limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 1.6,
+      "speed_delta_mph": 0.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
       "baseline_price": 289
@@ -2377,7 +3049,9 @@
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://super73.com/products/super73-zg"
+        "url": "https://super73.com/products/super73-zg",
+        "price_usd": 2195,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -2386,71 +3060,90 @@
         "family": "white"
       }
     ],
-    "price_usd": 2195,
+    "image_url": "https://super73.com/cdn/shop/files/25YMZMIAMI_CORE_FRONTHERO_de5b8c0a-fb02-4386-bf97-10d95025e36d_1800x.jpg?v=1772738545",
+    "image_urls": [
+      "https://super73.com/cdn/shop/files/25YMZMIAMI_CORE_RIGHT_1800x.jpg?v=1772738545",
+      "https://super73.com/cdn/shop/files/25YMZMIAMI_CORE_REARHERO_1800x.jpg?v=1772738545"
+    ],
     "price_sources": [
       {
         "platform": "manufacturer",
+        "platform_label": "Direct",
         "url": "https://super73.com/products/super73-zg",
-        "item_price_usd": 2195,
-        "shipping_usd": 0,
-        "landed_usd": 2195,
+        "item_price_usd": 2195.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 2195.0,
         "delivery_note": "Direct ship",
-        "rewards_note": null
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
-    "landed_price_usd": 2195,
+    "landed_price_usd": 2195.0,
+    "best_buy_url": "https://super73.com/products/super73-zg",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 48,
     "safety_checklist": [
       {
         "key": "brake_type",
-        "label": "Brake type",
+        "row_label": "Brakes",
+        "label": "Mechanical Disc",
         "value": "mechanical_disc",
         "ok": true
       },
       {
         "key": "front_brake",
+        "row_label": "Front brake",
         "label": "Front brake",
         "value": false,
         "ok": false
       },
       {
         "key": "rear_brake",
+        "row_label": "Rear brake",
         "label": "Rear brake",
         "value": true,
         "ok": true
       },
       {
         "key": "front_light",
+        "row_label": "Front light",
         "label": "Front light",
         "value": true,
         "ok": true
       },
       {
         "key": "rear_light",
+        "row_label": "Rear light",
         "label": "Rear light",
         "value": true,
         "ok": true
       },
       {
         "key": "reflectors",
+        "row_label": "Reflectors",
         "label": "Reflectors",
         "value": null,
         "ok": false
       },
       {
         "key": "ul_cert",
+        "row_label": "UL battery cert",
         "label": "UL battery cert",
         "value": null,
         "ok": false
       },
       {
         "key": "tires",
-        "label": "Tire width \u2265 2.0\"",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
         "value": null,
         "ok": false
       },
       {
         "key": "speed_limiter",
+        "row_label": "Speed limiter",
         "label": "Speed limiter",
         "value": null,
         "ok": true
@@ -2461,12 +3154,7 @@
       "issues": [
         "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
       ],
-      "badges": [
-        {
-          "type": "info",
-          "text": "Helmet required (under 18)"
-        }
-      ],
+      "badges": [],
       "e_bike_class": 2
     },
     "vs_baseline": {

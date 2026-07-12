@@ -2,6 +2,8 @@ import json
 import re
 from bs4 import BeautifulSoup
 
+from ..images import extract_image_url
+
 
 def parse_zooz(html: str, config: dict) -> dict:
     soup = BeautifulSoup(html, "html.parser")
@@ -39,6 +41,11 @@ def parse_zooz(html: str, config: dict) -> dict:
             elif field == "max_speed_mph":
                 result[field] = 28
             result["field_confidence"][field] = conf
+
+    img = extract_image_url(html)
+    if img:
+        result["image_url"] = img
+        result["field_confidence"]["image_url"] = 0.8
 
     manual = config.get("manual", {})
     for k, v in manual.items():

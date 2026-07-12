@@ -2,6 +2,8 @@ import json
 import re
 from bs4 import BeautifulSoup
 
+from ..images import extract_image_url
+
 
 def parse_firmstrong(html: str, config: dict) -> dict:
     soup = BeautifulSoup(html, "html.parser")
@@ -33,6 +35,11 @@ def parse_firmstrong(html: str, config: dict) -> dict:
     if m:
         result["weight_lb"] = float(m.group(1))
         result["field_confidence"]["weight_lb"] = 0.85
+
+    img = extract_image_url(html)
+    if img:
+        result["image_url"] = img
+        result["field_confidence"]["image_url"] = 0.85
 
     manual = config.get("manual", {})
     for k, v in (config.get("baseline", config)).items():

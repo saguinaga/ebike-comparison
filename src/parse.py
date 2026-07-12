@@ -29,8 +29,17 @@ def load_config(root: Path) -> tuple:
     return bikes_cfg, bench_cfg
 
 
+def load_image_galleries(root: Path) -> dict:
+    path = root / "config" / "image_galleries.yaml"
+    if not path.exists():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return data.get("galleries", {})
+
+
 def parse_all(root: Path, scrape_live: bool = True) -> list:
     bikes_cfg, bench_cfg = load_config(root)
+    galleries = load_image_galleries(root)
     baseline = bench_cfg["baseline"]
     rider = bench_cfg.get("rider", {})
     cache_dir = root / "data" / "raw"
@@ -38,6 +47,8 @@ def parse_all(root: Path, scrape_live: bool = True) -> list:
 
     # Parse baseline
     baseline_bike = {**baseline, "is_baseline": True, "tier": "baseline"}
+    if baseline_bike.get("id") in galleries:
+        baseline_bike = _merge(baseline_bike, galleries[baseline_bike["id"]])
     if scrape_live:
         try:
             url = baseline["url"]
@@ -68,6 +79,8 @@ def parse_all(root: Path, scrape_live: bool = True) -> list:
                     break
 
         bike = _merge(bike, manual)
+        if bike.get("id") in galleries:
+            bike = _merge(bike, galleries[bike["id"]])
         bike["colors"] = normalize_colors(bike.get("colors", []))
         bike.update(compute_landed_prices({**entry, **bike}))
         bike["safety_score"] = compute_safety_score(bike)

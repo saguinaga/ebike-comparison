@@ -1,3 +1,5 @@
+from .formatting import format_brake
+
 BRAKE_SCORES = {
     "coaster": 5,
     "rim": 8,
@@ -5,18 +7,17 @@ BRAKE_SCORES = {
     "hydraulic_disc": 25,
 }
 
-CHECKLIST_FIELDS = [
-    ("brake_type", "Brake type"),
-    ("brakes_front", "Front brake"),
-    ("brakes_rear", "Rear brake"),
-    ("lights.front", "Front light"),
-    ("lights.rear", "Rear light"),
-    ("reflectors", "Reflectors"),
-    ("ul_certified", "UL battery cert"),
-    ("motor_cutoff", "Motor cut-off on brake"),
-    ("tire_width_in", "Tire width"),
-    ("speed_limiter", "Speed limiter"),
-]
+CHECKLIST_ROW_LABELS = {
+    "brake_type": "Brakes",
+    "front_brake": "Front brake",
+    "rear_brake": "Rear brake",
+    "front_light": "Front light",
+    "rear_light": "Rear light",
+    "reflectors": "Reflectors",
+    "ul_cert": "UL battery cert",
+    "tires": "Tire width ≥ 2.0\"",
+    "speed_limiter": "Speed limiter",
+}
 
 
 def _get_nested(obj: dict, path: str):
@@ -28,20 +29,46 @@ def _get_nested(obj: dict, path: str):
     return cur
 
 
+def _check_item(key: str, label: str, value, ok: bool) -> dict:
+    return {
+        "key": key,
+        "row_label": CHECKLIST_ROW_LABELS.get(key, label),
+        "label": label,
+        "value": value,
+        "ok": ok,
+    }
+
+
 def build_checklist(bike: dict) -> list:
     lights = bike.get("lights") or {}
-    items = [
-        {"key": "brake_type", "label": "Brake type", "value": bike.get("brake_type"), "ok": bike.get("brake_type") in ("mechanical_disc", "hydraulic_disc")},
-        {"key": "front_brake", "label": "Front brake", "value": bike.get("brakes_front", False), "ok": bool(bike.get("brakes_front"))},
-        {"key": "rear_brake", "label": "Rear brake", "value": bike.get("brakes_rear", True), "ok": bool(bike.get("brakes_rear", True))},
-        {"key": "front_light", "label": "Front light", "value": lights.get("front"), "ok": bool(lights.get("front"))},
-        {"key": "rear_light", "label": "Rear light", "value": lights.get("rear"), "ok": bool(lights.get("rear"))},
-        {"key": "reflectors", "label": "Reflectors", "value": bike.get("reflectors"), "ok": bool(bike.get("reflectors", False))},
-        {"key": "ul_cert", "label": "UL battery cert", "value": bike.get("ul_certified"), "ok": bool(bike.get("ul_certified"))},
-        {"key": "tires", "label": "Tire width ≥ 2.0\"", "value": bike.get("tire_width_in"), "ok": (bike.get("tire_width_in") or 0) >= 2.0},
-        {"key": "speed_limiter", "label": "Speed limiter", "value": bike.get("speed_limiter"), "ok": bool(bike.get("speed_limiter", bike.get("max_speed_mph", 99) <= 20))},
+    brake_info = format_brake(bike.get("brake_type"))
+    tire_w = bike.get("tire_width_in")
+    return [
+        _check_item(
+            "brake_type",
+            brake_info["label"],
+            bike.get("brake_type"),
+            bike.get("brake_type") in ("mechanical_disc", "hydraulic_disc"),
+        ),
+        _check_item("front_brake", "Front brake", bike.get("brakes_front", False), bool(bike.get("brakes_front"))),
+        _check_item("rear_brake", "Rear brake", bike.get("brakes_rear", True), bool(bike.get("brakes_rear", True))),
+        _check_item("front_light", "Front light", lights.get("front"), bool(lights.get("front"))),
+        _check_item("rear_light", "Rear light", lights.get("rear"), bool(lights.get("rear"))),
+        _check_item("reflectors", "Reflectors", bike.get("reflectors"), bool(bike.get("reflectors", False))),
+        _check_item("ul_cert", "UL battery cert", bike.get("ul_certified"), bool(bike.get("ul_certified"))),
+        _check_item(
+            "tires",
+            f'Tires {tire_w}" wide' if tire_w else "Wide tires (≥ 2.0\")",
+            tire_w,
+            (tire_w or 0) >= 2.0,
+        ),
+        _check_item(
+            "speed_limiter",
+            "Speed limiter",
+            bike.get("speed_limiter"),
+            bool(bike.get("speed_limiter", bike.get("max_speed_mph", 99) <= 20)),
+        ),
     ]
-    return items
 
 
 def compute_safety_score(bike: dict) -> int:

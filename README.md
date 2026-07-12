@@ -12,7 +12,13 @@ pip install -r requirements.txt
 python run.py all
 ```
 
-Open `docs/index.html` locally, or push to GitHub for Pages hosting.
+Open `docs/index.html` locally in your browser (double-click or `python -m http.server` from project root).
+
+### Product images (3 options)
+
+1. **Auto-scrape** — `python run.py scrape` pulls `og:image` from manufacturer pages; `python run.py build` saves to `docs/images/{bike-id}.jpg` for offline viewing.
+2. **Manual URL** — add `image_url: https://...` under `manual:` in `config/bikes.yaml` for any bike (Amazon, AliExpress, etc.).
+3. **Local file** — drop `docs/images/{bike-id}.jpg` yourself; rebuild picks it up.
 
 ## Commands
 
