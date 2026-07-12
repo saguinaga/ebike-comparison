@@ -17,6 +17,9 @@
     <li><span class="bf-label">Range</span> {{ display.range_label }}</li>
     <li><span class="bf-label">Capacity</span> {{ display.capacity_label }}</li>
     <li><span class="bf-label">Charging</span> {{ display.charge_label }}{% if display.charge_notes %} <span class="bf-note" title="{{ display.charge_notes }}">ⓘ</span>{% endif %}</li>
+    {% if display.efficiency_label and display.efficiency_label != '—' %}
+    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-{{ display.efficiency_rating or 'unknown' }}">{{ display.efficiency_label }}</span></li>
+    {% endif %}
   </ul>
 </div>
 {%- endmacro %}
@@ -137,6 +140,7 @@
             <option value="2000">Under $2,000</option>
           </select>
         </label>
+        <label><input type="checkbox" id="efficiencyFilter"> Highlight efficient <span class="filter-hint">(≤12 Wh/mi PAS)</span></label>
       </div>
       <div class="tier-tabs" id="tierTabs">
         <button class="tier-tab active" data-tier="all">All</button>
@@ -153,7 +157,8 @@
           data-legal="{{ 'yes' if bike.legal.legal_for_age else 'no' }}"
           data-colors="{{ bike.colors | map(attribute='family') | join(',') }}"
           data-class="{{ bike.e_bike_class }}"
-          data-speed="{{ bike.max_speed_mph }}">
+          data-speed="{{ bike.max_speed_mph }}"
+          data-efficiency="{{ bike.battery_display.wh_per_mile_pas or '' }}">
           <div class="bike-media">
             <div class="bike-thumb">
               {% if bike.image_gallery %}
@@ -237,14 +242,16 @@
     </div>
 
     <section class="section" id="charts-section">
-      <h2 class="section-title">Safety Snapshots</h2>
-      <p class="section-note">Based on visible bikes (respects hide &amp; filters). Updates as you narrow the list.</p>
+      <h2 class="section-title">Safety &amp; Energy Snapshots</h2>
+      <p class="section-note">Based on visible bikes (respects hide &amp; filters). Energy uses manufacturer PAS range ÷ pack Wh — lower Wh/mi means less draw per mile.</p>
       <div class="charts-grid">
         <div class="chart-card"><h4>Safety vs price</h4><div id="chartSafetyPrice" class="chart-area"></div></div>
         <div class="chart-card"><h4>Safety by tier</h4><div id="chartSafetyTier" class="chart-area"></div></div>
         <div class="chart-card"><h4>Equipment pass rate</h4><div id="chartChecklist" class="chart-area"></div></div>
         <div class="chart-card"><h4>Max speed vs safety</h4><div id="chartSpeedSafety" class="chart-area"></div></div>
         <div class="chart-card"><h4>Range vs price</h4><div id="chartRangePrice" class="chart-area"></div></div>
+        <div class="chart-card"><h4>Efficiency vs price</h4><div id="chartEfficiencyPrice" class="chart-area"></div></div>
+        <div class="chart-card"><h4>Wh/mi by tier</h4><div id="chartEfficiencyTier" class="chart-area"></div></div>
       </div>
     </section>
 
@@ -273,6 +280,7 @@
             <th data-sort="speed" data-type="number">Max mph</th>
             <th data-sort="range" data-type="number">Range mi</th>
             <th data-sort="battery" data-type="number">Battery</th>
+            <th data-sort="efficiency" data-type="number" title="Lower Wh/mi = more efficient">Wh/mi</th>
             <th data-sort="charge" data-type="string">Charging</th>
             <th data-sort="brakes" data-type="string">Brakes</th>
             <th>Buy</th>
@@ -291,6 +299,7 @@
               data-speed="{{ bike.max_speed_mph }}"
               data-range="{{ bike.battery_range_miles_pas or '' }}"
               data-battery="{{ bike.battery_capacity_ah or '' }}"
+              data-efficiency="{{ bike.battery_display.wh_per_mile_pas or '' }}"
               data-charge="{{ bike.battery_display.charge_label }}"
               data-brakes="{{ bike.brake_type }}">
             <td class="table-photo">
@@ -306,6 +315,7 @@
             <td>{{ bike.max_speed_mph }}</td>
             <td>{{ bike.battery_display.range_label }}</td>
             <td>{{ bike.battery_display.capacity_label }}</td>
+            <td>{% if bike.battery_display.wh_per_mile_pas %}<span class="efficiency-tag efficiency-{{ bike.battery_display.efficiency_rating or 'unknown' }}">{{ bike.battery_display.wh_per_mile_pas }}</span>{% else %}—{% endif %}</td>
             <td>{{ bike.battery_display.charge_label }}</td>
             <td>{{ brake_label(bike.brake_display) }}</td>
             <td class="buy-cell">

@@ -23,8 +23,15 @@
     removable_keyed: "Removable (keyed)",
     none: "N/A",
   };
+  const EFFICIENCY_BANDS = [
+    [9, "excellent"],
+    [12, "good"],
+    [16, "average"],
+  ];
+  const EFFICIENCY_HIGHLIGHT_MAX_WH_MI = 12;
 
   const colorFilter = document.getElementById("colorFilter");
+  const efficiencyFilter = document.getElementById("efficiencyFilter");
   const speedFilter = document.getElementById("speedFilter");
   const legalFilter = document.getElementById("legalFilter");
   const priceFilter = document.getElementById("priceFilter");
@@ -62,6 +69,32 @@
     return `$${val.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
   }
 
+  function whPerMile(wh, miles) {
+    if (wh && miles && miles > 0) return Math.round((wh / miles) * 10) / 10;
+    return null;
+  }
+
+  function milesPerKwh(wh, miles) {
+    if (wh && miles && wh > 0) return Math.round((miles / wh) * 10000) / 10;
+    return null;
+  }
+
+  function efficiencyRating(whPerMi) {
+    if (whPerMi == null) return null;
+    for (const [limit, label] of EFFICIENCY_BANDS) {
+      if (whPerMi <= limit) return label;
+    }
+    return "poor";
+  }
+
+  function efficiencyLabel(whPerMiPas, whPerMiThr, mpkwhPas) {
+    const parts = [];
+    if (whPerMiPas != null) parts.push(`${whPerMiPas} Wh/mi PAS`);
+    if (whPerMiThr != null) parts.push(`${whPerMiThr} Wh/mi throttle`);
+    if (mpkwhPas != null) parts.push(`${mpkwhPas} mi/kWh`);
+    return parts.length ? parts.join(" · ") : "—";
+  }
+
   function formatBattery(bike) {
     const v = bike.battery_voltage_v;
     const ah = bike.battery_capacity_ah;
@@ -72,6 +105,10 @@
     const method = bike.battery_charge_method || "";
     const notes = bike.battery_charge_notes || "";
     const ahAlt = bike.battery_capacity_ah_alt;
+    const whPerMiPas = whPerMile(wh, pas);
+    const whPerMiThr = whPerMile(wh, thr);
+    const mpkwhPas = milesPerKwh(wh, pas);
+    const effRating = efficiencyRating(whPerMiPas);
 
     if (method === "none" || (!v && !ah && !pas)) {
       return {
@@ -79,8 +116,12 @@
         capacity_label: "—",
         range_label: "—",
         charge_label: "—",
+        efficiency_label: "—",
+        efficiency_rating: null,
         summary: "—",
         charge_notes: notes,
+        wh_per_mile_pas: null,
+        is_efficient: false,
       };
     }
     let capacity_label = "—";
@@ -100,17 +141,25 @@
     if (method && method !== "none") chargeParts.push(CHARGE_LABELS[method] || method);
     const charge_label = chargeParts.length ? chargeParts.join(" · ") : "—";
 
+    const efficiency_label = efficiencyLabel(whPerMiPas, whPerMiThr, mpkwhPas);
+
     return {
       has_battery: true,
       capacity_label,
       range_label,
       charge_label,
       charge_notes: notes,
+      efficiency_label,
+      efficiency_rating: effRating,
       summary: range_label !== "—" ? range_label : capacity_label,
       range_miles: pas,
       capacity_ah: ah,
       battery_wh: wh,
       charge_method: method,
+      wh_per_mile_pas: whPerMiPas,
+      wh_per_mile_throttle: whPerMiThr,
+      miles_per_kwh_pas: mpkwhPas,
+      is_efficient: whPerMiPas != null && whPerMiPas <= EFFICIENCY_HIGHLIGHT_MAX_WH_MI,
     };
   }
 
@@ -123,12 +172,17 @@
   function batteryBlockHtml(bike) {
     const b = formatBattery(bike);
     const note = b.charge_notes ? ` <span class="bf-note" title="${b.charge_notes}">ⓘ</span>` : "";
+    const effLine =
+      b.efficiency_label && b.efficiency_label !== "—"
+        ? `<li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-${b.efficiency_rating || "unknown"}">${b.efficiency_label}</span></li>`
+        : "";
     return `<div class="battery-equip">
       <span class="battery-equip-title">Battery &amp; range</span>
       <ul class="battery-facts">
         <li><span class="bf-label">Range</span> ${b.range_label}</li>
         <li><span class="bf-label">Capacity</span> ${b.capacity_label}</li>
         <li><span class="bf-label">Charging</span> ${b.charge_label}${note}</li>
+        ${effLine}
       </ul>
     </div>`;
   }
@@ -246,10 +300,16 @@
     return true;
   }
 
+  function isEfficientBike(bike) {
+    const b = bike.battery_display || formatBattery(bike);
+    return !!b.is_efficient;
+  }
+
   function getCardFilters() {
     return {
       tier: document.querySelector(".tier-tab.active")?.dataset.tier || "all",
       highlightColors: colorFilter?.checked,
+      highlightEfficient: efficiencyFilter?.checked,
       legal: legalFilter?.value || "all",
       maxPrice: priceFilter?.value || "all",
       speed: speedFilter?.value || "all",
@@ -290,6 +350,8 @@
       card.classList.toggle("hidden", !visible);
       card.classList.toggle("user-hidden", hiddenIds.includes(card.dataset.id));
       card.classList.toggle("color-preferred", f.highlightColors && hasPreferredColor(card.dataset.colors));
+      const bike = bikeMap[card.dataset.id];
+      card.classList.toggle("efficiency-preferred", f.highlightEfficient && bike && isEfficientBike(bike));
       card.classList.toggle("is-baseline", card.dataset.id === baselineId);
     });
     updateHiddenUi();
@@ -353,8 +415,9 @@
     const link = baseline.url || baseline.best_buy_url;
     const bat = formatBattery(baseline);
     const batLine = bat.has_battery ? ` · ${bat.range_label}` : "";
+    const effLine = bat.efficiency_label && bat.efficiency_label !== "—" ? ` · ${bat.efficiency_label}` : "";
     details.innerHTML = `
-      <p><strong>${baseline.brand} ${baseline.model}</strong> · ${formatMoney(bikePrice(baseline))} · ${kind} · ${baseline.max_speed_mph || "?"} mph max · ${brakeHtml(baseline)}${batLine}</p>
+      <p><strong>${baseline.brand} ${baseline.model}</strong> · ${formatMoney(bikePrice(baseline))} · ${kind} · ${baseline.max_speed_mph || "?"} mph max · ${brakeHtml(baseline)}${batLine}${effLine}</p>
       <p>All “vs baseline” multipliers compare to this bike.${link ? ` <a href="${link}" target="_blank" rel="noopener">Product page →</a>` : ""}</p>
     `;
 
@@ -418,6 +481,49 @@
         "PAS range (mi)"
       );
     }
+    const effEl = document.getElementById("chartEfficiencyPrice");
+    if (effEl) {
+      const withEff = bikes.filter((b) => b.battery_display?.wh_per_mile_pas != null);
+      renderScatterChart(
+        "chartEfficiencyPrice",
+        withEff,
+        (b) => bikePrice(b),
+        (b) => b.battery_display.wh_per_mile_pas,
+        "Price",
+        "Wh/mi PAS"
+      );
+    }
+    renderEfficiencyTierChart("chartEfficiencyTier", bikes);
+  }
+
+  function renderEfficiencyTierChart(elId, bikes) {
+    const el = document.getElementById(elId);
+    if (!el) return;
+    const tiers = ["budget", "value", "mid", "premium"];
+    const data = tiers
+      .map((t) => {
+        const group = bikes.filter((b) => b.tier === t && b.battery_display?.wh_per_mile_pas != null);
+        const avg = group.length
+          ? group.reduce((s, b) => s + b.battery_display.wh_per_mile_pas, 0) / group.length
+          : 0;
+        return { tier: t, label: tierLabels[t] || t, avg, n: group.length };
+      })
+      .filter((d) => d.n > 0);
+    if (!data.length) {
+      el.innerHTML = "<p class='chart-empty'>No bikes match filters.</p>";
+      return;
+    }
+    const max = Math.max(...data.map((d) => d.avg), 1);
+    el.innerHTML = data
+      .map(
+        (d) => `
+      <div class="bar-row">
+        <span class="bar-label">${d.label}</span>
+        <div class="bar-track"><div class="bar-fill bar-fill--eff" style="width:${(d.avg / max) * 100}%"></div></div>
+        <span class="bar-val">${d.avg.toFixed(1)}</span>
+      </div>`
+      )
+      .join("");
   }
 
   function renderScatterChart(elId, bikes, xFn, yFn, xLabel, yLabel) {
@@ -598,6 +704,17 @@
         fmt: (v, b) => formatBattery(b).charge_label,
         bikes: selected,
       },
+      {
+        label: "Energy efficiency (PAS)",
+        values: selected.map((b) => b.battery_display?.wh_per_mile_pas),
+        higherBetter: false,
+        fmt: (v, b) => {
+          const bat = formatBattery(b);
+          if (v == null) return "—";
+          return `<span class="efficiency-tag efficiency-${bat.efficiency_rating || "unknown"}">${bat.efficiency_label}</span>`;
+        },
+        bikes: selected,
+      },
       { label: "Brakes", values: selected.map((b) => b.brake_type), higherBetter: null, fmt: (_, b) => brakeHtml(b), bikes: selected },
     ];
 
@@ -679,6 +796,7 @@
     article.dataset.colors = (bike.colors || []).map((c) => c.family).join(",");
     article.dataset.class = bike.e_bike_class || "";
     article.dataset.speed = bike.max_speed_mph;
+    article.dataset.efficiency = bike.battery_display?.wh_per_mile_pas ?? "";
     const checklist = (bike.safety_checklist || [])
       .map((i) => `<li class="${i.ok ? "ok" : "miss"}">${i.label}</li>`)
       .join("");
@@ -782,7 +900,7 @@
     applyCardFilters();
   });
 
-  [colorFilter, legalFilter, priceFilter, speedFilter].forEach((el) =>
+  [colorFilter, legalFilter, priceFilter, speedFilter, efficiencyFilter].forEach((el) =>
     el?.addEventListener("change", applyCardFilters)
   );
   [tableTierFilter, tableClassFilter, tableLegalFilter, tableColorFilter].forEach((el) =>

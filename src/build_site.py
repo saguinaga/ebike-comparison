@@ -106,9 +106,13 @@ def build(root: Path, min_bikes: int = 18) -> None:
             "speed_limiter": b.get("speed_limiter"),
             "battery_display": b.get("battery_display", format_battery(b)),
             "battery_range_miles_pas": b.get("battery_range_miles_pas"),
+            "battery_range_miles_throttle": b.get("battery_range_miles_throttle"),
             "battery_capacity_ah": b.get("battery_capacity_ah"),
+            "battery_voltage_v": b.get("battery_voltage_v"),
             "battery_wh": b.get("battery_wh"),
+            "battery_charge_hours": b.get("battery_charge_hours"),
             "battery_charge_method": b.get("battery_charge_method"),
+            "battery_charge_notes": b.get("battery_charge_notes"),
         }
 
     bikes_for_js = [bike_to_js(b) for b in e_bikes]

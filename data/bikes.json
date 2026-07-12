@@ -41,7 +41,10 @@
     "image_url": "http://www.firmstrong.com/cdn/shop/products/Firmstrong_Urban_Lady_Single_Speed_Beach_Cruiser_Bicycle_26-Inch_Mint_Green_medium.jpg?v=1516946946",
     "image_urls": [
       "https://www.firmstrong.com/cdn/shop/products/Firmstrong_Urban_Lady_Single_Speed_Beach_Cruiser_Bicycle_26-Inch_White_w__Pink_Rims_1024x1024.jpg?v=1463486850"
-    ]
+    ],
+    "battery_charge_method": "none",
+    "battery_charge_notes": "Pedal only \u2014 no battery",
+    "battery_wh": null
   },
   {
     "id": "amazon-budget-step-1",
@@ -76,6 +79,14 @@
       "https://lectricebikes.com/cdn/shop/files/white-front.webp?v=1776061626",
       "https://nakto.com/cdn/shop/files/15.png?v=1748420526"
     ],
+    "battery_voltage_v": 36,
+    "battery_capacity_ah": 10,
+    "battery_range_miles_pas": 25,
+    "battery_range_miles_throttle": 18,
+    "battery_charge_hours": 4,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "Typical 36V 10Ah pack; wall charger included",
+    "battery_wh": 360,
     "price_sources": [
       {
         "platform": "amazon",
@@ -223,6 +234,14 @@
       "https://www.heybike.com/cdn/shop/files/Mars_2.0_Folding_Size_d7c65dd9-a694-4135-a82d-512a63d1b143.png?v=1774418893",
       "https://www.heybike.com/cdn/shop/files/Mars_2.0_CD.png?v=1774418893"
     ],
+    "battery_voltage_v": 48,
+    "battery_capacity_ah": 10.4,
+    "battery_range_miles_pas": 40,
+    "battery_range_miles_throttle": 25,
+    "battery_charge_hours": 5,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "Samsung-cell pack; key-lock removable battery",
+    "battery_wh": 499,
     "price_sources": [
       {
         "platform": "amazon",
@@ -374,6 +393,14 @@
       "https://lectricebikes.com/cdn/shop/files/lite-white_a6ef01c7-4607-4639-b0c4-09846a407fc9.png?v=1768990516",
       "https://www.heybike.com/cdn/shop/files/Mars_2.0_Folding_Size_d7c65dd9-a694-4135-a82d-512a63d1b143.png?v=1774418893"
     ],
+    "battery_voltage_v": 48,
+    "battery_capacity_ah": 10,
+    "battery_range_miles_pas": 30,
+    "battery_range_miles_throttle": 20,
+    "battery_charge_hours": 5,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "Varies by seller; plan on 48V 10Ah class pack",
+    "battery_wh": 480,
     "price_sources": [
       {
         "platform": "aliexpress",
@@ -532,6 +559,14 @@
       "https://nakto.com/cdn/shop/files/Camelstep-thrublack_d7b89c8c-8834-4957-b8da-273924f17a3a.png?v=1748420526",
       "https://nakto.com/cdn/shop/files/camel_1.png?v=1748420500"
     ],
+    "battery_voltage_v": 36,
+    "battery_capacity_ah": 10,
+    "battery_range_miles_pas": 35,
+    "battery_range_miles_throttle": 22,
+    "battery_charge_hours": 4,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "Removable 36V battery; charge on or off bike",
+    "battery_wh": 360,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -683,6 +718,14 @@
       "https://www.heybike.com/cdn/shop/files/MARS2.0_Grey-Right.png?v=1774418893",
       "https://lectricebikes.com/cdn/shop/files/white-side_2e68dfc9-b660-4559-9a17-133fb42e0792.webp?v=1776061626"
     ],
+    "battery_voltage_v": 48,
+    "battery_capacity_ah": 12,
+    "battery_range_miles_pas": 35,
+    "battery_range_miles_throttle": 25,
+    "battery_charge_hours": 5,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "Hidden-in-frame pack; removable for charging",
+    "battery_wh": 576,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -836,6 +879,14 @@
       "https://lectricebikes.com/cdn/shop/files/white-front.webp?v=1776061626",
       "https://lectricebikes.com/cdn/shop/files/XPL-White_f9e208a7-9b91-4c18-941b-d377f251cb05.jpg?v=1768990516"
     ],
+    "battery_voltage_v": 48,
+    "battery_capacity_ah": 10.4,
+    "battery_range_miles_pas": 45,
+    "battery_range_miles_throttle": 28,
+    "battery_charge_hours": 4,
+    "battery_charge_method": "removable_keyed",
+    "battery_charge_notes": "Keyed removable; 48V 499Wh pack",
+    "battery_wh": 499,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -982,6 +1033,15 @@
       "https://ride1up.com/wp-content/uploads/2023/07/Portola-Gallery-02-jpg.webp",
       "https://ride1up.com/wp-content/uploads/2023/07/Portola-Gallery-03-jpg.webp"
     ],
+    "battery_voltage_v": 48,
+    "battery_capacity_ah": 10.4,
+    "battery_capacity_ah_alt": 13.4,
+    "battery_range_miles_pas": 32,
+    "battery_range_miles_throttle": 20,
+    "battery_charge_hours": 5,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "10.4Ah or 13.4Ah options; removable pack",
+    "battery_wh": 499,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -1117,6 +1177,14 @@
       "https://aventon-images.imgix.net/files/Soltera-2.5-Midnight-02.jpg?v=1756958410",
       "https://aventon-images.imgix.net/files/Soltera2.5lifestyle01.jpg?v=1756958412"
     ],
+    "battery_voltage_v": 36,
+    "battery_capacity_ah": 10,
+    "battery_range_miles_pas": 46,
+    "battery_range_miles_throttle": 30,
+    "battery_charge_hours": 4,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "Hidden battery; removable for indoor charging",
+    "battery_wh": 360,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -1251,6 +1319,14 @@
       "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
       "https://lectricebikes.com/cdn/shop/files/XP4-TEMPEST_GREY_STEP_OVER-BF-STUDIO_CAROUSEL.jpg?v=1774327498"
     ],
+    "battery_voltage_v": 48,
+    "battery_capacity_ah": 10,
+    "battery_range_miles_pas": 45,
+    "battery_range_miles_throttle": 25,
+    "battery_charge_hours": 5,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "Rad Power 48V pack; charge on or off frame",
+    "battery_wh": 480,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -1386,6 +1462,14 @@
       "https://www.velotricbike.com/cdn/shop/files/N1_Plus_HS_indigogrey_2_grande.png?v=1722237926",
       "https://www.velotricbike.com/cdn/shop/files/N1_Plus_ST_indigogrey_1_grande.png?v=1722237926"
     ],
+    "battery_voltage_v": 48,
+    "battery_capacity_ah": 10.4,
+    "battery_range_miles_pas": 55,
+    "battery_range_miles_throttle": 35,
+    "battery_charge_hours": 6,
+    "battery_charge_method": "removable_keyed",
+    "battery_charge_notes": "Removable with key; IPX6-rated pack",
+    "battery_wh": 499,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -1522,6 +1606,14 @@
       "https://lectricebikes.com/cdn/shop/files/BXP-front.png?v=1775105952",
       "https://lectricebikes.com/cdn/shop/files/XP4-TEMPEST_GREY_STEP_OVER-BF-STUDIO_CAROUSEL.jpg?v=1774327498"
     ],
+    "battery_voltage_v": 48,
+    "battery_capacity_ah": 14,
+    "battery_range_miles_pas": 60,
+    "battery_range_miles_throttle": 35,
+    "battery_charge_hours": 5,
+    "battery_charge_method": "removable_keyed",
+    "battery_charge_notes": "48V 672Wh; keyed removable battery",
+    "battery_wh": 672,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -1656,6 +1748,14 @@
       "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
       "https://lectricebikes.com/cdn/shop/files/BXP-plain_9a05d19c-0b7e-4334-9899-a6fb338f8d7f.jpg?v=1775105952"
     ],
+    "battery_voltage_v": 48,
+    "battery_capacity_ah": 14,
+    "battery_range_miles_pas": 45,
+    "battery_range_miles_throttle": 28,
+    "battery_charge_hours": 6,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "Large 48V pack; removable for charging",
+    "battery_wh": 672,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -1790,6 +1890,14 @@
       "https://ride1up.com/wp-content/uploads/2026/04/RV3_Sus_-MedLrg_Blk--scaled.webp",
       "https://ride1up.com/wp-content/uploads/2024/06/RV3-05-copy-jpg.webp"
     ],
+    "battery_voltage_v": 36,
+    "battery_capacity_ah": 7,
+    "battery_range_miles_pas": 30,
+    "battery_range_miles_throttle": 20,
+    "battery_charge_hours": 4,
+    "battery_charge_method": "onboard",
+    "battery_charge_notes": "Integrated frame battery; plug in on bike",
+    "battery_wh": 252,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -1925,6 +2033,14 @@
       "https://aventon-images.imgix.net/files/01_Level.3_Glacier-Mint_Side_1.jpg?v=1739400504",
       "https://aventon-images.imgix.net/files/01_Level.3_Sand-Stone_Side_1-bike-2.jpg?v=1739400504"
     ],
+    "battery_voltage_v": 48,
+    "battery_capacity_ah": 14.8,
+    "battery_range_miles_pas": 70,
+    "battery_range_miles_throttle": 40,
+    "battery_charge_hours": 6,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "Aventon S4 battery; removable pack",
+    "battery_wh": 710,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -2065,6 +2181,14 @@
       "https://lectricebikes.com/cdn/shop/files/XP4-TEMPEST_GREY_STEP_OVER-BF-STUDIO_CAROUSEL.jpg?v=1774327498",
       "https://ride1up.com/wp-content/uploads/2026/03/RV3-MedLrg_Grn-scaled.webp"
     ],
+    "battery_voltage_v": 48,
+    "battery_capacity_ah": 10.4,
+    "battery_range_miles_pas": 40,
+    "battery_range_miles_throttle": 28,
+    "battery_charge_hours": 5,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "Standard commuter pack; removable",
+    "battery_wh": 499,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -2200,6 +2324,14 @@
       "https://zoozbikes.com/cdn/shop/files/URGEN2-CHROME-SIDE.png?v=1782772320",
       "https://zoozbikes.com/cdn/shop/files/URGEN2-CHROME-TOP.png?v=1782772269"
     ],
+    "battery_voltage_v": 52,
+    "battery_capacity_ah": 15,
+    "battery_range_miles_pas": 40,
+    "battery_range_miles_throttle": 25,
+    "battery_charge_hours": 6,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "52V pack; compact BMX-style build",
+    "battery_wh": 780,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -2344,6 +2476,14 @@
       "https://zoozbikes.com/cdn/shop/files/UUGEN5-CHROME-FRONT.jpg?v=1782842327",
       "https://zoozbikes.com/cdn/shop/files/UUGEN5-GLOWWORM-SIDE.jpg?v=1782842327"
     ],
+    "battery_voltage_v": 52,
+    "battery_capacity_ah": 25,
+    "battery_range_miles_pas": 60,
+    "battery_range_miles_throttle": 35,
+    "battery_charge_hours": 8,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "52V 25Ah Thrillmatic mount; high capacity",
+    "battery_wh": 1300,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -2487,6 +2627,14 @@
       "https://zoozbikes.com/cdn/shop/files/UFGEN3-LOW-CHRM-SIDE.jpg?v=1782769634",
       "https://zoozbikes.com/cdn/shop/files/UFGEN3-LOW-CHRM-REAR.jpg?v=1782769623"
     ],
+    "battery_voltage_v": 52,
+    "battery_capacity_ah": 25,
+    "battery_range_miles_pas": 55,
+    "battery_range_miles_throttle": 32,
+    "battery_charge_hours": 8,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "52V 25Ah; engineered mount system",
+    "battery_wh": 1300,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -2627,6 +2775,14 @@
       "https://zoozbikes.com/cdn/shop/files/ULTRACUSH-SIDE.jpg?v=1782778285",
       "https://zoozbikes.com/cdn/shop/files/ULTRACUSH-MOTOR.jpg?v=1782847738"
     ],
+    "battery_voltage_v": 52,
+    "battery_capacity_ah": 25,
+    "battery_range_miles_pas": 55,
+    "battery_range_miles_throttle": 32,
+    "battery_charge_hours": 8,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "Same 52V 25Ah platform as Ultra Urban",
+    "battery_wh": 1300,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -2784,6 +2940,14 @@
       "https://ridejetson.com/cdn/shop/products/JBLTP-SBL_04.jpg?v=1745265756",
       "https://ridejetson.com/cdn/shop/products/JBLTP-FGR_02.jpg?v=1745265756"
     ],
+    "battery_voltage_v": 36,
+    "battery_capacity_ah": 6,
+    "battery_range_miles_pas": 30,
+    "battery_range_miles_throttle": 15,
+    "battery_charge_hours": 5,
+    "battery_charge_method": "onboard",
+    "battery_charge_notes": "36V 6Ah integrated; charge on bike",
+    "battery_wh": 216,
     "price_sources": [
       {
         "platform": "amazon",
@@ -2931,6 +3095,14 @@
     "image_urls": [
       "https://www.heybike.com/cdn/shop/files/Mars_2.0_HS-2.png?v=1774418893"
     ],
+    "battery_voltage_v": 36,
+    "battery_capacity_ah": 7.8,
+    "battery_range_miles_pas": 25,
+    "battery_range_miles_throttle": 15,
+    "battery_charge_hours": 4,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "Compact folding pack; removable",
+    "battery_wh": 281,
     "price_sources": [
       {
         "platform": "amazon",
@@ -3065,6 +3237,14 @@
       "https://super73.com/cdn/shop/files/25YMZMIAMI_CORE_RIGHT_1800x.jpg?v=1772738545",
       "https://super73.com/cdn/shop/files/25YMZMIAMI_CORE_REARHERO_1800x.jpg?v=1772738545"
     ],
+    "battery_voltage_v": 48,
+    "battery_capacity_ah": 10,
+    "battery_range_miles_pas": 35,
+    "battery_range_miles_throttle": 22,
+    "battery_charge_hours": 5,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "Removable battery; Super73 pack",
+    "battery_wh": 480,
     "price_sources": [
       {
         "platform": "manufacturer",
