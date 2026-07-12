@@ -651,7 +651,6 @@
       bike.feature_display?.is_smart || (bike.features && formatFeatureDisplay(bike.features).is_smart)
         ? `<span class="badge luxury">Smart</span>`
         : "";
-    const tier = bike.tier_label || tierLabels[bike.tier] || bike.tier || "—";
     return `
       <button type="button" class="card-open" data-id="${bike.id}" aria-label="View ${bike.brand} ${bike.model} details">
         <div class="bike-media"><div class="bike-thumb bike-thumb-compact">${img}</div></div>
@@ -662,7 +661,6 @@
           ${legalBadge}
           ${smartBadge}
         </div>
-        <p class="card-meta">${tier} · ${bike.max_speed_mph || "?"} mph</p>
         <span class="card-cta">View details →</span>
       </button>
       <div class="card-actions card-actions-compact">
