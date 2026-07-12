@@ -183,12 +183,11 @@
         <label>Max weight
           <select id="weightFilter">
             <option value="all">Any</option>
-            <option value="40">≤40 lb (kid solo)</option>
-            <option value="55">≤55 lb (manageable)</option>
+            <option value="40">≤40 lb</option>
+            <option value="55">≤55 lb</option>
             <option value="70">≤70 lb</option>
           </select>
         </label>
-        <label><input type="checkbox" id="lightFilter"> Highlight light rides <span class="filter-hint">(≤55 lb)</span></label>
         <label><input type="checkbox" id="efficiencyFilter"> Highlight efficient <span class="filter-hint">(≤12 Wh/mi PAS)</span></label>
       </div>
       <div class="tier-tabs" id="tierTabs">
@@ -228,8 +227,6 @@
             <div class="price-big">${{ bike.landed_price_usd or bike.price_usd }}</div>
             {% if bike.weight_lb %}
             <div class="card-weight card-weight--js" data-weight="{{ bike.weight_lb }}">{{ bike.weight_lb }} lb</div>
-            {% else %}
-            <div class="card-weight card-weight--unknown">Weight —</div>
             {% endif %}
             <div class="badges badges-compact">
               <span class="badge ok">Safety {{ bike.safety_score }}</span>
@@ -312,7 +309,7 @@
             <th data-sort="name" data-type="string">Bike</th>
             <th data-sort="price" data-type="number">Price</th>
             <th data-sort="safety" data-type="number">Safety</th>
-            <th data-sort="weight" data-type="number" title="Lower is easier to carry">Weight</th>
+            <th data-sort="weight" data-type="number">Weight</th>
             <th data-sort="class" data-type="string">Type</th>
             <th data-sort="luxury" data-type="number">Smart</th>
             <th data-sort="legal" data-type="string">Legal</th>
