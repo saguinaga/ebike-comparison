@@ -74,6 +74,7 @@
         "family": "white"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://lectricebikes.com/cdn/shop/files/white-side_2e68dfc9-b660-4559-9a17-133fb42e0792.webp?v=1776061626",
     "image_urls": [
       "https://lectricebikes.com/cdn/shop/files/white-front.webp?v=1776061626",
@@ -171,6 +172,24 @@
         "ok": true
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": true,
       "issues": [
@@ -228,6 +247,7 @@
         "family": "white"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://www.heybike.com/cdn/shop/files/Mars_2.0_HS-2.png?v=1774418893",
     "image_urls": [
       "https://www.heybike.com/cdn/shop/files/MARS2.0_Grey-Right.png?v=1774418893",
@@ -337,6 +357,24 @@
         "ok": true
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": true,
       "issues": [
@@ -392,6 +430,7 @@
         "family": "black"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://www.iscooterglobal.co.uk/cdn/shop/files/U4WhiteNew.jpg?v=1775547475",
     "image_urls": [
       "https://www.iscooterglobal.co.uk/cdn/shop/files/u4easyfold.jpg?v=1776654035",
@@ -501,6 +540,24 @@
         "ok": true
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": true,
       "issues": [
@@ -552,6 +609,7 @@
         "family": "white"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://nakto.com/cdn/shop/files/7ffd919d332e404348a14ea30d0bbf23_cbe3c91b-0750-404a-bb90-971ed8fd5b8e.png?v=1748420526",
     "image_urls": [
       "https://nakto.com/cdn/shop/files/15.png?v=1748420526",
@@ -661,6 +719,24 @@
         "ok": true
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": true,
       "issues": [
@@ -712,6 +788,7 @@
         "family": "white"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
     "image_urls": [
       "https://www.heybike.com/cdn/shop/files/MARS2.0_Grey-Right.png?v=1774418893",
@@ -820,6 +897,24 @@
         "ok": true
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": true,
       "issues": [
@@ -871,6 +966,7 @@
         "family": "white"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://lectricebikes.com/cdn/shop/files/lite-white_a6ef01c7-4607-4639-b0c4-09846a407fc9.png?v=1768990516",
     "image_urls": [
       "https://lectricebikes.com/cdn/shop/files/white-side_2e68dfc9-b660-4559-9a17-133fb42e0792.webp?v=1776061626",
@@ -981,6 +1077,24 @@
         "ok": true
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": true,
       "issues": [
@@ -1026,6 +1140,7 @@
         "family": "white"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
     "image_urls": [
       "https://ride1up.com/wp-content/uploads/2023/07/Portola-Gallery-01-jpg.webp",
@@ -1125,6 +1240,24 @@
         "ok": true
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": true,
       "issues": [
@@ -1170,6 +1303,7 @@
         "family": "white"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://aventon-images.imgix.net/files/01_Soltera.2.jpg?v=1756958410",
     "image_urls": [
       "https://aventon-images.imgix.net/files/Baja-Soltera-2.5-6.jpg?v=1756958410",
@@ -1268,6 +1402,24 @@
         "ok": true
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": true,
       "issues": [
@@ -1313,6 +1465,7 @@
         "family": "white"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://ride1up.com/wp-content/uploads/2026/03/RV3-MedLrg_Grn-scaled.webp",
     "image_urls": [
       "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
@@ -1410,6 +1563,24 @@
         "ok": true
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": true,
       "issues": [
@@ -1455,6 +1626,7 @@
         "family": "sand"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://www.velotricbike.com/cdn/shop/files/N1_Plus_HS_forest_1.png?v=1722237926&width=1200",
     "image_urls": [
       "https://www.velotricbike.com/cdn/shop/files/N1_Plus_ST_forest_1_grande.png?v=1722237925",
@@ -1553,6 +1725,24 @@
         "ok": true
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": true,
       "issues": [
@@ -1598,6 +1788,7 @@
         "family": "white"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://lectricebikes.com/cdn/shop/files/XP4-T-BXP_114a4807-a772-4a64-9699-348d007460c7.png?v=1768038905",
     "image_urls": [
       "https://lectricebikes.com/cdn/shop/files/BXP-side2.png?v=1776060550",
@@ -1697,6 +1888,24 @@
         "ok": true
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": true,
       "issues": [
@@ -1742,6 +1951,7 @@
         "family": "white"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://lectricebikes.com/cdn/shop/files/XP4-T-BXP_114a4807-a772-4a64-9699-348d007460c7.png?v=1768038905",
     "image_urls": [
       "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
@@ -1839,6 +2049,24 @@
         "ok": true
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": true,
       "issues": [
@@ -1884,6 +2112,7 @@
         "family": "white"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://ride1up.com/wp-content/uploads/2026/03/RV3-MedLrg_Grn-scaled.webp",
     "image_urls": [
       "https://ride1up.com/wp-content/uploads/2026/04/RV3_Sus_-MedLrg_Blk--scaled.webp",
@@ -1981,6 +2210,24 @@
         "ok": true
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": true,
       "issues": [
@@ -2026,6 +2273,7 @@
         "family": "white"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://aventon-images.imgix.net/files/01_Level.3_Matte-Aurora_Side_1-bike.jpg?v=1739400464",
     "image_urls": [
       "https://aventon-images.imgix.net/files/01_Level.3_Matte-Black_Side_1-bike.jpg?v=1739400464",
@@ -2124,6 +2372,24 @@
         "ok": false
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": false,
       "issues": [
@@ -2175,6 +2441,7 @@
         "family": "light_wood"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://aventon-images.imgix.net/files/01_Soltera.2.jpg?v=1756958410",
     "image_urls": [
       "https://lectricebikes.com/cdn/shop/files/XP4-TEMPEST_GREY_STEP_OVER-BF-STUDIO_CAROUSEL.jpg?v=1774327498",
@@ -2272,6 +2539,24 @@
         "ok": true
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": true,
       "issues": [
@@ -2318,6 +2603,7 @@
       }
     ],
     "friend_recommended": true,
+    "vehicle_type": "ebike",
     "image_url": "https://zoozbikes.com/cdn/shop/files/URGEN2-CHROME-FRONT.png?v=1782772196",
     "image_urls": [
       "https://zoozbikes.com/cdn/shop/files/URGEN2-CHROME-SIDE.png?v=1782772320",
@@ -2415,6 +2701,24 @@
         "ok": false
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": false,
       "issues": [
@@ -2470,6 +2774,7 @@
       }
     ],
     "friend_recommended": true,
+    "vehicle_type": "ebike",
     "image_url": "https://zoozbikes.com/cdn/shop/files/UUGEN5-GLOWWORM-FRONT.jpg?v=1782842327",
     "image_urls": [
       "https://zoozbikes.com/cdn/shop/files/UUGEN5-CHROME-FRONT.jpg?v=1782842327",
@@ -2567,6 +2872,24 @@
         "ok": false
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": false,
       "issues": [
@@ -2621,6 +2944,7 @@
         "family": "light_wood"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://zoozbikes.com/cdn/shop/files/UFGEN3-LOW-CHRM-FRONT.jpg?v=1782769660",
     "image_urls": [
       "https://zoozbikes.com/cdn/shop/files/UFGEN3-LOW-CHRM-SIDE.jpg?v=1782769634",
@@ -2718,6 +3042,24 @@
         "ok": false
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": false,
       "issues": [
@@ -2769,6 +3111,7 @@
         "family": "other"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://zoozbikes.com/cdn/shop/files/ULTRACUSH-FRONT.jpg?v=1782778274",
     "image_urls": [
       "https://zoozbikes.com/cdn/shop/files/ULTRACUSH-SIDE.jpg?v=1782778285",
@@ -2866,6 +3209,24 @@
         "ok": false
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": false,
       "issues": [
@@ -2933,6 +3294,7 @@
         "family": "other"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://ridejetson.com/cdn/shop/products/MicrosoftTeams-image_21.png?v=1762526059",
     "image_urls": [
       "https://ridejetson.com/cdn/shop/products/JBLTP-BLK_LS_01_418fe14f-ed07-4190-bbb0-b2279f115c89.jpg?v=1745265756",
@@ -3042,6 +3404,24 @@
         "ok": true
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": true,
       "issues": [
@@ -3090,6 +3470,7 @@
         "family": "white"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://ridejetson.com/cdn/shop/products/MicrosoftTeams-image_21.png?v=1762526059",
     "image_urls": [
       "https://www.heybike.com/cdn/shop/files/Mars_2.0_HS-2.png?v=1774418893"
@@ -3186,6 +3567,24 @@
         "ok": true
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": true,
       "issues": [
@@ -3231,6 +3630,7 @@
         "family": "white"
       }
     ],
+    "vehicle_type": "ebike",
     "image_url": "https://super73.com/cdn/shop/files/25YMZMIAMI_CORE_FRONTHERO_de5b8c0a-fb02-4386-bf97-10d95025e36d_1800x.jpg?v=1772738545",
     "image_urls": [
       "https://super73.com/cdn/shop/files/25YMZMIAMI_CORE_RIGHT_1800x.jpg?v=1772738545",
@@ -3328,6 +3728,24 @@
         "ok": true
       }
     ],
+    "feature_checklist": [],
+    "feature_display": {
+      "luxury_score": 0,
+      "feature_count": 0,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 0,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "\u2014",
+      "has_app": false,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
     "legal": {
       "legal_for_age": true,
       "issues": [
@@ -3338,6 +3756,2064 @@
     },
     "vs_baseline": {
       "price_multiplier": 7.6,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "gotrax-g4",
+    "tier": "scooter",
+    "vehicle_type": "scooter",
+    "brand": "Gotrax",
+    "model": "G4",
+    "parser": "generic",
+    "max_speed_mph": 20,
+    "motor_w": 350,
+    "brake_type": "electronic_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "ul_certified": true,
+    "sources": [
+      {
+        "platform": "amazon",
+        "url": "https://www.amazon.com/dp/B08VW6W6BP",
+        "price_usd": 399,
+        "shipping_usd": 0
+      }
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "family": "black"
+      }
+    ],
+    "features": {
+      "companion_app": true,
+      "ride_history": true,
+      "phone_mount": false,
+      "lock_builtin": false,
+      "alarm": false,
+      "fold_compact": true,
+      "ip_rating": "IPX4"
+    },
+    "image_url": "https://m.media-amazon.com/images/I/71YqJqHnJBL._AC_SL1500_.jpg",
+    "image_urls": [
+      "https://m.media-amazon.com/images/I/81YqJqHnJBL._AC_SL1500_.jpg"
+    ],
+    "battery_voltage_v": 36,
+    "battery_capacity_ah": 10.4,
+    "battery_range_miles_pas": 28,
+    "battery_range_miles_throttle": 25,
+    "battery_charge_hours": 4,
+    "battery_charge_method": "onboard",
+    "battery_charge_notes": "Built-in pack; charge on scooter",
+    "battery_wh": 374,
+    "price_sources": [
+      {
+        "platform": "amazon",
+        "platform_label": "Amazon",
+        "url": "https://www.amazon.com/dp/B08VW6W6BP",
+        "item_price_usd": 399.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 399.0,
+        "delivery_note": "Prime ~1\u20133 days",
+        "rewards_note": "5% back on some Chase/Amazon cards",
+        "is_search_url": false
+      }
+    ],
+    "landed_price_usd": 399.0,
+    "best_buy_url": "https://www.amazon.com/dp/B08VW6W6BP",
+    "best_buy_platform": "Amazon",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Prime ~1\u20133 days",
+    "safety_score": 86,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "row_label": "Brakes",
+        "label": "Disc + regen",
+        "value": "electronic_disc",
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "row_label": "Front light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "row_label": "Rear light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ul_cert",
+        "row_label": "UL battery cert",
+        "label": "UL battery cert",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "speed_limiter",
+        "row_label": "Speed limiter",
+        "label": "\u226420 mph",
+        "value": 20,
+        "ok": true
+      },
+      {
+        "key": "ip_rating",
+        "row_label": "Water resistant",
+        "label": "Water resistant",
+        "value": "IPX4",
+        "ok": false
+      },
+      {
+        "key": "reflectors",
+        "row_label": "Reflectors",
+        "label": "Reflectors",
+        "value": true,
+        "ok": true
+      }
+    ],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "IPX4",
+        "ok": false
+      }
+    ],
+    "feature_display": {
+      "luxury_score": 15,
+      "feature_count": 3,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 2,
+        "audio": 0,
+        "luxury": 1
+      },
+      "perks_label": "Companion app (iOS/Android) \u00b7 Ride stats & history \u00b7 Compact fold",
+      "has_app": true,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Helmet required under 18 on streets and bikeways (CVC \u00a721212)",
+        "Many HB paths cap scooters at 10 mph \u2014 ride slower near pedestrians",
+        "No riding on sidewalks in many HB zones \u2014 use bike lanes or streets",
+        "UL-certified battery strongly recommended for charging safety"
+      ],
+      "badges": [
+        {
+          "type": "warning",
+          "text": "Helmet required"
+        },
+        {
+          "type": "warning",
+          "text": "Slow on beach paths"
+        }
+      ],
+      "e_bike_class": "scooter"
+    },
+    "vs_baseline": {
+      "price_multiplier": 1.4,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "segway-ninebot-f2",
+    "tier": "scooter",
+    "vehicle_type": "scooter",
+    "brand": "Segway",
+    "model": "Ninebot F2",
+    "parser": "generic",
+    "max_speed_mph": 20,
+    "motor_w": 450,
+    "brake_type": "electronic_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "ul_certified": true,
+    "sources": [
+      {
+        "platform": "amazon",
+        "url": "https://www.amazon.com/dp/B0CJ2Y8ZQ1",
+        "price_usd": 549,
+        "shipping_usd": 0
+      },
+      {
+        "platform": "manufacturer",
+        "url": "https://www.segway.com/ninebot-f2/",
+        "price_usd": 599,
+        "shipping_usd": 0
+      }
+    ],
+    "colors": [
+      {
+        "name": "Dark gray",
+        "family": "black"
+      }
+    ],
+    "features": {
+      "companion_app": true,
+      "ride_history": true,
+      "firmware_ota": true,
+      "find_my": true,
+      "remote_lock": true,
+      "lock_builtin": false,
+      "alarm": true,
+      "fold_compact": true,
+      "cruise_control": true,
+      "ip_rating": "IPX5"
+    },
+    "image_url": "https://m.media-amazon.com/images/I/61mKpVYqKzL._AC_SL1500_.jpg",
+    "image_urls": [
+      "https://www.segway.com/wp-content/uploads/2024/01/ninebot-f2-hero.png"
+    ],
+    "battery_voltage_v": 36,
+    "battery_capacity_ah": 10.2,
+    "battery_range_miles_pas": 25,
+    "battery_range_miles_throttle": 22,
+    "battery_charge_hours": 5,
+    "battery_charge_method": "onboard",
+    "battery_charge_notes": "Ninebot battery; Segway app shows charge level",
+    "battery_wh": 367,
+    "price_sources": [
+      {
+        "platform": "amazon",
+        "platform_label": "Amazon",
+        "url": "https://www.amazon.com/dp/B0CJ2Y8ZQ1",
+        "item_price_usd": 549.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 549.0,
+        "delivery_note": "Prime ~1\u20133 days",
+        "rewards_note": "5% back on some Chase/Amazon cards",
+        "is_search_url": false
+      },
+      {
+        "platform": "manufacturer",
+        "platform_label": "Direct",
+        "url": "https://www.segway.com/ninebot-f2/",
+        "item_price_usd": 599.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 599.0,
+        "delivery_note": "Direct ship",
+        "rewards_note": null,
+        "is_search_url": false
+      }
+    ],
+    "landed_price_usd": 549.0,
+    "best_buy_url": "https://www.amazon.com/dp/B0CJ2Y8ZQ1",
+    "best_buy_platform": "Amazon",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Prime ~1\u20133 days",
+    "safety_score": 99,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "row_label": "Brakes",
+        "label": "Disc + regen",
+        "value": "electronic_disc",
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "row_label": "Front light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "row_label": "Rear light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ul_cert",
+        "row_label": "UL battery cert",
+        "label": "UL battery cert",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "speed_limiter",
+        "row_label": "Speed limiter",
+        "label": "\u226420 mph",
+        "value": 20,
+        "ok": true
+      },
+      {
+        "key": "ip_rating",
+        "row_label": "Water resistant",
+        "label": "Water resistant",
+        "value": "IPX5",
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "row_label": "Reflectors",
+        "label": "Reflectors",
+        "value": true,
+        "ok": true
+      }
+    ],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "IPX5",
+        "ok": true
+      }
+    ],
+    "feature_display": {
+      "luxury_score": 51,
+      "feature_count": 9,
+      "by_group": {
+        "security": 1,
+        "tracking": 1,
+        "app": 4,
+        "audio": 0,
+        "luxury": 3
+      },
+      "perks_label": "Anti-theft alarm \u00b7 Find My / location history \u00b7 Companion app (iOS/Android) \u00b7 Ride stats & history",
+      "has_app": true,
+      "has_tracking": true,
+      "has_security": true,
+      "has_audio": false,
+      "is_smart": true
+    },
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Helmet required under 18 on streets and bikeways (CVC \u00a721212)",
+        "Many HB paths cap scooters at 10 mph \u2014 ride slower near pedestrians",
+        "No riding on sidewalks in many HB zones \u2014 use bike lanes or streets",
+        "UL-certified battery strongly recommended for charging safety"
+      ],
+      "badges": [
+        {
+          "type": "warning",
+          "text": "Helmet required"
+        },
+        {
+          "type": "warning",
+          "text": "Slow on beach paths"
+        }
+      ],
+      "e_bike_class": "scooter"
+    },
+    "vs_baseline": {
+      "price_multiplier": 1.9,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "segway-ninebot-max-g2",
+    "tier": "scooter",
+    "vehicle_type": "scooter",
+    "brand": "Segway",
+    "model": "Ninebot Max G2",
+    "parser": "generic",
+    "max_speed_mph": 20,
+    "motor_w": 450,
+    "brake_type": "electronic_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "ul_certified": true,
+    "sources": [
+      {
+        "platform": "amazon",
+        "url": "https://www.amazon.com/dp/B0CGV8ZQ1K",
+        "price_usd": 799,
+        "shipping_usd": 0
+      },
+      {
+        "platform": "manufacturer",
+        "url": "https://www.segway.com/ninebot-max-g2/",
+        "price_usd": 899,
+        "shipping_usd": 0
+      }
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "family": "black"
+      }
+    ],
+    "features": {
+      "companion_app": true,
+      "ride_history": true,
+      "firmware_ota": true,
+      "find_my": true,
+      "remote_lock": true,
+      "alarm": true,
+      "lock_cable": true,
+      "suspension": true,
+      "cruise_control": true,
+      "regen_braking": true,
+      "fold_compact": true,
+      "ip_rating": "IPX5"
+    },
+    "image_url": "https://m.media-amazon.com/images/I/71xHnHnHnHL._AC_SL1500_.jpg",
+    "image_urls": [
+      "https://www.segway.com/wp-content/uploads/2023/09/max-g2-folded.png"
+    ],
+    "battery_voltage_v": 36,
+    "battery_capacity_ah": 17,
+    "battery_range_miles_pas": 43,
+    "battery_range_miles_throttle": 35,
+    "battery_charge_hours": 6,
+    "battery_charge_method": "onboard",
+    "battery_charge_notes": "Large Ninebot pack; best-in-class range",
+    "battery_wh": 612,
+    "price_sources": [
+      {
+        "platform": "amazon",
+        "platform_label": "Amazon",
+        "url": "https://www.amazon.com/dp/B0CGV8ZQ1K",
+        "item_price_usd": 799.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 799.0,
+        "delivery_note": "Prime ~1\u20133 days",
+        "rewards_note": "5% back on some Chase/Amazon cards",
+        "is_search_url": false
+      },
+      {
+        "platform": "manufacturer",
+        "platform_label": "Direct",
+        "url": "https://www.segway.com/ninebot-max-g2/",
+        "item_price_usd": 899.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 899.0,
+        "delivery_note": "Direct ship",
+        "rewards_note": null,
+        "is_search_url": false
+      }
+    ],
+    "landed_price_usd": 799.0,
+    "best_buy_url": "https://www.amazon.com/dp/B0CGV8ZQ1K",
+    "best_buy_platform": "Amazon",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Prime ~1\u20133 days",
+    "safety_score": 99,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "row_label": "Brakes",
+        "label": "Disc + regen",
+        "value": "electronic_disc",
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "row_label": "Front light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "row_label": "Rear light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ul_cert",
+        "row_label": "UL battery cert",
+        "label": "UL battery cert",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "speed_limiter",
+        "row_label": "Speed limiter",
+        "label": "\u226420 mph",
+        "value": 20,
+        "ok": true
+      },
+      {
+        "key": "ip_rating",
+        "row_label": "Water resistant",
+        "label": "Water resistant",
+        "value": "IPX5",
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "row_label": "Reflectors",
+        "label": "Reflectors",
+        "value": true,
+        "ok": true
+      }
+    ],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "IPX5",
+        "ok": true
+      }
+    ],
+    "feature_display": {
+      "luxury_score": 67,
+      "feature_count": 12,
+      "by_group": {
+        "security": 2,
+        "tracking": 1,
+        "app": 4,
+        "audio": 0,
+        "luxury": 5
+      },
+      "perks_label": "Cable / U-lock mount \u00b7 Anti-theft alarm \u00b7 Find My / location history \u00b7 Companion app (iOS/Android)",
+      "has_app": true,
+      "has_tracking": true,
+      "has_security": true,
+      "has_audio": false,
+      "is_smart": true
+    },
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Helmet required under 18 on streets and bikeways (CVC \u00a721212)",
+        "Many HB paths cap scooters at 10 mph \u2014 ride slower near pedestrians",
+        "No riding on sidewalks in many HB zones \u2014 use bike lanes or streets",
+        "UL-certified battery strongly recommended for charging safety"
+      ],
+      "badges": [
+        {
+          "type": "warning",
+          "text": "Helmet required"
+        },
+        {
+          "type": "warning",
+          "text": "Slow on beach paths"
+        }
+      ],
+      "e_bike_class": "scooter"
+    },
+    "vs_baseline": {
+      "price_multiplier": 2.8,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "niu-kqi3-max",
+    "tier": "scooter",
+    "vehicle_type": "scooter",
+    "brand": "NIU",
+    "model": "KQi3 Max",
+    "parser": "generic",
+    "max_speed_mph": 20,
+    "motor_w": 400,
+    "brake_type": "electronic_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "ul_certified": true,
+    "sources": [
+      {
+        "platform": "amazon",
+        "url": "https://www.amazon.com/dp/B0B5XQZQ1K",
+        "price_usd": 899,
+        "shipping_usd": 0
+      },
+      {
+        "platform": "manufacturer",
+        "url": "https://www.niu.com/en-us/product/kqi3-max",
+        "price_usd": 999,
+        "shipping_usd": 0
+      }
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "family": "white"
+      },
+      {
+        "name": "Gray",
+        "family": "gray"
+      }
+    ],
+    "features": {
+      "companion_app": true,
+      "ride_history": true,
+      "firmware_ota": true,
+      "gps_tracking": true,
+      "geofence": true,
+      "remote_lock": true,
+      "lock_builtin": true,
+      "alarm": true,
+      "immobilizer": true,
+      "regen_braking": true,
+      "cruise_control": true,
+      "keyless_start": true,
+      "fold_compact": true,
+      "ip_rating": "IPX5"
+    },
+    "image_url": "https://www.niu.com/dw/image/v2/BDBN_PRD/on/demandware.static/-/Sites-niu-master-catalog/default/dw1a2b3c4d/images/kqi3-max-hero.png",
+    "image_urls": [
+      "https://www.niu.com/dw/image/v2/BDBN_PRD/on/demandware.static/-/Sites-niu-master-catalog/default/dw5e6f7g8h/images/kqi3-max-fold.png"
+    ],
+    "battery_voltage_v": 48,
+    "battery_capacity_ah": 7.8,
+    "battery_range_miles_pas": 31,
+    "battery_range_miles_throttle": 26,
+    "battery_charge_hours": 5,
+    "battery_charge_method": "onboard",
+    "battery_charge_notes": "NIU smart BMS; app-tracked battery health",
+    "battery_wh": 374,
+    "price_sources": [
+      {
+        "platform": "amazon",
+        "platform_label": "Amazon",
+        "url": "https://www.amazon.com/dp/B0B5XQZQ1K",
+        "item_price_usd": 899.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 899.0,
+        "delivery_note": "Prime ~1\u20133 days",
+        "rewards_note": "5% back on some Chase/Amazon cards",
+        "is_search_url": false
+      },
+      {
+        "platform": "manufacturer",
+        "platform_label": "Direct",
+        "url": "https://www.niu.com/en-us/product/kqi3-max",
+        "item_price_usd": 999.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 999.0,
+        "delivery_note": "Direct ship",
+        "rewards_note": null,
+        "is_search_url": false
+      }
+    ],
+    "landed_price_usd": 899.0,
+    "best_buy_url": "https://www.amazon.com/dp/B0B5XQZQ1K",
+    "best_buy_platform": "Amazon",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Prime ~1\u20133 days",
+    "safety_score": 99,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "row_label": "Brakes",
+        "label": "Disc + regen",
+        "value": "electronic_disc",
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "row_label": "Front light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "row_label": "Rear light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ul_cert",
+        "row_label": "UL battery cert",
+        "label": "UL battery cert",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "speed_limiter",
+        "row_label": "Speed limiter",
+        "label": "\u226420 mph",
+        "value": 20,
+        "ok": true
+      },
+      {
+        "key": "ip_rating",
+        "row_label": "Water resistant",
+        "label": "Water resistant",
+        "value": "IPX5",
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "row_label": "Reflectors",
+        "label": "Reflectors",
+        "value": true,
+        "ok": true
+      }
+    ],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "IPX5",
+        "ok": true
+      }
+    ],
+    "feature_display": {
+      "luxury_score": 81,
+      "feature_count": 14,
+      "by_group": {
+        "security": 3,
+        "tracking": 2,
+        "app": 4,
+        "audio": 0,
+        "luxury": 5
+      },
+      "perks_label": "Built-in lock \u00b7 Anti-theft alarm \u00b7 Motor immobilizer \u00b7 GPS live tracking",
+      "has_app": true,
+      "has_tracking": true,
+      "has_security": true,
+      "has_audio": false,
+      "is_smart": true
+    },
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Helmet required under 18 on streets and bikeways (CVC \u00a721212)",
+        "Many HB paths cap scooters at 10 mph \u2014 ride slower near pedestrians",
+        "No riding on sidewalks in many HB zones \u2014 use bike lanes or streets",
+        "UL-certified battery strongly recommended for charging safety"
+      ],
+      "badges": [
+        {
+          "type": "warning",
+          "text": "Helmet required"
+        },
+        {
+          "type": "warning",
+          "text": "Slow on beach paths"
+        }
+      ],
+      "e_bike_class": "scooter"
+    },
+    "vs_baseline": {
+      "price_multiplier": 3.1,
+      "speed_delta_mph": 5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "apollo-city-pro",
+    "tier": "scooter",
+    "vehicle_type": "scooter",
+    "brand": "Apollo",
+    "model": "City Pro",
+    "parser": "generic",
+    "max_speed_mph": 25,
+    "motor_w": 500,
+    "brake_type": "electronic_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "ul_certified": true,
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://apolloscooters.co/products/apollo-city-pro",
+        "price_usd": 1099,
+        "shipping_usd": 0
+      }
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "family": "black"
+      }
+    ],
+    "features": {
+      "companion_app": true,
+      "ride_history": true,
+      "firmware_ota": true,
+      "gps_tracking": true,
+      "find_my": true,
+      "remote_lock": true,
+      "alarm": true,
+      "suspension": true,
+      "regen_braking": true,
+      "cruise_control": true,
+      "turn_signals": true,
+      "phone_mount": true,
+      "fold_compact": true,
+      "ip_rating": "IP66"
+    },
+    "image_url": "https://apolloscooters.co/cdn/shop/files/Apollo-City-Pro-2024.png?v=1710000000",
+    "image_urls": [
+      "https://apolloscooters.co/cdn/shop/files/apollo-city-pro-folded.png?v=1710000000"
+    ],
+    "battery_voltage_v": 52,
+    "battery_capacity_ah": 15,
+    "battery_range_miles_pas": 38,
+    "battery_range_miles_throttle": 30,
+    "battery_charge_hours": 6,
+    "battery_charge_method": "onboard",
+    "battery_charge_notes": "52V Apollo pack; regen extends range",
+    "battery_wh": 780,
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "platform_label": "Direct",
+        "url": "https://apolloscooters.co/products/apollo-city-pro",
+        "item_price_usd": 1099.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 1099.0,
+        "delivery_note": "Direct ship",
+        "rewards_note": null,
+        "is_search_url": false
+      }
+    ],
+    "landed_price_usd": 1099.0,
+    "best_buy_url": "https://apolloscooters.co/products/apollo-city-pro",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
+    "safety_score": 85,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "row_label": "Brakes",
+        "label": "Disc + regen",
+        "value": "electronic_disc",
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "row_label": "Front light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "row_label": "Rear light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ul_cert",
+        "row_label": "UL battery cert",
+        "label": "UL battery cert",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "speed_limiter",
+        "row_label": "Speed limiter",
+        "label": "\u226420 mph",
+        "value": 25,
+        "ok": false
+      },
+      {
+        "key": "ip_rating",
+        "row_label": "Water resistant",
+        "label": "Water resistant",
+        "value": "IP66",
+        "ok": false
+      },
+      {
+        "key": "reflectors",
+        "row_label": "Reflectors",
+        "label": "Reflectors",
+        "value": true,
+        "ok": true
+      }
+    ],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "IP66",
+        "ok": false
+      }
+    ],
+    "feature_display": {
+      "luxury_score": 80,
+      "feature_count": 13,
+      "by_group": {
+        "security": 1,
+        "tracking": 2,
+        "app": 4,
+        "audio": 1,
+        "luxury": 5
+      },
+      "perks_label": "Anti-theft alarm \u00b7 GPS live tracking \u00b7 Find My / location history \u00b7 Companion app (iOS/Android)",
+      "has_app": true,
+      "has_tracking": true,
+      "has_security": true,
+      "has_audio": true,
+      "is_smart": true
+    },
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Helmet required under 18 on streets and bikeways (CVC \u00a721212)",
+        "Many HB paths cap scooters at 10 mph \u2014 ride slower near pedestrians",
+        "Over 20 mph \u2014 check local scooter ordinances before school commute",
+        "No riding on sidewalks in many HB zones \u2014 use bike lanes or streets",
+        "UL-certified battery strongly recommended for charging safety"
+      ],
+      "badges": [
+        {
+          "type": "warning",
+          "text": "Helmet required"
+        },
+        {
+          "type": "warning",
+          "text": "Slow on beach paths"
+        },
+        {
+          "type": "warning",
+          "text": ">20 mph \u2014 verify local rules"
+        }
+      ],
+      "e_bike_class": "scooter"
+    },
+    "vs_baseline": {
+      "price_multiplier": 3.8,
+      "speed_delta_mph": 10,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "unagi-model-one",
+    "tier": "scooter",
+    "vehicle_type": "scooter",
+    "brand": "Unagi",
+    "model": "Model One Classic",
+    "parser": "generic",
+    "max_speed_mph": 20,
+    "motor_w": 500,
+    "brake_type": "electronic_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "ul_certified": false,
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://unagiscooters.com/products/model-one-classic",
+        "price_usd": 990,
+        "shipping_usd": 0
+      }
+    ],
+    "colors": [
+      {
+        "name": "Matte black",
+        "family": "black"
+      },
+      {
+        "name": "Cosmic blue",
+        "family": "blue"
+      }
+    ],
+    "features": {
+      "companion_app": true,
+      "ride_history": true,
+      "firmware_ota": true,
+      "lock_builtin": true,
+      "keyless_start": true,
+      "bluetooth_speaker": false,
+      "phone_mount": true,
+      "regen_braking": true,
+      "cruise_control": true,
+      "fold_compact": true,
+      "ip_rating": "IP54"
+    },
+    "image_url": "https://unagiscooters.com/cdn/shop/files/Model-One-Classic-Matte-Black.png?v=1710000000",
+    "image_urls": [
+      "https://unagiscooters.com/cdn/shop/files/Model-One-Classic-folded.png?v=1710000000"
+    ],
+    "battery_voltage_v": 36,
+    "battery_capacity_ah": 9,
+    "battery_range_miles_pas": 12,
+    "battery_range_miles_throttle": 10,
+    "battery_charge_hours": 4,
+    "battery_charge_method": "onboard",
+    "battery_charge_notes": "Dual-motor premium deck; shorter range vs commuters",
+    "battery_wh": 324,
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "platform_label": "Direct",
+        "url": "https://unagiscooters.com/products/model-one-classic",
+        "item_price_usd": 990.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 990.0,
+        "delivery_note": "Direct ship",
+        "rewards_note": null,
+        "is_search_url": false
+      }
+    ],
+    "landed_price_usd": 990.0,
+    "best_buy_url": "https://unagiscooters.com/products/model-one-classic",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
+    "safety_score": 84,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "row_label": "Brakes",
+        "label": "Disc + regen",
+        "value": "electronic_disc",
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "row_label": "Front light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "row_label": "Rear light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ul_cert",
+        "row_label": "UL battery cert",
+        "label": "UL battery cert",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "row_label": "Speed limiter",
+        "label": "\u226420 mph",
+        "value": 20,
+        "ok": true
+      },
+      {
+        "key": "ip_rating",
+        "row_label": "Water resistant",
+        "label": "Water resistant",
+        "value": "IP54",
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "row_label": "Reflectors",
+        "label": "Reflectors",
+        "value": true,
+        "ok": true
+      }
+    ],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "IP54",
+        "ok": true
+      }
+    ],
+    "feature_display": {
+      "luxury_score": 49,
+      "feature_count": 10,
+      "by_group": {
+        "security": 1,
+        "tracking": 0,
+        "app": 3,
+        "audio": 1,
+        "luxury": 5
+      },
+      "perks_label": "Built-in lock \u00b7 Companion app (iOS/Android) \u00b7 Ride stats & history \u00b7 Over-the-air firmware updates",
+      "has_app": true,
+      "has_tracking": false,
+      "has_security": true,
+      "has_audio": true,
+      "is_smart": true
+    },
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Helmet required under 18 on streets and bikeways (CVC \u00a721212)",
+        "Many HB paths cap scooters at 10 mph \u2014 ride slower near pedestrians",
+        "No riding on sidewalks in many HB zones \u2014 use bike lanes or streets",
+        "UL-certified battery strongly recommended for charging safety"
+      ],
+      "badges": [
+        {
+          "type": "warning",
+          "text": "Helmet required"
+        },
+        {
+          "type": "warning",
+          "text": "Slow on beach paths"
+        }
+      ],
+      "e_bike_class": "scooter"
+    },
+    "vs_baseline": {
+      "price_multiplier": 3.4,
       "speed_delta_mph": 5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",

@@ -14,6 +14,7 @@ TIER_LABELS = {
     "value": "$600–1,200",
     "mid": "$1,200–2,000",
     "premium": "$2,000+",
+    "scooter": "E-Scooters",
     "baseline": "Baseline",
 }
 
@@ -53,6 +54,8 @@ def build(root: Path, min_bikes: int = 18) -> None:
 
     e_bikes = [b for b in all_bikes if not b.get("is_baseline")]
     baseline = next((b for b in all_bikes if b.get("is_baseline")), baseline)
+    ebike_count = sum(1 for b in e_bikes if b.get("vehicle_type") != "scooter")
+    scooter_count = sum(1 for b in e_bikes if b.get("vehicle_type") == "scooter")
 
     by_tier = {}
     for b in e_bikes:
@@ -113,6 +116,11 @@ def build(root: Path, min_bikes: int = 18) -> None:
             "battery_charge_hours": b.get("battery_charge_hours"),
             "battery_charge_method": b.get("battery_charge_method"),
             "battery_charge_notes": b.get("battery_charge_notes"),
+            "vehicle_type": b.get("vehicle_type", "ebike"),
+            "features": b.get("features", {}),
+            "feature_checklist": b.get("feature_checklist", []),
+            "feature_display": b.get("feature_display", {}),
+            "luxury_score": (b.get("feature_display") or {}).get("luxury_score", 0),
         }
 
     bikes_for_js = [bike_to_js(b) for b in e_bikes]
@@ -132,6 +140,8 @@ def build(root: Path, min_bikes: int = 18) -> None:
         safety=safety,
         main_site_url=main_site,
         generated_date="2026-07-12",
+        ebike_count=ebike_count,
+        scooter_count=scooter_count,
         bikes_json=json.dumps(bikes_for_js),
         all_bikes_json=json.dumps(all_bikes_for_js),
         default_baseline_id=baseline.get("id", "firmstrong-urban-lady"),

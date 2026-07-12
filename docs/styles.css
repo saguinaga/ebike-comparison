@@ -916,6 +916,102 @@ table.compare tbody tr.color-preferred { background: #fffbea; }
   background: linear-gradient(90deg, #2a9d6e, #5ec99a);
 }
 
+.bike-card.smart-preferred {
+  outline: 2px solid #5b6ee8;
+  box-shadow: 0 0 0 3px rgba(91, 110, 232, 0.25);
+}
+
+.badge.luxury {
+  background: linear-gradient(135deg, #e8ecff, #d4daf8);
+  color: #2a3a8f;
+  border: 1px solid #9aa8e8;
+}
+
+.badge.vehicle-scooter {
+  font-size: 0.62rem;
+  vertical-align: middle;
+  background: #eef6ff;
+  color: var(--ocean-deep);
+  border: 1px solid var(--ocean-light);
+}
+
+.feature-equip {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--sand-dark);
+}
+
+.feature-equip-title {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: 3px;
+}
+
+.luxury-score-badge {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #3d4db7;
+  background: #e8ecff;
+  padding: 1px 5px;
+  border-radius: 4px;
+  margin-left: 2px;
+}
+
+.feature-facts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.68rem;
+  line-height: 1.35;
+}
+
+.feature-group-row {
+  display: grid;
+  grid-template-columns: 3.8em 1fr;
+  gap: 4px;
+  padding: 2px 0;
+}
+
+.feature-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.feature-tag {
+  display: inline-block;
+  font-size: 0.58rem;
+  padding: 1px 4px;
+  border-radius: 3px;
+  line-height: 1.25;
+  border: 1px solid var(--sand-dark);
+  background: var(--foam);
+  color: #888;
+}
+
+.feature-tag.ok {
+  color: #1a4a6e;
+  background: #e8f4fc;
+  border-color: #9cc8e8;
+}
+
+.feature-tag.miss {
+  opacity: 0.55;
+  text-decoration: line-through;
+}
+
+.brake-electronic_disc::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle, #4a90d9 40%, transparent 42%), linear-gradient(90deg, #f0a030 0 40%, transparent 40%);
+  border-radius: 50%;
+  margin-right: 2px;
+}
+
 table.compare td:nth-child(n+7) {
   font-size: 0.8rem;
 }

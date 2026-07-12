@@ -7,6 +7,7 @@ import yaml
 from .battery import battery_wh, load_batteries
 from .colors import normalize_colors
 from .compare_pedal import compare_to_baseline
+from .features import build_feature_checklist, format_features_summary
 from .legal_compliance import evaluate_bike
 from .parsers import PARSERS
 from .pricing import compute_landed_prices
@@ -28,6 +29,14 @@ def load_config(root: Path) -> tuple:
     bikes_cfg = yaml.safe_load((root / "config" / "bikes.yaml").read_text(encoding="utf-8"))
     bench_cfg = yaml.safe_load((root / "config" / "benchmarks.yaml").read_text(encoding="utf-8"))
     return bikes_cfg, bench_cfg
+
+
+def load_scooters(root: Path) -> list:
+    path = root / "config" / "scooters.yaml"
+    if not path.exists():
+        return []
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return data.get("scooters", [])
 
 
 def _apply_battery_spec(bike: dict, spec: dict) -> None:
@@ -82,10 +91,14 @@ def parse_all(root: Path, scrape_live: bool = True) -> list:
             pass
     results.append(baseline_bike)
 
-    for entry in bikes_cfg.get("bikes", []):
+    all_entries = list(bikes_cfg.get("bikes", [])) + load_scooters(root)
+
+    for entry in all_entries:
         bike = copy.deepcopy(entry)
         bike.pop("manual", None)
         manual = entry.get("manual", {})
+        if not bike.get("vehicle_type"):
+            bike["vehicle_type"] = "ebike"
 
         parser_name = entry.get("parser", "generic")
         parser = PARSERS.get(parser_name, PARSERS["generic"])
@@ -110,6 +123,12 @@ def parse_all(root: Path, scrape_live: bool = True) -> list:
         bike.update(compute_landed_prices({**entry, **bike}))
         bike["safety_score"] = compute_safety_score(bike)
         bike["safety_checklist"] = build_checklist(bike)
+        if bike.get("features"):
+            bike["feature_checklist"] = build_feature_checklist(bike["features"])
+            bike["feature_display"] = format_features_summary(bike["features"], bike["feature_checklist"])
+        else:
+            bike["feature_checklist"] = []
+            bike["feature_display"] = format_features_summary({})
         bike["legal"] = evaluate_bike(bike, rider.get("age", 12))
         bike["vs_baseline"] = compare_to_baseline(bike, baseline_bike)
         bike["friend_recommended"] = entry.get("friend_recommended", False)

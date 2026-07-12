@@ -7,6 +7,9 @@ def load_rules(root: Path) -> dict:
 
 
 def evaluate_bike(bike: dict, rider_age: int = 12) -> dict:
+    if bike.get("vehicle_type") == "scooter":
+        return _evaluate_scooter(bike, rider_age)
+
     cls = bike.get("e_bike_class")
     max_mph = bike.get("max_speed_mph") or 20
     lights = bike.get("lights") or {}
@@ -33,4 +36,37 @@ def evaluate_bike(bike: dict, rider_age: int = 12) -> dict:
         "issues": issues,
         "badges": badges,
         "e_bike_class": cls,
+    }
+
+
+def _evaluate_scooter(bike: dict, rider_age: int = 12) -> dict:
+    max_mph = bike.get("max_speed_mph") or 20
+    lights = bike.get("lights") or {}
+    legal_for_age = True
+    issues = []
+    badges = []
+
+    if rider_age < 18:
+        issues.append("Helmet required under 18 on streets and bikeways (CVC §21212)")
+        badges.append({"type": "warning", "text": "Helmet required"})
+
+    if max_mph > 15:
+        issues.append("Many HB paths cap scooters at 10 mph — ride slower near pedestrians")
+        badges.append({"type": "warning", "text": "Slow on beach paths"})
+
+    if max_mph > 20:
+        issues.append("Over 20 mph — check local scooter ordinances before school commute")
+        badges.append({"type": "warning", "text": ">20 mph — verify local rules"})
+
+    if not lights.get("front") or not lights.get("rear"):
+        issues.append("Add lights for night rides (CVC §21201 applies to scooters on roads)")
+
+    issues.append("No riding on sidewalks in many HB zones — use bike lanes or streets")
+    issues.append("UL-certified battery strongly recommended for charging safety")
+
+    return {
+        "legal_for_age": legal_for_age,
+        "issues": issues,
+        "badges": badges,
+        "e_bike_class": "scooter",
     }

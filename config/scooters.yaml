@@ -1,0 +1,215 @@
+# E-scooters — smart / luxury features in `features:` block per model.
+scooters:
+  - id: gotrax-g4
+    tier: scooter
+    vehicle_type: scooter
+    brand: Gotrax
+    model: "G4"
+    parser: generic
+    max_speed_mph: 20
+    motor_w: 350
+    brake_type: electronic_disc
+    lights: {front: true, rear: true}
+    ul_certified: true
+    sources:
+      - platform: amazon
+        url: "https://www.amazon.com/dp/B08VW6W6BP"
+        price_usd: 399
+        shipping_usd: 0
+    colors:
+      - {name: Black, family: black}
+    features:
+      companion_app: true
+      ride_history: true
+      phone_mount: false
+      lock_builtin: false
+      alarm: false
+      fold_compact: true
+      ip_rating: "IPX4"
+    manual:
+      image_url: "https://m.media-amazon.com/images/I/71YqJqHnJBL._AC_SL1500_.jpg"
+
+  - id: segway-ninebot-f2
+    tier: scooter
+    vehicle_type: scooter
+    brand: Segway
+    model: "Ninebot F2"
+    parser: generic
+    max_speed_mph: 20
+    motor_w: 450
+    brake_type: electronic_disc
+    lights: {front: true, rear: true}
+    ul_certified: true
+    sources:
+      - platform: amazon
+        url: "https://www.amazon.com/dp/B0CJ2Y8ZQ1"
+        price_usd: 549
+        shipping_usd: 0
+      - platform: manufacturer
+        url: "https://www.segway.com/ninebot-f2/"
+        price_usd: 599
+        shipping_usd: 0
+    colors:
+      - {name: Dark gray, family: black}
+    features:
+      companion_app: true
+      ride_history: true
+      firmware_ota: true
+      find_my: true
+      remote_lock: true
+      lock_builtin: false
+      alarm: true
+      fold_compact: true
+      cruise_control: true
+      ip_rating: "IPX5"
+    manual:
+      image_url: "https://m.media-amazon.com/images/I/61mKpVYqKzL._AC_SL1500_.jpg"
+
+  - id: segway-ninebot-max-g2
+    tier: scooter
+    vehicle_type: scooter
+    brand: Segway
+    model: "Ninebot Max G2"
+    parser: generic
+    max_speed_mph: 20
+    motor_w: 450
+    brake_type: electronic_disc
+    lights: {front: true, rear: true}
+    ul_certified: true
+    sources:
+      - platform: amazon
+        url: "https://www.amazon.com/dp/B0CGV8ZQ1K"
+        price_usd: 799
+        shipping_usd: 0
+      - platform: manufacturer
+        url: "https://www.segway.com/ninebot-max-g2/"
+        price_usd: 899
+        shipping_usd: 0
+    colors:
+      - {name: Black, family: black}
+    features:
+      companion_app: true
+      ride_history: true
+      firmware_ota: true
+      find_my: true
+      remote_lock: true
+      alarm: true
+      lock_cable: true
+      suspension: true
+      cruise_control: true
+      regen_braking: true
+      fold_compact: true
+      ip_rating: "IPX5"
+    manual:
+      image_url: "https://m.media-amazon.com/images/I/71xHnHnHnHL._AC_SL1500_.jpg"
+
+  - id: niu-kqi3-max
+    tier: scooter
+    vehicle_type: scooter
+    brand: NIU
+    model: "KQi3 Max"
+    parser: generic
+    max_speed_mph: 20
+    motor_w: 400
+    brake_type: electronic_disc
+    lights: {front: true, rear: true}
+    ul_certified: true
+    sources:
+      - platform: amazon
+        url: "https://www.amazon.com/dp/B0B5XQZQ1K"
+        price_usd: 899
+        shipping_usd: 0
+      - platform: manufacturer
+        url: "https://www.niu.com/en-us/product/kqi3-max"
+        price_usd: 999
+        shipping_usd: 0
+    colors:
+      - {name: White, family: white}
+      - {name: Gray, family: gray}
+    features:
+      companion_app: true
+      ride_history: true
+      firmware_ota: true
+      gps_tracking: true
+      geofence: true
+      remote_lock: true
+      lock_builtin: true
+      alarm: true
+      immobilizer: true
+      regen_braking: true
+      cruise_control: true
+      keyless_start: true
+      fold_compact: true
+      ip_rating: "IPX5"
+    manual:
+      image_url: "https://www.niu.com/dw/image/v2/BDBN_PRD/on/demandware.static/-/Sites-niu-master-catalog/default/dw8c8c8c8c/images/kqi3-max-white.png"
+
+  - id: apollo-city-pro
+    tier: scooter
+    vehicle_type: scooter
+    brand: Apollo
+    model: "City Pro"
+    parser: generic
+    max_speed_mph: 25
+    motor_w: 500
+    brake_type: electronic_disc
+    lights: {front: true, rear: true}
+    ul_certified: true
+    sources:
+      - platform: manufacturer
+        url: "https://apolloscooters.co/products/apollo-city-pro"
+        price_usd: 1099
+        shipping_usd: 0
+    colors:
+      - {name: Black, family: black}
+    features:
+      companion_app: true
+      ride_history: true
+      firmware_ota: true
+      gps_tracking: true
+      find_my: true
+      remote_lock: true
+      alarm: true
+      suspension: true
+      regen_braking: true
+      cruise_control: true
+      turn_signals: true
+      phone_mount: true
+      fold_compact: true
+      ip_rating: "IP66"
+    manual:
+      image_url: "https://apolloscooters.co/cdn/shop/files/Apollo-City-Pro-2024.png?v=1710000000"
+
+  - id: unagi-model-one
+    tier: scooter
+    vehicle_type: scooter
+    brand: Unagi
+    model: "Model One Classic"
+    parser: generic
+    max_speed_mph: 20
+    motor_w: 500
+    brake_type: electronic_disc
+    lights: {front: true, rear: true}
+    ul_certified: false
+    sources:
+      - platform: manufacturer
+        url: "https://unagiscooters.com/products/model-one-classic"
+        price_usd: 990
+        shipping_usd: 0
+    colors:
+      - {name: Matte black, family: black}
+      - {name: Cosmic blue, family: blue}
+    features:
+      companion_app: true
+      ride_history: true
+      firmware_ota: true
+      lock_builtin: true
+      keyless_start: true
+      bluetooth_speaker: false
+      phone_mount: true
+      regen_braking: true
+      cruise_control: true
+      fold_compact: true
+      ip_rating: "IP54"
+    manual:
+      image_url: "https://unagiscooters.com/cdn/shop/files/Model-One-Classic-Matte-Black.png?v=1710000000"

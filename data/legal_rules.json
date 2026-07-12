@@ -43,6 +43,22 @@
       "severity": "recommended"
     }
   ],
+  "scooters": [
+    {
+      "id": "cvc-scooter-helmet",
+      "title": "E-scooter helmet under 18",
+      "summary": "California requires helmets for riders under 18 on motorized scooters (same helmet rule as bikes on bikeways).",
+      "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21212.&lawCode=VEH",
+      "severity": "required"
+    },
+    {
+      "id": "hb-scooter-paths",
+      "title": "HB paths & sidewalks",
+      "summary": "Slow to 10 mph on beach/park paths; many areas prohibit sidewalk riding — use bike lanes or streets.",
+      "source": "https://www.huntingtonbeachca.gov/departments/police/about_us/pd_division/alternative_vehicle_safety.php",
+      "severity": "local_limit"
+    }
+  ],
   "classes": {
     "1": {"max_mph": 20, "legal_under_16": true, "description": "Pedal-assist, motor stops at 20 mph"},
     "2": {"max_mph": 20, "legal_under_16": true, "description": "Throttle-assisted, motor stops at 20 mph"},

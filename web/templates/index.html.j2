@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E-Bike Comparison · Surf City HB</title>
+  <title>E-Bike &amp; Scooter Comparison · Surf City HB</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,6 +22,23 @@
     {% endif %}
   </ul>
 </div>
+{%- endmacro %}
+{% macro feature_block(checklist, display) -%}
+{% if checklist %}
+<div class="feature-equip">
+  <span class="feature-equip-title">Smart &amp; luxury <span class="luxury-score-badge">★ {{ display.luxury_score }}</span></span>
+  <ul class="feature-facts">
+    {% for group_id, group_label in [('security','Security'),('tracking','Tracking'),('app','App'),('audio','Audio'),('luxury','Premium')] %}
+    {% set group_items = checklist | selectattr('group', 'equalto', group_id) | list %}
+    {% if group_items %}
+    <li class="feature-group-row"><span class="bf-label">{{ group_label }}</span>
+      <span class="feature-tags">{% for item in group_items %}<span class="feature-tag{% if item.ok %} ok{% else %} miss{% endif %}" title="{{ item.label }}">{{ item.label }}</span>{% endfor %}</span>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
 {%- endmacro %}
   <header class="hero" aria-label="Surf City Huntington Beach">
     <div class="hero-scene" aria-hidden="true">
@@ -69,8 +86,8 @@
     </div>
     <div class="hero-content">
       <span class="hero-badge">Surf City · Huntington Beach</span>
-      <h1>E-Bike Comparison</h1>
-      <p class="hero-sub">{{ bikes|length }} bikes · school &amp; commute rides · 5'2" rider baseline</p>
+      <h1>E-Bike &amp; Scooter Comparison</h1>
+      <p class="hero-sub">{{ ebike_count }} e-bikes · {{ scooter_count }} e-scooters · school &amp; commute · 5'2" rider baseline</p>
       <nav class="quick-links">
         <a href="#compare-panel">Side-by-Side</a>
         <a href="#charts-section">Charts</a>
@@ -114,9 +131,17 @@
     </section>
 
     <section class="section" id="bikes">
-      <h2 class="section-title">Browse Bikes</h2>
+      <h2 class="section-title">Browse Rides</h2>
       <div class="toolbar" id="cardToolbar">
+        <label>Type
+          <select id="vehicleFilter">
+            <option value="all">All</option>
+            <option value="ebike">E-bikes only</option>
+            <option value="scooter">E-scooters only</option>
+          </select>
+        </label>
         <label><input type="checkbox" id="colorFilter"> Highlight beach tones <span class="filter-hint">(white, sand, vanilla, light wood)</span></label>
+        <label><input type="checkbox" id="smartFilter"> Highlight smart rides <span class="filter-hint">(app + GPS or lock)</span></label>
         <label>Max speed
           <select id="speedFilter">
             <option value="all">Any</option>
@@ -156,9 +181,12 @@
           data-price="{{ bike.landed_price_usd or bike.price_usd }}"
           data-legal="{{ 'yes' if bike.legal.legal_for_age else 'no' }}"
           data-colors="{{ bike.colors | map(attribute='family') | join(',') }}"
-          data-class="{{ bike.e_bike_class }}"
+          data-class="{{ 'scooter' if bike.vehicle_type == 'scooter' else bike.e_bike_class }}"
           data-speed="{{ bike.max_speed_mph }}"
-          data-efficiency="{{ bike.battery_display.wh_per_mile_pas or '' }}">
+          data-efficiency="{{ bike.battery_display.wh_per_mile_pas or '' }}"
+          data-vehicle="{{ bike.vehicle_type or 'ebike' }}"
+          data-luxury="{{ bike.feature_display.luxury_score if bike.feature_display else 0 }}"
+          data-smart="{{ 'yes' if bike.feature_display and bike.feature_display.is_smart else 'no' }}">
           <div class="bike-media">
             <div class="bike-thumb">
               {% if bike.image_gallery %}
@@ -179,7 +207,7 @@
             </div>
             {% endif %}
           </div>
-          <h3>{{ bike.brand }} {{ bike.model }}</h3>
+          <h3>{{ bike.brand }} {{ bike.model }}{% if bike.vehicle_type == 'scooter' %} <span class="badge vehicle-scooter">Scooter</span>{% endif %}</h3>
           <div class="price-big">${{ bike.landed_price_usd or bike.price_usd }} <span class="price-note">landed</span></div>
           <div class="buy-links">
             {% if bike.best_buy_url %}
@@ -197,8 +225,11 @@
           </div>
           <div class="badges">
             <span class="badge ok">Safety {{ bike.safety_score }}</span>
+            {% if bike.feature_display and bike.feature_display.luxury_score %}
+            <span class="badge luxury">Smart {{ bike.feature_display.luxury_score }}</span>
+            {% endif %}
             {% if bike.legal.legal_for_age %}
-            <span class="badge ok">Legal</span>
+            <span class="badge ok">{% if bike.vehicle_type == 'scooter' %}OK w/ rules{% else %}Legal{% endif %}</span>
             {% else %}
             <span class="badge danger">Class {{ bike.e_bike_class }} ✗</span>
             {% endif %}
@@ -220,6 +251,7 @@
             </ul>
           </div>
           {{ battery_block(bike.battery_display) }}
+          {{ feature_block(bike.feature_checklist, bike.feature_display) }}
           <div class="card-actions">
             <button type="button" class="btn-compare" data-id="{{ bike.id }}">+ Compare</button>
             <button type="button" class="btn-hide" data-id="{{ bike.id }}" title="Hide from view">Hide</button>
@@ -252,6 +284,7 @@
         <div class="chart-card"><h4>Range vs price</h4><div id="chartRangePrice" class="chart-area"></div></div>
         <div class="chart-card"><h4>Efficiency vs price</h4><div id="chartEfficiencyPrice" class="chart-area"></div></div>
         <div class="chart-card"><h4>Wh/mi by tier</h4><div id="chartEfficiencyTier" class="chart-area"></div></div>
+        <div class="chart-card"><h4>Smart score vs price</h4><div id="chartLuxuryPrice" class="chart-area"></div></div>
       </div>
     </section>
 
@@ -264,7 +297,7 @@
           <option value="{{ tier }}">{{ label }}</option>
           {% endfor %}
         </select></label>
-        <label>Class <select id="tableClassFilter"><option value="all">All</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label>
+        <label>Type <select id="tableClassFilter"><option value="all">All</option><option value="1">Class 1</option><option value="2">Class 2</option><option value="3">Class 3</option><option value="scooter">Scooter</option></select></label>
         <label>Legal <select id="tableLegalFilter"><option value="all">All</option><option value="yes">Legal</option><option value="no">Illegal</option></select></label>
         <label><input type="checkbox" id="tableColorFilter"> Highlight beach tones <span class="filter-hint">(white, sand, vanilla, light wood)</span></label>
       </div>
@@ -275,7 +308,8 @@
             <th data-sort="name" data-type="string">Bike</th>
             <th data-sort="price" data-type="number">Price</th>
             <th data-sort="safety" data-type="number">Safety</th>
-            <th data-sort="class" data-type="number">Class</th>
+            <th data-sort="class" data-type="string">Type</th>
+            <th data-sort="luxury" data-type="number">Smart</th>
             <th data-sort="legal" data-type="string">Legal</th>
             <th data-sort="speed" data-type="number">Max mph</th>
             <th data-sort="range" data-type="number">Range mi</th>
@@ -290,7 +324,7 @@
           {% for bike in bikes %}
           <tr data-id="{{ bike.id }}"
               data-tier="{{ bike.tier }}"
-              data-class="{{ bike.e_bike_class }}"
+              data-class="{{ 'scooter' if bike.vehicle_type == 'scooter' else bike.e_bike_class }}"
               data-legal="{{ 'yes' if bike.legal.legal_for_age else 'no' }}"
               data-colors="{{ bike.colors | map(attribute='family') | join(',') }}"
               data-name="{{ bike.brand }} {{ bike.model }}"
@@ -301,7 +335,9 @@
               data-battery="{{ bike.battery_capacity_ah or '' }}"
               data-efficiency="{{ bike.battery_display.wh_per_mile_pas or '' }}"
               data-charge="{{ bike.battery_display.charge_label }}"
-              data-brakes="{{ bike.brake_type }}">
+              data-brakes="{{ bike.brake_type }}"
+              data-luxury="{{ bike.feature_display.luxury_score if bike.feature_display else '' }}"
+              data-vehicle="{{ bike.vehicle_type or 'ebike' }}">
             <td class="table-photo">
               {% if bike.image_src %}
               <img src="{{ bike.image_src }}" alt="{{ bike.brand }} {{ bike.model }}" loading="lazy" title="{{ bike.brand }} {{ bike.model }}">
@@ -310,7 +346,8 @@
             <td>{{ bike.brand }} {{ bike.model }}</td>
             <td>{{ (bike.landed_price_usd or bike.price_usd) | format_usd }}</td>
             <td>{{ bike.safety_score }}</td>
-            <td>{{ bike.e_bike_class }}</td>
+            <td>{% if bike.vehicle_type == 'scooter' %}Scooter{% else %}Class {{ bike.e_bike_class }}{% endif %}</td>
+            <td>{% if bike.feature_display and bike.feature_display.luxury_score %}{{ bike.feature_display.luxury_score }}{% else %}—{% endif %}</td>
             <td>{{ 'Yes' if bike.legal.legal_for_age else 'No' }}</td>
             <td>{{ bike.max_speed_mph }}</td>
             <td>{{ bike.battery_display.range_label }}</td>
@@ -339,6 +376,12 @@
       {% for rule in legal.huntington_beach %}
       <div class="legal-item"><strong>{{ rule.title }}</strong> — {{ rule.summary }} <a href="{{ rule.source }}" target="_blank" rel="noopener">Source</a></div>
       {% endfor %}
+      {% if legal.scooters %}
+      <h3 style="margin-top:18px;font-size:1rem;">E-scooters</h3>
+      {% for rule in legal.scooters %}
+      <div class="legal-item"><strong>{{ rule.title }}</strong> — {{ rule.summary }} <a href="{{ rule.source }}" target="_blank" rel="noopener">Source</a></div>
+      {% endfor %}
+      {% endif %}
     </section>
 
     <section class="section" id="safety">

@@ -147,3 +147,33 @@ galleries:
     image_url: "http://www.firmstrong.com/cdn/shop/products/Firmstrong_Urban_Lady_Single_Speed_Beach_Cruiser_Bicycle_26-Inch_Mint_Green_medium.jpg?v=1516946946"
     image_urls:
       - "https://www.firmstrong.com/cdn/shop/products/Firmstrong_Urban_Lady_Single_Speed_Beach_Cruiser_Bicycle_26-Inch_White_w__Pink_Rims_1024x1024.jpg?v=1463486850"
+
+  gotrax-g4:
+    image_url: "https://m.media-amazon.com/images/I/71YqJqHnJBL._AC_SL1500_.jpg"
+    image_urls:
+      - "https://m.media-amazon.com/images/I/81YqJqHnJBL._AC_SL1500_.jpg"
+
+  segway-ninebot-f2:
+    image_url: "https://m.media-amazon.com/images/I/61mKpVYqKzL._AC_SL1500_.jpg"
+    image_urls:
+      - "https://www.segway.com/wp-content/uploads/2024/01/ninebot-f2-hero.png"
+
+  segway-ninebot-max-g2:
+    image_url: "https://m.media-amazon.com/images/I/71xHnHnHnHL._AC_SL1500_.jpg"
+    image_urls:
+      - "https://www.segway.com/wp-content/uploads/2023/09/max-g2-folded.png"
+
+  niu-kqi3-max:
+    image_url: "https://www.niu.com/dw/image/v2/BDBN_PRD/on/demandware.static/-/Sites-niu-master-catalog/default/dw1a2b3c4d/images/kqi3-max-hero.png"
+    image_urls:
+      - "https://www.niu.com/dw/image/v2/BDBN_PRD/on/demandware.static/-/Sites-niu-master-catalog/default/dw5e6f7g8h/images/kqi3-max-fold.png"
+
+  apollo-city-pro:
+    image_url: "https://apolloscooters.co/cdn/shop/files/Apollo-City-Pro-2024.png?v=1710000000"
+    image_urls:
+      - "https://apolloscooters.co/cdn/shop/files/apollo-city-pro-folded.png?v=1710000000"
+
+  unagi-model-one:
+    image_url: "https://unagiscooters.com/cdn/shop/files/Model-One-Classic-Matte-Black.png?v=1710000000"
+    image_urls:
+      - "https://unagiscooters.com/cdn/shop/files/Model-One-Classic-folded.png?v=1710000000"

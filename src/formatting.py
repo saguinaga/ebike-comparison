@@ -13,6 +13,11 @@ BRAKE_DISPLAY = {
     },
     "rim": {"icon": "⭕", "label": "Rim Brake", "css_class": "brake-rim"},
     "coaster": {"icon": "↩️", "label": "Coaster", "css_class": "brake-coaster"},
+    "electronic_disc": {
+        "icon": "⚡",
+        "label": "Disc + regen",
+        "css_class": "brake-electronic_disc",
+    },
 }
 
 

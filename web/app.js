@@ -15,8 +15,38 @@
     mechanical_disc: { icon: "", label: "Mechanical Disc", css_class: "brake-mechanical_disc", glyph: true },
     rim: { icon: "⭕", label: "Rim Brake", css_class: "brake-rim" },
     coaster: { icon: "↩️", label: "Coaster", css_class: "brake-coaster" },
+    electronic_disc: { icon: "⚡", label: "Disc + regen", css_class: "brake-electronic_disc" },
   };
-  const BRAKE_SCORES = { coaster: 5, rim: 8, mechanical_disc: 18, hydraulic_disc: 25 };
+  const BRAKE_SCORES = { coaster: 5, rim: 8, mechanical_disc: 18, hydraulic_disc: 25, electronic_disc: 20 };
+  const FEATURE_DEFS = {
+    lock_builtin: ["Built-in lock", "security", 8],
+    lock_cable: ["Cable / U-lock mount", "security", 3],
+    alarm: ["Anti-theft alarm", "security", 6],
+    immobilizer: ["Motor immobilizer", "security", 5],
+    gps_tracking: ["GPS live tracking", "tracking", 12],
+    find_my: ["Find My / location history", "tracking", 10],
+    geofence: ["Geofence alerts", "tracking", 6],
+    companion_app: ["Companion app", "app", 8],
+    ride_history: ["Ride stats & history", "app", 4],
+    firmware_ota: ["OTA firmware updates", "app", 5],
+    remote_lock: ["Remote lock / unlock", "app", 6],
+    bluetooth_speaker: ["Bluetooth speaker", "audio", 7],
+    phone_mount: ["Phone mount included", "audio", 3],
+    suspension: ["Suspension", "luxury", 8],
+    regen_braking: ["Regen braking", "luxury", 5],
+    cruise_control: ["Cruise control", "luxury", 4],
+    turn_signals: ["Turn signals", "luxury", 6],
+    keyless_start: ["Keyless / NFC start", "luxury", 4],
+    fold_compact: ["Compact fold", "luxury", 3],
+    ip_rating: ["Water resistance IPX5+", "luxury", 5],
+  };
+  const FEATURE_GROUPS = [
+    ["security", "Security"],
+    ["tracking", "Tracking"],
+    ["app", "App"],
+    ["audio", "Audio"],
+    ["luxury", "Premium"],
+  ];
   const CHARGE_LABELS = {
     onboard: "Onboard plug",
     removable: "Removable pack",
@@ -32,6 +62,8 @@
 
   const colorFilter = document.getElementById("colorFilter");
   const efficiencyFilter = document.getElementById("efficiencyFilter");
+  const vehicleFilter = document.getElementById("vehicleFilter");
+  const smartFilter = document.getElementById("smartFilter");
   const speedFilter = document.getElementById("speedFilter");
   const legalFilter = document.getElementById("legalFilter");
   const priceFilter = document.getElementById("priceFilter");
@@ -169,6 +201,71 @@
     return `<span class="battery-inline" title="${b.charge_notes || ""}">${b.range_label} · ${b.capacity_label}</span>`;
   }
 
+  function ipRatingOk(features) {
+    const ip = (features?.ip_rating || "").toUpperCase();
+    return ["IPX5", "IPX6", "IPX7", "IP54", "IP55", "IP65"].some((x) => ip.includes(x));
+  }
+
+  function buildFeatureChecklist(features) {
+    const feats = features || {};
+    return Object.entries(FEATURE_DEFS).map(([key, [label, group, _w]]) => {
+      const ok = key === "ip_rating" ? ipRatingOk(feats) : !!feats[key];
+      return { key, group, label, ok, value: key === "ip_rating" ? feats.ip_rating || "—" : ok };
+    });
+  }
+
+  function computeLuxuryScore(features) {
+    let score = 0;
+    const feats = features || {};
+    Object.entries(FEATURE_DEFS).forEach(([key, [, , weight]]) => {
+      if (key === "ip_rating" ? ipRatingOk(feats) : feats[key]) score += weight;
+    });
+    return Math.min(score, 100);
+  }
+
+  function formatFeatureDisplay(features, checklist) {
+    const list = checklist || buildFeatureChecklist(features);
+    const byGroup = {};
+    let total = 0;
+    list.forEach((item) => {
+      if (item.ok) {
+        total += 1;
+        byGroup[item.group] = (byGroup[item.group] || 0) + 1;
+      }
+    });
+    const perks = list.filter((i) => i.ok).map((i) => i.label).slice(0, 4);
+    const f = features || {};
+    return {
+      luxury_score: computeLuxuryScore(f),
+      feature_count: total,
+      by_group: byGroup,
+      perks_label: perks.length ? perks.join(" · ") : "—",
+      has_app: !!f.companion_app,
+      has_tracking: !!(f.gps_tracking || f.find_my),
+      has_security: !!(f.lock_builtin || f.alarm || f.immobilizer),
+      has_audio: !!(f.bluetooth_speaker || f.phone_mount),
+      is_smart: !!(f.companion_app && (f.gps_tracking || f.find_my || f.lock_builtin)),
+    };
+  }
+
+  function featureBlockHtml(bike) {
+    const checklist = bike.feature_checklist?.length ? bike.feature_checklist : buildFeatureChecklist(bike.features);
+    if (!checklist.length || !bike.features || !Object.keys(bike.features).length) return "";
+    const display = bike.feature_display || formatFeatureDisplay(bike.features, checklist);
+    const groupRows = FEATURE_GROUPS.map(([gid, glabel]) => {
+      const items = checklist.filter((i) => i.group === gid);
+      if (!items.length) return "";
+      const tags = items
+        .map((i) => `<span class="feature-tag${i.ok ? " ok" : " miss"}" title="${i.label}">${i.label}</span>`)
+        .join("");
+      return `<li class="feature-group-row"><span class="bf-label">${glabel}</span><span class="feature-tags">${tags}</span></li>`;
+    }).join("");
+    return `<div class="feature-equip">
+      <span class="feature-equip-title">Smart &amp; luxury <span class="luxury-score-badge">★ ${display.luxury_score}</span></span>
+      <ul class="feature-facts">${groupRows}</ul>
+    </div>`;
+  }
+
   function batteryBlockHtml(bike) {
     const b = formatBattery(bike);
     const note = b.charge_notes ? ` <span class="bf-note" title="${b.charge_notes}">ⓘ</span>` : "";
@@ -198,6 +295,21 @@
   }
 
   function computeSafetyScore(bike) {
+    if (bike.vehicle_type === "scooter") {
+      let score = 15;
+      if (bike.brake_type === "electronic_disc") score += 20;
+      else if (["mechanical_disc", "hydraulic_disc"].includes(bike.brake_type)) score += 18;
+      const lights = bike.lights || {};
+      if (lights.front) score += 12;
+      if (lights.rear) score += 12;
+      if (bike.ul_certified) score += 15;
+      const maxSpd = bike.max_speed_mph || 20;
+      if (maxSpd <= 20) score += 12;
+      else if (maxSpd <= 25) score += 6;
+      if (ipRatingOk(bike.features)) score += 8;
+      if (bike.features?.alarm || bike.features?.lock_builtin) score += 5;
+      return Math.min(score, 100);
+    }
     let score = BRAKE_SCORES[bike.brake_type] || 5;
     const lights = bike.lights || {};
     if (lights.front) score += 10;
@@ -247,6 +359,11 @@
     if (!bike.safety_checklist?.length) bike.safety_checklist = buildChecklist(bike);
     bike.tier_label = bike.tier_label || tierLabels[bike.tier] || bike.tier;
     bike.battery_display = formatBattery(bike);
+    if (bike.features && Object.keys(bike.features).length) {
+      bike.feature_checklist = bike.feature_checklist?.length ? bike.feature_checklist : buildFeatureChecklist(bike.features);
+      bike.feature_display = bike.feature_display || formatFeatureDisplay(bike.features, bike.feature_checklist);
+      bike.luxury_score = bike.feature_display.luxury_score;
+    }
     return bike;
   }
 
@@ -305,11 +422,17 @@
     return !!b.is_efficient;
   }
 
+  function isSmartRide(bike) {
+    return !!(bike.feature_display?.is_smart || formatFeatureDisplay(bike.features).is_smart);
+  }
+
   function getCardFilters() {
     return {
       tier: document.querySelector(".tier-tab.active")?.dataset.tier || "all",
+      vehicle: vehicleFilter?.value || "all",
       highlightColors: colorFilter?.checked,
       highlightEfficient: efficiencyFilter?.checked,
+      highlightSmart: smartFilter?.checked,
       legal: legalFilter?.value || "all",
       maxPrice: priceFilter?.value || "all",
       speed: speedFilter?.value || "all",
@@ -332,7 +455,8 @@
     const price = parseFloat(card.dataset.price) || 0;
     const priceOk = f.maxPrice === "all" || price <= parseFloat(f.maxPrice);
     const speedOk = speedMatches(card.dataset.speed, f.speed);
-    return tierOk && legalOk && priceOk && speedOk;
+    const vehicleOk = f.vehicle === "all" || card.dataset.vehicle === f.vehicle;
+    return tierOk && legalOk && priceOk && speedOk && vehicleOk;
   }
 
   function getVisibleBikesForCharts() {
@@ -352,6 +476,7 @@
       card.classList.toggle("color-preferred", f.highlightColors && hasPreferredColor(card.dataset.colors));
       const bike = bikeMap[card.dataset.id];
       card.classList.toggle("efficiency-preferred", f.highlightEfficient && bike && isEfficientBike(bike));
+      card.classList.toggle("smart-preferred", f.highlightSmart && bike && isSmartRide(bike));
       card.classList.toggle("is-baseline", card.dataset.id === baselineId);
     });
     updateHiddenUi();
@@ -494,6 +619,18 @@
       );
     }
     renderEfficiencyTierChart("chartEfficiencyTier", bikes);
+    const luxEl = document.getElementById("chartLuxuryPrice");
+    if (luxEl) {
+      const withLux = bikes.filter((b) => (b.feature_display?.luxury_score || b.luxury_score || 0) > 0);
+      renderScatterChart(
+        "chartLuxuryPrice",
+        withLux,
+        (b) => bikePrice(b),
+        (b) => b.feature_display?.luxury_score || b.luxury_score || 0,
+        "Price",
+        "Smart score"
+      );
+    }
   }
 
   function renderEfficiencyTierChart(elId, bikes) {
@@ -648,8 +785,8 @@
       <div class="thumb-wrap">${img}</div>
       <strong>${bike.brand} ${bike.model}</strong>
       <div>${formatMoney(bike.price)} · Safety <strong>${bike.safety_score}</strong>/100</div>
-      <div>Class ${bike.e_bike_class || "?"} · ${bike.max_speed_mph} mph max</div>
-      <div>${legalBadge} · ${brakeHtml(bike)}</div>
+      <div>${bike.vehicle_type === "scooter" ? "Scooter" : `Class ${bike.e_bike_class || "?"}`} · ${bike.max_speed_mph} mph max</div>
+      <div>${legalBadge} · ${brakeHtml(bike)}${bike.luxury_score ? ` · Smart <strong>${bike.luxury_score}</strong>` : ""}</div>
       <div class="compare-battery">${batteryHtml(bike)}</div>
       ${vs ? `<div>vs baseline: <strong>${vs.price_multiplier}×</strong> · ${vs.speed_delta_mph >= 0 ? "+" : ""}${vs.speed_delta_mph} mph</div>` : ""}
       <div class="buy-links">${buyLink}</div>
@@ -715,8 +852,26 @@
         },
         bikes: selected,
       },
+      {
+        label: "Smart / luxury score",
+        values: selected.map((b) => b.feature_display?.luxury_score || b.luxury_score || 0),
+        higherBetter: true,
+        fmt: (v) => (v ? `<strong>${v}</strong>/100` : "—"),
+      },
       { label: "Brakes", values: selected.map((b) => b.brake_type), higherBetter: null, fmt: (_, b) => brakeHtml(b), bikes: selected },
     ];
+
+    const featureKeys = [...new Set(selected.flatMap((b) => (b.feature_checklist || []).map((i) => i.key)))];
+    const featureRows = featureKeys.map((key) => {
+      const rowLabel = (selected.find((b) => (b.feature_checklist || []).find((i) => i.key === key))?.feature_checklist || []).find((i) => i.key === key)?.label || key;
+      const cells = selected.map((b) => {
+        const item = (b.feature_checklist || []).find((i) => i.key === key);
+        if (!item) return "<td>—</td>";
+        const cls = item.ok ? "cell-best" : "cell-worst";
+        return `<td class="${cls}">${item.ok ? "✓" : "✗"}</td>`;
+      });
+      return `<tr><th class="row-label">${rowLabel}</th>${cells.join("")}</tr>`;
+    });
 
     const metricHtml = metricRows.map((row) => {
       const nums = row.values.filter((v) => typeof v === "number" && !Number.isNaN(v));
@@ -744,7 +899,7 @@
     matrixEl.innerHTML = `
       <table class="compare-matrix">
         <thead><tr><th>Safety factor</th>${headers}</tr></thead>
-        <tbody>${metricHtml.join("")}${checklistRows.join("")}</tbody>
+        <tbody>${metricHtml.join("")}${featureRows.join("")}${checklistRows.join("")}</tbody>
       </table>`;
   }
 
@@ -794,9 +949,12 @@
     article.dataset.price = bike.price;
     article.dataset.legal = bike.legal_for_age !== false ? "yes" : "no";
     article.dataset.colors = (bike.colors || []).map((c) => c.family).join(",");
-    article.dataset.class = bike.e_bike_class || "";
+    article.dataset.class = bike.vehicle_type === "scooter" ? "scooter" : bike.e_bike_class || "";
+    article.dataset.vehicle = bike.vehicle_type || "ebike";
     article.dataset.speed = bike.max_speed_mph;
     article.dataset.efficiency = bike.battery_display?.wh_per_mile_pas ?? "";
+    article.dataset.luxury = bike.luxury_score ?? "";
+    article.dataset.smart = bike.feature_display?.is_smart ? "yes" : "no";
     const checklist = (bike.safety_checklist || [])
       .map((i) => `<li class="${i.ok ? "ok" : "miss"}">${i.label}</li>`)
       .join("");
@@ -811,6 +969,7 @@
       <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">${bike.vs_baseline?.price_multiplier}×</strong> · <span class="vs-speed-delta">${bike.vs_baseline?.speed_delta_mph >= 0 ? "+" : ""}${bike.vs_baseline?.speed_delta_mph} mph</span></p>
       <div class="safety-equip"><span class="safety-equip-title">Safety equipment</span><ul class="checklist checklist-compact">${checklist}</ul></div>
       ${batteryBlockHtml(bike)}
+      ${featureBlockHtml(bike)}
       <div class="card-actions">
         <button type="button" class="btn-compare" data-id="${bike.id}">+ Compare</button>
         <button type="button" class="btn-hide" data-id="${bike.id}">Hide</button>
@@ -900,7 +1059,7 @@
     applyCardFilters();
   });
 
-  [colorFilter, legalFilter, priceFilter, speedFilter, efficiencyFilter].forEach((el) =>
+  [colorFilter, legalFilter, priceFilter, speedFilter, efficiencyFilter, vehicleFilter, smartFilter].forEach((el) =>
     el?.addEventListener("change", applyCardFilters)
   );
   [tableTierFilter, tableClassFilter, tableLegalFilter, tableColorFilter].forEach((el) =>

@@ -206,3 +206,57 @@ batteries:
     charge_hours: 5
     charge_method: removable
     charge_notes: "Removable battery; Super73 pack"
+
+  gotrax-g4:
+    voltage_v: 36
+    capacity_ah: 10.4
+    range_miles_pas: 28
+    range_miles_throttle: 25
+    charge_hours: 4
+    charge_method: onboard
+    charge_notes: "Built-in pack; charge on scooter"
+
+  segway-ninebot-f2:
+    voltage_v: 36
+    capacity_ah: 10.2
+    range_miles_pas: 25
+    range_miles_throttle: 22
+    charge_hours: 5
+    charge_method: onboard
+    charge_notes: "Ninebot battery; Segway app shows charge level"
+
+  segway-ninebot-max-g2:
+    voltage_v: 36
+    capacity_ah: 17
+    range_miles_pas: 43
+    range_miles_throttle: 35
+    charge_hours: 6
+    charge_method: onboard
+    charge_notes: "Large Ninebot pack; best-in-class range"
+
+  niu-kqi3-max:
+    voltage_v: 48
+    capacity_ah: 7.8
+    range_miles_pas: 31
+    range_miles_throttle: 26
+    charge_hours: 5
+    charge_method: onboard
+    charge_notes: "NIU smart BMS; app-tracked battery health"
+
+  apollo-city-pro:
+    voltage_v: 52
+    capacity_ah: 15
+    range_miles_pas: 38
+    range_miles_throttle: 30
+    charge_hours: 6
+    charge_method: onboard
+    charge_notes: "52V Apollo pack; regen extends range"
+
+  unagi-model-one:
+    voltage_v: 36
+    capacity_ah: 9
+    range_miles_pas: 12
+    range_miles_throttle: 10
+    charge_hours: 4
+    charge_method: onboard
+    charge_notes: "Dual-motor premium deck; shorter range vs commuters"
