@@ -54,6 +54,11 @@
       "id": "landed-price",
       "q": "What does landed price mean?",
       "a": "Landed price is item price plus estimated shipping to your door. We pick the lowest landed source as the default buy link when multiple stores are listed."
+    },
+    {
+      "id": "weight-carry",
+      "q": "How heavy is too heavy for a 12-year-old to carry?",
+      "a": "Under 40 lb is usually solo-carry territory for a strong tween. 41–55 lb is manageable with two hands but awkward on stairs. Above 55 lb, plan on adult help for curbs, cars, and storage. E-bikes are almost always heavier than a pedal beach cruiser."
     }
   ]
 }

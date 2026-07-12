@@ -1,0 +1,117 @@
+# Manufacturer net weight (lb) where listed; estimates noted in notes.
+weights:
+  firmstrong-urban-lady:
+    weight_lb: 32.5
+    notes: "Firmstrong product spec"
+
+  amazon-budget-step-1:
+    weight_lb: 58
+    notes: "Typical 26\" step-through budget e-bike"
+
+  amazon-budget-step-2:
+    weight_lb: 77
+    notes: "Heybike Mars 2.0 — fat-tire, heavy pack"
+
+  aliexpress-budget-folder:
+    weight_lb: 48.5
+    notes: "iScooter U4 folding step-through"
+
+  nakto-camel:
+    weight_lb: 55
+    notes: "Nakto Camel step-through"
+
+  wallke-h7:
+    weight_lb: 70
+    notes: "Wallke H7"
+
+  lectric-xp-lite:
+    weight_lb: 49
+    notes: "Lectric XP Lite 2.0"
+
+  ride1up-portola:
+    weight_lb: 59
+    notes: "Ride1Up Portola"
+
+  aventon-soltera:
+    weight_lb: 44
+    notes: "Aventon Soltera 2.5"
+
+  rad-mission-1:
+    weight_lb: 48
+    notes: "Rad Power RadMission 1"
+
+  velotric-nomad-1:
+    weight_lb: 73
+    notes: "Velotric Nomad 1"
+
+  lectric-xp-3:
+    weight_lb: 64
+    notes: "Lectric XP 3.0"
+
+  radrunner-plus:
+    weight_lb: 77
+    notes: "Rad Power RadRunner 3 Plus"
+
+  ride1up-roadster:
+    weight_lb: 44
+    notes: "Ride1Up Roadster V3"
+
+  aventon-level:
+    weight_lb: 54
+    notes: "Aventon Level 3"
+
+  batch-commuter:
+    weight_lb: 51
+    notes: "Batch E-Bike Commuter"
+
+  zooz-ultra-ripster:
+    weight_lb: 65
+    notes: "Zooz Ultra Ripster Gen 2"
+
+  zooz-ultra-urban:
+    weight_lb: 70
+    notes: "Zooz Ultra Urban Gen 4"
+
+  zooz-ultra-flex:
+    weight_lb: 72
+    notes: "Zooz Ultra Flex G2"
+
+  zooz-ultra-cush:
+    weight_lb: 75
+    notes: "Zooz Ultra Cush"
+
+  jetson-bolt-pro:
+    weight_lb: 34
+    notes: "Jetson Bolt Pro — compact frame"
+
+  hoverfly-ecompact:
+    weight_lb: 38
+    notes: "Hoverfly E-Compact 16\""
+
+  super73-zg:
+    weight_lb: 65
+    notes: "Super73 ZG"
+
+  gotrax-g4:
+    weight_lb: 36.3
+    notes: "Gotrax G4"
+
+  segway-ninebot-f2:
+    weight_lb: 41.9
+    notes: "Segway Ninebot F2"
+
+  segway-ninebot-max-g2:
+    weight_lb: 47.6
+    notes: "Segway Ninebot Max G2"
+
+  niu-kqi3-max:
+    weight_lb: 44.5
+    notes: "NIU KQi3 Max"
+
+  apollo-city-pro:
+    weight_lb: 52
+    notes: "Apollo City Pro"
+
+  unagi-model-one:
+    weight_lb: 28.5
+    notes: "Unagi Model One Classic"

@@ -44,7 +44,8 @@
     ],
     "battery_charge_method": "none",
     "battery_charge_notes": "Pedal only \u2014 no battery",
-    "battery_wh": null
+    "battery_wh": null,
+    "weight_notes": "Firmstrong product spec"
   },
   {
     "id": "amazon-budget-step-1",
@@ -92,6 +93,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Typical 36V 10Ah pack; wall charger included",
     "battery_wh": 360,
+    "weight_lb": 58,
+    "weight_notes": "Typical 26\" step-through budget e-bike",
     "price_sources": [
       {
         "platform": "amazon",
@@ -211,9 +214,11 @@
     "vs_baseline": {
       "price_multiplier": 1.4,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 25.5,
       "brake_upgrade": false,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -268,6 +273,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Samsung-cell pack; key-lock removable battery",
     "battery_wh": 499,
+    "weight_lb": 77,
+    "weight_notes": "Heybike Mars 2.0 \u2014 fat-tire, heavy pack",
     "features": {
       "companion_app": true,
       "ride_history": true
@@ -546,9 +553,11 @@
     "vs_baseline": {
       "price_multiplier": 2.1,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 44.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -609,6 +618,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "iScooter U4 \u2014 36V 10.4Ah removable pack; charge off bike",
     "battery_wh": 374,
+    "weight_lb": 48.5,
+    "weight_notes": "iScooter U4 folding step-through",
     "features": {
       "fold_compact": true
     },
@@ -897,9 +908,11 @@
     "vs_baseline": {
       "price_multiplier": 1.5,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 16.0,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -964,6 +977,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Removable 36V battery; charge on or off bike",
     "battery_wh": 360,
+    "weight_lb": 55,
+    "weight_notes": "Nakto Camel step-through",
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -1088,9 +1103,11 @@
     "vs_baseline": {
       "price_multiplier": 1.6,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 22.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -1150,6 +1167,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Hidden-in-frame pack; removable for charging",
     "battery_wh": 576,
+    "weight_lb": 70,
+    "weight_notes": "Wallke H7",
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -1274,9 +1293,11 @@
     "vs_baseline": {
       "price_multiplier": 1.9,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 37.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -1334,6 +1355,8 @@
     "battery_charge_method": "removable_keyed",
     "battery_charge_notes": "Keyed removable; 48V 499Wh pack",
     "battery_wh": 499,
+    "weight_lb": 49,
+    "weight_notes": "Lectric XP Lite 2.0",
     "features": {
       "companion_app": true,
       "ride_history": true,
@@ -1625,9 +1648,11 @@
     "vs_baseline": {
       "price_multiplier": 2.8,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 16.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -1687,6 +1712,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "10.4Ah or 13.4Ah options; removable pack",
     "battery_wh": 499,
+    "weight_lb": 59,
+    "weight_notes": "Ride1Up Portola",
     "features": {
       "fold_compact": true
     },
@@ -1964,9 +1991,11 @@
     "vs_baseline": {
       "price_multiplier": 3.4,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 26.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -2029,6 +2058,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Hidden battery; removable for indoor charging",
     "battery_wh": 360,
+    "weight_lb": 44,
+    "weight_notes": "Aventon Soltera 2.5",
     "features": {
       "companion_app": true,
       "ride_history": true,
@@ -2308,9 +2339,11 @@
     "vs_baseline": {
       "price_multiplier": 3.5,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 11.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -2360,6 +2393,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Rad Power 48V pack; charge on or off frame",
     "battery_wh": 480,
+    "weight_lb": 48,
+    "weight_notes": "Rad Power RadMission 1",
     "features": {
       "companion_app": true,
       "ride_history": true
@@ -2638,9 +2673,11 @@
     "vs_baseline": {
       "price_multiplier": 4.1,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 15.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -2699,6 +2736,8 @@
     "battery_charge_method": "removable_keyed",
     "battery_charge_notes": "Removable with key; IPX6-rated pack",
     "battery_wh": 499,
+    "weight_lb": 73,
+    "weight_notes": "Velotric Nomad 1",
     "features": {
       "companion_app": true,
       "ride_history": true,
@@ -2978,9 +3017,11 @@
     "vs_baseline": {
       "price_multiplier": 3.8,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 40.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -3048,6 +3089,8 @@
     "battery_charge_method": "removable_keyed",
     "battery_charge_notes": "48V 672Wh; keyed removable battery",
     "battery_wh": 672,
+    "weight_lb": 64,
+    "weight_notes": "Lectric XP 3.0",
     "features": {
       "companion_app": true,
       "ride_history": true,
@@ -3328,9 +3371,11 @@
     "vs_baseline": {
       "price_multiplier": 4.5,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 31.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -3388,6 +3433,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Large 48V pack; removable for charging",
     "battery_wh": 672,
+    "weight_lb": 77,
+    "weight_notes": "Rad Power RadRunner 3 Plus",
     "features": {
       "companion_app": true,
       "ride_history": true
@@ -3666,9 +3713,11 @@
     "vs_baseline": {
       "price_multiplier": 5.5,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 44.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -3722,6 +3771,8 @@
     "battery_charge_method": "onboard",
     "battery_charge_notes": "Integrated frame battery; plug in on bike",
     "battery_wh": 252,
+    "weight_lb": 44,
+    "weight_notes": "Ride1Up Roadster V3",
     "features": {
       "fold_compact": false
     },
@@ -3999,9 +4050,11 @@
     "vs_baseline": {
       "price_multiplier": 5.2,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 11.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -4060,6 +4113,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Aventon S4 battery; removable pack",
     "battery_wh": 710,
+    "weight_lb": 54,
+    "weight_notes": "Aventon Level 3",
     "features": {
       "companion_app": true,
       "ride_history": true,
@@ -4346,9 +4401,11 @@
     "vs_baseline": {
       "price_multiplier": 5.9,
       "speed_delta_mph": 13,
+      "weight_delta_lb": 21.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -4402,6 +4459,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Standard commuter pack; removable",
     "battery_wh": 499,
+    "weight_lb": 51,
+    "weight_notes": "Batch E-Bike Commuter",
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -4515,9 +4574,11 @@
     "vs_baseline": {
       "price_multiplier": 4.8,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 18.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -4576,6 +4637,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "52V pack; compact BMX-style build",
     "battery_wh": 780,
+    "weight_lb": 65,
+    "weight_notes": "Zooz Ultra Ripster Gen 2",
     "features": {
       "keyless_start": true
     },
@@ -4859,9 +4922,11 @@
     "vs_baseline": {
       "price_multiplier": 7.2,
       "speed_delta_mph": 13,
+      "weight_delta_lb": 32.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     }
   },
   {
@@ -4919,6 +4984,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "52V 25Ah Thrillmatic mount; high capacity",
     "battery_wh": 1300,
+    "weight_lb": 70,
+    "weight_notes": "Zooz Ultra Urban Gen 4",
     "features": {
       "keyless_start": true
     },
@@ -5202,9 +5269,11 @@
     "vs_baseline": {
       "price_multiplier": 9.0,
       "speed_delta_mph": 13,
+      "weight_delta_lb": 37.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     }
   },
   {
@@ -5261,6 +5330,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "52V 25Ah; engineered mount system",
     "battery_wh": 1300,
+    "weight_lb": 72,
+    "weight_notes": "Zooz Ultra Flex G2",
     "features": {
       "keyless_start": true
     },
@@ -5544,9 +5615,11 @@
     "vs_baseline": {
       "price_multiplier": 10.7,
       "speed_delta_mph": 13,
+      "weight_delta_lb": 39.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -5600,6 +5673,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Same 52V 25Ah platform as Ultra Urban",
     "battery_wh": 1300,
+    "weight_lb": 75,
+    "weight_notes": "Zooz Ultra Cush",
     "features": {
       "keyless_start": true
     },
@@ -5883,9 +5958,11 @@
     "vs_baseline": {
       "price_multiplier": 9.7,
       "speed_delta_mph": 13,
+      "weight_delta_lb": 42.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -5952,6 +6029,8 @@
     "battery_charge_method": "onboard",
     "battery_charge_notes": "36V 6Ah integrated; charge on bike",
     "battery_wh": 216,
+    "weight_lb": 34,
+    "weight_notes": "Jetson Bolt Pro \u2014 compact frame",
     "features": {
       "companion_app": true,
       "ride_history": true
@@ -6241,9 +6320,11 @@
     "vs_baseline": {
       "price_multiplier": 1.7,
       "speed_delta_mph": 0.5,
+      "weight_delta_lb": 1.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -6295,6 +6376,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Compact folding pack; removable",
     "battery_wh": 281,
+    "weight_lb": 38,
+    "weight_notes": "Hoverfly E-Compact 16\"",
     "price_sources": [
       {
         "platform": "amazon",
@@ -6408,9 +6491,11 @@
     "vs_baseline": {
       "price_multiplier": 1.7,
       "speed_delta_mph": 0.5,
+      "weight_delta_lb": 5.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -6464,6 +6549,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Removable battery; Super73 pack",
     "battery_wh": 480,
+    "weight_lb": 65,
+    "weight_notes": "Super73 ZG",
     "features": {
       "companion_app": true,
       "ride_history": true
@@ -6742,9 +6829,11 @@
     "vs_baseline": {
       "price_multiplier": 7.6,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 32.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -6801,6 +6890,8 @@
     "battery_charge_method": "onboard",
     "battery_charge_notes": "Built-in pack; charge on scooter",
     "battery_wh": 374,
+    "weight_lb": 36.3,
+    "weight_notes": "Gotrax G4",
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -7073,9 +7164,11 @@
     "vs_baseline": {
       "price_multiplier": 1.6,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 3.8,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -7133,6 +7226,8 @@
     "battery_charge_method": "onboard",
     "battery_charge_notes": "Ninebot battery; Segway app shows charge level",
     "battery_wh": 367,
+    "weight_lb": 41.9,
+    "weight_notes": "Segway Ninebot F2",
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -7405,9 +7500,11 @@
     "vs_baseline": {
       "price_multiplier": 2.1,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 9.4,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -7467,6 +7564,8 @@
     "battery_charge_method": "onboard",
     "battery_charge_notes": "Large Ninebot pack; best-in-class range",
     "battery_wh": 612,
+    "weight_lb": 47.6,
+    "weight_notes": "Segway Ninebot Max G2",
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -7739,9 +7838,11 @@
     "vs_baseline": {
       "price_multiplier": 3.1,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 15.1,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -7811,6 +7912,8 @@
     "battery_charge_method": "onboard",
     "battery_charge_notes": "NIU smart BMS; app-tracked battery health",
     "battery_wh": 374,
+    "weight_lb": 44.5,
+    "weight_notes": "NIU KQi3 Max",
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -8083,9 +8186,11 @@
     "vs_baseline": {
       "price_multiplier": 3.5,
       "speed_delta_mph": 5,
+      "weight_delta_lb": 12.0,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -8151,6 +8256,8 @@
     "battery_charge_method": "onboard",
     "battery_charge_notes": "52V Apollo pack; regen extends range",
     "battery_wh": 780,
+    "weight_lb": 52,
+    "weight_notes": "Apollo City Pro",
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -8428,9 +8535,11 @@
     "vs_baseline": {
       "price_multiplier": 4.5,
       "speed_delta_mph": 10,
+      "weight_delta_lb": 19.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   },
@@ -8496,6 +8605,8 @@
     "battery_charge_method": "onboard",
     "battery_charge_notes": "Dual-motor premium deck; shorter range vs commuters",
     "battery_wh": 324,
+    "weight_lb": 28.5,
+    "weight_notes": "Unagi Model One Classic",
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -8768,9 +8879,11 @@
     "vs_baseline": {
       "price_multiplier": 3.4,
       "speed_delta_mph": 5,
+      "weight_delta_lb": -4.0,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
     },
     "friend_recommended": false
   }

@@ -9,10 +9,18 @@ def compare_to_baseline(bike: dict, baseline: dict) -> dict:
 
     brake_upgrade = bike.get("brake_type") not in ("coaster", "rim", None)
 
+    b_weight = baseline.get("weight_lb")
+    e_weight = bike.get("weight_lb")
+    weight_delta = None
+    if b_weight is not None and e_weight is not None:
+        weight_delta = round(e_weight - b_weight, 1)
+
     return {
         "price_multiplier": ratio,
         "speed_delta_mph": speed_delta,
+        "weight_delta_lb": weight_delta,
         "brake_upgrade": brake_upgrade,
         "baseline_model": baseline.get("model"),
         "baseline_price": b_price,
+        "baseline_weight_lb": b_weight,
     }

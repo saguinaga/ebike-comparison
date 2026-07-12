@@ -73,8 +73,6 @@
   const speedFilter = document.getElementById("speedFilter");
   const legalFilter = document.getElementById("legalFilter");
   const priceFilter = document.getElementById("priceFilter");
-  const weightFilter = document.getElementById("weightFilter");
-  const lightFilter = document.getElementById("lightFilter");
   const tierTabs = document.getElementById("tierTabs");
   const cardGrid = document.getElementById("cardGrid");
   const cards = () => document.querySelectorAll(".bike-card");
@@ -118,60 +116,6 @@
   function enableBaselineHighlight() {
     baselineHighlightEnabled = true;
     saveBaselineHighlight();
-  }
-
-  function formatWeightLb(lb) {
-    const n = parseFloat(lb);
-    if (Number.isNaN(n)) return "—";
-    return Number.isInteger(n) ? `${n} lb` : `${Math.round(n * 10) / 10} lb`;
-  }
-
-  function weightPortability(lb) {
-    const w = parseFloat(lb);
-    if (Number.isNaN(w)) {
-      return { tier: "unknown", label: "Unknown", hint: "Weight not listed — check manufacturer specs before buying." };
-    }
-    if (w <= 40) return { tier: "easy", label: "Easy carry", hint: "A 12-year-old can usually lift and walk this alone." };
-    if (w <= 55) return { tier: "ok", label: "Manageable", hint: "Doable with two hands; awkward on stairs or into a car." };
-    if (w <= 70) return { tier: "heavy", label: "Heavy", hint: "Plan on adult help for curbs, cars, and stairs." };
-    return { tier: "haul", label: "Very heavy", hint: "Two-person lift territory — not a solo kid job." };
-  }
-
-  function portabilityBlockHtml(bike, baseline, { detail = false } = {}) {
-    const p = weightPortability(bike.weight_lb);
-    const wt = formatWeightLb(bike.weight_lb);
-    const vs = bike.vs_baseline;
-    let vsLine = "";
-    if (vs?.weight_delta_lb != null && bike.id !== baseline?.id) {
-      const d = vs.weight_delta_lb;
-      vsLine = `<p class="portability-vs">${d >= 0 ? "+" : ""}${d} lb vs ${baseline.brand} ${baseline.model} (${formatWeightLb(baseline.weight_lb)})</p>`;
-    }
-    const notes = bike.weight_notes ? `<p class="portability-source">${bike.weight_notes}</p>` : "";
-    if (!detail) {
-      return `<div class="portability-inline portability-${p.tier}" title="${p.hint}"><strong>${wt}</strong> · ${p.label}</div>`;
-    }
-    return `<div class="portability-callout portability-${p.tier}">
-      <div class="portability-head"><span class="portability-weight">${wt}</span><span class="portability-label">${p.label}</span></div>
-      <p class="portability-hint">${p.hint}</p>
-      ${vsLine}
-      ${notes}
-    </div>`;
-  }
-
-  function cardWeightHtml(bike) {
-    const lb = bike.weight_lb;
-    if (lb == null) return `<div class="card-weight card-weight--unknown">Weight —</div>`;
-    const p = weightPortability(lb);
-    return `<div class="card-weight card-weight--${p.tier}" title="${p.hint}">${formatWeightLb(lb)} · ${p.label}</div>`;
-  }
-
-  function decorateCardWeights() {
-    document.querySelectorAll(".card-weight--js[data-weight]").forEach((el) => {
-      const p = weightPortability(el.dataset.weight);
-      el.classList.add(`card-weight--${p.tier}`);
-      el.textContent = `${formatWeightLb(el.dataset.weight)} · ${p.label}`;
-      el.title = p.hint;
-    });
   }
 
   function formatMoney(n) {
@@ -383,14 +327,6 @@
       a: `Top speed is ${bike.max_speed_mph || "—"} mph. On Huntington Beach paths you should ride at 10 mph (5 mph near pedestrians) even if the ${isScooter ? "scooter" : "bike"} can go faster.`,
     });
 
-    if (bike.weight_lb != null) {
-      const p = weightPortability(bike.weight_lb);
-      items.push({
-        q: `Can a 12-year-old carry the ${name}?`,
-        a: `Listed weight is ${formatWeightLb(bike.weight_lb)} (${p.label.toLowerCase()}). ${p.hint}`,
-      });
-    }
-
     if (bd.range_label && bd.range_label !== "—") {
       items.push({
         q: `What range can you expect on the ${name}?`,
@@ -512,13 +448,12 @@
     const bike = chatContextBike();
     const suggestions = bike
       ? [
-          `Can my daughter carry the ${bike.brand} ${bike.model}?`,
           `Is the ${bike.brand} ${bike.model} safe for a 12-year-old?`,
           `What is the range on this ${bike.vehicle_type === "scooter" ? "scooter" : "bike"}?`,
+          "What are HB path speed limits?",
           "Compare this to my baseline",
         ]
       : [
-          "Lightest ride a 12-year-old can manage?",
           "Best budget e-bike for a 12-year-old?",
           "Class 2 vs Class 3 — what's the difference?",
           "Do scooters need UL certification?",
@@ -543,28 +478,7 @@
 
     if (bike && /(this|current|it\b|the one)/.test(lower)) {
       const bd = formatBattery(bike);
-      const p = weightPortability(bike.weight_lb);
-      return `${productLabel(bike)}: ${formatMoney(bikePrice(bike))} landed, ${formatWeightLb(bike.weight_lb)} (${p.label}), ${bike.max_speed_mph} mph, safety ${bike.safety_score}/100. Range ${bd.range_label}. ${bike.legal_for_age !== false ? "Passes our age-12 legal checklist." : "Fails our age-12 legal checklist — see PDP legal notes."}`;
-    }
-
-    if (/(weight|heavy|light|carry|lug|portab|pound|\blb\b)/i.test(q)) {
-      if (bike?.weight_lb != null) {
-        const p = weightPortability(bike.weight_lb);
-        const vs = bike.vs_baseline;
-        const vsTxt =
-          vs?.weight_delta_lb != null
-            ? ` That's ${vs.weight_delta_lb >= 0 ? "+" : ""}${vs.weight_delta_lb} lb vs the ${baseline.brand} baseline cruiser.`
-            : "";
-        return `${productLabel(bike)} weighs ${formatWeightLb(bike.weight_lb)} — ${p.label.toLowerCase()}. ${p.hint}${vsTxt}`;
-      }
-      const light = visibleCatalog()
-        .filter((b) => b.weight_lb != null && b.weight_lb <= 55)
-        .sort((a, b) => a.weight_lb - b.weight_lb)
-        .slice(0, 5);
-      if (light.length) {
-        return `Lightest manageable rides (≤55 lb) in the catalog:\n${light.map((b) => `• ${productLabel(b)} — ${formatWeightLb(b.weight_lb)}`).join("\n")}\nUnder 40 lb is easiest for a 12-year-old to carry solo.`;
-      }
-      return faqData.shared?.find((f) => f.id === "weight-carry")?.a || "E-bikes and scooters are much heavier than a pedal cruiser — filter by max weight in Browse.";
+      return `${productLabel(bike)}: ${formatMoney(bikePrice(bike))} landed, ${bike.max_speed_mph} mph, safety ${bike.safety_score}/100. Range ${bd.range_label}. ${bike.legal_for_age !== false ? "Passes our age-12 legal checklist." : "Fails our age-12 legal checklist — see PDP legal notes."}`;
     }
 
     if (bike && /range|battery|charge|mile|wh\b/.test(lower)) {
@@ -602,9 +516,7 @@
     if (bike && /compare|vs|baseline|difference/.test(lower)) {
       const vs = bike.vs_baseline;
       if (!vs) return `No baseline comparison saved for ${productLabel(bike)}.`;
-      const wt =
-        vs.weight_delta_lb != null ? `, ${vs.weight_delta_lb >= 0 ? "+" : ""}${vs.weight_delta_lb} lb` : "";
-      return `${productLabel(bike)} vs ${baseline.brand} ${baseline.model}: ${vs.price_multiplier}× price, ${vs.speed_delta_mph >= 0 ? "+" : ""}${vs.speed_delta_mph} mph${wt}, brake upgrade: ${vs.brake_upgrade || "—"}.`;
+      return `${productLabel(bike)} vs ${baseline.brand} ${baseline.model}: ${vs.price_multiplier}× price, ${vs.speed_delta_mph >= 0 ? "+" : ""}${vs.speed_delta_mph} mph, brake upgrade: ${vs.brake_upgrade || "—"}.`;
     }
 
     if (/(cheapest|budget|affordable|under \$)/i.test(q)) {
@@ -616,18 +528,13 @@
       return `Lowest landed ${tier === "scooter" ? "scooters" : "budget e-bikes"}:\n${top.map((b) => `• ${productLabel(b)} — ${formatMoney(bikePrice(b))} (safety ${b.safety_score})`).join("\n")}`;
     }
 
-    if (/(best|recommend|pick|which)/i.test(q) && /(12|kid|child|teen|daughter)/i.test(q)) {
+    if (/(best|recommend|pick|which)/i.test(q) && /(12|kid|child|teen)/i.test(q)) {
       const pool = visibleCatalog()
         .filter((b) => b.legal_for_age !== false && (b.safety_score || 0) >= 50)
-        .sort((a, b) => {
-          const aw = a.weight_lb ?? 999;
-          const bw = b.weight_lb ?? 999;
-          if (/(light|carry|weight|lug)/i.test(q)) return aw - bw || (b.safety_score || 0) - (a.safety_score || 0);
-          return (b.safety_score || 0) - (a.safety_score || 0) || aw - bw || bikePrice(a) - bikePrice(b);
-        });
+        .sort((a, b) => (b.safety_score || 0) - (a.safety_score || 0) || bikePrice(a) - bikePrice(b));
       const top = pool.slice(0, 4);
       return top.length
-        ? `Models that pass our age-12 checklist with solid safety scores:\n${top.map((b) => `• ${productLabel(b)} — safety ${b.safety_score}, ${formatWeightLb(b.weight_lb)}, ${formatMoney(bikePrice(b))}`).join("\n")}\nOpen any card for full specs.`
+        ? `Models that pass our age-12 checklist with solid safety scores:\n${top.map((b) => `• ${productLabel(b)} — safety ${b.safety_score}, ${formatMoney(bikePrice(b))}`).join("\n")}\nOpen any card for full specs.`
         : "No models match that filter right now — try widening your tier or vehicle filters.";
     }
 
@@ -874,19 +781,11 @@
     const ratio = bPrice ? Math.round((ePrice / bPrice) * 10) / 10 : null;
     const bSpeed = baseline.max_speed_mph || 15;
     const eSpeed = bike.max_speed_mph || 20;
-    const bWeight = parseFloat(baseline.weight_lb);
-    const eWeight = parseFloat(bike.weight_lb);
-    let weight_delta_lb = null;
-    if (!Number.isNaN(bWeight) && !Number.isNaN(eWeight)) {
-      weight_delta_lb = Math.round((eWeight - bWeight) * 10) / 10;
-    }
     return {
       price_multiplier: ratio,
       speed_delta_mph: Math.round((eSpeed - bSpeed) * 10) / 10,
-      weight_delta_lb,
       baseline_model: baseline.model,
       baseline_price: bPrice,
-      baseline_weight_lb: baseline.weight_lb,
     };
   }
 
@@ -956,18 +855,6 @@
     return true;
   }
 
-  function weightMatches(lb, filter) {
-    const w = parseFloat(lb);
-    if (!filter || filter === "all") return true;
-    if (Number.isNaN(w)) return false;
-    return w <= parseFloat(filter);
-  }
-
-  function isLightRide(bike) {
-    const w = parseFloat(bike.weight_lb);
-    return !Number.isNaN(w) && w <= 55;
-  }
-
   function isEfficientBike(bike) {
     const b = bike.battery_display || formatBattery(bike);
     return !!b.is_efficient;
@@ -987,8 +874,6 @@
       legal: legalFilter?.value || "all",
       maxPrice: priceFilter?.value || "all",
       speed: speedFilter?.value || "all",
-      maxWeight: weightFilter?.value || "all",
-      highlightLight: lightFilter?.checked,
     };
   }
 
@@ -1008,9 +893,8 @@
     const price = parseFloat(card.dataset.price) || 0;
     const priceOk = f.maxPrice === "all" || price <= parseFloat(f.maxPrice);
     const speedOk = speedMatches(card.dataset.speed, f.speed);
-    const weightOk = weightMatches(card.dataset.weight, f.maxWeight);
     const vehicleOk = f.vehicle === "all" || card.dataset.vehicle === f.vehicle;
-    return tierOk && legalOk && priceOk && speedOk && weightOk && vehicleOk;
+    return tierOk && legalOk && priceOk && speedOk && vehicleOk;
   }
 
   function getVisibleBikesForCharts() {
@@ -1030,7 +914,6 @@
       card.classList.toggle("color-preferred", f.highlightColors && hasPreferredColor(card.dataset.colors));
       const bike = bikeMap[card.dataset.id];
       card.classList.toggle("efficiency-preferred", f.highlightEfficient && bike && isEfficientBike(bike));
-      card.classList.toggle("light-preferred", f.highlightLight && bike && isLightRide(bike));
       card.classList.toggle("smart-preferred", f.highlightSmart && bike && isSmartRide(bike));
       card.classList.toggle("is-baseline", baselineHighlightEnabled && card.dataset.id === baselineId);
     });
@@ -1082,9 +965,8 @@
     const bat = formatBattery(baseline);
     const batLine = bat.has_battery ? ` · ${bat.range_label}` : "";
     const effLine = bat.efficiency_label && bat.efficiency_label !== "—" ? ` · ${bat.efficiency_label}` : "";
-    const wtLine = baseline.weight_lb != null ? ` · ${formatWeightLb(baseline.weight_lb)}` : "";
     details.innerHTML = `
-      <p><strong>${baseline.brand} ${baseline.model}</strong> · ${formatMoney(bikePrice(baseline))} · ${kind} · ${baseline.max_speed_mph || "?"} mph max · ${brakeHtml(baseline)}${wtLine}${batLine}${effLine}</p>
+      <p><strong>${baseline.brand} ${baseline.model}</strong> · ${formatMoney(bikePrice(baseline))} · ${kind} · ${baseline.max_speed_mph || "?"} mph max · ${brakeHtml(baseline)}${batLine}${effLine}</p>
       <p>All “vs baseline” multipliers compare to this bike.${link ? ` <a href="${link}" target="_blank" rel="noopener">Product page →</a>` : ""}</p>
     `;
 
@@ -1196,7 +1078,6 @@
         <div class="bike-media"><div class="bike-thumb bike-thumb-compact">${vehicleMarkHtml(bike)}${img}</div></div>
         <h3>${bike.brand} ${bike.model}${customBadge}</h3>
         <div class="price-big">${formatMoney(bikePrice(bike))}</div>
-        ${cardWeightHtml(bike)}
         <div class="badges badges-compact">
           <span class="badge ok">Safety ${bike.safety_score}</span>
           ${legalBadge}
@@ -1237,16 +1118,12 @@
         ? `<span class="badge ok">${bike.vehicle_type === "scooter" ? "OK w/ rules" : "Legal"}</span>`
         : `<span class="badge danger">Not legal age 12</span>`;
 
-    const wtVs =
-      vs?.weight_delta_lb != null
-        ? ` · <strong>${vs.weight_delta_lb >= 0 ? "+" : ""}${vs.weight_delta_lb} lb</strong>`
-        : "";
     const vsBlock =
       vs && bike.id !== baseline.id
         ? `<div class="detail-vs-baseline">
             <span class="detail-vs-label">vs ${baseline.brand} ${baseline.model}</span>
             <strong>${vs.price_multiplier}×</strong> price ·
-            <strong>${vs.speed_delta_mph >= 0 ? "+" : ""}${vs.speed_delta_mph} mph</strong>${wtVs}
+            <strong>${vs.speed_delta_mph >= 0 ? "+" : ""}${vs.speed_delta_mph} mph</strong>
           </div>`
         : "";
 
@@ -1261,7 +1138,7 @@
         ${legalBadge}
         ${recBadge}
       </div>
-      <p class="detail-meta">${bike.tier_label || tierLabels[bike.tier] || bike.tier} · ${kind} · ${bike.max_speed_mph || "?"} mph · ${formatWeightLb(bike.weight_lb)} · ${brakeHtml(bike)}</p>
+      <p class="detail-meta">${bike.tier_label || tierLabels[bike.tier] || bike.tier} · ${kind} · ${bike.max_speed_mph || "?"} mph · ${brakeHtml(bike)}</p>
       ${vsBlock}
       <div class="detail-actions">
         <button type="button" class="btn-compare detail-action-btn${compareOn ? " active" : ""}" data-id="${bike.id}">${compareOn ? "✓ Comparing" : "+ Compare"}</button>
@@ -1280,9 +1157,6 @@
       .join("");
 
     document.getElementById("detailSpecs").innerHTML = [
-      detailSpecBlock("Portability & weight", portabilityBlockHtml(bike, baseline, { detail: true }), {
-        className: "detail-spec-block--portability",
-      }),
       detailSpecBlock("Safety equipment", `<ul class="checklist checklist-compact">${checklist}</ul>`),
       detailSpecBlock("Battery & range", batteryBlockHtml(bike, { detail: true })),
       detailSpecBlock("Smart & connectivity", featureBlockHtml(bike, { detail: true }), {
@@ -1566,7 +1440,7 @@
       <div class="thumb-wrap">${img}</div>
       <strong>${bike.brand} ${bike.model}</strong>
       <div>${formatMoney(bike.price)} · Safety <strong>${bike.safety_score}</strong>/100</div>
-      <div>${bike.vehicle_type === "scooter" ? "Scooter" : `Class ${bike.e_bike_class || "?"}`} · ${bike.max_speed_mph} mph · ${formatWeightLb(bike.weight_lb)}</div>
+      <div>${bike.vehicle_type === "scooter" ? "Scooter" : `Class ${bike.e_bike_class || "?"}`} · ${bike.max_speed_mph} mph max</div>
       <div>${legalBadge} · ${brakeHtml(bike)}${bike.luxury_score ? ` · Smart <strong>${bike.luxury_score}</strong>` : ""}</div>
       <div class="compare-battery">${batteryHtml(bike)}</div>
       ${vs ? `<div>vs baseline: <strong>${vs.price_multiplier}×</strong> · ${vs.speed_delta_mph >= 0 ? "+" : ""}${vs.speed_delta_mph} mph</div>` : ""}
@@ -1631,25 +1505,9 @@
 
     const metricRows = [
       { label: "Safety score", values: selected.map((b) => b.safety_score), higherBetter: true, fmt: (v) => `<strong>${v}</strong>/100` },
-      {
-        label: "Weight",
-        values: selected.map((b) => b.weight_lb),
-        higherBetter: false,
-        fmt: (v, b) => {
-          const p = weightPortability(v);
-          return v != null ? `${formatWeightLb(v)} <span class="weight-tag weight-${p.tier}">${p.label}</span>` : "—";
-        },
-        bikes: selected,
-      },
       { label: "Landed price", values: selected.map((b) => b.price), higherBetter: false, fmt: (v) => formatMoney(v) },
       { label: `vs ${baseline.brand} ${baseline.model}`, values: selected.map((b) => b.vs_baseline?.price_multiplier), higherBetter: false, fmt: (v) => (v ? `${v}×` : "—") },
       { label: "Speed delta vs baseline", values: selected.map((b) => b.vs_baseline?.speed_delta_mph), higherBetter: null, fmt: (v) => (v != null ? `${v >= 0 ? "+" : ""}${v} mph` : "—") },
-      {
-        label: "Weight delta vs baseline",
-        values: selected.map((b) => b.vs_baseline?.weight_delta_lb),
-        higherBetter: false,
-        fmt: (v) => (v != null ? `${v >= 0 ? "+" : ""}${v} lb` : "—"),
-      },
       { label: "Max speed", values: selected.map((b) => b.max_speed_mph), higherBetter: null, fmt: (v) => `${v} mph` },
       {
         label: "PAS range",
@@ -1904,7 +1762,7 @@
     applyCardFilters();
   });
 
-  [colorFilter, legalFilter, priceFilter, speedFilter, weightFilter, lightFilter, efficiencyFilter, vehicleFilter, smartFilter].forEach((el) =>
+  [colorFilter, legalFilter, priceFilter, speedFilter, efficiencyFilter, vehicleFilter, smartFilter].forEach((el) =>
     el?.addEventListener("change", applyCardFilters)
   );
   [tableTierFilter, tableClassFilter, tableLegalFilter, tableColorFilter].forEach((el) =>
@@ -2121,7 +1979,6 @@
   });
   try {
     applyBaselineToAll();
-    decorateCardWeights();
     renderBaselinePanel();
     applyCardFilters();
     applyTableFilters();

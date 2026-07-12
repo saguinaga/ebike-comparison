@@ -82,12 +82,30 @@ def load_ebike_features(root: Path) -> dict:
     return data.get("features", {})
 
 
+def load_weights(root: Path) -> dict:
+    path = root / "config" / "weights.yaml"
+    if not path.exists():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return data.get("weights", {})
+
+
+def _apply_weight_spec(bike: dict, spec: dict) -> None:
+    if not spec:
+        return
+    if spec.get("weight_lb") is not None:
+        bike["weight_lb"] = spec["weight_lb"]
+    if spec.get("notes"):
+        bike["weight_notes"] = spec["notes"]
+
+
 def parse_all(root: Path, scrape_live: bool = True) -> list:
     bikes_cfg, bench_cfg = load_config(root)
     galleries = load_image_galleries(root)
     product_colors = load_product_colors(root)
     ebike_features = load_ebike_features(root)
     batteries = load_batteries(root)
+    weights = load_weights(root)
     baseline = bench_cfg["baseline"]
     rider = bench_cfg.get("rider", {})
     cache_dir = root / "data" / "raw"
@@ -99,6 +117,8 @@ def parse_all(root: Path, scrape_live: bool = True) -> list:
         baseline_bike = _merge(baseline_bike, galleries[baseline_bike["id"]])
     if baseline_bike.get("id") in batteries:
         _apply_battery_spec(baseline_bike, batteries[baseline_bike["id"]])
+    if baseline_bike.get("id") in weights:
+        _apply_weight_spec(baseline_bike, weights[baseline_bike["id"]])
     if scrape_live:
         try:
             url = baseline["url"]
@@ -137,6 +157,8 @@ def parse_all(root: Path, scrape_live: bool = True) -> list:
             bike = _merge(bike, galleries[bike["id"]])
         if bike.get("id") in batteries:
             _apply_battery_spec(bike, batteries[bike["id"]])
+        if bike.get("id") in weights:
+            _apply_weight_spec(bike, weights[bike["id"]])
         if bike.get("id") in product_colors:
             bike["colors"] = normalize_colors(product_colors[bike["id"]])
         else:
