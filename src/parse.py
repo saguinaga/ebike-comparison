@@ -66,9 +66,27 @@ def load_image_galleries(root: Path) -> dict:
     return data.get("galleries", {})
 
 
+def load_product_colors(root: Path) -> dict:
+    path = root / "config" / "product_colors.yaml"
+    if not path.exists():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return data.get("colors", {})
+
+
+def load_ebike_features(root: Path) -> dict:
+    path = root / "config" / "ebike_features.yaml"
+    if not path.exists():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return data.get("features", {})
+
+
 def parse_all(root: Path, scrape_live: bool = True) -> list:
     bikes_cfg, bench_cfg = load_config(root)
     galleries = load_image_galleries(root)
+    product_colors = load_product_colors(root)
+    ebike_features = load_ebike_features(root)
     batteries = load_batteries(root)
     baseline = bench_cfg["baseline"]
     rider = bench_cfg.get("rider", {})
@@ -119,7 +137,12 @@ def parse_all(root: Path, scrape_live: bool = True) -> list:
             bike = _merge(bike, galleries[bike["id"]])
         if bike.get("id") in batteries:
             _apply_battery_spec(bike, batteries[bike["id"]])
-        bike["colors"] = normalize_colors(bike.get("colors", []))
+        if bike.get("id") in product_colors:
+            bike["colors"] = normalize_colors(product_colors[bike["id"]])
+        else:
+            bike["colors"] = normalize_colors(bike.get("colors", []))
+        if bike.get("vehicle_type") != "scooter" and bike.get("id") in ebike_features:
+            bike["features"] = {**ebike_features[bike["id"]], **(bike.get("features") or {})}
         bike.update(compute_landed_prices({**entry, **bike}))
         bike["safety_score"] = compute_safety_score(bike)
         bike["safety_checklist"] = build_checklist(bike)

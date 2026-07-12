@@ -72,6 +72,10 @@
       {
         "name": "White",
         "family": "white"
+      },
+      {
+        "name": "Black",
+        "family": "black"
       }
     ],
     "vehicle_type": "ebike",
@@ -245,6 +249,14 @@
       {
         "name": "White",
         "family": "white"
+      },
+      {
+        "name": "Gray",
+        "family": "gray"
+      },
+      {
+        "name": "Orange",
+        "family": "orange"
       }
     ],
     "vehicle_type": "ebike",
@@ -262,6 +274,10 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Samsung-cell pack; key-lock removable battery",
     "battery_wh": 499,
+    "features": {
+      "companion_app": true,
+      "ride_history": true
+    },
     "price_sources": [
       {
         "platform": "amazon",
@@ -357,19 +373,180 @@
         "ok": true
       }
     ],
-    "feature_checklist": [],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
     "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
+      "luxury_score": 12,
+      "feature_count": 2,
       "by_group": {
         "security": 0,
         "tracking": 0,
-        "app": 0,
+        "app": 2,
         "audio": 0,
         "luxury": 0
       },
-      "perks_label": "\u2014",
-      "has_app": false,
+      "perks_label": "Companion app (iOS/Android) \u00b7 Ride stats & history",
+      "has_app": true,
       "has_tracking": false,
       "has_security": false,
       "has_audio": false,
@@ -428,6 +605,10 @@
       {
         "name": "Black",
         "family": "black"
+      },
+      {
+        "name": "Green",
+        "family": "green"
       }
     ],
     "vehicle_type": "ebike",
@@ -445,6 +626,9 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "iScooter U4 \u2014 36V 10.4Ah removable pack; charge off bike",
     "battery_wh": 374,
+    "features": {
+      "fold_compact": true
+    },
     "price_sources": [
       {
         "platform": "aliexpress",
@@ -540,18 +724,179 @@
         "ok": true
       }
     ],
-    "feature_checklist": [],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
     "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
+      "luxury_score": 3,
+      "feature_count": 1,
       "by_group": {
         "security": 0,
         "tracking": 0,
         "app": 0,
         "audio": 0,
-        "luxury": 0
+        "luxury": 1
       },
-      "perks_label": "\u2014",
+      "perks_label": "Compact fold",
       "has_app": false,
       "has_tracking": false,
       "has_security": false,
@@ -607,6 +952,18 @@
       {
         "name": "White",
         "family": "white"
+      },
+      {
+        "name": "Black",
+        "family": "black"
+      },
+      {
+        "name": "Green",
+        "family": "green"
+      },
+      {
+        "name": "Red",
+        "family": "red"
       }
     ],
     "vehicle_type": "ebike",
@@ -786,6 +1143,14 @@
       {
         "name": "White",
         "family": "white"
+      },
+      {
+        "name": "Black",
+        "family": "black"
+      },
+      {
+        "name": "Blue",
+        "family": "blue"
       }
     ],
     "vehicle_type": "ebike",
@@ -964,6 +1329,10 @@
       {
         "name": "White",
         "family": "white"
+      },
+      {
+        "name": "Black",
+        "family": "black"
       }
     ],
     "vehicle_type": "ebike",
@@ -982,6 +1351,12 @@
     "battery_charge_method": "removable_keyed",
     "battery_charge_notes": "Keyed removable; 48V 499Wh pack",
     "battery_wh": 499,
+    "features": {
+      "companion_app": true,
+      "ride_history": true,
+      "firmware_ota": true,
+      "fold_compact": true
+    },
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -1077,19 +1452,180 @@
         "ok": true
       }
     ],
-    "feature_checklist": [],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
     "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
+      "luxury_score": 20,
+      "feature_count": 4,
       "by_group": {
         "security": 0,
         "tracking": 0,
-        "app": 0,
+        "app": 3,
         "audio": 0,
-        "luxury": 0
+        "luxury": 1
       },
-      "perks_label": "\u2014",
-      "has_app": false,
+      "perks_label": "Companion app (iOS/Android) \u00b7 Ride stats & history \u00b7 Over-the-air firmware updates \u00b7 Compact fold",
+      "has_app": true,
       "has_tracking": false,
       "has_security": false,
       "has_audio": false,
@@ -1136,6 +1672,18 @@
     ],
     "colors": [
       {
+        "name": "Indigo",
+        "family": "blue"
+      },
+      {
+        "name": "Silver",
+        "family": "gray"
+      },
+      {
+        "name": "Sage",
+        "family": "green"
+      },
+      {
         "name": "White",
         "family": "white"
       }
@@ -1156,6 +1704,9 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "10.4Ah or 13.4Ah options; removable pack",
     "battery_wh": 499,
+    "features": {
+      "fold_compact": true
+    },
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -1240,18 +1791,179 @@
         "ok": true
       }
     ],
-    "feature_checklist": [],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
     "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
+      "luxury_score": 3,
+      "feature_count": 1,
       "by_group": {
         "security": 0,
         "tracking": 0,
         "app": 0,
         "audio": 0,
-        "luxury": 0
+        "luxury": 1
       },
-      "perks_label": "\u2014",
+      "perks_label": "Compact fold",
       "has_app": false,
       "has_tracking": false,
       "has_security": false,
@@ -1299,6 +2011,22 @@
     ],
     "colors": [
       {
+        "name": "Baja",
+        "family": "sand"
+      },
+      {
+        "name": "Citrine",
+        "family": "yellow"
+      },
+      {
+        "name": "Midnight",
+        "family": "black"
+      },
+      {
+        "name": "Sage",
+        "family": "green"
+      },
+      {
         "name": "White",
         "family": "white"
       }
@@ -1318,6 +2046,11 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Hidden battery; removable for indoor charging",
     "battery_wh": 360,
+    "features": {
+      "companion_app": true,
+      "ride_history": true,
+      "firmware_ota": true
+    },
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -1402,19 +2135,180 @@
         "ok": true
       }
     ],
-    "feature_checklist": [],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
     "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
+      "luxury_score": 17,
+      "feature_count": 3,
       "by_group": {
         "security": 0,
         "tracking": 0,
-        "app": 0,
+        "app": 3,
         "audio": 0,
         "luxury": 0
       },
-      "perks_label": "\u2014",
-      "has_app": false,
+      "perks_label": "Companion app (iOS/Android) \u00b7 Ride stats & history \u00b7 Over-the-air firmware updates",
+      "has_app": true,
       "has_tracking": false,
       "has_security": false,
       "has_audio": false,
@@ -1461,6 +2355,10 @@
     ],
     "colors": [
       {
+        "name": "Charcoal",
+        "family": "black"
+      },
+      {
         "name": "White",
         "family": "white"
       }
@@ -1479,6 +2377,10 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Rad Power 48V pack; charge on or off frame",
     "battery_wh": 480,
+    "features": {
+      "companion_app": true,
+      "ride_history": true
+    },
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -1563,19 +2465,180 @@
         "ok": true
       }
     ],
-    "feature_checklist": [],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
     "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
+      "luxury_score": 12,
+      "feature_count": 2,
       "by_group": {
         "security": 0,
         "tracking": 0,
-        "app": 0,
+        "app": 2,
         "audio": 0,
         "luxury": 0
       },
-      "perks_label": "\u2014",
-      "has_app": false,
+      "perks_label": "Companion app (iOS/Android) \u00b7 Ride stats & history",
+      "has_app": true,
       "has_tracking": false,
       "has_security": false,
       "has_audio": false,
@@ -1622,8 +2685,20 @@
     ],
     "colors": [
       {
-        "name": "Sand",
+        "name": "Indigo Grey",
+        "family": "gray"
+      },
+      {
+        "name": "Forest Green",
+        "family": "green"
+      },
+      {
+        "name": "Caramel",
         "family": "sand"
+      },
+      {
+        "name": "Mango",
+        "family": "orange"
       }
     ],
     "vehicle_type": "ebike",
@@ -1641,6 +2716,11 @@
     "battery_charge_method": "removable_keyed",
     "battery_charge_notes": "Removable with key; IPX6-rated pack",
     "battery_wh": 499,
+    "features": {
+      "companion_app": true,
+      "ride_history": true,
+      "gps_tracking": true
+    },
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -1725,23 +2805,184 @@
         "ok": true
       }
     ],
-    "feature_checklist": [],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
     "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
+      "luxury_score": 24,
+      "feature_count": 3,
       "by_group": {
         "security": 0,
-        "tracking": 0,
-        "app": 0,
+        "tracking": 1,
+        "app": 2,
         "audio": 0,
         "luxury": 0
       },
-      "perks_label": "\u2014",
-      "has_app": false,
-      "has_tracking": false,
+      "perks_label": "GPS live tracking \u00b7 Companion app (iOS/Android) \u00b7 Ride stats & history",
+      "has_app": true,
+      "has_tracking": true,
       "has_security": false,
       "has_audio": false,
-      "is_smart": false
+      "is_smart": true
     },
     "legal": {
       "legal_for_age": true,
@@ -1786,6 +3027,26 @@
       {
         "name": "White",
         "family": "white"
+      },
+      {
+        "name": "Black",
+        "family": "black"
+      },
+      {
+        "name": "Storm Grey",
+        "family": "gray"
+      },
+      {
+        "name": "Limestone",
+        "family": "sand"
+      },
+      {
+        "name": "Pacific Blue",
+        "family": "blue"
+      },
+      {
+        "name": "Sage Green",
+        "family": "green"
       }
     ],
     "vehicle_type": "ebike",
@@ -1804,6 +3065,12 @@
     "battery_charge_method": "removable_keyed",
     "battery_charge_notes": "48V 672Wh; keyed removable battery",
     "battery_wh": 672,
+    "features": {
+      "companion_app": true,
+      "ride_history": true,
+      "firmware_ota": true,
+      "fold_compact": true
+    },
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -1888,19 +3155,180 @@
         "ok": true
       }
     ],
-    "feature_checklist": [],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
     "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
+      "luxury_score": 20,
+      "feature_count": 4,
       "by_group": {
         "security": 0,
         "tracking": 0,
-        "app": 0,
+        "app": 3,
         "audio": 0,
-        "luxury": 0
+        "luxury": 1
       },
-      "perks_label": "\u2014",
-      "has_app": false,
+      "perks_label": "Companion app (iOS/Android) \u00b7 Ride stats & history \u00b7 Over-the-air firmware updates \u00b7 Compact fold",
+      "has_app": true,
       "has_tracking": false,
       "has_security": false,
       "has_audio": false,
@@ -1947,8 +3375,20 @@
     ],
     "colors": [
       {
-        "name": "White",
+        "name": "Charcoal",
+        "family": "black"
+      },
+      {
+        "name": "Pear",
         "family": "white"
+      },
+      {
+        "name": "Burnt Orange",
+        "family": "orange"
+      },
+      {
+        "name": "Rhubarb",
+        "family": "red"
       }
     ],
     "vehicle_type": "ebike",
@@ -1965,6 +3405,10 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Large 48V pack; removable for charging",
     "battery_wh": 672,
+    "features": {
+      "companion_app": true,
+      "ride_history": true
+    },
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -2049,19 +3493,180 @@
         "ok": true
       }
     ],
-    "feature_checklist": [],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
     "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
+      "luxury_score": 12,
+      "feature_count": 2,
       "by_group": {
         "security": 0,
         "tracking": 0,
-        "app": 0,
+        "app": 2,
         "audio": 0,
         "luxury": 0
       },
-      "perks_label": "\u2014",
-      "has_app": false,
+      "perks_label": "Companion app (iOS/Android) \u00b7 Ride stats & history",
+      "has_app": true,
       "has_tracking": false,
       "has_security": false,
       "has_audio": false,
@@ -2108,8 +3713,16 @@
     ],
     "colors": [
       {
-        "name": "White",
-        "family": "white"
+        "name": "Black",
+        "family": "black"
+      },
+      {
+        "name": "Green",
+        "family": "green"
+      },
+      {
+        "name": "Silver",
+        "family": "gray"
       }
     ],
     "vehicle_type": "ebike",
@@ -2126,6 +3739,9 @@
     "battery_charge_method": "onboard",
     "battery_charge_notes": "Integrated frame battery; plug in on bike",
     "battery_wh": 252,
+    "features": {
+      "fold_compact": false
+    },
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -2210,7 +3826,168 @@
         "ok": true
       }
     ],
-    "feature_checklist": [],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
     "feature_display": {
       "luxury_score": 0,
       "feature_count": 0,
@@ -2269,8 +4046,20 @@
     ],
     "colors": [
       {
-        "name": "White",
-        "family": "white"
+        "name": "Matte Aurora",
+        "family": "purple"
+      },
+      {
+        "name": "Matte Black",
+        "family": "black"
+      },
+      {
+        "name": "Glacier Mint",
+        "family": "green"
+      },
+      {
+        "name": "Sand Stone",
+        "family": "sand"
       }
     ],
     "vehicle_type": "ebike",
@@ -2288,6 +4077,12 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Aventon S4 battery; removable pack",
     "battery_wh": 710,
+    "features": {
+      "companion_app": true,
+      "ride_history": true,
+      "firmware_ota": true,
+      "gps_tracking": true
+    },
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -2372,23 +4167,184 @@
         "ok": false
       }
     ],
-    "feature_checklist": [],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
     "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
+      "luxury_score": 29,
+      "feature_count": 4,
       "by_group": {
         "security": 0,
-        "tracking": 0,
-        "app": 0,
+        "tracking": 1,
+        "app": 3,
         "audio": 0,
         "luxury": 0
       },
-      "perks_label": "\u2014",
-      "has_app": false,
-      "has_tracking": false,
+      "perks_label": "GPS live tracking \u00b7 Companion app (iOS/Android) \u00b7 Ride stats & history \u00b7 Over-the-air firmware updates",
+      "has_app": true,
+      "has_tracking": true,
       "has_security": false,
       "has_audio": false,
-      "is_smart": false
+      "is_smart": true
     },
     "legal": {
       "legal_for_age": false,
@@ -2439,6 +4395,14 @@
       {
         "name": "Cream",
         "family": "light_wood"
+      },
+      {
+        "name": "Black",
+        "family": "black"
+      },
+      {
+        "name": "Blue",
+        "family": "blue"
       }
     ],
     "vehicle_type": "ebike",
@@ -2600,6 +4564,18 @@
       {
         "name": "Spark White",
         "family": "white"
+      },
+      {
+        "name": "Chrome",
+        "family": "silver"
+      },
+      {
+        "name": "Diamond Dust",
+        "family": "light_wood"
+      },
+      {
+        "name": "Black",
+        "family": "black"
       }
     ],
     "friend_recommended": true,
@@ -2617,6 +4593,9 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "52V pack; compact BMX-style build",
     "battery_wh": 780,
+    "features": {
+      "keyless_start": true
+    },
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -2701,18 +4680,179 @@
         "ok": false
       }
     ],
-    "feature_checklist": [],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
     "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
+      "luxury_score": 4,
+      "feature_count": 1,
       "by_group": {
         "security": 0,
         "tracking": 0,
         "app": 0,
         "audio": 0,
-        "luxury": 0
+        "luxury": 1
       },
-      "perks_label": "\u2014",
+      "perks_label": "Keyless / NFC start",
       "has_app": false,
       "has_tracking": false,
       "has_security": false,
@@ -2770,7 +4910,15 @@
       },
       {
         "name": "Chrome",
-        "family": "light_wood"
+        "family": "silver"
+      },
+      {
+        "name": "Spark White",
+        "family": "white"
+      },
+      {
+        "name": "Black",
+        "family": "black"
       }
     ],
     "friend_recommended": true,
@@ -2788,6 +4936,9 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "52V 25Ah Thrillmatic mount; high capacity",
     "battery_wh": 1300,
+    "features": {
+      "keyless_start": true
+    },
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -2872,18 +5023,179 @@
         "ok": false
       }
     ],
-    "feature_checklist": [],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
     "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
+      "luxury_score": 4,
+      "feature_count": 1,
       "by_group": {
         "security": 0,
         "tracking": 0,
         "app": 0,
         "audio": 0,
-        "luxury": 0
+        "luxury": 1
       },
-      "perks_label": "\u2014",
+      "perks_label": "Keyless / NFC start",
       "has_app": false,
       "has_tracking": false,
       "has_security": false,
@@ -2941,7 +5253,15 @@
       },
       {
         "name": "Chrome",
+        "family": "silver"
+      },
+      {
+        "name": "Glow Worm",
         "family": "light_wood"
+      },
+      {
+        "name": "Black",
+        "family": "black"
       }
     ],
     "vehicle_type": "ebike",
@@ -2958,6 +5278,9 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "52V 25Ah; engineered mount system",
     "battery_wh": 1300,
+    "features": {
+      "keyless_start": true
+    },
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -3042,18 +5365,179 @@
         "ok": false
       }
     ],
-    "feature_checklist": [],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
     "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
+      "luxury_score": 4,
+      "feature_count": 1,
       "by_group": {
         "security": 0,
         "tracking": 0,
         "app": 0,
         "audio": 0,
-        "luxury": 0
+        "luxury": 1
       },
-      "perks_label": "\u2014",
+      "perks_label": "Keyless / NFC start",
       "has_app": false,
       "has_tracking": false,
       "has_security": false,
@@ -3108,7 +5592,15 @@
     "colors": [
       {
         "name": "Ultra Cush",
-        "family": "other"
+        "family": "sand"
+      },
+      {
+        "name": "Chrome",
+        "family": "silver"
+      },
+      {
+        "name": "Black",
+        "family": "black"
       }
     ],
     "vehicle_type": "ebike",
@@ -3125,6 +5617,9 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Same 52V 25Ah platform as Ultra Urban",
     "battery_wh": 1300,
+    "features": {
+      "keyless_start": true
+    },
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -3209,18 +5704,179 @@
         "ok": false
       }
     ],
-    "feature_checklist": [],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
     "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
+      "luxury_score": 4,
+      "feature_count": 1,
       "by_group": {
         "security": 0,
         "tracking": 0,
         "app": 0,
         "audio": 0,
-        "luxury": 0
+        "luxury": 1
       },
-      "perks_label": "\u2014",
+      "perks_label": "Keyless / NFC start",
       "has_app": false,
       "has_tracking": false,
       "has_security": false,
@@ -3287,11 +5943,15 @@
     "colors": [
       {
         "name": "Blue",
-        "family": "white"
+        "family": "blue"
       },
       {
         "name": "Black",
-        "family": "other"
+        "family": "black"
+      },
+      {
+        "name": "Silver",
+        "family": "gray"
       }
     ],
     "vehicle_type": "ebike",
@@ -3309,6 +5969,10 @@
     "battery_charge_method": "onboard",
     "battery_charge_notes": "36V 6Ah integrated; charge on bike",
     "battery_wh": 216,
+    "features": {
+      "companion_app": true,
+      "ride_history": true
+    },
     "price_sources": [
       {
         "platform": "amazon",
@@ -3404,19 +6068,180 @@
         "ok": true
       }
     ],
-    "feature_checklist": [],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
     "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
+      "luxury_score": 12,
+      "feature_count": 2,
       "by_group": {
         "security": 0,
         "tracking": 0,
-        "app": 0,
+        "app": 2,
         "audio": 0,
         "luxury": 0
       },
-      "perks_label": "\u2014",
-      "has_app": false,
+      "perks_label": "Companion app (iOS/Android) \u00b7 Ride stats & history",
+      "has_app": true,
       "has_tracking": false,
       "has_security": false,
       "has_audio": false,
@@ -3468,6 +6293,10 @@
       {
         "name": "White",
         "family": "white"
+      },
+      {
+        "name": "Black",
+        "family": "black"
       }
     ],
     "vehicle_type": "ebike",
@@ -3628,6 +6457,14 @@
       {
         "name": "White",
         "family": "white"
+      },
+      {
+        "name": "Black",
+        "family": "black"
+      },
+      {
+        "name": "Grey",
+        "family": "gray"
       }
     ],
     "vehicle_type": "ebike",
@@ -3644,6 +6481,10 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "Removable battery; Super73 pack",
     "battery_wh": 480,
+    "features": {
+      "companion_app": true,
+      "ride_history": true
+    },
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -3728,19 +6569,180 @@
         "ok": true
       }
     ],
-    "feature_checklist": [],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
     "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
+      "luxury_score": 12,
+      "feature_count": 2,
       "by_group": {
         "security": 0,
         "tracking": 0,
-        "app": 0,
+        "app": 2,
         "audio": 0,
         "luxury": 0
       },
-      "perks_label": "\u2014",
-      "has_app": false,
+      "perks_label": "Companion app (iOS/Android) \u00b7 Ride stats & history",
+      "has_app": true,
       "has_tracking": false,
       "has_security": false,
       "has_audio": false,
@@ -3796,6 +6798,10 @@
       {
         "name": "Black",
         "family": "black"
+      },
+      {
+        "name": "Gray",
+        "family": "gray"
       }
     ],
     "features": {
@@ -4138,8 +7144,12 @@
     ],
     "colors": [
       {
-        "name": "Dark gray",
-        "family": "black"
+        "name": "Dark Gray",
+        "family": "gray"
+      },
+      {
+        "name": "Silver",
+        "family": "silver"
       }
     ],
     "features": {
@@ -4154,10 +7164,7 @@
       "cruise_control": true,
       "ip_rating": "IPX5"
     },
-    "image_url": "https://www.segway.com/wp-content/uploads/2024/01/ninebot-f2-hero.png",
-    "image_urls": [
-      "https://www.segway.com/wp-content/uploads/2024/01/ninebot-f2-fold.png"
-    ],
+    "image_url": "https://segway.imgix.net/catalog/product/cache/d3ec3723470ff918c92e447639eaf984/f/2/f2-1_2.png",
     "battery_voltage_v": 36,
     "battery_capacity_ah": 10.2,
     "battery_range_miles_pas": 25,
@@ -4488,6 +7495,10 @@
       {
         "name": "Black",
         "family": "black"
+      },
+      {
+        "name": "Gray",
+        "family": "gray"
       }
     ],
     "features": {
@@ -4504,10 +7515,7 @@
       "fold_compact": true,
       "ip_rating": "IPX5"
     },
-    "image_url": "https://www.segway.com/wp-content/uploads/2023/09/max-g2-hero.png",
-    "image_urls": [
-      "https://www.segway.com/wp-content/uploads/2023/09/max-g2-folded.png"
-    ],
+    "image_url": "https://segway.imgix.net/catalog/product/cache/d3ec3723470ff918c92e447639eaf984/m/a/max_g2-1_2.png",
     "battery_voltage_v": 36,
     "battery_capacity_ah": 17,
     "battery_range_miles_pas": 43,
@@ -4842,6 +7850,14 @@
       {
         "name": "Gray",
         "family": "gray"
+      },
+      {
+        "name": "Black",
+        "family": "black"
+      },
+      {
+        "name": "Blue",
+        "family": "blue"
       }
     ],
     "features": {
@@ -4860,10 +7876,7 @@
       "fold_compact": true,
       "ip_rating": "IPX5"
     },
-    "image_url": "https://www.niu.com/dw/image/v2/BDBN_PRD/on/demandware.static/-/Sites-niu-master-catalog/default/dw6f8a9b0c/images/large/kqi3-max-white.png",
-    "image_urls": [
-      "https://www.niu.com/dw/image/v2/BDBN_PRD/on/demandware.static/-/Sites-niu-master-catalog/default/dw1c2d3e4f/images/large/kqi3-max-side.png"
-    ],
+    "image_url": "https://cdn.sanity.io/images/cd9iwvgl/production/2926859225e2348927354e9469c8494ea8213e77-1200x628.jpg",
     "battery_voltage_v": 48,
     "battery_capacity_ah": 7.8,
     "battery_range_miles_pas": 31,
@@ -5188,6 +8201,10 @@
       {
         "name": "Black",
         "family": "black"
+      },
+      {
+        "name": "Blue",
+        "family": "blue"
       }
     ],
     "features": {
@@ -5527,12 +8544,16 @@
     ],
     "colors": [
       {
-        "name": "Matte black",
+        "name": "Matte Black",
         "family": "black"
       },
       {
-        "name": "Cosmic blue",
+        "name": "Cosmic Blue",
         "family": "blue"
+      },
+      {
+        "name": "Ghost White",
+        "family": "white"
       }
     ],
     "features": {
@@ -5548,9 +8569,9 @@
       "fold_compact": true,
       "ip_rating": "IP54"
     },
-    "image_url": "https://unagiscooters.com/cdn/shop/files/Unagi_Model_One_Classic_Matte_Black_2048x.png?v=1697040000",
+    "image_url": "https://cdn.sanity.io/images/xl8ls2xi/production/ae1d806aa557fb789a836aee113dcc8c58143689-1276x596.png?q=85&auto=format",
     "image_urls": [
-      "https://unagiscooters.com/cdn/shop/files/Unagi_Model_One_Classic_Folded_2048x.png?v=1697040000"
+      "https://cdn.sanity.io/images/xl8ls2xi/production/b3acf12d4f49894c574635beaa502329b83f3628-1276x596.png?q=85&auto=format"
     ],
     "battery_voltage_v": 36,
     "battery_capacity_ah": 9,

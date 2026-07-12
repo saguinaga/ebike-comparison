@@ -1,0 +1,155 @@
+# Full manufacturer color options (not filtered to beach-tone preferences).
+colors:
+  firmstrong-urban-lady:
+    - {name: Vanilla, family: light_wood}
+    - {name: White, family: white}
+    - {name: Mint Green, family: green}
+    - {name: Pink, family: pink}
+    - {name: Baby Blue, family: blue}
+    - {name: Black, family: black}
+
+  amazon-budget-step-1:
+    - {name: White, family: white}
+    - {name: Black, family: black}
+
+  amazon-budget-step-2:
+    - {name: White, family: white}
+    - {name: Gray, family: gray}
+    - {name: Orange, family: orange}
+
+  aliexpress-budget-folder:
+    - {name: White, family: white}
+    - {name: Black, family: black}
+    - {name: Green, family: green}
+
+  nakto-camel:
+    - {name: White, family: white}
+    - {name: Black, family: black}
+    - {name: Green, family: green}
+    - {name: Red, family: red}
+
+  wallke-h7:
+    - {name: White, family: white}
+    - {name: Black, family: black}
+    - {name: Blue, family: blue}
+
+  lectric-xp-lite:
+    - {name: White, family: white}
+    - {name: Black, family: black}
+
+  ride1up-portola:
+    - {name: Indigo, family: blue}
+    - {name: Silver, family: gray}
+    - {name: Sage, family: green}
+    - {name: White, family: white}
+
+  aventon-soltera:
+    - {name: Baja, family: sand}
+    - {name: Citrine, family: yellow}
+    - {name: Midnight, family: black}
+    - {name: Sage, family: green}
+    - {name: White, family: white}
+
+  rad-mission-1:
+    - {name: Charcoal, family: black}
+    - {name: White, family: white}
+
+  velotric-nomad-1:
+    - {name: Indigo Grey, family: gray}
+    - {name: Forest Green, family: green}
+    - {name: Caramel, family: sand}
+    - {name: Mango, family: orange}
+
+  lectric-xp-3:
+    - {name: White, family: white}
+    - {name: Black, family: black}
+    - {name: Storm Grey, family: gray}
+    - {name: Limestone, family: sand}
+    - {name: Pacific Blue, family: blue}
+    - {name: Sage Green, family: green}
+
+  radrunner-plus:
+    - {name: Charcoal, family: black}
+    - {name: Pear, family: white}
+    - {name: Burnt Orange, family: orange}
+    - {name: Rhubarb, family: red}
+
+  ride1up-roadster:
+    - {name: Black, family: black}
+    - {name: Green, family: green}
+    - {name: Silver, family: gray}
+
+  aventon-level:
+    - {name: Matte Aurora, family: purple}
+    - {name: Matte Black, family: black}
+    - {name: Glacier Mint, family: green}
+    - {name: Sand Stone, family: sand}
+
+  batch-commuter:
+    - {name: Cream, family: light_wood}
+    - {name: Black, family: black}
+    - {name: Blue, family: blue}
+
+  zooz-ultra-ripster:
+    - {name: Spark White, family: white}
+    - {name: Chrome, family: silver}
+    - {name: Diamond Dust, family: light_wood}
+    - {name: Black, family: black}
+
+  zooz-ultra-urban:
+    - {name: Glow Worm, family: light_wood}
+    - {name: Chrome, family: silver}
+    - {name: Spark White, family: white}
+    - {name: Black, family: black}
+
+  zooz-ultra-flex:
+    - {name: Diamond Dust, family: light_wood}
+    - {name: Chrome, family: silver}
+    - {name: Glow Worm, family: light_wood}
+    - {name: Black, family: black}
+
+  zooz-ultra-cush:
+    - {name: Ultra Cush, family: sand}
+    - {name: Chrome, family: silver}
+    - {name: Black, family: black}
+
+  jetson-bolt-pro:
+    - {name: Blue, family: blue}
+    - {name: Black, family: black}
+    - {name: Silver, family: gray}
+
+  hoverfly-ecompact:
+    - {name: White, family: white}
+    - {name: Black, family: black}
+
+  super73-zg:
+    - {name: White, family: white}
+    - {name: Black, family: black}
+    - {name: Grey, family: gray}
+
+  gotrax-g4:
+    - {name: Black, family: black}
+    - {name: Gray, family: gray}
+
+  segway-ninebot-f2:
+    - {name: Dark Gray, family: gray}
+    - {name: Silver, family: silver}
+
+  segway-ninebot-max-g2:
+    - {name: Black, family: black}
+    - {name: Gray, family: gray}
+
+  niu-kqi3-max:
+    - {name: White, family: white}
+    - {name: Gray, family: gray}
+    - {name: Black, family: black}
+    - {name: Blue, family: blue}
+
+  apollo-city-pro:
+    - {name: Black, family: black}
+    - {name: Blue, family: blue}
+
+  unagi-model-one:
+    - {name: Matte Black, family: black}
+    - {name: Cosmic Blue, family: blue}
+    - {name: Ghost White, family: white}

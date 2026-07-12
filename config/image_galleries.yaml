@@ -155,19 +155,13 @@ galleries:
       - "https://gotrax.com/cdn/shop/files/g4-electric-scooter-for-adults-867355.jpg?v=1776112319"
 
   segway-ninebot-f2:
-    image_url: "https://www.segway.com/wp-content/uploads/2024/01/ninebot-f2-hero.png"
-    image_urls:
-      - "https://www.segway.com/wp-content/uploads/2024/01/ninebot-f2-fold.png"
+    image_url: "https://segway.imgix.net/catalog/product/cache/d3ec3723470ff918c92e447639eaf984/f/2/f2-1_2.png"
 
   segway-ninebot-max-g2:
-    image_url: "https://www.segway.com/wp-content/uploads/2023/09/max-g2-hero.png"
-    image_urls:
-      - "https://www.segway.com/wp-content/uploads/2023/09/max-g2-folded.png"
+    image_url: "https://segway.imgix.net/catalog/product/cache/d3ec3723470ff918c92e447639eaf984/m/a/max_g2-1_2.png"
 
   niu-kqi3-max:
-    image_url: "https://www.niu.com/dw/image/v2/BDBN_PRD/on/demandware.static/-/Sites-niu-master-catalog/default/dw6f8a9b0c/images/large/kqi3-max-white.png"
-    image_urls:
-      - "https://www.niu.com/dw/image/v2/BDBN_PRD/on/demandware.static/-/Sites-niu-master-catalog/default/dw1c2d3e4f/images/large/kqi3-max-side.png"
+    image_url: "https://cdn.sanity.io/images/cd9iwvgl/production/2926859225e2348927354e9469c8494ea8213e77-1200x628.jpg"
 
   apollo-city-pro:
     image_url: "https://apolloscooters.co/cdn/shop/files/CityPro-new2023_afc1bb3a-4cea-4b53-bfdb-0530456272c0.png?v=1773931277"
@@ -176,6 +170,6 @@ galleries:
       - "https://apolloscooters.co/cdn/shop/files/Creativefylms-26.jpg?v=1773931277"
 
   unagi-model-one:
-    image_url: "https://unagiscooters.com/cdn/shop/files/Unagi_Model_One_Classic_Matte_Black_2048x.png?v=1697040000"
+    image_url: "https://cdn.sanity.io/images/xl8ls2xi/production/ae1d806aa557fb789a836aee113dcc8c58143689-1276x596.png?q=85&auto=format"
     image_urls:
-      - "https://unagiscooters.com/cdn/shop/files/Unagi_Model_One_Classic_Folded_2048x.png?v=1697040000"
+      - "https://cdn.sanity.io/images/xl8ls2xi/production/b3acf12d4f49894c574635beaa502329b83f3628-1276x596.png?q=85&auto=format"

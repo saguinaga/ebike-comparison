@@ -1,0 +1,70 @@
+# Smart / app features for e-bikes (scooters use scooters.yaml features block).
+features:
+  amazon-budget-step-2:
+    companion_app: true
+    ride_history: true
+
+  aliexpress-budget-folder:
+    fold_compact: true
+
+  lectric-xp-lite:
+    companion_app: true
+    ride_history: true
+    firmware_ota: true
+    fold_compact: true
+
+  lectric-xp-3:
+    companion_app: true
+    ride_history: true
+    firmware_ota: true
+    fold_compact: true
+
+  aventon-soltera:
+    companion_app: true
+    ride_history: true
+    firmware_ota: true
+
+  aventon-level:
+    companion_app: true
+    ride_history: true
+    firmware_ota: true
+    gps_tracking: true
+
+  rad-mission-1:
+    companion_app: true
+    ride_history: true
+
+  radrunner-plus:
+    companion_app: true
+    ride_history: true
+
+  velotric-nomad-1:
+    companion_app: true
+    ride_history: true
+    gps_tracking: true
+
+  ride1up-portola:
+    fold_compact: true
+
+  ride1up-roadster:
+    fold_compact: false
+
+  jetson-bolt-pro:
+    companion_app: true
+    ride_history: true
+
+  super73-zg:
+    companion_app: true
+    ride_history: true
+
+  zooz-ultra-ripster:
+    keyless_start: true
+
+  zooz-ultra-urban:
+    keyless_start: true
+
+  zooz-ultra-flex:
+    keyless_start: true
+
+  zooz-ultra-cush:
+    keyless_start: true
