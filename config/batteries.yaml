@@ -27,13 +27,13 @@ batteries:
     charge_notes: "Samsung-cell pack; key-lock removable battery"
 
   aliexpress-budget-folder:
-    voltage_v: 48
-    capacity_ah: 10
-    range_miles_pas: 30
-    range_miles_throttle: 20
+    voltage_v: 36
+    capacity_ah: 10.4
+    range_miles_pas: 34
+    range_miles_throttle: 22
     charge_hours: 5
     charge_method: removable
-    charge_notes: "Varies by seller; plan on 48V 10Ah class pack"
+    charge_notes: "iScooter U4 — 36V 10.4Ah removable pack; charge off bike"
 
   nakto-camel:
     voltage_v: 36

@@ -47,27 +47,28 @@ bikes:
 
   - id: aliexpress-budget-folder
     tier: budget
-    brand: Folding
-    model: "350W Step-Through (AliExpress)"
+    brand: iScooter
+    model: "U4 Step-Through Folder"
     parser: generic
     e_bike_class: 2
     max_speed_mph: 20
     motor_w: 350
-    brake_type: rim
-    lights: {front: false, rear: true}
+    brake_type: mechanical_disc
+    lights: {front: true, rear: true}
     sources:
       - platform: aliexpress
-        url: "https://www.aliexpress.us/w/wholesale-350w-folding-electric-bike.html"
-        price_usd: 329
-        shipping_usd: 89
+        url: "https://www.aliexpress.us/item/1005012173322881.html"
+        price_usd: 359
+        shipping_usd: 79
       - platform: amazon
-        url: "https://www.amazon.com/s?k=350w+folding+electric+bike+step+through"
+        url: "https://www.amazon.com/s?k=iscooter+u4+folding+electric+bike"
         price_usd: 449
         shipping_usd: 0
     colors:
       - {name: White, family: white}
+      - {name: Black, family: black}
     manual:
-      image_url: "https://lectricebikes.com/cdn/shop/files/Folding_-_June_2026_c576db2f-f294-4835-8b9a-78085103cc8e.webp?v=1782513926"
+      image_url: "https://www.iscooterglobal.co.uk/cdn/shop/files/U4WhiteNew.jpg?v=1775547475"
 
   - id: nakto-camel
     tier: budget

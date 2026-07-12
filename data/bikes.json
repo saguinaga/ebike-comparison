@@ -357,27 +357,27 @@
   {
     "id": "aliexpress-budget-folder",
     "tier": "budget",
-    "brand": "Folding",
-    "model": "350W Step-Through (AliExpress)",
+    "brand": "iScooter",
+    "model": "U4 Step-Through Folder",
     "parser": "generic",
     "e_bike_class": 2,
     "max_speed_mph": 20,
     "motor_w": 350,
-    "brake_type": "rim",
+    "brake_type": "mechanical_disc",
     "lights": {
-      "front": false,
+      "front": true,
       "rear": true
     },
     "sources": [
       {
         "platform": "aliexpress",
-        "url": "https://www.aliexpress.us/w/wholesale-350w-folding-electric-bike.html",
-        "price_usd": 329,
-        "shipping_usd": 89
+        "url": "https://www.aliexpress.us/item/1005012173322881.html",
+        "price_usd": 359,
+        "shipping_usd": 79
       },
       {
         "platform": "amazon",
-        "url": "https://www.amazon.com/s?k=350w+folding+electric+bike+step+through",
+        "url": "https://www.amazon.com/s?k=iscooter+u4+folding+electric+bike",
         "price_usd": 449,
         "shipping_usd": 0
       }
@@ -386,37 +386,42 @@
       {
         "name": "White",
         "family": "white"
+      },
+      {
+        "name": "Black",
+        "family": "black"
       }
     ],
-    "image_url": "https://lectricebikes.com/cdn/shop/files/white-folded.webp?v=1776061626",
+    "image_url": "https://www.iscooterglobal.co.uk/cdn/shop/files/U4WhiteNew.jpg?v=1775547475",
     "image_urls": [
-      "https://lectricebikes.com/cdn/shop/files/lite-white_a6ef01c7-4607-4639-b0c4-09846a407fc9.png?v=1768990516",
-      "https://www.heybike.com/cdn/shop/files/Mars_2.0_Folding_Size_d7c65dd9-a694-4135-a82d-512a63d1b143.png?v=1774418893"
+      "https://www.iscooterglobal.co.uk/cdn/shop/files/u4easyfold.jpg?v=1776654035",
+      "https://www.iscooterglobal.co.uk/cdn/shop/files/u4removablebattery.jpg?v=1776654035",
+      "https://www.iscooterglobal.co.uk/cdn/shop/files/u4light.jpg?v=1776654035"
     ],
-    "battery_voltage_v": 48,
-    "battery_capacity_ah": 10,
-    "battery_range_miles_pas": 30,
-    "battery_range_miles_throttle": 20,
+    "battery_voltage_v": 36,
+    "battery_capacity_ah": 10.4,
+    "battery_range_miles_pas": 34,
+    "battery_range_miles_throttle": 22,
     "battery_charge_hours": 5,
     "battery_charge_method": "removable",
-    "battery_charge_notes": "Varies by seller; plan on 48V 10Ah class pack",
-    "battery_wh": 480,
+    "battery_charge_notes": "iScooter U4 \u2014 36V 10.4Ah removable pack; charge off bike",
+    "battery_wh": 374,
     "price_sources": [
       {
         "platform": "aliexpress",
         "platform_label": "AliExpress",
-        "url": "https://www.aliexpress.us/w/wholesale-350w-folding-electric-bike.html",
-        "item_price_usd": 329.0,
-        "shipping_usd": 89.0,
-        "landed_usd": 418.0,
+        "url": "https://www.aliexpress.us/item/1005012173322881.html",
+        "item_price_usd": 359.0,
+        "shipping_usd": 79.0,
+        "landed_usd": 438.0,
         "delivery_note": "~2\u20134 weeks",
         "rewards_note": null,
-        "is_search_url": true
+        "is_search_url": false
       },
       {
         "platform": "amazon",
         "platform_label": "Amazon",
-        "url": "https://www.amazon.com/s?k=350w+folding+electric+bike+step+through",
+        "url": "https://www.amazon.com/s?k=iscooter+u4+folding+electric+bike",
         "item_price_usd": 449.0,
         "shipping_usd": 0.0,
         "landed_usd": 449.0,
@@ -425,19 +430,19 @@
         "is_search_url": true
       }
     ],
-    "landed_price_usd": 418.0,
-    "best_buy_url": "https://www.aliexpress.us/w/wholesale-350w-folding-electric-bike.html",
+    "landed_price_usd": 438.0,
+    "best_buy_url": "https://www.aliexpress.us/item/1005012173322881.html",
     "best_buy_platform": "AliExpress",
-    "best_buy_shipping_usd": 89.0,
+    "best_buy_shipping_usd": 79.0,
     "best_buy_delivery": "~2\u20134 weeks",
-    "safety_score": 28,
+    "safety_score": 48,
     "safety_checklist": [
       {
         "key": "brake_type",
         "row_label": "Brakes",
-        "label": "Rim Brake",
-        "value": "rim",
-        "ok": false
+        "label": "Mechanical Disc",
+        "value": "mechanical_disc",
+        "ok": true
       },
       {
         "key": "front_brake",
@@ -457,8 +462,8 @@
         "key": "front_light",
         "row_label": "Front light",
         "label": "Front light",
-        "value": false,
-        "ok": false
+        "value": true,
+        "ok": true
       },
       {
         "key": "rear_light",
@@ -499,21 +504,15 @@
     "legal": {
       "legal_for_age": true,
       "issues": [
-        "Missing integrated lights \u2014 add before night rides (CVC \u00a721201)",
         "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
       ],
-      "badges": [
-        {
-          "type": "warning",
-          "text": "Add lights for night"
-        }
-      ],
+      "badges": [],
       "e_bike_class": 2
     },
     "vs_baseline": {
-      "price_multiplier": 1.4,
+      "price_multiplier": 1.5,
       "speed_delta_mph": 5,
-      "brake_upgrade": false,
+      "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
       "baseline_price": 289
     },
