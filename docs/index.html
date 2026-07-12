@@ -57,8 +57,9 @@
     <div class="hero-content">
       <span class="hero-badge">Surf City · Huntington Beach</span>
       <h1>E-Bike &amp; Scooter Comparison</h1>
-      <p class="hero-sub">22 e-bikes · 6 e-scooters · school &amp; commute · 5'2" rider baseline</p>
+      <p class="hero-sub">22 e-bikes · 6 e-scooters · school &amp; commute · Huntington Beach</p>
       <nav class="quick-links">
+        <a href="#bikes">Browse</a>
         <a href="#compare-panel">Side-by-Side</a>
         <a href="#charts-section">Charts</a>
         <a href="#table-section">Table</a>
@@ -69,17 +70,7 @@
   </header>
 
   <div class="container">
-    <section class="baseline-panel" id="baselinePanel">
-      <div id="baselineMedia" class="bike-media"></div>
-      <div class="baseline-info">
-        <h2 class="section-title" style="margin:0;border:0;padding:0;">Comparison baseline</h2>
-        <label class="baseline-picker">Compare against
-          <select id="baselineSelect" aria-label="Select comparison baseline"></select>
-        </label>
-        <div id="baselineDetails"></div>
-      </div>
-    </section>
-
+    <div id="browseView">
     <div class="user-controls" id="userControls">
       <button type="button" class="btn-secondary" id="btnAddBike">+ Add bike (URL)</button>
       <button type="button" class="btn-secondary" id="btnRestoreHidden" hidden>Restore hidden (<span id="hiddenCount">0</span>)</button>
@@ -153,7 +144,7 @@
       </div>
       <div class="card-grid" id="cardGrid">
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="amazon-budget-step-1"
           data-tier="budget"
           data-price="399.0"
@@ -165,101 +156,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="amazon-budget-step-1" aria-label="View Generic 26&#34; Step-Through Budget E-Bike details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/amazon-budget-step-1.jpg" alt="Generic 26&#34; Step-Through Budget E-Bike" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Generic 26&#34; Step-Through Budget E-Bike</h3>
+            <div class="price-big">$399.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 18</span>
               
-              <img class="bike-main-img" src="images/amazon-budget-step-1.jpg" alt="Generic 26&#34; Step-Through Budget E-Bike" loading="lazy">
+              <span class="badge ok">Legal</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Generic 26&#34; Step-Through Budget E-Bike photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/amazon-budget-step-1.jpg" aria-label="Photo 1">
-                <img src="images/amazon-budget-step-1.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/amazon-budget-step-1-2.jpg" aria-label="Photo 2">
-                <img src="images/amazon-budget-step-1-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/amazon-budget-step-1-3.jpg" aria-label="Photo 3">
-                <img src="images/amazon-budget-step-1-3.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Generic 26&#34; Step-Through Budget E-Bike</h3>
-          <div class="price-big">$399.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://www.amazon.com/s?k=26+inch+step+through+electric+bike+350w" target="_blank" rel="noopener" title="Prime ~1–3 days">
-              ★ Amazon $399.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 18</span>
-            
-            
-            <span class="badge ok">Legal</span>
-            
-            
-          </div>
-          <p>$300–600 · 20 mph · <span class="brake-label brake-rim" title="Rim Brake">⭕Rim Brake</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">1.4×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>White</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="miss">Rim Brake</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="miss">Front light</li>
-              
-              <li class="miss">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="ok">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 25 mi PAS · 18 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 36V · 10Ah · 360Wh</li>
-    <li><span class="bf-label">Charging</span> ~4 hr · Removable pack <span class="bf-note" title="Typical 36V 10Ah pack; wall charger included">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-average">14.4 Wh/mi PAS · 20.0 Wh/mi throttle · 69.4 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$300–600 · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="amazon-budget-step-1">+ Compare</button>
             <button type="button" class="btn-hide" data-id="amazon-budget-step-1" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="amazon-budget-step-1" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="amazon-budget-step-2"
           data-tier="budget"
           data-price="549.0"
@@ -271,111 +194,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="amazon-budget-step-2" aria-label="View Heybike Mars 2.0 details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/amazon-budget-step-2.jpg" alt="Heybike Mars 2.0" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Heybike Mars 2.0</h3>
+            <div class="price-big">$549.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 48</span>
               
-              <img class="bike-main-img" src="images/amazon-budget-step-2.jpg" alt="Heybike Mars 2.0" loading="lazy">
+              <span class="badge ok">Legal</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Heybike Mars 2.0 photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/amazon-budget-step-2.jpg" aria-label="Photo 1">
-                <img src="images/amazon-budget-step-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/amazon-budget-step-2-2.jpg" aria-label="Photo 2">
-                <img src="images/amazon-budget-step-2-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/amazon-budget-step-2-3.jpg" aria-label="Photo 3">
-                <img src="images/amazon-budget-step-2-3.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/amazon-budget-step-2-4.jpg" aria-label="Photo 4">
-                <img src="images/amazon-budget-step-2-4.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Heybike Mars 2.0</h3>
-          <div class="price-big">$549.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://www.amazon.com/dp/B0CGLZ9QZJ" target="_blank" rel="noopener" title="Prime ~1–3 days">
-              ★ Amazon $549.0
-            </a>
-            
-            
-            
-            
-            
-            <a class="buy-alt" href="https://www.heybike.com/products/mars-2-0" target="_blank" rel="noopener" title="Direct ship">
-              Direct $599
-            </a>
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 48</span>
-            
-            
-            <span class="badge ok">Legal</span>
-            
-            
-          </div>
-          <p>$300–600 · 20 mph · <span class="brake-label brake-mechanical_disc" title="Mechanical Disc">Mechanical Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">1.9×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>White</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Mechanical Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="ok">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 40 mi PAS · 25 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 48V · 10.4Ah · 499Wh</li>
-    <li><span class="bf-label">Charging</span> ~5 hr · Removable pack <span class="bf-note" title="Samsung-cell pack; key-lock removable battery">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-average">12.5 Wh/mi PAS · 20.0 Wh/mi throttle · 80.2 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$300–600 · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="amazon-budget-step-2">+ Compare</button>
             <button type="button" class="btn-hide" data-id="amazon-budget-step-2" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="amazon-budget-step-2" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="aliexpress-budget-folder"
           data-tier="budget"
           data-price="438.0"
@@ -387,113 +232,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="aliexpress-budget-folder" aria-label="View iScooter U4 Step-Through Folder details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/aliexpress-budget-folder.jpg" alt="iScooter U4 Step-Through Folder" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>iScooter U4 Step-Through Folder</h3>
+            <div class="price-big">$438.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 48</span>
               
-              <img class="bike-main-img" src="images/aliexpress-budget-folder.jpg" alt="iScooter U4 Step-Through Folder" loading="lazy">
+              <span class="badge ok">Legal</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="iScooter U4 Step-Through Folder photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/aliexpress-budget-folder.jpg" aria-label="Photo 1">
-                <img src="images/aliexpress-budget-folder.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/aliexpress-budget-folder-2.jpg" aria-label="Photo 2">
-                <img src="images/aliexpress-budget-folder-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/aliexpress-budget-folder-3.jpg" aria-label="Photo 3">
-                <img src="images/aliexpress-budget-folder-3.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/aliexpress-budget-folder-4.jpg" aria-label="Photo 4">
-                <img src="images/aliexpress-budget-folder-4.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>iScooter U4 Step-Through Folder</h3>
-          <div class="price-big">$438.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://www.aliexpress.us/item/1005012173322881.html" target="_blank" rel="noopener" title="~2–4 weeks">
-              ★ AliExpress $438.0 (+$79 ship)
-            </a>
-            
-            
-            
-            
-            
-            <a class="buy-alt" href="https://www.amazon.com/s?k=iscooter+u4+folding+electric+bike" target="_blank" rel="noopener" title="Prime ~1–3 days">
-              Amazon $449 ↗
-            </a>
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 48</span>
-            
-            
-            <span class="badge ok">Legal</span>
-            
-            
-          </div>
-          <p>$300–600 · 20 mph · <span class="brake-label brake-mechanical_disc" title="Mechanical Disc">Mechanical Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">1.5×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>White</span>
-            
-            <span class="color-chip"><span class="dot black"></span>Black</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Mechanical Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="ok">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 34 mi PAS · 22 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 36V · 10.4Ah · 374Wh</li>
-    <li><span class="bf-label">Charging</span> ~5 hr · Removable pack <span class="bf-note" title="iScooter U4 — 36V 10.4Ah removable pack; charge off bike">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-good">11.0 Wh/mi PAS · 17.0 Wh/mi throttle · 90.9 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$300–600 · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="aliexpress-budget-folder">+ Compare</button>
             <button type="button" class="btn-hide" data-id="aliexpress-budget-folder" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="aliexpress-budget-folder" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="nakto-camel"
           data-tier="budget"
           data-price="469.0"
@@ -505,111 +270,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="nakto-camel" aria-label="View Nakto Camel 26&#34; Step-Through details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/nakto-camel.jpg" alt="Nakto Camel 26&#34; Step-Through" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Nakto Camel 26&#34; Step-Through</h3>
+            <div class="price-big">$469.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 48</span>
               
-              <img class="bike-main-img" src="images/nakto-camel.jpg" alt="Nakto Camel 26&#34; Step-Through" loading="lazy">
+              <span class="badge ok">Legal</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Nakto Camel 26&#34; Step-Through photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/nakto-camel.jpg" aria-label="Photo 1">
-                <img src="images/nakto-camel.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/nakto-camel-2.jpg" aria-label="Photo 2">
-                <img src="images/nakto-camel-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/nakto-camel-3.jpg" aria-label="Photo 3">
-                <img src="images/nakto-camel-3.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/nakto-camel-4.jpg" aria-label="Photo 4">
-                <img src="images/nakto-camel-4.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Nakto Camel 26&#34; Step-Through</h3>
-          <div class="price-big">$469.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://nakto.com/products/camel-step-thru" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $469.0
-            </a>
-            
-            
-            
-            
-            
-            <a class="buy-alt" href="https://www.amazon.com/s?k=nakto+camel+electric+bike" target="_blank" rel="noopener" title="Prime ~1–3 days">
-              Amazon $499 ↗
-            </a>
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 48</span>
-            
-            
-            <span class="badge ok">Legal</span>
-            
-            
-          </div>
-          <p>$300–600 · 20 mph · <span class="brake-label brake-mechanical_disc" title="Mechanical Disc">Mechanical Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">1.6×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>White</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Mechanical Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="ok">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 35 mi PAS · 22 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 36V · 10Ah · 360Wh</li>
-    <li><span class="bf-label">Charging</span> ~4 hr · Removable pack <span class="bf-note" title="Removable 36V battery; charge on or off bike">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-good">10.3 Wh/mi PAS · 16.4 Wh/mi throttle · 97.2 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$300–600 · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="nakto-camel">+ Compare</button>
             <button type="button" class="btn-hide" data-id="nakto-camel" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="nakto-camel" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="wallke-h7"
           data-tier="budget"
           data-price="549.0"
@@ -621,107 +308,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="wallke-h7" aria-label="View Wallke H7 26&#34; details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/wallke-h7.jpg" alt="Wallke H7 26&#34;" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Wallke H7 26&#34;</h3>
+            <div class="price-big">$549.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 55</span>
               
-              <img class="bike-main-img" src="images/wallke-h7.jpg" alt="Wallke H7 26&#34;" loading="lazy">
+              <span class="badge ok">Legal</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Wallke H7 26&#34; photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/wallke-h7.jpg" aria-label="Photo 1">
-                <img src="images/wallke-h7.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/wallke-h7-2.jpg" aria-label="Photo 2">
-                <img src="images/wallke-h7-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/wallke-h7-3.jpg" aria-label="Photo 3">
-                <img src="images/wallke-h7-3.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Wallke H7 26&#34;</h3>
-          <div class="price-big">$549.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://www.wallkeebike.com/products/wallke-h7-electric-bike" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $549.0
-            </a>
-            
-            
-            
-            
-            
-            <a class="buy-alt" href="https://www.amazon.com/s?k=wallke+h7+electric+bike" target="_blank" rel="noopener" title="Prime ~1–3 days">
-              Amazon $579 ↗
-            </a>
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 55</span>
-            
-            
-            <span class="badge ok">Legal</span>
-            
-            
-          </div>
-          <p>$300–600 · 20 mph · <span class="brake-label brake-hydraulic_disc" title="Hydraulic Disc">Hydraulic Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">1.9×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>White</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Hydraulic Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="ok">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 35 mi PAS · 25 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 48V · 12Ah · 576Wh</li>
-    <li><span class="bf-label">Charging</span> ~5 hr · Removable pack <span class="bf-note" title="Hidden-in-frame pack; removable for charging">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-poor">16.5 Wh/mi PAS · 23.0 Wh/mi throttle · 60.8 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$300–600 · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="wallke-h7">+ Compare</button>
             <button type="button" class="btn-hide" data-id="wallke-h7" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="wallke-h7" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="lectric-xp-lite"
           data-tier="value"
           data-price="799.0"
@@ -733,115 +346,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="lectric-xp-lite" aria-label="View Lectric XP Lite 2.0 details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/lectric-xp-lite.jpg" alt="Lectric XP Lite 2.0" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Lectric XP Lite 2.0</h3>
+            <div class="price-big">$799.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 48</span>
               
-              <img class="bike-main-img" src="images/lectric-xp-lite.jpg" alt="Lectric XP Lite 2.0" loading="lazy">
+              <span class="badge ok">Legal</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Lectric XP Lite 2.0 photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/lectric-xp-lite.jpg" aria-label="Photo 1">
-                <img src="images/lectric-xp-lite.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/lectric-xp-lite-2.jpg" aria-label="Photo 2">
-                <img src="images/lectric-xp-lite-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/lectric-xp-lite-3.jpg" aria-label="Photo 3">
-                <img src="images/lectric-xp-lite-3.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/lectric-xp-lite-4.jpg" aria-label="Photo 4">
-                <img src="images/lectric-xp-lite-4.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/lectric-xp-lite-5.jpg" aria-label="Photo 5">
-                <img src="images/lectric-xp-lite-5.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Lectric XP Lite 2.0</h3>
-          <div class="price-big">$799.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://lectricebikes.com/products/xp-lite" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $799.0
-            </a>
-            
-            
-            
-            
-            
-            <a class="buy-alt" href="https://www.amazon.com/s?k=lectric+xp+lite" target="_blank" rel="noopener" title="Prime ~1–3 days">
-              Amazon $849 ↗
-            </a>
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 48</span>
-            
-            
-            <span class="badge ok">Legal</span>
-            
-            
-          </div>
-          <p>$600–1,200 · 20 mph · <span class="brake-label brake-mechanical_disc" title="Mechanical Disc">Mechanical Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">2.8×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>White</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Mechanical Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="ok">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 45 mi PAS · 28 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 48V · 10.4Ah · 499Wh</li>
-    <li><span class="bf-label">Charging</span> ~4 hr · Removable (keyed) <span class="bf-note" title="Keyed removable; 48V 499Wh pack">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-good">11.1 Wh/mi PAS · 17.8 Wh/mi throttle · 90.2 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$600–1,200 · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="lectric-xp-lite">+ Compare</button>
             <button type="button" class="btn-hide" data-id="lectric-xp-lite" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="lectric-xp-lite" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="ride1up-portola"
           data-tier="value"
           data-price="995.0"
@@ -853,105 +384,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="ride1up-portola" aria-label="View Ride1Up Portola details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/ride1up-portola.jpg" alt="Ride1Up Portola" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Ride1Up Portola</h3>
+            <div class="price-big">$995.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 55</span>
               
-              <img class="bike-main-img" src="images/ride1up-portola.jpg" alt="Ride1Up Portola" loading="lazy">
+              <span class="badge ok">Legal</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Ride1Up Portola photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/ride1up-portola.jpg" aria-label="Photo 1">
-                <img src="images/ride1up-portola.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/ride1up-portola-2.jpg" aria-label="Photo 2">
-                <img src="images/ride1up-portola-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/ride1up-portola-3.jpg" aria-label="Photo 3">
-                <img src="images/ride1up-portola-3.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/ride1up-portola-4.jpg" aria-label="Photo 4">
-                <img src="images/ride1up-portola-4.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Ride1Up Portola</h3>
-          <div class="price-big">$995.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://ride1up.com/product/portola/" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $995.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 55</span>
-            
-            
-            <span class="badge ok">Legal</span>
-            
-            
-          </div>
-          <p>$600–1,200 · 20 mph · <span class="brake-label brake-hydraulic_disc" title="Hydraulic Disc">Hydraulic Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">3.4×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>White</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Hydraulic Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="ok">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 32 mi PAS · 20 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 48V · 10.4Ah (or 13.4Ah) · 499Wh</li>
-    <li><span class="bf-label">Charging</span> ~5 hr · Removable pack <span class="bf-note" title="10.4Ah or 13.4Ah options; removable pack">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-average">15.6 Wh/mi PAS · 24.9 Wh/mi throttle · 64.1 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$600–1,200 · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="ride1up-portola">+ Compare</button>
             <button type="button" class="btn-hide" data-id="ride1up-portola" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="ride1up-portola" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="aventon-soltera"
           data-tier="value"
           data-price="999.0"
@@ -963,105 +422,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="aventon-soltera" aria-label="View Aventon Soltera 2.5 details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/aventon-soltera.jpg" alt="Aventon Soltera 2.5" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Aventon Soltera 2.5</h3>
+            <div class="price-big">$999.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 48</span>
               
-              <img class="bike-main-img" src="images/aventon-soltera.jpg" alt="Aventon Soltera 2.5" loading="lazy">
+              <span class="badge ok">Legal</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Aventon Soltera 2.5 photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/aventon-soltera.jpg" aria-label="Photo 1">
-                <img src="images/aventon-soltera.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/aventon-soltera-2.jpg" aria-label="Photo 2">
-                <img src="images/aventon-soltera-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/aventon-soltera-3.jpg" aria-label="Photo 3">
-                <img src="images/aventon-soltera-3.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/aventon-soltera-4.jpg" aria-label="Photo 4">
-                <img src="images/aventon-soltera-4.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Aventon Soltera 2.5</h3>
-          <div class="price-big">$999.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://www.aventon.com/products/soltera-2-5-ebike" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $999.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 48</span>
-            
-            
-            <span class="badge ok">Legal</span>
-            
-            
-          </div>
-          <p>$600–1,200 · 20 mph · <span class="brake-label brake-mechanical_disc" title="Mechanical Disc">Mechanical Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">3.5×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>White</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Mechanical Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="ok">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 46 mi PAS · 30 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 36V · 10Ah · 360Wh</li>
-    <li><span class="bf-label">Charging</span> ~4 hr · Removable pack <span class="bf-note" title="Hidden battery; removable for indoor charging">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-excellent">7.8 Wh/mi PAS · 12.0 Wh/mi throttle · 127.8 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$600–1,200 · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="aventon-soltera">+ Compare</button>
             <button type="button" class="btn-hide" data-id="aventon-soltera" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="aventon-soltera" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="rad-mission-1"
           data-tier="value"
           data-price="1199.0"
@@ -1073,101 +460,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="rad-mission-1" aria-label="View Rad Power RadMission 1 details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/rad-mission-1.jpg" alt="Rad Power RadMission 1" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Rad Power RadMission 1</h3>
+            <div class="price-big">$1199.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 48</span>
               
-              <img class="bike-main-img" src="images/rad-mission-1.jpg" alt="Rad Power RadMission 1" loading="lazy">
+              <span class="badge ok">Legal</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Rad Power RadMission 1 photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/rad-mission-1.jpg" aria-label="Photo 1">
-                <img src="images/rad-mission-1.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/rad-mission-1-2.jpg" aria-label="Photo 2">
-                <img src="images/rad-mission-1-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/rad-mission-1-3.jpg" aria-label="Photo 3">
-                <img src="images/rad-mission-1-3.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Rad Power RadMission 1</h3>
-          <div class="price-big">$1199.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://www.radpowerbikes.com/products/radmission-electric-metro-utility-bike" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $1199.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 48</span>
-            
-            
-            <span class="badge ok">Legal</span>
-            
-            
-          </div>
-          <p>$600–1,200 · 20 mph · <span class="brake-label brake-mechanical_disc" title="Mechanical Disc">Mechanical Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">4.1×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>White</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Mechanical Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="ok">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 45 mi PAS · 25 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 48V · 10Ah · 480Wh</li>
-    <li><span class="bf-label">Charging</span> ~5 hr · Removable pack <span class="bf-note" title="Rad Power 48V pack; charge on or off frame">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-good">10.7 Wh/mi PAS · 19.2 Wh/mi throttle · 93.8 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$600–1,200 · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="rad-mission-1">+ Compare</button>
             <button type="button" class="btn-hide" data-id="rad-mission-1" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="rad-mission-1" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="velotric-nomad-1"
           data-tier="value"
           data-price="1099.0"
@@ -1179,105 +498,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="velotric-nomad-1" aria-label="View Velotric Nomad 1 details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/velotric-nomad-1.jpg" alt="Velotric Nomad 1" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Velotric Nomad 1</h3>
+            <div class="price-big">$1099.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 48</span>
               
-              <img class="bike-main-img" src="images/velotric-nomad-1.jpg" alt="Velotric Nomad 1" loading="lazy">
+              <span class="badge ok">Legal</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Velotric Nomad 1 photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/velotric-nomad-1.jpg" aria-label="Photo 1">
-                <img src="images/velotric-nomad-1.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/velotric-nomad-1-2.jpg" aria-label="Photo 2">
-                <img src="images/velotric-nomad-1-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/velotric-nomad-1-3.jpg" aria-label="Photo 3">
-                <img src="images/velotric-nomad-1-3.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/velotric-nomad-1-4.jpg" aria-label="Photo 4">
-                <img src="images/velotric-nomad-1-4.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Velotric Nomad 1</h3>
-          <div class="price-big">$1099.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://www.velotricbike.com/products/velotric-nomad-1" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $1099.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 48</span>
-            
-            
-            <span class="badge ok">Legal</span>
-            
-            
-          </div>
-          <p>$600–1,200 · 20 mph · <span class="brake-label brake-mechanical_disc" title="Mechanical Disc">Mechanical Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">3.8×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot sand"></span>Sand</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Mechanical Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="ok">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 55 mi PAS · 35 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 48V · 10.4Ah · 499Wh</li>
-    <li><span class="bf-label">Charging</span> ~6 hr · Removable (keyed) <span class="bf-note" title="Removable with key; IPX6-rated pack">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-good">9.1 Wh/mi PAS · 14.3 Wh/mi throttle · 110.2 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$600–1,200 · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="velotric-nomad-1">+ Compare</button>
             <button type="button" class="btn-hide" data-id="velotric-nomad-1" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="velotric-nomad-1" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="lectric-xp-3"
           data-tier="mid"
           data-price="1299.0"
@@ -1289,109 +536,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="lectric-xp-3" aria-label="View Lectric XP 3.0 details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/lectric-xp-3.jpg" alt="Lectric XP 3.0" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Lectric XP 3.0</h3>
+            <div class="price-big">$1299.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 48</span>
               
-              <img class="bike-main-img" src="images/lectric-xp-3.jpg" alt="Lectric XP 3.0" loading="lazy">
+              <span class="badge ok">Legal</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Lectric XP 3.0 photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/lectric-xp-3.jpg" aria-label="Photo 1">
-                <img src="images/lectric-xp-3.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/lectric-xp-3-2.jpg" aria-label="Photo 2">
-                <img src="images/lectric-xp-3-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/lectric-xp-3-3.jpg" aria-label="Photo 3">
-                <img src="images/lectric-xp-3-3.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/lectric-xp-3-4.jpg" aria-label="Photo 4">
-                <img src="images/lectric-xp-3-4.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/lectric-xp-3-5.jpg" aria-label="Photo 5">
-                <img src="images/lectric-xp-3-5.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Lectric XP 3.0</h3>
-          <div class="price-big">$1299.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://lectricebikes.com/products/xp" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $1299.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 48</span>
-            
-            
-            <span class="badge ok">Legal</span>
-            
-            
-          </div>
-          <p>$1,200–2,000 · 20 mph · <span class="brake-label brake-mechanical_disc" title="Mechanical Disc">Mechanical Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">4.5×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>White</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Mechanical Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="ok">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 60 mi PAS · 35 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 48V · 14Ah · 672Wh</li>
-    <li><span class="bf-label">Charging</span> ~5 hr · Removable (keyed) <span class="bf-note" title="48V 672Wh; keyed removable battery">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-good">11.2 Wh/mi PAS · 19.2 Wh/mi throttle · 89.3 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$1,200–2,000 · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="lectric-xp-3">+ Compare</button>
             <button type="button" class="btn-hide" data-id="lectric-xp-3" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="lectric-xp-3" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="radrunner-plus"
           data-tier="mid"
           data-price="1599.0"
@@ -1403,101 +574,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="radrunner-plus" aria-label="View Rad Power RadRunner 3 Plus details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/radrunner-plus.jpg" alt="Rad Power RadRunner 3 Plus" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Rad Power RadRunner 3 Plus</h3>
+            <div class="price-big">$1599.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 55</span>
               
-              <img class="bike-main-img" src="images/radrunner-plus.jpg" alt="Rad Power RadRunner 3 Plus" loading="lazy">
+              <span class="badge ok">Legal</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Rad Power RadRunner 3 Plus photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/radrunner-plus.jpg" aria-label="Photo 1">
-                <img src="images/radrunner-plus.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/radrunner-plus-2.jpg" aria-label="Photo 2">
-                <img src="images/radrunner-plus-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/radrunner-plus-3.jpg" aria-label="Photo 3">
-                <img src="images/radrunner-plus-3.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Rad Power RadRunner 3 Plus</h3>
-          <div class="price-big">$1599.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://www.radpowerbikes.com/products/radrunner-3-plus-electric-utility-bike" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $1599.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 55</span>
-            
-            
-            <span class="badge ok">Legal</span>
-            
-            
-          </div>
-          <p>$1,200–2,000 · 20 mph · <span class="brake-label brake-hydraulic_disc" title="Hydraulic Disc">Hydraulic Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">5.5×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>White</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Hydraulic Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="ok">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 45 mi PAS · 28 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 48V · 14Ah · 672Wh</li>
-    <li><span class="bf-label">Charging</span> ~6 hr · Removable pack <span class="bf-note" title="Large 48V pack; removable for charging">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-average">14.9 Wh/mi PAS · 24.0 Wh/mi throttle · 67.0 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$1,200–2,000 · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="radrunner-plus">+ Compare</button>
             <button type="button" class="btn-hide" data-id="radrunner-plus" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="radrunner-plus" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="ride1up-roadster"
           data-tier="mid"
           data-price="1495.0"
@@ -1509,101 +612,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="ride1up-roadster" aria-label="View Ride1Up Roadster V3 details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/ride1up-roadster.jpg" alt="Ride1Up Roadster V3" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Ride1Up Roadster V3</h3>
+            <div class="price-big">$1495.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 55</span>
               
-              <img class="bike-main-img" src="images/ride1up-roadster.jpg" alt="Ride1Up Roadster V3" loading="lazy">
+              <span class="badge ok">Legal</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Ride1Up Roadster V3 photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/ride1up-roadster.jpg" aria-label="Photo 1">
-                <img src="images/ride1up-roadster.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/ride1up-roadster-2.jpg" aria-label="Photo 2">
-                <img src="images/ride1up-roadster-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/ride1up-roadster-3.jpg" aria-label="Photo 3">
-                <img src="images/ride1up-roadster-3.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Ride1Up Roadster V3</h3>
-          <div class="price-big">$1495.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://ride1up.com/product/roadster-v3/" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $1495.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 55</span>
-            
-            
-            <span class="badge ok">Legal</span>
-            
-            
-          </div>
-          <p>$1,200–2,000 · 20 mph · <span class="brake-label brake-hydraulic_disc" title="Hydraulic Disc">Hydraulic Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">5.2×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>White</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Hydraulic Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="ok">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 30 mi PAS · 20 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 36V · 7Ah · 252Wh</li>
-    <li><span class="bf-label">Charging</span> ~4 hr · Onboard plug <span class="bf-note" title="Integrated frame battery; plug in on bike">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-excellent">8.4 Wh/mi PAS · 12.6 Wh/mi throttle · 119.0 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$1,200–2,000 · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="ride1up-roadster">+ Compare</button>
             <button type="button" class="btn-hide" data-id="ride1up-roadster" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="ride1up-roadster" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="aventon-level"
           data-tier="mid"
           data-price="1699.0"
@@ -1615,105 +650,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="aventon-level" aria-label="View Aventon Level 3 details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/aventon-level.jpg" alt="Aventon Level 3" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Aventon Level 3</h3>
+            <div class="price-big">$1699.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 50</span>
               
-              <img class="bike-main-img" src="images/aventon-level.jpg" alt="Aventon Level 3" loading="lazy">
+              <span class="badge danger">✗</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Aventon Level 3 photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/aventon-level.jpg" aria-label="Photo 1">
-                <img src="images/aventon-level.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/aventon-level-2.jpg" aria-label="Photo 2">
-                <img src="images/aventon-level-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/aventon-level-3.jpg" aria-label="Photo 3">
-                <img src="images/aventon-level-3.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/aventon-level-4.jpg" aria-label="Photo 4">
-                <img src="images/aventon-level-4.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Aventon Level 3</h3>
-          <div class="price-big">$1699.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://www.aventon.com/products/level-3-commuter-ebike" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $1699.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 50</span>
-            
-            
-            <span class="badge danger">Class 3 ✗</span>
-            
-            
-          </div>
-          <p>$1,200–2,000 · 28 mph · <span class="brake-label brake-hydraulic_disc" title="Hydraulic Disc">Hydraulic Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">5.9×</strong> · <span class="vs-speed-delta">+13 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>White</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Hydraulic Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="miss">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 70 mi PAS · 40 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 48V · 14.8Ah · 710Wh</li>
-    <li><span class="bf-label">Charging</span> ~6 hr · Removable pack <span class="bf-note" title="Aventon S4 battery; removable pack">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-good">10.1 Wh/mi PAS · 17.8 Wh/mi throttle · 98.6 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$1,200–2,000 · 28 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="aventon-level">+ Compare</button>
             <button type="button" class="btn-hide" data-id="aventon-level" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="aventon-level" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="batch-commuter"
           data-tier="mid"
           data-price="1399.0"
@@ -1725,101 +688,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="batch-commuter" aria-label="View Batch E-Bike Commuter details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/batch-commuter.jpg" alt="Batch E-Bike Commuter" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Batch E-Bike Commuter</h3>
+            <div class="price-big">$1399.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 48</span>
               
-              <img class="bike-main-img" src="images/batch-commuter.jpg" alt="Batch E-Bike Commuter" loading="lazy">
+              <span class="badge ok">Legal</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Batch E-Bike Commuter photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/batch-commuter.jpg" aria-label="Photo 1">
-                <img src="images/batch-commuter.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/batch-commuter-2.jpg" aria-label="Photo 2">
-                <img src="images/batch-commuter-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/batch-commuter-3.jpg" aria-label="Photo 3">
-                <img src="images/batch-commuter-3.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Batch E-Bike Commuter</h3>
-          <div class="price-big">$1399.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://ridebatch.com/products/batch-e-bike" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $1399.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 48</span>
-            
-            
-            <span class="badge ok">Legal</span>
-            
-            
-          </div>
-          <p>$1,200–2,000 · 20 mph · <span class="brake-label brake-mechanical_disc" title="Mechanical Disc">Mechanical Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">4.8×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot light_wood"></span>Cream</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Mechanical Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="ok">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 40 mi PAS · 28 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 48V · 10.4Ah · 499Wh</li>
-    <li><span class="bf-label">Charging</span> ~5 hr · Removable pack <span class="bf-note" title="Standard commuter pack; removable">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-average">12.5 Wh/mi PAS · 17.8 Wh/mi throttle · 80.2 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$1,200–2,000 · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="batch-commuter">+ Compare</button>
             <button type="button" class="btn-hide" data-id="batch-commuter" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="batch-commuter" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="zooz-ultra-ripster"
           data-tier="premium"
           data-price="2095.0"
@@ -1831,101 +726,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="zooz-ultra-ripster" aria-label="View Zooz Ultra Ripster Gen 2 details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/zooz-ultra-ripster.jpg" alt="Zooz Ultra Ripster Gen 2" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Zooz Ultra Ripster Gen 2</h3>
+            <div class="price-big">$2095.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 50</span>
               
-              <img class="bike-main-img" src="images/zooz-ultra-ripster.jpg" alt="Zooz Ultra Ripster Gen 2" loading="lazy">
+              <span class="badge danger">✗</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Zooz Ultra Ripster Gen 2 photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/zooz-ultra-ripster.jpg" aria-label="Photo 1">
-                <img src="images/zooz-ultra-ripster.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/zooz-ultra-ripster-2.jpg" aria-label="Photo 2">
-                <img src="images/zooz-ultra-ripster-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/zooz-ultra-ripster-3.jpg" aria-label="Photo 3">
-                <img src="images/zooz-ultra-ripster-3.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Zooz Ultra Ripster Gen 2</h3>
-          <div class="price-big">$2095.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://zoozbikes.com/products/ultra-ripster-gen-2" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $2095.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 50</span>
-            
-            
-            <span class="badge danger">Class 3 ✗</span>
-            
-            <span class="badge info">Recommended</span>
-          </div>
-          <p>$2,000+ · 28 mph · <span class="brake-label brake-hydraulic_disc" title="Hydraulic Disc">Hydraulic Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">7.2×</strong> · <span class="vs-speed-delta">+13 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>Spark White</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Hydraulic Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="miss">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 40 mi PAS · 25 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 52V · 15Ah · 780Wh</li>
-    <li><span class="bf-label">Charging</span> ~6 hr · Removable pack <span class="bf-note" title="52V pack; compact BMX-style build">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-poor">19.5 Wh/mi PAS · 31.2 Wh/mi throttle · 51.3 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$2,000+ · 28 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="zooz-ultra-ripster">+ Compare</button>
             <button type="button" class="btn-hide" data-id="zooz-ultra-ripster" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="zooz-ultra-ripster" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="zooz-ultra-urban"
           data-tier="premium"
           data-price="2595.0"
@@ -1937,103 +764,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="zooz-ultra-urban" aria-label="View Zooz Ultra Urban details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/zooz-ultra-urban.jpg" alt="Zooz Ultra Urban" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Zooz Ultra Urban</h3>
+            <div class="price-big">$2595.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 50</span>
               
-              <img class="bike-main-img" src="images/zooz-ultra-urban.jpg" alt="Zooz Ultra Urban" loading="lazy">
+              <span class="badge danger">✗</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Zooz Ultra Urban photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/zooz-ultra-urban.jpg" aria-label="Photo 1">
-                <img src="images/zooz-ultra-urban.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/zooz-ultra-urban-2.jpg" aria-label="Photo 2">
-                <img src="images/zooz-ultra-urban-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/zooz-ultra-urban-3.jpg" aria-label="Photo 3">
-                <img src="images/zooz-ultra-urban-3.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Zooz Ultra Urban</h3>
-          <div class="price-big">$2595.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://zoozbikes.com/products/uu-gen4" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $2595.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 50</span>
-            
-            
-            <span class="badge danger">Class 3 ✗</span>
-            
-            <span class="badge info">Recommended</span>
-          </div>
-          <p>$2,000+ · 28 mph · <span class="brake-label brake-hydraulic_disc" title="Hydraulic Disc">Hydraulic Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">9.0×</strong> · <span class="vs-speed-delta">+13 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot light_wood"></span>Glow Worm</span>
-            
-            <span class="color-chip"><span class="dot light_wood"></span>Chrome</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Hydraulic Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="miss">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 60 mi PAS · 35 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 52V · 25Ah · 1300Wh</li>
-    <li><span class="bf-label">Charging</span> ~8 hr · Removable pack <span class="bf-note" title="52V 25Ah Thrillmatic mount; high capacity">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-poor">21.7 Wh/mi PAS · 37.1 Wh/mi throttle · 46.2 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$2,000+ · 28 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="zooz-ultra-urban">+ Compare</button>
             <button type="button" class="btn-hide" data-id="zooz-ultra-urban" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="zooz-ultra-urban" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="zooz-ultra-flex"
           data-tier="premium"
           data-price="3095.0"
@@ -2045,103 +802,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="zooz-ultra-flex" aria-label="View Zooz Ultra Flex G2 Low Bar details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/zooz-ultra-flex.jpg" alt="Zooz Ultra Flex G2 Low Bar" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Zooz Ultra Flex G2 Low Bar</h3>
+            <div class="price-big">$3095.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 50</span>
               
-              <img class="bike-main-img" src="images/zooz-ultra-flex.jpg" alt="Zooz Ultra Flex G2 Low Bar" loading="lazy">
+              <span class="badge danger">✗</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Zooz Ultra Flex G2 Low Bar photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/zooz-ultra-flex.jpg" aria-label="Photo 1">
-                <img src="images/zooz-ultra-flex.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/zooz-ultra-flex-2.jpg" aria-label="Photo 2">
-                <img src="images/zooz-ultra-flex-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/zooz-ultra-flex-3.jpg" aria-label="Photo 3">
-                <img src="images/zooz-ultra-flex-3.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Zooz Ultra Flex G2 Low Bar</h3>
-          <div class="price-big">$3095.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://zoozbikes.com/products/ultra-flex-g2-low-bar" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $3095.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 50</span>
-            
-            
-            <span class="badge danger">Class 3 ✗</span>
-            
-            
-          </div>
-          <p>$2,000+ · 28 mph · <span class="brake-label brake-hydraulic_disc" title="Hydraulic Disc">Hydraulic Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">10.7×</strong> · <span class="vs-speed-delta">+13 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot light_wood"></span>Diamond Dust</span>
-            
-            <span class="color-chip"><span class="dot light_wood"></span>Chrome</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Hydraulic Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="miss">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 55 mi PAS · 32 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 52V · 25Ah · 1300Wh</li>
-    <li><span class="bf-label">Charging</span> ~8 hr · Removable pack <span class="bf-note" title="52V 25Ah; engineered mount system">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-poor">23.6 Wh/mi PAS · 40.6 Wh/mi throttle · 42.3 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$2,000+ · 28 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="zooz-ultra-flex">+ Compare</button>
             <button type="button" class="btn-hide" data-id="zooz-ultra-flex" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="zooz-ultra-flex" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="zooz-ultra-cush"
           data-tier="premium"
           data-price="2795.0"
@@ -2153,101 +840,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="zooz-ultra-cush" aria-label="View Zooz Ultra Cush details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/zooz-ultra-cush.jpg" alt="Zooz Ultra Cush" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Zooz Ultra Cush</h3>
+            <div class="price-big">$2795.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 50</span>
               
-              <img class="bike-main-img" src="images/zooz-ultra-cush.jpg" alt="Zooz Ultra Cush" loading="lazy">
+              <span class="badge danger">✗</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Zooz Ultra Cush photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/zooz-ultra-cush.jpg" aria-label="Photo 1">
-                <img src="images/zooz-ultra-cush.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/zooz-ultra-cush-2.jpg" aria-label="Photo 2">
-                <img src="images/zooz-ultra-cush-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/zooz-ultra-cush-3.jpg" aria-label="Photo 3">
-                <img src="images/zooz-ultra-cush-3.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Zooz Ultra Cush</h3>
-          <div class="price-big">$2795.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://zoozbikes.com/products/ultra-cush" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $2795.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 50</span>
-            
-            
-            <span class="badge danger">Class 3 ✗</span>
-            
-            
-          </div>
-          <p>$2,000+ · 28 mph · <span class="brake-label brake-hydraulic_disc" title="Hydraulic Disc">Hydraulic Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">9.7×</strong> · <span class="vs-speed-delta">+13 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot other"></span>Ultra Cush</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Hydraulic Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="miss">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 55 mi PAS · 32 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 52V · 25Ah · 1300Wh</li>
-    <li><span class="bf-label">Charging</span> ~8 hr · Removable pack <span class="bf-note" title="Same 52V 25Ah platform as Ultra Urban">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-poor">23.6 Wh/mi PAS · 40.6 Wh/mi throttle · 42.3 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$2,000+ · 28 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="zooz-ultra-cush">+ Compare</button>
             <button type="button" class="btn-hide" data-id="zooz-ultra-cush" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="zooz-ultra-cush" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="jetson-bolt-pro"
           data-tier="budget"
           data-price="500.0"
@@ -2259,113 +878,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="jetson-bolt-pro" aria-label="View Jetson Bolt Pro details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/jetson-bolt-pro.jpg" alt="Jetson Bolt Pro" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Jetson Bolt Pro</h3>
+            <div class="price-big">$500.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 63</span>
               
-              <img class="bike-main-img" src="images/jetson-bolt-pro.jpg" alt="Jetson Bolt Pro" loading="lazy">
+              <span class="badge ok">Legal</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Jetson Bolt Pro photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/jetson-bolt-pro.jpg" aria-label="Photo 1">
-                <img src="images/jetson-bolt-pro.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/jetson-bolt-pro-2.jpg" aria-label="Photo 2">
-                <img src="images/jetson-bolt-pro-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/jetson-bolt-pro-3.jpg" aria-label="Photo 3">
-                <img src="images/jetson-bolt-pro-3.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/jetson-bolt-pro-4.jpg" aria-label="Photo 4">
-                <img src="images/jetson-bolt-pro-4.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Jetson Bolt Pro</h3>
-          <div class="price-big">$500.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://www.amazon.com/dp/B0G29XV1J8" target="_blank" rel="noopener" title="Prime ~1–3 days">
-              ★ Amazon $500.0
-            </a>
-            
-            
-            
-            
-            
-            <a class="buy-alt" href="https://ridejetson.com/products/bolt-electric-bike-pro" target="_blank" rel="noopener" title="Direct ship">
-              Direct $510
-            </a>
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 63</span>
-            
-            
-            <span class="badge ok">Legal</span>
-            
-            
-          </div>
-          <p>$300–600 · 15.5 mph · <span class="brake-label brake-mechanical_disc" title="Mechanical Disc">Mechanical Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">1.7×</strong> · <span class="vs-speed-delta">+0.5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>Blue</span>
-            
-            <span class="color-chip"><span class="dot other"></span>Black</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Mechanical Disc</li>
-              
-              <li class="ok">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="ok">Reflectors</li>
-              
-              <li class="ok">UL battery cert</li>
-              
-              <li class="ok">Tires 2.0&#34; wide</li>
-              
-              <li class="ok">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 30 mi PAS · 15 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 36V · 6Ah · 216Wh</li>
-    <li><span class="bf-label">Charging</span> ~5 hr · Onboard plug <span class="bf-note" title="36V 6Ah integrated; charge on bike">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-excellent">7.2 Wh/mi PAS · 14.4 Wh/mi throttle · 138.9 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$300–600 · 15.5 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="jetson-bolt-pro">+ Compare</button>
             <button type="button" class="btn-hide" data-id="jetson-bolt-pro" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="jetson-bolt-pro" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="hoverfly-ecompact"
           data-tier="budget"
           data-price="449.0"
@@ -2377,97 +916,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="hoverfly-ecompact" aria-label="View Hoverfly E-Compact 16&#34; details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/hoverfly-ecompact.jpg" alt="Hoverfly E-Compact 16&#34;" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Hoverfly E-Compact 16&#34;</h3>
+            <div class="price-big">$449.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 58</span>
               
-              <img class="bike-main-img" src="images/hoverfly-ecompact.jpg" alt="Hoverfly E-Compact 16&#34;" loading="lazy">
+              <span class="badge ok">Legal</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Hoverfly E-Compact 16&#34; photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/hoverfly-ecompact.jpg" aria-label="Photo 1">
-                <img src="images/hoverfly-ecompact.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/hoverfly-ecompact-2.jpg" aria-label="Photo 2">
-                <img src="images/hoverfly-ecompact-2.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Hoverfly E-Compact 16&#34;</h3>
-          <div class="price-big">$449.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://www.amazon.com/dp/B0CZ793YBN" target="_blank" rel="noopener" title="Prime ~1–3 days">
-              ★ Amazon $449.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 58</span>
-            
-            
-            <span class="badge ok">Legal</span>
-            
-            
-          </div>
-          <p>$300–600 · 15.5 mph · <span class="brake-label brake-mechanical_disc" title="Mechanical Disc">Mechanical Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">1.6×</strong> · <span class="vs-speed-delta">+0.5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>White</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Mechanical Disc</li>
-              
-              <li class="ok">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="ok">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="ok">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 25 mi PAS · 15 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 36V · 7.8Ah · 281Wh</li>
-    <li><span class="bf-label">Charging</span> ~4 hr · Removable pack <span class="bf-note" title="Compact folding pack; removable">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-good">11.2 Wh/mi PAS · 18.7 Wh/mi throttle · 89.0 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$300–600 · 15.5 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="hoverfly-ecompact">+ Compare</button>
             <button type="button" class="btn-hide" data-id="hoverfly-ecompact" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="hoverfly-ecompact" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="super73-zg"
           data-tier="premium"
           data-price="2195.0"
@@ -2479,101 +954,33 @@
           data-vehicle="ebike"
           data-luxury="0"
           data-smart="no">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="super73-zg" aria-label="View Super73 ZG details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/super73-zg.jpg" alt="Super73 ZG" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Super73 ZG</h3>
+            <div class="price-big">$2195.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 48</span>
               
-              <img class="bike-main-img" src="images/super73-zg.jpg" alt="Super73 ZG" loading="lazy">
+              <span class="badge ok">Legal</span>
+              
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Super73 ZG photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/super73-zg.jpg" aria-label="Photo 1">
-                <img src="images/super73-zg.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/super73-zg-2.jpg" aria-label="Photo 2">
-                <img src="images/super73-zg-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/super73-zg-3.jpg" aria-label="Photo 3">
-                <img src="images/super73-zg-3.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Super73 ZG</h3>
-          <div class="price-big">$2195.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://super73.com/products/super73-zg" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $2195.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 48</span>
-            
-            
-            <span class="badge ok">Legal</span>
-            
-            
-          </div>
-          <p>$2,000+ · 20 mph · <span class="brake-label brake-mechanical_disc" title="Mechanical Disc">Mechanical Disc</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">7.6×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>White</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Mechanical Disc</li>
-              
-              <li class="miss">Front brake</li>
-              
-              <li class="ok">Rear brake</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">Reflectors</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="miss">Wide tires (≥ 2.0&#34;)</li>
-              
-              <li class="ok">Speed limiter</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 35 mi PAS · 22 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 48V · 10Ah · 480Wh</li>
-    <li><span class="bf-label">Charging</span> ~5 hr · Removable pack <span class="bf-note" title="Removable battery; Super73 pack">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-average">13.7 Wh/mi PAS · 21.8 Wh/mi throttle · 72.9 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-          <div class="card-actions">
+            <p class="card-meta">$2,000+ · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="super73-zg">+ Compare</button>
             <button type="button" class="btn-hide" data-id="super73-zg" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="super73-zg" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="gotrax-g4"
           data-tier="scooter"
           data-price="399.0"
@@ -2585,147 +992,35 @@
           data-vehicle="scooter"
           data-luxury="23"
           data-smart="yes">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="gotrax-g4" aria-label="View Gotrax G4 details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/gotrax-g4.jpg" alt="Gotrax G4" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Gotrax G4 <span class="badge vehicle-scooter">Scooter</span></h3>
+            <div class="price-big">$399.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 91</span>
               
-              <img class="bike-main-img" src="images/gotrax-g4.jpg" alt="Gotrax G4" loading="lazy">
+              <span class="badge ok">OK</span>
+              
+              
+              <span class="badge luxury">Smart</span>
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Gotrax G4 photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/gotrax-g4.jpg" aria-label="Photo 1">
-                <img src="images/gotrax-g4.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/gotrax-g4-2.jpg" aria-label="Photo 2">
-                <img src="images/gotrax-g4-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/gotrax-g4-3.jpg" aria-label="Photo 3">
-                <img src="images/gotrax-g4-3.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Gotrax G4 <span class="badge vehicle-scooter">Scooter</span></h3>
-          <div class="price-big">$399.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://www.amazon.com/dp/B08VW6W6BP" target="_blank" rel="noopener" title="Prime ~1–3 days">
-              ★ Amazon $399.0
-            </a>
-            
-            
-            
-            
-            
-            <a class="buy-alt" href="https://gotrax.com/products/g4-electric-scooter-for-adults" target="_blank" rel="noopener" title="Direct ship">
-              Direct $469
-            </a>
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 91</span>
-            
-            <span class="badge luxury">Smart 23</span>
-            
-            
-            <span class="badge ok">OK w/ rules</span>
-            
-            
-          </div>
-          <p>E-Scooters · 20 mph · <span class="brake-label brake-electronic_disc" title="Disc + regen">⚡Disc + regen</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">1.4×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot black"></span>Black</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Disc + regen</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="ok">UL battery cert</li>
-              
-              <li class="ok">≤20 mph</li>
-              
-              <li class="miss">Water resistant</li>
-              
-              <li class="ok">Reflectors</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 28 mi PAS · 25 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 36V · 10.4Ah · 374Wh</li>
-    <li><span class="bf-label">Charging</span> ~4 hr · Onboard plug <span class="bf-note" title="Built-in pack; charge on scooter">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-average">13.4 Wh/mi PAS · 15.0 Wh/mi throttle · 74.9 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-<div class="feature-equip">
-  <span class="feature-equip-title">Smart &amp; luxury <span class="luxury-score-badge">★ 23</span></span>
-  <ul class="feature-facts">
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Security</span>
-      <span class="feature-tags"><span class="feature-tag ok" title="Built-in lock">Built-in lock</span><span class="feature-tag miss" title="Cable / U-lock mount">Cable / U-lock mount</span><span class="feature-tag miss" title="Anti-theft alarm">Anti-theft alarm</span><span class="feature-tag miss" title="Motor immobilizer">Motor immobilizer</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Tracking</span>
-      <span class="feature-tags"><span class="feature-tag miss" title="GPS live tracking">GPS live tracking</span><span class="feature-tag miss" title="Find My / location history">Find My / location history</span><span class="feature-tag miss" title="Geofence alerts">Geofence alerts</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">App</span>
-      <span class="feature-tags"><span class="feature-tag ok" title="Companion app (iOS/Android)">Companion app (iOS/Android)</span><span class="feature-tag ok" title="Ride stats &amp; history">Ride stats &amp; history</span><span class="feature-tag miss" title="Over-the-air firmware updates">Over-the-air firmware updates</span><span class="feature-tag miss" title="Remote lock / unlock">Remote lock / unlock</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Audio</span>
-      <span class="feature-tags"><span class="feature-tag miss" title="Built-in Bluetooth speaker">Built-in Bluetooth speaker</span><span class="feature-tag miss" title="Phone mount included">Phone mount included</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Premium</span>
-      <span class="feature-tags"><span class="feature-tag miss" title="Suspension (front or dual)">Suspension (front or dual)</span><span class="feature-tag miss" title="Regenerative braking">Regenerative braking</span><span class="feature-tag miss" title="Cruise control">Cruise control</span><span class="feature-tag miss" title="Turn signals">Turn signals</span><span class="feature-tag miss" title="Keyless / NFC start">Keyless / NFC start</span><span class="feature-tag ok" title="Compact fold">Compact fold</span><span class="feature-tag miss" title="Water resistance IPX5+">Water resistance IPX5+</span></span>
-    </li>
-    
-    
-  </ul>
-</div>
-
-          <div class="card-actions">
+            <p class="card-meta">E-Scooters · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="gotrax-g4">+ Compare</button>
             <button type="button" class="btn-hide" data-id="gotrax-g4" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="gotrax-g4" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="segway-ninebot-f2"
           data-tier="scooter"
           data-price="549.0"
@@ -2737,131 +1032,35 @@
           data-vehicle="scooter"
           data-luxury="51"
           data-smart="yes">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="segway-ninebot-f2" aria-label="View Segway Ninebot F2 details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <span class="placeholder-icon">🚲</span>
+                
+              </div>
+            </div>
+            <h3>Segway Ninebot F2 <span class="badge vehicle-scooter">Scooter</span></h3>
+            <div class="price-big">$549.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 99</span>
               
-              <span class="placeholder-icon">🚲</span>
+              <span class="badge ok">OK</span>
+              
+              
+              <span class="badge luxury">Smart</span>
               
             </div>
-            
-          </div>
-          <h3>Segway Ninebot F2 <span class="badge vehicle-scooter">Scooter</span></h3>
-          <div class="price-big">$549.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://www.amazon.com/dp/B0CJ2Y8ZQ1" target="_blank" rel="noopener" title="Prime ~1–3 days">
-              ★ Amazon $549.0
-            </a>
-            
-            
-            
-            
-            
-            <a class="buy-alt" href="https://www.segway.com/ninebot-f2/" target="_blank" rel="noopener" title="Direct ship">
-              Direct $599
-            </a>
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 99</span>
-            
-            <span class="badge luxury">Smart 51</span>
-            
-            
-            <span class="badge ok">OK w/ rules</span>
-            
-            
-          </div>
-          <p>E-Scooters · 20 mph · <span class="brake-label brake-electronic_disc" title="Disc + regen">⚡Disc + regen</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">1.9×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot black"></span>Dark gray</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Disc + regen</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="ok">UL battery cert</li>
-              
-              <li class="ok">≤20 mph</li>
-              
-              <li class="ok">Water resistant</li>
-              
-              <li class="ok">Reflectors</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 25 mi PAS · 22 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 36V · 10.2Ah · 367Wh</li>
-    <li><span class="bf-label">Charging</span> ~5 hr · Onboard plug <span class="bf-note" title="Ninebot battery; Segway app shows charge level">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-average">14.7 Wh/mi PAS · 16.7 Wh/mi throttle · 68.1 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-<div class="feature-equip">
-  <span class="feature-equip-title">Smart &amp; luxury <span class="luxury-score-badge">★ 51</span></span>
-  <ul class="feature-facts">
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Security</span>
-      <span class="feature-tags"><span class="feature-tag miss" title="Built-in lock">Built-in lock</span><span class="feature-tag miss" title="Cable / U-lock mount">Cable / U-lock mount</span><span class="feature-tag ok" title="Anti-theft alarm">Anti-theft alarm</span><span class="feature-tag miss" title="Motor immobilizer">Motor immobilizer</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Tracking</span>
-      <span class="feature-tags"><span class="feature-tag miss" title="GPS live tracking">GPS live tracking</span><span class="feature-tag ok" title="Find My / location history">Find My / location history</span><span class="feature-tag miss" title="Geofence alerts">Geofence alerts</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">App</span>
-      <span class="feature-tags"><span class="feature-tag ok" title="Companion app (iOS/Android)">Companion app (iOS/Android)</span><span class="feature-tag ok" title="Ride stats &amp; history">Ride stats &amp; history</span><span class="feature-tag ok" title="Over-the-air firmware updates">Over-the-air firmware updates</span><span class="feature-tag ok" title="Remote lock / unlock">Remote lock / unlock</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Audio</span>
-      <span class="feature-tags"><span class="feature-tag miss" title="Built-in Bluetooth speaker">Built-in Bluetooth speaker</span><span class="feature-tag miss" title="Phone mount included">Phone mount included</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Premium</span>
-      <span class="feature-tags"><span class="feature-tag miss" title="Suspension (front or dual)">Suspension (front or dual)</span><span class="feature-tag miss" title="Regenerative braking">Regenerative braking</span><span class="feature-tag ok" title="Cruise control">Cruise control</span><span class="feature-tag miss" title="Turn signals">Turn signals</span><span class="feature-tag miss" title="Keyless / NFC start">Keyless / NFC start</span><span class="feature-tag ok" title="Compact fold">Compact fold</span><span class="feature-tag ok" title="Water resistance IPX5+">Water resistance IPX5+</span></span>
-    </li>
-    
-    
-  </ul>
-</div>
-
-          <div class="card-actions">
+            <p class="card-meta">E-Scooters · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="segway-ninebot-f2">+ Compare</button>
             <button type="button" class="btn-hide" data-id="segway-ninebot-f2" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="segway-ninebot-f2" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="segway-ninebot-max-g2"
           data-tier="scooter"
           data-price="799.0"
@@ -2873,131 +1072,35 @@
           data-vehicle="scooter"
           data-luxury="67"
           data-smart="yes">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="segway-ninebot-max-g2" aria-label="View Segway Ninebot Max G2 details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <span class="placeholder-icon">🚲</span>
+                
+              </div>
+            </div>
+            <h3>Segway Ninebot Max G2 <span class="badge vehicle-scooter">Scooter</span></h3>
+            <div class="price-big">$799.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 99</span>
               
-              <span class="placeholder-icon">🚲</span>
+              <span class="badge ok">OK</span>
+              
+              
+              <span class="badge luxury">Smart</span>
               
             </div>
-            
-          </div>
-          <h3>Segway Ninebot Max G2 <span class="badge vehicle-scooter">Scooter</span></h3>
-          <div class="price-big">$799.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://www.amazon.com/dp/B0CGV8ZQ1K" target="_blank" rel="noopener" title="Prime ~1–3 days">
-              ★ Amazon $799.0
-            </a>
-            
-            
-            
-            
-            
-            <a class="buy-alt" href="https://www.segway.com/ninebot-max-g2/" target="_blank" rel="noopener" title="Direct ship">
-              Direct $899
-            </a>
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 99</span>
-            
-            <span class="badge luxury">Smart 67</span>
-            
-            
-            <span class="badge ok">OK w/ rules</span>
-            
-            
-          </div>
-          <p>E-Scooters · 20 mph · <span class="brake-label brake-electronic_disc" title="Disc + regen">⚡Disc + regen</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">2.8×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot black"></span>Black</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Disc + regen</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="ok">UL battery cert</li>
-              
-              <li class="ok">≤20 mph</li>
-              
-              <li class="ok">Water resistant</li>
-              
-              <li class="ok">Reflectors</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 43 mi PAS · 35 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 36V · 17Ah · 612Wh</li>
-    <li><span class="bf-label">Charging</span> ~6 hr · Onboard plug <span class="bf-note" title="Large Ninebot pack; best-in-class range">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-average">14.2 Wh/mi PAS · 17.5 Wh/mi throttle · 70.3 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-<div class="feature-equip">
-  <span class="feature-equip-title">Smart &amp; luxury <span class="luxury-score-badge">★ 67</span></span>
-  <ul class="feature-facts">
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Security</span>
-      <span class="feature-tags"><span class="feature-tag miss" title="Built-in lock">Built-in lock</span><span class="feature-tag ok" title="Cable / U-lock mount">Cable / U-lock mount</span><span class="feature-tag ok" title="Anti-theft alarm">Anti-theft alarm</span><span class="feature-tag miss" title="Motor immobilizer">Motor immobilizer</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Tracking</span>
-      <span class="feature-tags"><span class="feature-tag miss" title="GPS live tracking">GPS live tracking</span><span class="feature-tag ok" title="Find My / location history">Find My / location history</span><span class="feature-tag miss" title="Geofence alerts">Geofence alerts</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">App</span>
-      <span class="feature-tags"><span class="feature-tag ok" title="Companion app (iOS/Android)">Companion app (iOS/Android)</span><span class="feature-tag ok" title="Ride stats &amp; history">Ride stats &amp; history</span><span class="feature-tag ok" title="Over-the-air firmware updates">Over-the-air firmware updates</span><span class="feature-tag ok" title="Remote lock / unlock">Remote lock / unlock</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Audio</span>
-      <span class="feature-tags"><span class="feature-tag miss" title="Built-in Bluetooth speaker">Built-in Bluetooth speaker</span><span class="feature-tag miss" title="Phone mount included">Phone mount included</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Premium</span>
-      <span class="feature-tags"><span class="feature-tag ok" title="Suspension (front or dual)">Suspension (front or dual)</span><span class="feature-tag ok" title="Regenerative braking">Regenerative braking</span><span class="feature-tag ok" title="Cruise control">Cruise control</span><span class="feature-tag miss" title="Turn signals">Turn signals</span><span class="feature-tag miss" title="Keyless / NFC start">Keyless / NFC start</span><span class="feature-tag ok" title="Compact fold">Compact fold</span><span class="feature-tag ok" title="Water resistance IPX5+">Water resistance IPX5+</span></span>
-    </li>
-    
-    
-  </ul>
-</div>
-
-          <div class="card-actions">
+            <p class="card-meta">E-Scooters · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="segway-ninebot-max-g2">+ Compare</button>
             <button type="button" class="btn-hide" data-id="segway-ninebot-max-g2" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="segway-ninebot-max-g2" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="niu-kqi3-max"
           data-tier="scooter"
           data-price="899.0"
@@ -3009,133 +1112,35 @@
           data-vehicle="scooter"
           data-luxury="81"
           data-smart="yes">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="niu-kqi3-max" aria-label="View NIU KQi3 Max details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <span class="placeholder-icon">🚲</span>
+                
+              </div>
+            </div>
+            <h3>NIU KQi3 Max <span class="badge vehicle-scooter">Scooter</span></h3>
+            <div class="price-big">$899.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 99</span>
               
-              <span class="placeholder-icon">🚲</span>
+              <span class="badge ok">OK</span>
+              
+              
+              <span class="badge luxury">Smart</span>
               
             </div>
-            
-          </div>
-          <h3>NIU KQi3 Max <span class="badge vehicle-scooter">Scooter</span></h3>
-          <div class="price-big">$899.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://www.amazon.com/dp/B0B5XQZQ1K" target="_blank" rel="noopener" title="Prime ~1–3 days">
-              ★ Amazon $899.0
-            </a>
-            
-            
-            
-            
-            
-            <a class="buy-alt" href="https://www.niu.com/en-us/product/kqi3-max" target="_blank" rel="noopener" title="Direct ship">
-              Direct $999
-            </a>
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 99</span>
-            
-            <span class="badge luxury">Smart 81</span>
-            
-            
-            <span class="badge ok">OK w/ rules</span>
-            
-            
-          </div>
-          <p>E-Scooters · 20 mph · <span class="brake-label brake-electronic_disc" title="Disc + regen">⚡Disc + regen</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">3.1×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot white"></span>White</span>
-            
-            <span class="color-chip"><span class="dot gray"></span>Gray</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Disc + regen</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="ok">UL battery cert</li>
-              
-              <li class="ok">≤20 mph</li>
-              
-              <li class="ok">Water resistant</li>
-              
-              <li class="ok">Reflectors</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 31 mi PAS · 26 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 48V · 7.8Ah · 374Wh</li>
-    <li><span class="bf-label">Charging</span> ~5 hr · Onboard plug <span class="bf-note" title="NIU smart BMS; app-tracked battery health">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-average">12.1 Wh/mi PAS · 14.4 Wh/mi throttle · 82.9 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-<div class="feature-equip">
-  <span class="feature-equip-title">Smart &amp; luxury <span class="luxury-score-badge">★ 81</span></span>
-  <ul class="feature-facts">
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Security</span>
-      <span class="feature-tags"><span class="feature-tag ok" title="Built-in lock">Built-in lock</span><span class="feature-tag miss" title="Cable / U-lock mount">Cable / U-lock mount</span><span class="feature-tag ok" title="Anti-theft alarm">Anti-theft alarm</span><span class="feature-tag ok" title="Motor immobilizer">Motor immobilizer</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Tracking</span>
-      <span class="feature-tags"><span class="feature-tag ok" title="GPS live tracking">GPS live tracking</span><span class="feature-tag miss" title="Find My / location history">Find My / location history</span><span class="feature-tag ok" title="Geofence alerts">Geofence alerts</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">App</span>
-      <span class="feature-tags"><span class="feature-tag ok" title="Companion app (iOS/Android)">Companion app (iOS/Android)</span><span class="feature-tag ok" title="Ride stats &amp; history">Ride stats &amp; history</span><span class="feature-tag ok" title="Over-the-air firmware updates">Over-the-air firmware updates</span><span class="feature-tag ok" title="Remote lock / unlock">Remote lock / unlock</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Audio</span>
-      <span class="feature-tags"><span class="feature-tag miss" title="Built-in Bluetooth speaker">Built-in Bluetooth speaker</span><span class="feature-tag miss" title="Phone mount included">Phone mount included</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Premium</span>
-      <span class="feature-tags"><span class="feature-tag miss" title="Suspension (front or dual)">Suspension (front or dual)</span><span class="feature-tag ok" title="Regenerative braking">Regenerative braking</span><span class="feature-tag ok" title="Cruise control">Cruise control</span><span class="feature-tag miss" title="Turn signals">Turn signals</span><span class="feature-tag ok" title="Keyless / NFC start">Keyless / NFC start</span><span class="feature-tag ok" title="Compact fold">Compact fold</span><span class="feature-tag ok" title="Water resistance IPX5+">Water resistance IPX5+</span></span>
-    </li>
-    
-    
-  </ul>
-</div>
-
-          <div class="card-actions">
+            <p class="card-meta">E-Scooters · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="niu-kqi3-max">+ Compare</button>
             <button type="button" class="btn-hide" data-id="niu-kqi3-max" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="niu-kqi3-max" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="apollo-city-pro"
           data-tier="scooter"
           data-price="1299.0"
@@ -3147,141 +1152,35 @@
           data-vehicle="scooter"
           data-luxury="80"
           data-smart="yes">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="apollo-city-pro" aria-label="View Apollo City Pro details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <img class="bike-main-img" src="images/apollo-city-pro.jpg" alt="Apollo City Pro" loading="lazy">
+                
+              </div>
+            </div>
+            <h3>Apollo City Pro <span class="badge vehicle-scooter">Scooter</span></h3>
+            <div class="price-big">$1299.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 85</span>
               
-              <img class="bike-main-img" src="images/apollo-city-pro.jpg" alt="Apollo City Pro" loading="lazy">
+              <span class="badge ok">OK</span>
+              
+              
+              <span class="badge luxury">Smart</span>
               
             </div>
-            
-            <div class="gallery-thumbs" role="group" aria-label="Apollo City Pro photos">
-              
-              <button type="button" class="gallery-thumb active" data-src="images/apollo-city-pro.jpg" aria-label="Photo 1">
-                <img src="images/apollo-city-pro.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/apollo-city-pro-2.jpg" aria-label="Photo 2">
-                <img src="images/apollo-city-pro-2.jpg" alt="" loading="lazy">
-              </button>
-              
-              <button type="button" class="gallery-thumb" data-src="images/apollo-city-pro-3.jpg" aria-label="Photo 3">
-                <img src="images/apollo-city-pro-3.jpg" alt="" loading="lazy">
-              </button>
-              
-            </div>
-            
-          </div>
-          <h3>Apollo City Pro <span class="badge vehicle-scooter">Scooter</span></h3>
-          <div class="price-big">$1299.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://apolloscooters.co/products/apollo-city-pro" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $1299.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 85</span>
-            
-            <span class="badge luxury">Smart 80</span>
-            
-            
-            <span class="badge ok">OK w/ rules</span>
-            
-            
-          </div>
-          <p>E-Scooters · 25 mph · <span class="brake-label brake-electronic_disc" title="Disc + regen">⚡Disc + regen</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">4.5×</strong> · <span class="vs-speed-delta">+10 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot black"></span>Black</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Disc + regen</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="ok">UL battery cert</li>
-              
-              <li class="miss">≤20 mph</li>
-              
-              <li class="miss">Water resistant</li>
-              
-              <li class="ok">Reflectors</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 38 mi PAS · 30 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 52V · 15Ah · 780Wh</li>
-    <li><span class="bf-label">Charging</span> ~6 hr · Onboard plug <span class="bf-note" title="52V Apollo pack; regen extends range">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-poor">20.5 Wh/mi PAS · 26.0 Wh/mi throttle · 48.7 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-<div class="feature-equip">
-  <span class="feature-equip-title">Smart &amp; luxury <span class="luxury-score-badge">★ 80</span></span>
-  <ul class="feature-facts">
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Security</span>
-      <span class="feature-tags"><span class="feature-tag miss" title="Built-in lock">Built-in lock</span><span class="feature-tag miss" title="Cable / U-lock mount">Cable / U-lock mount</span><span class="feature-tag ok" title="Anti-theft alarm">Anti-theft alarm</span><span class="feature-tag miss" title="Motor immobilizer">Motor immobilizer</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Tracking</span>
-      <span class="feature-tags"><span class="feature-tag ok" title="GPS live tracking">GPS live tracking</span><span class="feature-tag ok" title="Find My / location history">Find My / location history</span><span class="feature-tag miss" title="Geofence alerts">Geofence alerts</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">App</span>
-      <span class="feature-tags"><span class="feature-tag ok" title="Companion app (iOS/Android)">Companion app (iOS/Android)</span><span class="feature-tag ok" title="Ride stats &amp; history">Ride stats &amp; history</span><span class="feature-tag ok" title="Over-the-air firmware updates">Over-the-air firmware updates</span><span class="feature-tag ok" title="Remote lock / unlock">Remote lock / unlock</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Audio</span>
-      <span class="feature-tags"><span class="feature-tag miss" title="Built-in Bluetooth speaker">Built-in Bluetooth speaker</span><span class="feature-tag ok" title="Phone mount included">Phone mount included</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Premium</span>
-      <span class="feature-tags"><span class="feature-tag ok" title="Suspension (front or dual)">Suspension (front or dual)</span><span class="feature-tag ok" title="Regenerative braking">Regenerative braking</span><span class="feature-tag ok" title="Cruise control">Cruise control</span><span class="feature-tag ok" title="Turn signals">Turn signals</span><span class="feature-tag miss" title="Keyless / NFC start">Keyless / NFC start</span><span class="feature-tag ok" title="Compact fold">Compact fold</span><span class="feature-tag miss" title="Water resistance IPX5+">Water resistance IPX5+</span></span>
-    </li>
-    
-    
-  </ul>
-</div>
-
-          <div class="card-actions">
+            <p class="card-meta">E-Scooters · 25 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="apollo-city-pro">+ Compare</button>
             <button type="button" class="btn-hide" data-id="apollo-city-pro" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="apollo-city-pro" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="unagi-model-one"
           data-tier="scooter"
           data-price="990.0"
@@ -3293,126 +1192,48 @@
           data-vehicle="scooter"
           data-luxury="49"
           data-smart="yes">
-          <div class="bike-media">
-            <div class="bike-thumb">
+          <button type="button" class="card-open" data-id="unagi-model-one" aria-label="View Unagi Model One Classic details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                
+                <span class="placeholder-icon">🚲</span>
+                
+              </div>
+            </div>
+            <h3>Unagi Model One Classic <span class="badge vehicle-scooter">Scooter</span></h3>
+            <div class="price-big">$990.0</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety 84</span>
               
-              <span class="placeholder-icon">🚲</span>
+              <span class="badge ok">OK</span>
+              
+              
+              <span class="badge luxury">Smart</span>
               
             </div>
-            
-          </div>
-          <h3>Unagi Model One Classic <span class="badge vehicle-scooter">Scooter</span></h3>
-          <div class="price-big">$990.0 <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            
-            <a class="buy-best" href="https://unagiscooters.com/products/model-one-classic" target="_blank" rel="noopener" title="Direct ship">
-              ★ Direct $990.0
-            </a>
-            
-            
-            
-            
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety 84</span>
-            
-            <span class="badge luxury">Smart 49</span>
-            
-            
-            <span class="badge ok">OK w/ rules</span>
-            
-            
-          </div>
-          <p>E-Scooters · 20 mph · <span class="brake-label brake-electronic_disc" title="Disc + regen">⚡Disc + regen</span></p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">3.4×</strong> · <span class="vs-speed-delta">+5 mph</span></p>
-          <div class="color-chips">
-            
-            <span class="color-chip"><span class="dot black"></span>Matte black</span>
-            
-            <span class="color-chip"><span class="dot blue"></span>Cosmic blue</span>
-            
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              
-              <li class="ok">Disc + regen</li>
-              
-              <li class="ok">Front light</li>
-              
-              <li class="ok">Rear light</li>
-              
-              <li class="miss">UL battery cert</li>
-              
-              <li class="ok">≤20 mph</li>
-              
-              <li class="ok">Water resistant</li>
-              
-              <li class="ok">Reflectors</li>
-              
-            </ul>
-          </div>
-          <div class="battery-equip">
-  <span class="battery-equip-title">Battery &amp; range</span>
-  <ul class="battery-facts">
-    <li><span class="bf-label">Range</span> 12 mi PAS · 10 mi throttle</li>
-    <li><span class="bf-label">Capacity</span> 36V · 9Ah · 324Wh</li>
-    <li><span class="bf-label">Charging</span> ~4 hr · Onboard plug <span class="bf-note" title="Dual-motor premium deck; shorter range vs commuters">ⓘ</span></li>
-    
-    <li><span class="bf-label">Efficiency</span> <span class="efficiency-tag efficiency-poor">27.0 Wh/mi PAS · 32.4 Wh/mi throttle · 37.0 mi/kWh</span></li>
-    
-  </ul>
-</div>
-          
-<div class="feature-equip">
-  <span class="feature-equip-title">Smart &amp; luxury <span class="luxury-score-badge">★ 49</span></span>
-  <ul class="feature-facts">
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Security</span>
-      <span class="feature-tags"><span class="feature-tag ok" title="Built-in lock">Built-in lock</span><span class="feature-tag miss" title="Cable / U-lock mount">Cable / U-lock mount</span><span class="feature-tag miss" title="Anti-theft alarm">Anti-theft alarm</span><span class="feature-tag miss" title="Motor immobilizer">Motor immobilizer</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Tracking</span>
-      <span class="feature-tags"><span class="feature-tag miss" title="GPS live tracking">GPS live tracking</span><span class="feature-tag miss" title="Find My / location history">Find My / location history</span><span class="feature-tag miss" title="Geofence alerts">Geofence alerts</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">App</span>
-      <span class="feature-tags"><span class="feature-tag ok" title="Companion app (iOS/Android)">Companion app (iOS/Android)</span><span class="feature-tag ok" title="Ride stats &amp; history">Ride stats &amp; history</span><span class="feature-tag ok" title="Over-the-air firmware updates">Over-the-air firmware updates</span><span class="feature-tag miss" title="Remote lock / unlock">Remote lock / unlock</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Audio</span>
-      <span class="feature-tags"><span class="feature-tag miss" title="Built-in Bluetooth speaker">Built-in Bluetooth speaker</span><span class="feature-tag ok" title="Phone mount included">Phone mount included</span></span>
-    </li>
-    
-    
-    
-    
-    <li class="feature-group-row"><span class="bf-label">Premium</span>
-      <span class="feature-tags"><span class="feature-tag miss" title="Suspension (front or dual)">Suspension (front or dual)</span><span class="feature-tag ok" title="Regenerative braking">Regenerative braking</span><span class="feature-tag ok" title="Cruise control">Cruise control</span><span class="feature-tag miss" title="Turn signals">Turn signals</span><span class="feature-tag ok" title="Keyless / NFC start">Keyless / NFC start</span><span class="feature-tag ok" title="Compact fold">Compact fold</span><span class="feature-tag ok" title="Water resistance IPX5+">Water resistance IPX5+</span></span>
-    </li>
-    
-    
-  </ul>
-</div>
-
-          <div class="card-actions">
+            <p class="card-meta">E-Scooters · 20 mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="unagi-model-one">+ Compare</button>
             <button type="button" class="btn-hide" data-id="unagi-model-one" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="unagi-model-one" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         
+      </div>
+    </section>
+
+    <section class="baseline-panel baseline-panel--compact" id="baselinePanel">
+      <div class="baseline-bar">
+        <h2 class="baseline-title">Comparison baseline</h2>
+        <label class="baseline-picker">Compare against
+          <select id="baselineSelect" aria-label="Select comparison baseline"></select>
+        </label>
+        <button type="button" class="btn-ghost btn-baseline-toggle" id="btnBaselineExpand" aria-expanded="false">Show details</button>
+      </div>
+      <div class="baseline-expanded" id="baselineExpanded" hidden>
+        <div id="baselineMedia" class="bike-media"></div>
+        <div id="baselineDetails" class="baseline-info"></div>
       </div>
     </section>
 
@@ -4678,6 +2499,20 @@
         <a href="https://www.huntingtonbeachca.gov/departments/police/about_us/pd_division/alternative_vehicle_safety.php" target="_blank" rel="noopener">Children&#39;s Hospital Colorado / national pediatric reports (2025)</a>
       </div>
       
+    </section>
+    </div>
+
+    <section id="detailView" class="detail-view" hidden aria-label="Product details">
+      <nav class="detail-breadcrumb">
+        <button type="button" class="btn-back-detail" id="btnDetailBack">← Back to browse</button>
+        <span id="detailBreadcrumb" class="detail-crumb"></span>
+      </nav>
+      <div class="detail-layout">
+        <div id="detailGallery" class="detail-gallery"></div>
+        <div id="detailBuyBox" class="detail-buybox"></div>
+      </div>
+      <div id="detailSpecs" class="detail-specs"></div>
+      <div id="detailSimilar" class="detail-similar"></div>
     </section>
   </div>
 

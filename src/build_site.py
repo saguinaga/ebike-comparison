@@ -84,7 +84,7 @@ def build(root: Path, min_bikes: int = 18) -> None:
             "safety_checklist": b.get("safety_checklist", []),
             "e_bike_class": b.get("e_bike_class"),
             "legal_for_age": legal_b.get("legal_for_age", True),
-            "legal_issues": legal_b.get("issues", []),
+            "legal_issues": legal_b.get("issues", []) or legal_b.get("legal_issues", []),
             "max_speed_mph": b.get("max_speed_mph"),
             "brake_type": b.get("brake_type"),
             "brake_display": b.get("brake_display", format_brake(b.get("brake_type"))),

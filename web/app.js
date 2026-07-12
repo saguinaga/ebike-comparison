@@ -2,8 +2,11 @@
   const STORAGE = {
     hidden: "ebike_hidden_v1",
     baseline: "ebike_baseline_v1",
+    baselineHighlight: "ebike_baseline_highlight_v1",
     custom: "ebike_custom_v1",
   };
+
+  const PAGE_TITLE = "E-Bike & Scooter Comparison · Surf City HB";
 
   const catalogBikes = JSON.parse(document.getElementById("all-bikes-data")?.textContent || "[]");
   const config = JSON.parse(document.getElementById("app-config")?.textContent || "{}");
@@ -83,6 +86,11 @@
   let hiddenIds = JSON.parse(localStorage.getItem(STORAGE.hidden) || "[]");
   let customBikes = JSON.parse(localStorage.getItem(STORAGE.custom) || "[]");
   let baselineId = localStorage.getItem(STORAGE.baseline) || config.defaultBaselineId || "firmstrong-urban-lady";
+  let baselineHighlightEnabled = localStorage.getItem(STORAGE.baselineHighlight) === "1";
+  let currentDetailId = null;
+
+  const browseView = document.getElementById("browseView");
+  const detailView = document.getElementById("detailView");
 
   function saveHidden() {
     localStorage.setItem(STORAGE.hidden, JSON.stringify(hiddenIds));
@@ -92,6 +100,13 @@
   }
   function saveBaseline() {
     localStorage.setItem(STORAGE.baseline, baselineId);
+  }
+  function saveBaselineHighlight() {
+    localStorage.setItem(STORAGE.baselineHighlight, baselineHighlightEnabled ? "1" : "0");
+  }
+  function enableBaselineHighlight() {
+    baselineHighlightEnabled = true;
+    saveBaselineHighlight();
   }
 
   function formatMoney(n) {
@@ -477,7 +492,7 @@
       const bike = bikeMap[card.dataset.id];
       card.classList.toggle("efficiency-preferred", f.highlightEfficient && bike && isEfficientBike(bike));
       card.classList.toggle("smart-preferred", f.highlightSmart && bike && isSmartRide(bike));
-      card.classList.toggle("is-baseline", card.dataset.id === baselineId);
+      card.classList.toggle("is-baseline", baselineHighlightEnabled && card.dataset.id === baselineId);
     });
     updateHiddenUi();
     renderCharts();
@@ -495,20 +510,6 @@
       const legalOk = f.legal === "all" || row.dataset.legal === f.legal;
       row.classList.toggle("hidden", !(tierOk && classOk && legalOk));
       row.classList.toggle("color-preferred", f.highlightColors && hasPreferredColor(row.dataset.colors));
-    });
-  }
-
-  function updateVsBaselineLines() {
-    cards().forEach((card) => {
-      const bike = bikeMap[card.dataset.id];
-      if (!bike?.vs_baseline) return;
-      const mult = card.querySelector(".vs-price-mult");
-      const delta = card.querySelector(".vs-speed-delta");
-      if (mult) mult.textContent = `${bike.vs_baseline.price_multiplier}×`;
-      if (delta) {
-        const d = bike.vs_baseline.speed_delta_mph;
-        delta.textContent = `${d >= 0 ? "+" : ""}${d} mph`;
-      }
     });
   }
 
@@ -565,6 +566,7 @@
     if (!hiddenIds.includes(id)) hiddenIds.push(id);
     compareIds = compareIds.filter((x) => x !== id);
     saveHidden();
+    if (currentDetailId === id) closeDetail();
     applyCardFilters();
     applyTableFilters();
     updateComparePanel();
@@ -577,15 +579,242 @@
     applyTableFilters();
   }
 
-  function setBaseline(id) {
+  function setBaseline(id, fromUser = true) {
     if (!bikeMap[id]) return;
     baselineId = id;
     saveBaseline();
+    if (fromUser) enableBaselineHighlight();
     applyBaselineToAll();
     renderBaselinePanel();
-    updateVsBaselineLines();
     applyCardFilters();
     updateComparePanel();
+    if (currentDetailId === id) renderDetailPage(id);
+    else if (currentDetailId) renderDetailPage(currentDetailId);
+  }
+
+  function productGallery(bike) {
+    return bike.image_gallery?.length ? bike.image_gallery : bike.image_src ? [bike.image_src] : [];
+  }
+
+  function galleryHtml(gallery, alt, mainClass = "bike-main-img") {
+    const main = gallery[0];
+    const thumbs =
+      gallery.length > 1
+        ? `<div class="gallery-thumbs" role="group" aria-label="${alt} photos">${gallery
+            .map(
+              (src, i) =>
+                `<button type="button" class="gallery-thumb${i === 0 ? " active" : ""}" data-src="${src}" aria-label="Photo ${i + 1}"><img src="${src}" alt=""></button>`
+            )
+            .join("")}</div>`
+        : "";
+    return `<div class="bike-thumb detail-hero-thumb">${
+      main ? `<img class="${mainClass}" src="${main}" alt="${alt}">` : `<span class="placeholder-icon">🚲</span>`
+    }</div>${thumbs}`;
+  }
+
+  function buyLinksHtml(bike) {
+    const best = bike.best_buy_url
+      ? `<a class="buy-best" href="${bike.best_buy_url}" target="_blank" rel="noopener" title="${bike.best_buy_delivery || ""}">
+          ★ ${bike.best_buy_platform || "Buy"} ${formatMoney(bike.landed_price_usd || bike.price)}
+        </a>`
+      : "";
+    const alts = (bike.price_sources || [])
+      .filter((src) => src.url && src.url !== bike.best_buy_url)
+      .map(
+        (src) =>
+          `<a class="buy-alt" href="${src.url}" target="_blank" rel="noopener" title="${src.delivery_note || ""}">
+            ${src.platform_label} $${src.landed_usd != null ? Math.round(src.landed_usd) : "—"}${src.is_search_url ? " ↗" : ""}
+          </a>`
+      )
+      .join("");
+    return best || alts ? `<div class="buy-links">${best}${alts}</div>` : "";
+  }
+
+  function compactCardInner(bike) {
+    const gallery = productGallery(bike);
+    const img = gallery[0]
+      ? `<img class="bike-main-img" src="${gallery[0]}" alt="${bike.brand} ${bike.model}" loading="lazy">`
+      : `<span class="placeholder-icon">🚲</span>`;
+    const vehicleBadge =
+      bike.vehicle_type === "scooter" ? ` <span class="badge vehicle-scooter">Scooter</span>` : "";
+    const customBadge = bike.id?.startsWith("custom-") ? ` <span class="badge info">Custom</span>` : "";
+    const legalBadge = bike.legal_for_age !== false
+      ? `<span class="badge ok">${bike.vehicle_type === "scooter" ? "OK" : "Legal"}</span>`
+      : `<span class="badge danger">✗</span>`;
+    const smartBadge =
+      bike.feature_display?.is_smart || (bike.features && formatFeatureDisplay(bike.features).is_smart)
+        ? `<span class="badge luxury">Smart</span>`
+        : "";
+    const tier = bike.tier_label || tierLabels[bike.tier] || bike.tier || "—";
+    return `
+      <button type="button" class="card-open" data-id="${bike.id}" aria-label="View ${bike.brand} ${bike.model} details">
+        <div class="bike-media"><div class="bike-thumb bike-thumb-compact">${img}</div></div>
+        <h3>${bike.brand} ${bike.model}${vehicleBadge}${customBadge}</h3>
+        <div class="price-big">${formatMoney(bikePrice(bike))}</div>
+        <div class="badges badges-compact">
+          <span class="badge ok">Safety ${bike.safety_score}</span>
+          ${legalBadge}
+          ${smartBadge}
+        </div>
+        <p class="card-meta">${tier} · ${bike.max_speed_mph || "?"} mph</p>
+        <span class="card-cta">View details →</span>
+      </button>
+      <div class="card-actions card-actions-compact">
+        <button type="button" class="btn-compare" data-id="${bike.id}">+ Compare</button>
+        <button type="button" class="btn-hide" data-id="${bike.id}">Hide</button>
+      </div>`;
+  }
+
+  function renderDetailPage(id) {
+    const bike = bikeMap[id];
+    if (!bike) return;
+    const baseline = getBaseline();
+    const vs = bike.vs_baseline;
+    const gallery = productGallery(bike);
+    const kind =
+      bike.is_baseline || bike.motor_w === 0
+        ? "Pedal"
+        : bike.vehicle_type === "scooter"
+          ? "E-scooter"
+          : `Class ${bike.e_bike_class || "?"}`;
+
+    document.getElementById("detailGallery").innerHTML = galleryHtml(
+      gallery,
+      `${bike.brand} ${bike.model}`,
+      "bike-main-img detail-hero-img"
+    );
+    document.getElementById("detailBreadcrumb").textContent = `Browse › ${bike.brand} ${bike.model}`;
+
+    const recBadge = bike.friend_recommended ? `<span class="badge info">Recommended</span>` : "";
+    const smartScore = bike.feature_display?.luxury_score || bike.luxury_score;
+    const smartBadge = smartScore ? `<span class="badge luxury">Smart ${smartScore}</span>` : "";
+    const legalBadge =
+      bike.legal_for_age !== false
+        ? `<span class="badge ok">${bike.vehicle_type === "scooter" ? "OK w/ rules" : "Legal"}</span>`
+        : `<span class="badge danger">Not legal age 12</span>`;
+
+    const vsBlock =
+      vs && bike.id !== baseline.id
+        ? `<div class="detail-vs-baseline">
+            <span class="detail-vs-label">vs ${baseline.brand} ${baseline.model}</span>
+            <strong>${vs.price_multiplier}×</strong> price ·
+            <strong>${vs.speed_delta_mph >= 0 ? "+" : ""}${vs.speed_delta_mph} mph</strong>
+          </div>`
+        : "";
+
+    const compareOn = compareIds.includes(id);
+    document.getElementById("detailBuyBox").innerHTML = `
+      <h1 class="detail-title">${bike.brand} ${bike.model}</h1>
+      <div class="detail-price">${formatMoney(bikePrice(bike))} <span class="price-note">landed</span></div>
+      ${buyLinksHtml(bike)}
+      <div class="badges detail-badges">
+        <span class="badge ok">Safety ${bike.safety_score}</span>
+        ${smartBadge}
+        ${legalBadge}
+        ${recBadge}
+      </div>
+      <p class="detail-meta">${bike.tier_label || tierLabels[bike.tier] || bike.tier} · ${kind} · ${bike.max_speed_mph || "?"} mph · ${brakeHtml(bike)}</p>
+      ${vsBlock}
+      <div class="detail-actions">
+        <button type="button" class="btn-compare detail-action-btn${compareOn ? " active" : ""}" data-id="${bike.id}">${compareOn ? "✓ Comparing" : "+ Compare"}</button>
+        <button type="button" class="btn-baseline detail-action-btn" data-id="${bike.id}">Set baseline</button>
+        <button type="button" class="btn-hide detail-action-btn" data-id="${bike.id}">Hide</button>
+      </div>`;
+
+    const checklist = (bike.safety_checklist || buildChecklist(bike))
+      .map((i) => `<li class="${i.ok ? "ok" : "miss"}">${i.label}</li>`)
+      .join("");
+    const colors = (bike.colors || [])
+      .map((c) => `<span class="color-chip"><span class="dot ${c.family}"></span>${c.name}</span>`)
+      .join("");
+    const legalIssues = (bike.legal_issues || [])
+      .map((issue) => `<li>${issue}</li>`)
+      .join("");
+
+    document.getElementById("detailSpecs").innerHTML = `
+      <section class="detail-spec-block">
+        <h3>Safety equipment</h3>
+        <ul class="checklist checklist-compact">${checklist}</ul>
+      </section>
+      <section class="detail-spec-block">${batteryBlockHtml(bike)}</section>
+      <section class="detail-spec-block">${featureBlockHtml(bike) || ""}</section>
+      ${
+        colors
+          ? `<section class="detail-spec-block"><h3>Colors</h3><div class="color-chips">${colors}</div></section>`
+          : ""
+      }
+      ${
+        legalIssues
+          ? `<section class="detail-spec-block detail-legal-issues"><h3>Legal notes</h3><ul>${legalIssues}</ul></section>`
+          : ""
+      }`;
+
+    const similar = Object.values(bikeMap)
+      .filter((b) => b.id !== id && b.tier === bike.tier && !hiddenIds.includes(b.id))
+      .slice(0, 4);
+    const similarEl = document.getElementById("detailSimilar");
+    if (similar.length) {
+      similarEl.innerHTML = `
+        <h3 class="detail-similar-title">More in ${bike.tier_label || tierLabels[bike.tier] || bike.tier}</h3>
+        <div class="detail-similar-grid">${similar
+          .map(
+            (b) => `
+          <button type="button" class="detail-similar-card" data-id="${b.id}">
+            ${productGallery(b)[0] ? `<img src="${productGallery(b)[0]}" alt="">` : `<span class="placeholder-icon">🚲</span>`}
+            <span>${b.brand} ${b.model}</span>
+            <span class="detail-similar-price">${formatMoney(bikePrice(b))}</span>
+          </button>`
+          )
+          .join("")}</div>`;
+      similarEl.hidden = false;
+    } else {
+      similarEl.innerHTML = "";
+      similarEl.hidden = true;
+    }
+
+    document.title = `${bike.brand} ${bike.model} · Surf City HB`;
+  }
+
+  function parseRoute() {
+    const hash = location.hash.replace(/^#/, "");
+    const m = hash.match(/^\/?ride\/([^/?#]+)/);
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+
+  function showDetailView(id) {
+    currentDetailId = id;
+    browseView.hidden = true;
+    detailView.hidden = false;
+    renderDetailPage(id);
+    window.scrollTo(0, 0);
+  }
+
+  function openDetail(id) {
+    if (!bikeMap[id]) {
+      closeDetail();
+      return;
+    }
+    const target = `#/ride/${encodeURIComponent(id)}`;
+    if (location.hash !== target) location.hash = target;
+    else showDetailView(id);
+  }
+
+  function closeDetail(skipHash) {
+    currentDetailId = null;
+    if (!skipHash && location.hash.match(/#\/ride\//)) {
+      history.replaceState(null, "", location.pathname + location.search);
+    }
+    browseView.hidden = false;
+    detailView.hidden = true;
+    document.title = PAGE_TITLE;
+    window.scrollTo(0, 0);
+  }
+
+  function handleRoute() {
+    const id = parseRoute();
+    if (id && bikeMap[id]) showDetailView(id);
+    else if (id) closeDetail(true);
+    else if (currentDetailId) closeDetail(true);
   }
 
   function renderCharts() {
@@ -943,7 +1172,7 @@
   function appendCustomBikeCard(bike) {
     if (!cardGrid) return;
     const article = document.createElement("article");
-    article.className = "bike-card custom-bike";
+    article.className = "bike-card bike-card-compact custom-bike";
     article.dataset.id = bike.id;
     article.dataset.tier = bike.tier || "other";
     article.dataset.price = bike.price;
@@ -955,26 +1184,7 @@
     article.dataset.efficiency = bike.battery_display?.wh_per_mile_pas ?? "";
     article.dataset.luxury = bike.luxury_score ?? "";
     article.dataset.smart = bike.feature_display?.is_smart ? "yes" : "no";
-    const checklist = (bike.safety_checklist || [])
-      .map((i) => `<li class="${i.ok ? "ok" : "miss"}">${i.label}</li>`)
-      .join("");
-    article.innerHTML = `
-      <div class="bike-media"><div class="bike-thumb">${
-        bike.image_src ? `<img class="bike-main-img" src="${bike.image_src}" alt="">` : `<span class="placeholder-icon">🚲</span>`
-      }</div></div>
-      <h3>${bike.brand} ${bike.model} <span class="badge info">Custom</span></h3>
-      <div class="price-big">${formatMoney(bike.price)} <span class="price-note">your entry</span></div>
-      <div class="badges"><span class="badge ok">Safety ${bike.safety_score}</span></div>
-      <p>${bike.tier_label || "Custom"} · ${bike.max_speed_mph} mph · ${brakeHtml(bike)}</p>
-      <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">${bike.vs_baseline?.price_multiplier}×</strong> · <span class="vs-speed-delta">${bike.vs_baseline?.speed_delta_mph >= 0 ? "+" : ""}${bike.vs_baseline?.speed_delta_mph} mph</span></p>
-      <div class="safety-equip"><span class="safety-equip-title">Safety equipment</span><ul class="checklist checklist-compact">${checklist}</ul></div>
-      ${batteryBlockHtml(bike)}
-      ${featureBlockHtml(bike)}
-      <div class="card-actions">
-        <button type="button" class="btn-compare" data-id="${bike.id}">+ Compare</button>
-        <button type="button" class="btn-hide" data-id="${bike.id}">Hide</button>
-        <button type="button" class="btn-baseline" data-id="${bike.id}">Set baseline</button>
-      </div>`;
+    article.innerHTML = compactCardInner(bike);
     cardGrid.appendChild(article);
   }
 
@@ -1037,17 +1247,19 @@
     hiddenIds = [];
     customBikes = [];
     baselineId = config.defaultBaselineId;
+    baselineHighlightEnabled = false;
     localStorage.removeItem(STORAGE.hidden);
     localStorage.removeItem(STORAGE.custom);
     localStorage.removeItem(STORAGE.baseline);
+    localStorage.removeItem(STORAGE.baselineHighlight);
     document.querySelectorAll(".custom-bike").forEach((el) => el.remove());
     bikeMap = getCatalogMap();
     applyBaselineToAll();
     renderBaselinePanel();
-    updateVsBaselineLines();
     applyCardFilters();
     applyTableFilters();
     updateComparePanel();
+    if (currentDetailId) renderDetailPage(currentDetailId);
   }
 
   // Event wiring
@@ -1066,14 +1278,42 @@
     el?.addEventListener("change", applyTableFilters)
   );
 
-  document.getElementById("baselineSelect")?.addEventListener("change", (e) => setBaseline(e.target.value));
+  document.getElementById("baselineSelect")?.addEventListener("change", (e) => setBaseline(e.target.value, true));
+
+  document.getElementById("btnBaselineExpand")?.addEventListener("click", () => {
+    const panel = document.getElementById("baselineExpanded");
+    const btn = document.getElementById("btnBaselineExpand");
+    if (!panel || !btn) return;
+    const open = panel.hidden;
+    panel.hidden = !open;
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    btn.textContent = open ? "Hide details" : "Show details";
+  });
+
+  document.getElementById("btnDetailBack")?.addEventListener("click", () => closeDetail());
+  window.addEventListener("hashchange", handleRoute);
 
   document.addEventListener("click", (e) => {
+    const cardOpen = e.target.closest(".card-open");
+    if (cardOpen?.dataset.id) {
+      openDetail(cardOpen.dataset.id);
+      return;
+    }
+    const similarCard = e.target.closest(".detail-similar-card");
+    if (similarCard?.dataset.id) {
+      openDetail(similarCard.dataset.id);
+      return;
+    }
+    const tableRow = e.target.closest("#compareTable tbody tr[data-id]");
+    if (tableRow?.dataset.id && !e.target.closest("a")) {
+      openDetail(tableRow.dataset.id);
+      return;
+    }
     const thumb = e.target.closest(".gallery-thumb");
     if (thumb) {
       e.preventDefault();
-      const media = thumb.closest(".bike-media");
-      const main = media?.querySelector(".bike-main-img");
+      const media = thumb.closest(".bike-media, .detail-gallery");
+      const main = media?.querySelector(".bike-main-img, .detail-hero-img");
       if (main && thumb.dataset.src) {
         main.src = thumb.dataset.src;
         media.querySelectorAll(".gallery-thumb").forEach((t) => t.classList.toggle("active", t === thumb));
@@ -1100,6 +1340,7 @@
         compareIds.push(id);
       }
       updateComparePanel();
+      if (currentDetailId === id) renderDetailPage(id);
     }
     const restoreOne = e.target.closest(".btn-restore-one");
     if (restoreOne) {
@@ -1208,9 +1449,9 @@
   });
   applyBaselineToAll();
   renderBaselinePanel();
-  updateVsBaselineLines();
   applyCardFilters();
   applyTableFilters();
   updateComparePanel();
   renderCharts();
+  handleRoute();
 })();

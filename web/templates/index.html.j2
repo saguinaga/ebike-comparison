@@ -87,8 +87,9 @@
     <div class="hero-content">
       <span class="hero-badge">Surf City · Huntington Beach</span>
       <h1>E-Bike &amp; Scooter Comparison</h1>
-      <p class="hero-sub">{{ ebike_count }} e-bikes · {{ scooter_count }} e-scooters · school &amp; commute · 5'2" rider baseline</p>
+      <p class="hero-sub">{{ ebike_count }} e-bikes · {{ scooter_count }} e-scooters · school &amp; commute · Huntington Beach</p>
       <nav class="quick-links">
+        <a href="#bikes">Browse</a>
         <a href="#compare-panel">Side-by-Side</a>
         <a href="#charts-section">Charts</a>
         <a href="#table-section">Table</a>
@@ -99,17 +100,7 @@
   </header>
 
   <div class="container">
-    <section class="baseline-panel" id="baselinePanel">
-      <div id="baselineMedia" class="bike-media"></div>
-      <div class="baseline-info">
-        <h2 class="section-title" style="margin:0;border:0;padding:0;">Comparison baseline</h2>
-        <label class="baseline-picker">Compare against
-          <select id="baselineSelect" aria-label="Select comparison baseline"></select>
-        </label>
-        <div id="baselineDetails"></div>
-      </div>
-    </section>
-
+    <div id="browseView">
     <div class="user-controls" id="userControls">
       <button type="button" class="btn-secondary" id="btnAddBike">+ Add bike (URL)</button>
       <button type="button" class="btn-secondary" id="btnRestoreHidden" hidden>Restore hidden (<span id="hiddenCount">0</span>)</button>
@@ -175,7 +166,7 @@
       </div>
       <div class="card-grid" id="cardGrid">
         {% for bike in bikes %}
-        <article class="bike-card"
+        <article class="bike-card bike-card-compact"
           data-id="{{ bike.id }}"
           data-tier="{{ bike.tier }}"
           data-price="{{ bike.landed_price_usd or bike.price_usd }}"
@@ -187,78 +178,54 @@
           data-vehicle="{{ bike.vehicle_type or 'ebike' }}"
           data-luxury="{{ bike.feature_display.luxury_score if bike.feature_display else 0 }}"
           data-smart="{{ 'yes' if bike.feature_display and bike.feature_display.is_smart else 'no' }}">
-          <div class="bike-media">
-            <div class="bike-thumb">
-              {% if bike.image_gallery %}
-              <img class="bike-main-img" src="{{ bike.image_gallery[0] }}" alt="{{ bike.brand }} {{ bike.model }}" loading="lazy">
-              {% elif bike.image_src %}
-              <img class="bike-main-img" src="{{ bike.image_src }}" alt="{{ bike.brand }} {{ bike.model }}" loading="lazy">
+          <button type="button" class="card-open" data-id="{{ bike.id }}" aria-label="View {{ bike.brand }} {{ bike.model }} details">
+            <div class="bike-media">
+              <div class="bike-thumb bike-thumb-compact">
+                {% if bike.image_gallery %}
+                <img class="bike-main-img" src="{{ bike.image_gallery[0] }}" alt="{{ bike.brand }} {{ bike.model }}" loading="lazy">
+                {% elif bike.image_src %}
+                <img class="bike-main-img" src="{{ bike.image_src }}" alt="{{ bike.brand }} {{ bike.model }}" loading="lazy">
+                {% else %}
+                <span class="placeholder-icon">🚲</span>
+                {% endif %}
+              </div>
+            </div>
+            <h3>{{ bike.brand }} {{ bike.model }}{% if bike.vehicle_type == 'scooter' %} <span class="badge vehicle-scooter">Scooter</span>{% endif %}</h3>
+            <div class="price-big">${{ bike.landed_price_usd or bike.price_usd }}</div>
+            <div class="badges badges-compact">
+              <span class="badge ok">Safety {{ bike.safety_score }}</span>
+              {% if bike.legal.legal_for_age %}
+              <span class="badge ok">{% if bike.vehicle_type == 'scooter' %}OK{% else %}Legal{% endif %}</span>
               {% else %}
-              <span class="placeholder-icon">🚲</span>
+              <span class="badge danger">✗</span>
+              {% endif %}
+              {% if bike.feature_display and bike.feature_display.is_smart %}
+              <span class="badge luxury">Smart</span>
               {% endif %}
             </div>
-            {% if bike.image_gallery | length > 1 %}
-            <div class="gallery-thumbs" role="group" aria-label="{{ bike.brand }} {{ bike.model }} photos">
-              {% for img in bike.image_gallery %}
-              <button type="button" class="gallery-thumb{% if loop.first %} active{% endif %}" data-src="{{ img }}" aria-label="Photo {{ loop.index }}">
-                <img src="{{ img }}" alt="" loading="lazy">
-              </button>
-              {% endfor %}
-            </div>
-            {% endif %}
-          </div>
-          <h3>{{ bike.brand }} {{ bike.model }}{% if bike.vehicle_type == 'scooter' %} <span class="badge vehicle-scooter">Scooter</span>{% endif %}</h3>
-          <div class="price-big">${{ bike.landed_price_usd or bike.price_usd }} <span class="price-note">landed</span></div>
-          <div class="buy-links">
-            {% if bike.best_buy_url %}
-            <a class="buy-best" href="{{ bike.best_buy_url }}" target="_blank" rel="noopener" title="{{ bike.best_buy_delivery }}">
-              ★ {{ bike.best_buy_platform }} ${{ bike.landed_price_usd }}{% if bike.best_buy_shipping_usd %} (+${{ bike.best_buy_shipping_usd|int }} ship){% endif %}
-            </a>
-            {% endif %}
-            {% for src in bike.price_sources %}
-            {% if src.url and src.url != bike.best_buy_url %}
-            <a class="buy-alt" href="{{ src.url }}" target="_blank" rel="noopener" title="{{ src.delivery_note }}">
-              {{ src.platform_label }} ${{ src.landed_usd|int }}{% if src.is_search_url %} ↗{% endif %}
-            </a>
-            {% endif %}
-            {% endfor %}
-          </div>
-          <div class="badges">
-            <span class="badge ok">Safety {{ bike.safety_score }}</span>
-            {% if bike.feature_display and bike.feature_display.luxury_score %}
-            <span class="badge luxury">Smart {{ bike.feature_display.luxury_score }}</span>
-            {% endif %}
-            {% if bike.legal.legal_for_age %}
-            <span class="badge ok">{% if bike.vehicle_type == 'scooter' %}OK w/ rules{% else %}Legal{% endif %}</span>
-            {% else %}
-            <span class="badge danger">Class {{ bike.e_bike_class }} ✗</span>
-            {% endif %}
-            {% if bike.friend_recommended %}<span class="badge info">Recommended</span>{% endif %}
-          </div>
-          <p>{{ tier_labels.get(bike.tier, bike.tier) }} · {{ bike.max_speed_mph }} mph · {{ brake_label(bike.brake_display) }}</p>
-          <p class="vs-baseline-line">vs baseline: <strong class="vs-price-mult">{{ bike.vs_baseline.price_multiplier }}×</strong> · <span class="vs-speed-delta">+{{ bike.vs_baseline.speed_delta_mph }} mph</span></p>
-          <div class="color-chips">
-            {% for c in bike.colors %}
-            <span class="color-chip"><span class="dot {{ c.family }}"></span>{{ c.name }}</span>
-            {% endfor %}
-          </div>
-          <div class="safety-equip">
-            <span class="safety-equip-title">Safety equipment</span>
-            <ul class="checklist checklist-compact">
-              {% for item in bike.safety_checklist %}
-              <li class="{{ 'ok' if item.ok else 'miss' }}">{{ item.label }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-          {{ battery_block(bike.battery_display) }}
-          {{ feature_block(bike.feature_checklist, bike.feature_display) }}
-          <div class="card-actions">
+            <p class="card-meta">{{ tier_labels.get(bike.tier, bike.tier) }} · {{ bike.max_speed_mph }} mph</p>
+            <span class="card-cta">View details →</span>
+          </button>
+          <div class="card-actions card-actions-compact">
             <button type="button" class="btn-compare" data-id="{{ bike.id }}">+ Compare</button>
             <button type="button" class="btn-hide" data-id="{{ bike.id }}" title="Hide from view">Hide</button>
-            <button type="button" class="btn-baseline" data-id="{{ bike.id }}" title="Use as comparison baseline">Set baseline</button>
           </div>
         </article>
         {% endfor %}
+      </div>
+    </section>
+
+    <section class="baseline-panel baseline-panel--compact" id="baselinePanel">
+      <div class="baseline-bar">
+        <h2 class="baseline-title">Comparison baseline</h2>
+        <label class="baseline-picker">Compare against
+          <select id="baselineSelect" aria-label="Select comparison baseline"></select>
+        </label>
+        <button type="button" class="btn-ghost btn-baseline-toggle" id="btnBaselineExpand" aria-expanded="false">Show details</button>
+      </div>
+      <div class="baseline-expanded" id="baselineExpanded" hidden>
+        <div id="baselineMedia" class="bike-media"></div>
+        <div id="baselineDetails" class="baseline-info"></div>
       </div>
     </section>
 
@@ -395,6 +362,20 @@
         <a href="{{ stat.url }}" target="_blank" rel="noopener">{{ stat.source }} ({{ stat.date }})</a>
       </div>
       {% endfor %}
+    </section>
+    </div>
+
+    <section id="detailView" class="detail-view" hidden aria-label="Product details">
+      <nav class="detail-breadcrumb">
+        <button type="button" class="btn-back-detail" id="btnDetailBack">← Back to browse</button>
+        <span id="detailBreadcrumb" class="detail-crumb"></span>
+      </nav>
+      <div class="detail-layout">
+        <div id="detailGallery" class="detail-gallery"></div>
+        <div id="detailBuyBox" class="detail-buybox"></div>
+      </div>
+      <div id="detailSpecs" class="detail-specs"></div>
+      <div id="detailSimilar" class="detail-similar"></div>
     </section>
   </div>
 
