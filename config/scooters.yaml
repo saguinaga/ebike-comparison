@@ -12,10 +12,6 @@ scooters:
     lights: {front: true, rear: true}
     ul_certified: true
     sources:
-      - platform: amazon
-        url: "https://www.amazon.com/dp/B08VW6W6BP"
-        price_usd: 399
-        shipping_usd: 0
       - platform: manufacturer
         url: "https://gotrax.com/products/g4-electric-scooter-for-adults"
         price_usd: 469
@@ -43,10 +39,6 @@ scooters:
     lights: {front: true, rear: true}
     ul_certified: true
     sources:
-      - platform: amazon
-        url: "https://www.amazon.com/dp/B0CJ2Y8ZQ1"
-        price_usd: 549
-        shipping_usd: 0
       - platform: manufacturer
         url: "https://www.segway.com/ninebot-f2/"
         price_usd: 599
@@ -65,7 +57,7 @@ scooters:
       cruise_control: true
       ip_rating: "IPX5"
     manual:
-      image_url: "https://m.media-amazon.com/images/I/61mKpVYqKzL._AC_SL1500_.jpg"
+      image_url: "https://segway.imgix.net/catalog/product/cache/d3ec3723470ff918c92e447639eaf984/f/2/f2-1_2.png"
 
   - id: segway-ninebot-max-g2
     tier: scooter
@@ -79,10 +71,6 @@ scooters:
     lights: {front: true, rear: true}
     ul_certified: true
     sources:
-      - platform: amazon
-        url: "https://www.amazon.com/dp/B0CGV8ZQ1K"
-        price_usd: 799
-        shipping_usd: 0
       - platform: manufacturer
         url: "https://www.segway.com/ninebot-max-g2/"
         price_usd: 899
@@ -103,7 +91,7 @@ scooters:
       fold_compact: true
       ip_rating: "IPX5"
     manual:
-      image_url: "https://m.media-amazon.com/images/I/71xHnHnHnHL._AC_SL1500_.jpg"
+      image_url: "https://segway.imgix.net/catalog/product/cache/d3ec3723470ff918c92e447639eaf984/m/a/max_g2-1_2.png"
 
   - id: niu-kqi3-max
     tier: scooter
@@ -117,10 +105,6 @@ scooters:
     lights: {front: true, rear: true}
     ul_certified: true
     sources:
-      - platform: amazon
-        url: "https://www.amazon.com/dp/B0B5XQZQ1K"
-        price_usd: 899
-        shipping_usd: 0
       - platform: manufacturer
         url: "https://www.niu.com/en-us/product/kqi3-max"
         price_usd: 999

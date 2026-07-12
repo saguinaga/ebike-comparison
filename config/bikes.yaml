@@ -32,10 +32,6 @@ bikes:
     brake_type: mechanical_disc
     lights: {front: true, rear: true}
     sources:
-      - platform: amazon
-        url: "https://www.amazon.com/dp/B0CGLZ9QZJ"
-        price_usd: 549
-        shipping_usd: 0
       - platform: manufacturer
         url: "https://www.heybike.com/products/mars-2-0"
         price_usd: 599
@@ -417,7 +413,7 @@ bikes:
         price_usd: 500
         shipping_usd: 10
       - platform: amazon
-        url: "https://www.amazon.com/dp/B0G29XV1J8"
+        url: "https://www.amazon.com/dp/B0D3NGHMQC"
         price_usd: 500
         shipping_usd: 0
     colors:
@@ -441,8 +437,8 @@ bikes:
     reflectors: true
     sources:
       - platform: amazon
-        url: "https://www.amazon.com/dp/B0CZ793YBN"
-        price_usd: 449
+        url: "https://www.amazon.com/dp/B0FDWZV38C"
+        price_usd: 500
         shipping_usd: 0
     colors:
       - {name: White, family: white}
