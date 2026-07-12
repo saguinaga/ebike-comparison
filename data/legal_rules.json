@@ -59,6 +59,15 @@
       "severity": "local_limit"
     }
   ],
+  "jurisdictions": [
+    {
+      "id": "huntington_beach",
+      "label": "Huntington Beach, CA",
+      "aliases": ["huntington beach", "huntington", "hb", "surf city", "92646", "92647", "92648", "92649"],
+      "local_rules_key": "huntington_beach",
+      "scooter_rule_ids": ["hb-scooter-paths"]
+    }
+  ],
   "classes": {
     "1": {"max_mph": 20, "legal_under_16": true, "description": "Pedal-assist, motor stops at 20 mph"},
     "2": {"max_mph": 20, "legal_under_16": true, "description": "Throttle-assisted, motor stops at 20 mph"},

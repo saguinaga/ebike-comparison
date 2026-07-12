@@ -59,6 +59,10 @@ class ChatHandler(BaseHTTPRequestHandler):
         body = json.loads(self.rfile.read(length) or b"{}")
         message = (body.get("message") or "").strip()
         product_id = body.get("productId")
+        location = body.get("location") or {}
+        rider_age = body.get("riderAge", 12)
+        riding_city = location.get("label") or "Huntington Beach, CA"
+        has_local = location.get("hasLocalRules", True)
         api_key = os.environ.get("XAI_API_KEY")
         if not api_key:
             self.send_response(503)
@@ -69,11 +73,18 @@ class ChatHandler(BaseHTTPRequestHandler):
             return
 
         catalog = load_catalog_snippet(product_id)
+        local_note = (
+            f"Detailed local ordinances are loaded for {riding_city}."
+            if has_local
+            else f"No detailed local ordinances are loaded for {riding_city}; give California statewide rules and tell the user to verify local path/sidewalk rules with their city."
+        )
         system = (
-            "You are Ryan, a helpful ride advisor for a family comparing e-bikes and e-scooters in Huntington Beach, CA. "
-            "Introduce yourself as Ryan when greeting. "
-            "Use only the catalog facts below. Be concise. Mention helmet rules, Class 3 under-16 ban, and 10 mph path limits when relevant. "
-            "Not legal or medical advice.\n\nCatalog:\n" + catalog
+            f"You are Ryan, a helpful ride advisor for a family comparing e-bikes and e-scooters. "
+            f"The rider is age {rider_age}. Assume primary riding area: {riding_city}. {local_note} "
+            "If the user mentions a different city, ask them to confirm their riding location before giving local path or sidewalk rules. "
+            "Introduce yourself as Ryan when greeting. Use only the catalog facts below. Be concise. "
+            "Mention helmet rules, Class 3 under-16 ban, and local path speed limits when relevant. Not legal or medical advice.\n\n"
+            f"Catalog:\n{catalog}"
         )
         payload = {
             "model": MODEL,
