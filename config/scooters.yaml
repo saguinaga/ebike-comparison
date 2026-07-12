@@ -16,18 +16,20 @@ scooters:
         url: "https://www.amazon.com/dp/B08VW6W6BP"
         price_usd: 399
         shipping_usd: 0
+      - platform: manufacturer
+        url: "https://gotrax.com/products/g4-electric-scooter-for-adults"
+        price_usd: 469
+        shipping_usd: 0
     colors:
       - {name: Black, family: black}
     features:
       companion_app: true
       ride_history: true
-      phone_mount: false
-      lock_builtin: false
-      alarm: false
+      lock_builtin: true
       fold_compact: true
       ip_rating: "IPX4"
     manual:
-      image_url: "https://m.media-amazon.com/images/I/71YqJqHnJBL._AC_SL1500_.jpg"
+      image_url: "https://gotrax.com/cdn/shop/files/g4-electric-scooter-for-adults-9284598.jpg?v=1776169808"
 
   - id: segway-ninebot-f2
     tier: scooter
@@ -158,7 +160,7 @@ scooters:
     sources:
       - platform: manufacturer
         url: "https://apolloscooters.co/products/apollo-city-pro"
-        price_usd: 1099
+        price_usd: 1299
         shipping_usd: 0
     colors:
       - {name: Black, family: black}

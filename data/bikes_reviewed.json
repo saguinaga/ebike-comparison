@@ -3784,6 +3784,12 @@
         "url": "https://www.amazon.com/dp/B08VW6W6BP",
         "price_usd": 399,
         "shipping_usd": 0
+      },
+      {
+        "platform": "manufacturer",
+        "url": "https://gotrax.com/products/g4-electric-scooter-for-adults",
+        "price_usd": 469,
+        "shipping_usd": 0
       }
     ],
     "colors": [
@@ -3795,15 +3801,14 @@
     "features": {
       "companion_app": true,
       "ride_history": true,
-      "phone_mount": false,
-      "lock_builtin": false,
-      "alarm": false,
+      "lock_builtin": true,
       "fold_compact": true,
       "ip_rating": "IPX4"
     },
-    "image_url": "https://m.media-amazon.com/images/I/71YqJqHnJBL._AC_SL1500_.jpg",
+    "image_url": "https://gotrax.com/cdn/shop/files/g4-electric-scooter-for-adults-9284598.jpg?v=1776169808",
     "image_urls": [
-      "https://m.media-amazon.com/images/I/81YqJqHnJBL._AC_SL1500_.jpg"
+      "https://gotrax.com/cdn/shop/files/g4-electric-scooter-for-adults-6755758.jpg?v=1776112319",
+      "https://gotrax.com/cdn/shop/files/g4-electric-scooter-for-adults-867355.jpg?v=1776112319"
     ],
     "battery_voltage_v": 36,
     "battery_capacity_ah": 10.4,
@@ -3824,6 +3829,17 @@
         "delivery_note": "Prime ~1\u20133 days",
         "rewards_note": "5% back on some Chase/Amazon cards",
         "is_search_url": false
+      },
+      {
+        "platform": "manufacturer",
+        "platform_label": "Direct",
+        "url": "https://gotrax.com/products/g4-electric-scooter-for-adults",
+        "item_price_usd": 469.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 469.0,
+        "delivery_note": "Direct ship",
+        "rewards_note": null,
+        "is_search_url": false
       }
     ],
     "landed_price_usd": 399.0,
@@ -3831,7 +3847,7 @@
     "best_buy_platform": "Amazon",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Prime ~1\u20133 days",
-    "safety_score": 86,
+    "safety_score": 91,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -3889,8 +3905,8 @@
         "group": "security",
         "group_label": "Security",
         "label": "Built-in lock",
-        "value": false,
-        "ok": false
+        "value": true,
+        "ok": true
       },
       {
         "key": "lock_cable",
@@ -4046,21 +4062,21 @@
       }
     ],
     "feature_display": {
-      "luxury_score": 15,
-      "feature_count": 3,
+      "luxury_score": 23,
+      "feature_count": 4,
       "by_group": {
-        "security": 0,
+        "security": 1,
         "tracking": 0,
         "app": 2,
         "audio": 0,
         "luxury": 1
       },
-      "perks_label": "Companion app (iOS/Android) \u00b7 Ride stats & history \u00b7 Compact fold",
+      "perks_label": "Built-in lock \u00b7 Companion app (iOS/Android) \u00b7 Ride stats & history \u00b7 Compact fold",
       "has_app": true,
       "has_tracking": false,
-      "has_security": false,
+      "has_security": true,
       "has_audio": false,
-      "is_smart": false
+      "is_smart": true
     },
     "legal": {
       "legal_for_age": true,
@@ -4138,9 +4154,9 @@
       "cruise_control": true,
       "ip_rating": "IPX5"
     },
-    "image_url": "https://m.media-amazon.com/images/I/61mKpVYqKzL._AC_SL1500_.jpg",
+    "image_url": "https://www.segway.com/wp-content/uploads/2024/01/ninebot-f2-hero.png",
     "image_urls": [
-      "https://www.segway.com/wp-content/uploads/2024/01/ninebot-f2-hero.png"
+      "https://www.segway.com/wp-content/uploads/2024/01/ninebot-f2-fold.png"
     ],
     "battery_voltage_v": 36,
     "battery_capacity_ah": 10.2,
@@ -4488,7 +4504,7 @@
       "fold_compact": true,
       "ip_rating": "IPX5"
     },
-    "image_url": "https://m.media-amazon.com/images/I/71xHnHnHnHL._AC_SL1500_.jpg",
+    "image_url": "https://www.segway.com/wp-content/uploads/2023/09/max-g2-hero.png",
     "image_urls": [
       "https://www.segway.com/wp-content/uploads/2023/09/max-g2-folded.png"
     ],
@@ -4844,9 +4860,9 @@
       "fold_compact": true,
       "ip_rating": "IPX5"
     },
-    "image_url": "https://www.niu.com/dw/image/v2/BDBN_PRD/on/demandware.static/-/Sites-niu-master-catalog/default/dw1a2b3c4d/images/kqi3-max-hero.png",
+    "image_url": "https://www.niu.com/dw/image/v2/BDBN_PRD/on/demandware.static/-/Sites-niu-master-catalog/default/dw6f8a9b0c/images/large/kqi3-max-white.png",
     "image_urls": [
-      "https://www.niu.com/dw/image/v2/BDBN_PRD/on/demandware.static/-/Sites-niu-master-catalog/default/dw5e6f7g8h/images/kqi3-max-fold.png"
+      "https://www.niu.com/dw/image/v2/BDBN_PRD/on/demandware.static/-/Sites-niu-master-catalog/default/dw1c2d3e4f/images/large/kqi3-max-side.png"
     ],
     "battery_voltage_v": 48,
     "battery_capacity_ah": 7.8,
@@ -5164,7 +5180,7 @@
       {
         "platform": "manufacturer",
         "url": "https://apolloscooters.co/products/apollo-city-pro",
-        "price_usd": 1099,
+        "price_usd": 1299,
         "shipping_usd": 0
       }
     ],
@@ -5190,9 +5206,10 @@
       "fold_compact": true,
       "ip_rating": "IP66"
     },
-    "image_url": "https://apolloscooters.co/cdn/shop/files/Apollo-City-Pro-2024.png?v=1710000000",
+    "image_url": "https://apolloscooters.co/cdn/shop/files/CityPro-new2023_afc1bb3a-4cea-4b53-bfdb-0530456272c0.png?v=1773931277",
     "image_urls": [
-      "https://apolloscooters.co/cdn/shop/files/apollo-city-pro-folded.png?v=1710000000"
+      "https://apolloscooters.co/cdn/shop/files/IMGL0742.jpg?v=1773931277",
+      "https://apolloscooters.co/cdn/shop/files/Creativefylms-26.jpg?v=1773931277"
     ],
     "battery_voltage_v": 52,
     "battery_capacity_ah": 15,
@@ -5207,15 +5224,15 @@
         "platform": "manufacturer",
         "platform_label": "Direct",
         "url": "https://apolloscooters.co/products/apollo-city-pro",
-        "item_price_usd": 1099.0,
+        "item_price_usd": 1299.0,
         "shipping_usd": 0.0,
-        "landed_usd": 1099.0,
+        "landed_usd": 1299.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
         "is_search_url": false
       }
     ],
-    "landed_price_usd": 1099.0,
+    "landed_price_usd": 1299.0,
     "best_buy_url": "https://apolloscooters.co/products/apollo-city-pro",
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
@@ -5477,7 +5494,7 @@
       "e_bike_class": "scooter"
     },
     "vs_baseline": {
-      "price_multiplier": 3.8,
+      "price_multiplier": 4.5,
       "speed_delta_mph": 10,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
@@ -5531,9 +5548,9 @@
       "fold_compact": true,
       "ip_rating": "IP54"
     },
-    "image_url": "https://unagiscooters.com/cdn/shop/files/Model-One-Classic-Matte-Black.png?v=1710000000",
+    "image_url": "https://unagiscooters.com/cdn/shop/files/Unagi_Model_One_Classic_Matte_Black_2048x.png?v=1697040000",
     "image_urls": [
-      "https://unagiscooters.com/cdn/shop/files/Model-One-Classic-folded.png?v=1710000000"
+      "https://unagiscooters.com/cdn/shop/files/Unagi_Model_One_Classic_Folded_2048x.png?v=1697040000"
     ],
     "battery_voltage_v": 36,
     "battery_capacity_ah": 9,
