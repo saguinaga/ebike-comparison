@@ -11,6 +11,9 @@
   const catalogBikes = JSON.parse(document.getElementById("all-bikes-data")?.textContent || "[]");
   const config = JSON.parse(document.getElementById("app-config")?.textContent || "{}");
   const tierLabels = JSON.parse(document.getElementById("tier-labels-data")?.textContent || "{}");
+  const legalRules = JSON.parse(document.getElementById("legal-rules-data")?.textContent || "{}");
+  const safetyData = JSON.parse(document.getElementById("safety-data")?.textContent || "{}");
+  const faqData = JSON.parse(document.getElementById("faq-data")?.textContent || "{}");
 
   const PREFERRED_COLORS = new Set(["white", "light_wood", "sand"]);
   const BRAKE_DISPLAY = {
@@ -277,6 +280,358 @@
     if (!body) return "";
     const extra = className ? ` ${className}` : "";
     return `<section class="detail-spec-block${extra}"><h3>${title}</h3><div class="detail-spec-body">${body}</div></section>`;
+  }
+
+  function escapeHtml(text) {
+    return String(text)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function productLabel(bike) {
+    return `${bike.brand} ${bike.model}`;
+  }
+
+  function buildProductFaq(bike) {
+    const items = [];
+    const isScooter = bike.vehicle_type === "scooter";
+    const name = productLabel(bike);
+    const bd = formatBattery(bike);
+    const brake = formatBrake(bike.brake_type);
+    const lights = bike.lights || {};
+
+    if (bike.legal_for_age === false) {
+      items.push({
+        q: `Can a 12-year-old legally ride the ${name}?`,
+        a: isScooter
+          ? "This model is flagged as not appropriate for a 12-year-old under our Huntington Beach rules checklist. Review local scooter path limits and helmet requirements before riding."
+          : bike.e_bike_class === 3
+            ? "No — California prohibits riders under 16 from operating Class 3 e-bikes (28 mph assist). Pick a Class 1 or 2 model capped at 20 mph instead."
+            : "Our checklist flags legal concerns for a 12-year-old on this model. Read the Legal notes above and verify current California and HB rules.",
+      });
+    } else {
+      const classNote =
+        !isScooter && bike.e_bike_class
+          ? ` It is a Class ${bike.e_bike_class} e-bike (${legalRules.classes?.[bike.e_bike_class]?.description || "see California e-bike classes"}).`
+          : "";
+      items.push({
+        q: `Can a 12-year-old ride the ${name}?`,
+        a: `Generally yes, with rules: riders under 18 need a helmet, night riding requires lights, and HB beach/park paths are 10 mph max.${classNote}`,
+      });
+    }
+
+    items.push({
+      q: `How fast is the ${name}?`,
+      a: `Top speed is ${bike.max_speed_mph || "—"} mph. On Huntington Beach paths you should ride at 10 mph (5 mph near pedestrians) even if the ${isScooter ? "scooter" : "bike"} can go faster.`,
+    });
+
+    if (bd.range_label && bd.range_label !== "—") {
+      items.push({
+        q: `What range can you expect on the ${name}?`,
+        a: `Estimated range is ${bd.range_label} (${bd.capacity_label} pack). Real range varies with rider weight, hills, wind, and how much you use throttle vs pedal-assist.`,
+      });
+    }
+
+    items.push({
+      q: `How safe is the ${name} for a young rider?`,
+      a: `Safety score: ${bike.safety_score ?? "—"}/100. Brakes: ${brake.label}. Front light: ${lights.front ? "yes" : "no"}. Rear light: ${lights.rear ? "yes" : "no"}. UL battery cert: ${bike.ul_certified ? "yes" : "no"}. Higher scores mean more safety equipment — not a guarantee against injury.`,
+    });
+
+    if (!isScooter && bike.e_bike_class) {
+      const cls = legalRules.classes?.[String(bike.e_bike_class)];
+      items.push({
+        q: `What e-bike class is the ${name}?`,
+        a: cls
+          ? `Class ${bike.e_bike_class}: ${cls.description}. ${cls.legal_under_16 ? "Legal for under-16 riders in California." : "Not legal for riders under 16 in California."}`
+          : `Listed as Class ${bike.e_bike_class}. Class 3 models are illegal for riders under 16 in California.`,
+      });
+    }
+
+    const smart = bike.feature_display || formatFeatureDisplay(bike.features || {}, bike.feature_checklist || []);
+    if (smart.is_smart || smart.luxury_score > 0) {
+      items.push({
+        q: `Does the ${name} have app or anti-theft features?`,
+        a: smart.perks_label && smart.perks_label !== "—"
+          ? `Yes — highlights include ${smart.perks_label}. Use the app for firmware updates and tracking, but still use a physical lock.`
+          : "Some smart features are listed above. Check the Smart & connectivity section for GPS, app, and lock options.",
+      });
+    } else if (isScooter) {
+      items.push({
+        q: `Is the ${name} a "smart" scooter?`,
+        a: "This model has few or no connected features in our database. Physical locks and parking in visible areas matter more than app features here.",
+      });
+    }
+
+    const vs = bike.vs_baseline;
+    const baseline = getBaseline();
+    if (vs && bike.id !== baseline.id) {
+      items.push({
+        q: `How does the ${name} compare on price?`,
+        a: `Versus ${baseline.brand} ${baseline.model} (${formatMoney(bikePrice(baseline))}), this ${isScooter ? "scooter" : "e-bike"} costs about ${vs.price_multiplier}× and is ${vs.speed_delta_mph >= 0 ? "+" : ""}${vs.speed_delta_mph} mph faster.`,
+      });
+    }
+
+    const issues = bike.legal_issues || [];
+    if (issues.length) {
+      items.push({
+        q: `Any local riding restrictions for the ${name}?`,
+        a: issues.slice(0, 3).join(" "),
+      });
+    }
+
+    const pool = [
+      ...(faqData.shared || []),
+      ...(isScooter ? faqData.scooter || [] : faqData.ebike || []),
+    ];
+    pool.slice(0, 2).forEach((entry) => {
+      items.push({ q: entry.q, a: entry.a, general: true });
+    });
+
+    return items;
+  }
+
+  function faqAccordionHtml(items, { productId = "" } = {}) {
+    if (!items.length) return "";
+    const rows = items
+      .map(
+        (item, i) => `
+      <details class="faq-item${i === 0 ? " faq-item--open" : ""}"${i === 0 ? " open" : ""}>
+        <summary class="faq-question">${escapeHtml(item.q)}</summary>
+        <div class="faq-answer">
+          <p>${escapeHtml(item.a)}</p>
+          <button type="button" class="faq-ask-chat" data-faq-q="${escapeHtml(item.q)}">Ask more in chat</button>
+        </div>
+      </details>`
+      )
+      .join("");
+    return `<div class="faq-accordion" data-product-id="${escapeHtml(productId)}">${rows}</div>`;
+  }
+
+  let chatDrawerOpen = false;
+  let chatHistory = [];
+  const chatDrawer = document.getElementById("chatDrawer");
+  const chatMessages = document.getElementById("chatMessages");
+  const chatSuggestions = document.getElementById("chatSuggestions");
+
+  function chatContextBike() {
+    const id = currentDetailId;
+    return id && bikeMap[id] ? bikeMap[id] : null;
+  }
+
+  function chatGreeting() {
+    const bike = chatContextBike();
+    if (bike) {
+      return `Hi! I can answer questions about the ${productLabel(bike)}, compare it to other rides in our catalog, or explain HB safety rules. What would you like to know?`;
+    }
+    return "Hi! Ask me about e-bikes and scooters in this comparison — safety scores, California rules, battery range, or which models fit a 12-year-old in Huntington Beach.";
+  }
+
+  function appendChatMessage(role, text) {
+    if (!chatMessages) return;
+    const bubble = document.createElement("div");
+    bubble.className = `chat-bubble chat-bubble--${role}`;
+    bubble.innerHTML = `<p>${escapeHtml(text).replace(/\n/g, "<br>")}</p>`;
+    chatMessages.appendChild(bubble);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    chatHistory.push({ role, text });
+  }
+
+  function renderChatSuggestions() {
+    if (!chatSuggestions) return;
+    const bike = chatContextBike();
+    const suggestions = bike
+      ? [
+          `Is the ${bike.brand} ${bike.model} safe for a 12-year-old?`,
+          `What is the range on this ${bike.vehicle_type === "scooter" ? "scooter" : "bike"}?`,
+          "What are HB path speed limits?",
+          "Compare this to my baseline",
+        ]
+      : [
+          "Best budget e-bike for a 12-year-old?",
+          "Class 2 vs Class 3 — what's the difference?",
+          "Do scooters need UL certification?",
+          "Explain the safety score",
+        ];
+    chatSuggestions.innerHTML = suggestions
+      .map((s) => `<button type="button" class="chat-chip" data-chat-suggest="${escapeHtml(s)}">${escapeHtml(s)}</button>`)
+      .join("");
+  }
+
+  function visibleCatalog() {
+    return Object.values(bikeMap).filter((b) => !b.is_baseline && !hiddenIds.includes(b.id));
+  }
+
+  function answerChatLocal(query) {
+    const q = query.trim();
+    const lower = q.toLowerCase();
+    const bike = chatContextBike();
+    const baseline = getBaseline();
+
+    if (/^(hi|hello|hey|help)\b/.test(lower)) return chatGreeting();
+
+    if (bike && /(this|current|it\b|the one)/.test(lower)) {
+      const bd = formatBattery(bike);
+      return `${productLabel(bike)}: ${formatMoney(bikePrice(bike))} landed, ${bike.max_speed_mph} mph, safety ${bike.safety_score}/100. Range ${bd.range_label}. ${bike.legal_for_age !== false ? "Passes our age-12 legal checklist." : "Fails our age-12 legal checklist — see PDP legal notes."}`;
+    }
+
+    if (bike && /range|battery|charge|mile|wh\b/.test(lower)) {
+      const bd = formatBattery(bike);
+      return `On the ${productLabel(bike)}: ${bd.range_label} estimated range, ${bd.capacity_label} battery, charges via ${bd.charge_label}. ${bd.charge_notes || ""}`.trim();
+    }
+
+    if (/(safety|brake|light|ul|cert)/.test(lower)) {
+      if (bike) {
+        const brake = formatBrake(bike.brake_type);
+        const lights = bike.lights || {};
+        return `${productLabel(bike)} safety score ${bike.safety_score}/100. Brakes: ${brake.label}. Lights F/R: ${lights.front ? "yes" : "no"}/${lights.rear ? "yes" : "no"}. UL cert: ${bike.ul_certified ? "yes" : "no"}.`;
+      }
+      return (safetyData.glossary && safetyData.glossary["Class 1"])
+        ? `Safety scores sum brakes, lights, reflectors, UL cert, and speed limiter. ${faqData.shared?.find((f) => f.id === "safety-score")?.a || ""}`
+        : "Safety scores weight equipment on each model — higher is better, but no score predicts crashes.";
+    }
+
+    if (/(legal|law|age|12|16|helmet|class\s*[123])/i.test(q)) {
+      const parts = [];
+      (legalRules.california || []).slice(0, 3).forEach((r) => parts.push(`${r.title}: ${r.summary}`));
+      (legalRules.huntington_beach || []).slice(0, 2).forEach((r) => parts.push(`${r.title}: ${r.summary}`));
+      if (bike?.e_bike_class === 3) parts.unshift("This PDP model is Class 3 — illegal for under-16 in CA.");
+      if (bike?.vehicle_type === "scooter") {
+        (legalRules.scooters || []).slice(0, 2).forEach((r) => parts.push(`${r.title}: ${r.summary}`));
+      }
+      return parts.join("\n\n");
+    }
+
+    if (/(hb|huntington|beach|path|10\s*mph|sidewalk)/i.test(q)) {
+      const hb = (legalRules.huntington_beach || []).map((r) => `• ${r.title}: ${r.summary}`).join("\n");
+      return hb || "Huntington Beach paths are generally 10 mph max (5 mph near pedestrians). Check HBPD alternative vehicle safety page for updates.";
+    }
+
+    if (bike && /compare|vs|baseline|difference/.test(lower)) {
+      const vs = bike.vs_baseline;
+      if (!vs) return `No baseline comparison saved for ${productLabel(bike)}.`;
+      return `${productLabel(bike)} vs ${baseline.brand} ${baseline.model}: ${vs.price_multiplier}× price, ${vs.speed_delta_mph >= 0 ? "+" : ""}${vs.speed_delta_mph} mph, brake upgrade: ${vs.brake_upgrade || "—"}.`;
+    }
+
+    if (/(cheapest|budget|affordable|under \$)/i.test(q)) {
+      const tier = /scooter/.test(lower) ? "scooter" : "budget";
+      const pool = visibleCatalog().filter((b) => b.tier === tier);
+      pool.sort((a, b) => bikePrice(a) - bikePrice(b));
+      const top = pool.slice(0, 3);
+      if (!top.length) return "No matching models in the current catalog.";
+      return `Lowest landed ${tier === "scooter" ? "scooters" : "budget e-bikes"}:\n${top.map((b) => `• ${productLabel(b)} — ${formatMoney(bikePrice(b))} (safety ${b.safety_score})`).join("\n")}`;
+    }
+
+    if (/(best|recommend|pick|which)/i.test(q) && /(12|kid|child|teen)/i.test(q)) {
+      const pool = visibleCatalog()
+        .filter((b) => b.legal_for_age !== false && (b.safety_score || 0) >= 50)
+        .sort((a, b) => (b.safety_score || 0) - (a.safety_score || 0) || bikePrice(a) - bikePrice(b));
+      const top = pool.slice(0, 4);
+      return top.length
+        ? `Models that pass our age-12 checklist with solid safety scores:\n${top.map((b) => `• ${productLabel(b)} — safety ${b.safety_score}, ${formatMoney(bikePrice(b))}`).join("\n")}\nOpen any card for full specs.`
+        : "No models match that filter right now — try widening your tier or vehicle filters.";
+    }
+
+    if (/scooter/.test(lower) && !bike) {
+      const entry = (faqData.scooter || [])[0];
+      return entry ? `${entry.q} ${entry.a}` : "E-scooters need helmets under 18, UL electrical certification is recommended, and HB path speed limits apply.";
+    }
+
+    if (/class\s*1|class\s*2|class\s*3/.test(lower)) {
+      const g = safetyData.glossary || {};
+      return ["Class 1", "Class 2", "Class 3"]
+        .map((k) => (g[k] ? `${k}: ${g[k]}` : null))
+        .filter(Boolean)
+        .join("\n");
+    }
+
+    if (bike) {
+      const faq = buildProductFaq(bike).find((item) => lower.includes(item.q.slice(0, 12).toLowerCase()));
+      if (faq) return faq.a;
+      return `I don't have a precise answer for that. On ${productLabel(bike)}: ${bike.max_speed_mph} mph, safety ${bike.safety_score}, ${bike.legal_for_age !== false ? "legal for age 12 per our checklist" : "not legal for age 12 per our checklist"}. Try asking about range, brakes, HB rules, or "compare to baseline".`;
+    }
+
+    const general = [...(faqData.shared || []), ...(faqData.ebike || [])].find((f) =>
+      lower.split(/\s+/).some((w) => w.length > 4 && f.q.toLowerCase().includes(w))
+    );
+    if (general) return general.a;
+
+    return "Try asking about safety scores, California helmet rules, Class 1/2/3, HB 10 mph paths, battery range, or open a product page and ask about that specific ride.";
+  }
+
+  async function answerChat(query) {
+    const apiUrl = config.chatApiUrl;
+    if (apiUrl) {
+      try {
+        const resp = await fetch(apiUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            message: query,
+            productId: currentDetailId,
+            history: chatHistory.slice(-6),
+          }),
+        });
+        if (resp.ok) {
+          const data = await resp.json();
+          if (data.reply) return data.reply;
+        }
+      } catch (_err) {
+        /* fall through to local */
+      }
+    }
+    return answerChatLocal(query);
+  }
+
+  function openChatDrawer(prefill) {
+    if (!chatDrawer) return;
+    chatDrawerOpen = true;
+    chatDrawer.hidden = false;
+    chatDrawer.setAttribute("aria-hidden", "false");
+    document.body.classList.add("chat-drawer-open");
+    const sub = document.getElementById("chatDrawerSub");
+    const bike = chatContextBike();
+    if (sub) {
+      sub.textContent = bike
+        ? `Answering about ${productLabel(bike)} — plus catalog & HB rules`
+        : "Ask about bikes, scooters, safety, and local rules";
+    }
+    renderChatSuggestions();
+    if (!chatMessages?.childElementCount) {
+      appendChatMessage("assistant", chatGreeting());
+    }
+    if (prefill) {
+      document.getElementById("chatInput").value = prefill;
+      submitChat(prefill);
+    } else {
+      document.getElementById("chatInput")?.focus();
+    }
+  }
+
+  function closeChatDrawer() {
+    if (!chatDrawer) return;
+    chatDrawerOpen = false;
+    chatDrawer.hidden = true;
+    chatDrawer.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("chat-drawer-open");
+  }
+
+  async function submitChat(text) {
+    const input = document.getElementById("chatInput");
+    const q = (text || input?.value || "").trim();
+    if (!q) return;
+    if (input) input.value = "";
+    appendChatMessage("user", q);
+    const sendBtn = document.getElementById("btnChatSend");
+    if (sendBtn) sendBtn.disabled = true;
+    appendChatMessage("assistant", "…");
+    const pending = chatMessages?.lastElementChild;
+    const reply = await answerChat(q);
+    if (pending) pending.remove();
+    appendChatMessage("assistant", reply);
+    if (sendBtn) sendBtn.disabled = false;
+    input?.focus();
   }
 
   function featureBlockHtml(bike, { detail = false } = {}) {
@@ -796,6 +1151,7 @@
       .map((issue) => `<li>${issue}</li>`)
       .join("");
 
+    const faqItems = buildProductFaq(bike);
     document.getElementById("detailSpecs").innerHTML = [
       detailSpecBlock("Safety equipment", `<ul class="checklist checklist-compact">${checklist}</ul>`),
       detailSpecBlock("Battery & range", batteryBlockHtml(bike, { detail: true })),
@@ -804,6 +1160,12 @@
       }),
       colors ? detailSpecBlock("Available colors", `<div class="color-chips color-chips--detail">${colors}</div>`) : "",
       legalIssues ? detailSpecBlock("Legal notes", `<ul class="detail-legal-list">${legalIssues}</ul>`) : "",
+      detailSpecBlock(
+        "FAQ",
+        `${faqAccordionHtml(faqItems, { productId: bike.id })}
+         <p class="faq-chat-cta">Still unsure? <button type="button" class="faq-open-chat" data-id="${bike.id}">Ask the ride advisor</button></p>`,
+        { className: "detail-spec-block--faq" }
+      ),
     ]
       .filter(Boolean)
       .join("");
@@ -845,6 +1207,7 @@
     browseView.hidden = true;
     detailView.hidden = false;
     renderDetailPage(id);
+    if (chatDrawerOpen) renderChatSuggestions();
     window.scrollTo(0, 0);
   }
 
@@ -1418,12 +1781,21 @@
   document.getElementById("btnCompareFab")?.addEventListener("click", openCompareDrawer);
   document.getElementById("btnCompareClose")?.addEventListener("click", closeCompareDrawer);
   document.getElementById("compareDrawerBackdrop")?.addEventListener("click", closeCompareDrawer);
+  document.getElementById("btnChatFab")?.addEventListener("click", () => openChatDrawer());
+  document.getElementById("btnChatClose")?.addEventListener("click", closeChatDrawer);
+  document.getElementById("chatDrawerBackdrop")?.addEventListener("click", closeChatDrawer);
+  document.getElementById("chatForm")?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    submitChat();
+  });
   heroCompareLink?.addEventListener("click", (e) => {
     e.preventDefault();
     openCompareDrawer();
   });
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && compareDrawerOpen) closeCompareDrawer();
+    if (e.key !== "Escape") return;
+    if (chatDrawerOpen) closeChatDrawer();
+    else if (compareDrawerOpen) closeCompareDrawer();
   });
 
   document.addEventListener("click", (e) => {
@@ -1471,6 +1843,21 @@
     const compareBtn = e.target.closest(".btn-compare");
     if (compareBtn?.dataset.id) {
       toggleCompare(compareBtn.dataset.id);
+      return;
+    }
+    const faqChatBtn = e.target.closest(".faq-ask-chat");
+    if (faqChatBtn?.dataset.faqQ) {
+      openChatDrawer(faqChatBtn.dataset.faqQ);
+      return;
+    }
+    const faqOpenChat = e.target.closest(".faq-open-chat");
+    if (faqOpenChat) {
+      openChatDrawer();
+      return;
+    }
+    const chatChip = e.target.closest(".chat-chip");
+    if (chatChip?.dataset.chatSuggest) {
+      submitChat(chatChip.dataset.chatSuggest);
       return;
     }
     const specToggle = e.target.closest(".btn-spec-toggle");

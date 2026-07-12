@@ -409,6 +409,30 @@
     ⚖️ Compare <span class="compare-fab-count" id="compareFabCount">0</span>
   </button>
 
+  <div id="chatDrawer" class="chat-drawer" hidden aria-hidden="true">
+    <div class="chat-drawer-backdrop" id="chatDrawerBackdrop"></div>
+    <aside class="chat-drawer-panel" role="dialog" aria-labelledby="chatDrawerTitle" aria-modal="true">
+      <header class="chat-drawer-header">
+        <div>
+          <h3 id="chatDrawerTitle">Ride advisor</h3>
+          <p class="chat-drawer-sub" id="chatDrawerSub">Ask about bikes, scooters, safety, and local rules</p>
+        </div>
+        <button type="button" class="chat-drawer-close" id="btnChatClose" aria-label="Close chat">✕</button>
+      </header>
+      <div class="chat-messages" id="chatMessages" aria-live="polite"></div>
+      <form class="chat-compose" id="chatForm">
+        <div class="chat-suggestions" id="chatSuggestions"></div>
+        <div class="chat-input-row">
+          <input type="text" id="chatInput" placeholder="Ask about this ride, safety, or HB rules…" autocomplete="off" maxlength="500">
+          <button type="submit" class="btn-primary chat-send" id="btnChatSend">Send</button>
+        </div>
+      </form>
+    </aside>
+  </div>
+  <button type="button" class="chat-fab" id="btnChatFab" aria-controls="chatDrawer" aria-label="Open ride advisor chat">
+    💬 Ask
+  </button>
+
   <dialog class="modal" id="addBikeModal">
     <form method="dialog" id="addBikeForm">
       <h3>Add a bike</h3>
@@ -463,8 +487,11 @@
 
   <script id="bikes-data" type="application/json">{{ bikes_json | safe }}</script>
   <script id="all-bikes-data" type="application/json">{{ all_bikes_json | safe }}</script>
-  <script id="app-config" type="application/json">{"defaultBaselineId": "{{ default_baseline_id }}", "mainSiteUrl": "{{ main_site_url }}"}</script>
+  <script id="app-config" type="application/json">{"defaultBaselineId": "{{ default_baseline_id }}", "mainSiteUrl": "{{ main_site_url }}", "chatApiUrl": null}</script>
   <script id="tier-labels-data" type="application/json">{{ tier_labels_json | safe }}</script>
+  <script id="legal-rules-data" type="application/json">{{ legal_json | safe }}</script>
+  <script id="safety-data" type="application/json">{{ safety_json | safe }}</script>
+  <script id="faq-data" type="application/json">{{ faq_json | safe }}</script>
   <script src="app.{{ asset_version }}.js" defer></script>
 </body>
 </html>

@@ -36,6 +36,8 @@ def build(root: Path, min_bikes: int = 18) -> None:
     bench = yaml.safe_load((root / "config" / "benchmarks.yaml").read_text(encoding="utf-8"))
     legal = json.loads((root / "data" / "legal_rules.json").read_text(encoding="utf-8"))
     safety = json.loads((root / "data" / "safety_research.json").read_text(encoding="utf-8"))
+    faq_path = root / "data" / "faq.json"
+    faq = json.loads(faq_path.read_text(encoding="utf-8")) if faq_path.exists() else {}
 
     all_bikes = bikes
     baseline = next((b for b in bikes if b.get("is_baseline")), bench["baseline"])
@@ -141,6 +143,10 @@ def build(root: Path, min_bikes: int = 18) -> None:
         rider=rider,
         legal=legal,
         safety=safety,
+        faq=faq,
+        legal_json=json.dumps(legal),
+        safety_json=json.dumps(safety),
+        faq_json=json.dumps(faq),
         main_site_url=main_site,
         generated_date=datetime.now(timezone.utc).strftime("%Y-%m-%d"),
         asset_version=asset_version,

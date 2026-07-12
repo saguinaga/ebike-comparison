@@ -1,0 +1,59 @@
+{
+  "disclaimer": "General guidance for Surf City HB — not legal or medical advice. Verify rules at official sources.",
+  "ebike": [
+    {
+      "id": "what-is-class",
+      "q": "What do Class 1, 2, and 3 e-bikes mean?",
+      "a": "Class 1 is pedal-assist only (motor stops at 20 mph). Class 2 adds a throttle but still caps at 20 mph. Class 3 is pedal-assist up to 28 mph — illegal for riders under 16 in California."
+    },
+    {
+      "id": "helmet-ca",
+      "q": "Does a 12-year-old need a helmet on an e-bike?",
+      "a": "Yes. California requires riders under 18 to wear an ASTM- or CPSC-approved helmet on streets and bikeways."
+    },
+    {
+      "id": "hb-paths",
+      "q": "How fast can you ride on Huntington Beach paths?",
+      "a": "Beach bicycle paths and city parks are 10 mph max — 5 mph when pedestrians are nearby. Many e-bikes can go faster, so speed limiting and route choice matter."
+    },
+    {
+      "id": "ul-battery",
+      "q": "What is UL battery certification?",
+      "a": "UL 2849 (or related UL listings) means the battery system was tested for electrical and fire safety. It reduces — but does not eliminate — battery fire risk. Always charge per manufacturer instructions."
+    },
+    {
+      "id": "pas-vs-throttle",
+      "q": "What is pedal-assist vs throttle?",
+      "a": "Pedal-assist boosts you only while pedaling. Throttle lets you ride without pedaling (Class 2). Throttle-only riding can drain the battery faster and may be restricted on some paths."
+    }
+  ],
+  "scooter": [
+    {
+      "id": "scooter-legal",
+      "q": "Are e-scooters legal for a 12-year-old in California?",
+      "a": "Motorized scooters can be ridden on bikeways where local rules allow, but riders under 18 must wear a helmet. Sidewalk rules vary — in Huntington Beach, slow down on paths and check HBPD guidance."
+    },
+    {
+      "id": "scooter-ul",
+      "q": "Why does UL certification matter on scooters?",
+      "a": "UL 2272 covers the electrical system of personal e-mobility devices. A listed scooter has passed standardized fire and electrical safety tests — worth prioritizing for daily charging at home."
+    },
+    {
+      "id": "scooter-app",
+      "q": "What do smart scooter features actually do?",
+      "a": "Companion apps often provide ride history, firmware updates, GPS tracking, remote lock, and anti-theft alarms. They help recovery and maintenance but do not replace a physical lock."
+    }
+  ],
+  "shared": [
+    {
+      "id": "safety-score",
+      "q": "How should I read the safety score?",
+      "a": "The score weights brakes, lights, reflectors, UL battery certification, and speed limiter. Higher is better for a young rider, but it is a checklist summary — not a crash prediction."
+    },
+    {
+      "id": "landed-price",
+      "q": "What does landed price mean?",
+      "a": "Landed price is item price plus estimated shipping to your door. We pick the lowest landed source as the default buy link when multiple stores are listed."
+    }
+  ]
+}
