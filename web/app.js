@@ -396,17 +396,22 @@
     if (!items.length) return "";
     const rows = items
       .map(
-        (item, i) => `
-      <details class="faq-item${i === 0 ? " faq-item--open" : ""}"${i === 0 ? " open" : ""}>
+        (item) => `
+      <details class="faq-item">
         <summary class="faq-question">${escapeHtml(item.q)}</summary>
-        <div class="faq-answer">
-          <p>${escapeHtml(item.a)}</p>
-          <button type="button" class="faq-ask-chat" data-faq-q="${escapeHtml(item.q)}">Ask more in chat</button>
-        </div>
+        <div class="faq-answer"><p>${escapeHtml(item.a)}</p></div>
       </details>`
       )
       .join("");
     return `<div class="faq-accordion" data-product-id="${escapeHtml(productId)}">${rows}</div>`;
+  }
+
+  function faqSectionHtml(items, { productId = "" } = {}) {
+    if (!items.length) return "";
+    return `<details class="detail-faq-fold">
+      <summary class="detail-faq-summary">Common questions about this ride</summary>
+      <div class="detail-faq-inner">${faqAccordionHtml(items, { productId })}</div>
+    </details>`;
   }
 
   let chatDrawerOpen = false;
@@ -1151,7 +1156,6 @@
       .map((issue) => `<li>${issue}</li>`)
       .join("");
 
-    const faqItems = buildProductFaq(bike);
     document.getElementById("detailSpecs").innerHTML = [
       detailSpecBlock("Safety equipment", `<ul class="checklist checklist-compact">${checklist}</ul>`),
       detailSpecBlock("Battery & range", batteryBlockHtml(bike, { detail: true })),
@@ -1160,15 +1164,17 @@
       }),
       colors ? detailSpecBlock("Available colors", `<div class="color-chips color-chips--detail">${colors}</div>`) : "",
       legalIssues ? detailSpecBlock("Legal notes", `<ul class="detail-legal-list">${legalIssues}</ul>`) : "",
-      detailSpecBlock(
-        "FAQ",
-        `${faqAccordionHtml(faqItems, { productId: bike.id })}
-         <p class="faq-chat-cta">Still unsure? <button type="button" class="faq-open-chat" data-id="${bike.id}">Ask the ride advisor</button></p>`,
-        { className: "detail-spec-block--faq" }
-      ),
     ]
       .filter(Boolean)
       .join("");
+
+    const faqEl = document.getElementById("detailFaq");
+    const faqItems = buildProductFaq(bike);
+    if (faqEl) {
+      const html = faqSectionHtml(faqItems, { productId: bike.id });
+      faqEl.innerHTML = html;
+      faqEl.hidden = !html;
+    }
 
     const similar = Object.values(bikeMap)
       .filter((b) => b.id !== id && b.tier === bike.tier && !hiddenIds.includes(b.id))
@@ -1843,16 +1849,6 @@
     const compareBtn = e.target.closest(".btn-compare");
     if (compareBtn?.dataset.id) {
       toggleCompare(compareBtn.dataset.id);
-      return;
-    }
-    const faqChatBtn = e.target.closest(".faq-ask-chat");
-    if (faqChatBtn?.dataset.faqQ) {
-      openChatDrawer(faqChatBtn.dataset.faqQ);
-      return;
-    }
-    const faqOpenChat = e.target.closest(".faq-open-chat");
-    if (faqOpenChat) {
-      openChatDrawer();
       return;
     }
     const chatChip = e.target.closest(".chat-chip");
