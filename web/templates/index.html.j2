@@ -149,6 +149,10 @@
     <section class="section" id="bikes">
       <h2 class="section-title">Browse Rides</h2>
       <div class="toolbar" id="cardToolbar">
+        <label class="rider-age-field">Rider age
+          <input type="number" id="riderAgeInput" min="8" max="99" value="{{ rider.age }}" inputmode="numeric" aria-describedby="riderAgeHint" title="Used for California legal checks (Class 3 requires 16+)">
+        </label>
+        <span class="filter-hint rider-age-hint" id="riderAgeHint">Class 3 illegal under 16 in CA</span>
         <label>Type
           <select id="vehicleFilter">
             <option value="all">All</option>
@@ -166,7 +170,7 @@
             <option value="28">28 mph</option>
           </select>
         </label>
-        <label>Legal for age 12
+        <label>Legal for age <span id="legalFilterAge">{{ rider.age }}</span>
           <select id="legalFilter">
             <option value="all">All</option>
             <option value="yes">Legal only</option>
@@ -240,9 +244,9 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety {{ bike.safety_score }}</span>
               {% if bike.legal.legal_for_age %}
-              <span class="badge ok">{% if bike.vehicle_type == 'scooter' %}OK{% else %}Legal{% endif %}</span>
+              <span class="badge ok card-legal-badge">{% if bike.vehicle_type == 'scooter' %}OK{% else %}Legal{% endif %}</span>
               {% else %}
-              <span class="badge danger">✗</span>
+              <span class="badge danger card-legal-badge">✗</span>
               {% endif %}
               {% if bike.feature_display and bike.feature_display.is_smart %}
               <span class="badge luxury">Smart</span>
@@ -321,7 +325,7 @@
             <th data-sort="weight" data-type="number">Weight</th>
             <th data-sort="class" data-type="string">Type</th>
             <th data-sort="luxury" data-type="number">Smart</th>
-            <th data-sort="legal" data-type="string">Legal</th>
+            <th data-sort="legal" data-type="string" id="tableLegalHeader">Legal (age {{ rider.age }})</th>
             <th data-sort="speed" data-type="number">Max mph</th>
             <th data-sort="range" data-type="number">Range mi</th>
             <th data-sort="battery" data-type="number">Battery</th>
@@ -361,7 +365,7 @@
             <td>{% if bike.weight_lb %}{{ bike.weight_lb }} lb{% else %}—{% endif %}</td>
             <td>{% if bike.vehicle_type == 'scooter' %}Scooter{% else %}Class {{ bike.e_bike_class }}{% endif %}</td>
             <td>{% if bike.feature_display and bike.feature_display.luxury_score %}{{ bike.feature_display.luxury_score }}{% else %}—{% endif %}</td>
-            <td>{{ 'Yes' if bike.legal.legal_for_age else 'No' }}</td>
+            <td class="table-legal-cell">{{ 'Yes' if bike.legal.legal_for_age else 'No' }}</td>
             <td>{{ bike.max_speed_mph }}</td>
             <td>{{ bike.battery_display.range_label }}</td>
             <td>{{ bike.battery_display.capacity_label }}</td>

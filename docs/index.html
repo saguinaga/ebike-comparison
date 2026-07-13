@@ -7,10 +7,10 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>E-Bike &amp; Scooter Comparison · Surf City HB</title>
-  <link rel="stylesheet" href="styles.css?v=202607130008">
+  <link rel="stylesheet" href="styles.css?v=202607130019">
   <script>
     (function () {
-      var BUILD = "202607130008";
+      var BUILD = "202607130019";
       var key = "ebike_asset_build";
       try {
         if (localStorage.getItem(key) !== BUILD) {
@@ -121,6 +121,10 @@
     <section class="section" id="bikes">
       <h2 class="section-title">Browse Rides</h2>
       <div class="toolbar" id="cardToolbar">
+        <label class="rider-age-field">Rider age
+          <input type="number" id="riderAgeInput" min="8" max="99" value="12" inputmode="numeric" aria-describedby="riderAgeHint" title="Used for California legal checks (Class 3 requires 16+)">
+        </label>
+        <span class="filter-hint rider-age-hint" id="riderAgeHint">Class 3 illegal under 16 in CA</span>
         <label>Type
           <select id="vehicleFilter">
             <option value="all">All</option>
@@ -138,7 +142,7 @@
             <option value="28">28 mph</option>
           </select>
         </label>
-        <label>Legal for age 12
+        <label>Legal for age <span id="legalFilterAge">12</span>
           <select id="legalFilter">
             <option value="all">All</option>
             <option value="yes">Legal only</option>
@@ -216,7 +220,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 18</span>
               
-              <span class="badge ok">Legal</span>
+              <span class="badge ok card-legal-badge">Legal</span>
               
               
             </div>
@@ -256,7 +260,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 48</span>
               
-              <span class="badge ok">Legal</span>
+              <span class="badge ok card-legal-badge">Legal</span>
               
               
             </div>
@@ -296,7 +300,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 48</span>
               
-              <span class="badge ok">Legal</span>
+              <span class="badge ok card-legal-badge">Legal</span>
               
               
             </div>
@@ -336,7 +340,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 48</span>
               
-              <span class="badge ok">Legal</span>
+              <span class="badge ok card-legal-badge">Legal</span>
               
               
             </div>
@@ -376,7 +380,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 55</span>
               
-              <span class="badge ok">Legal</span>
+              <span class="badge ok card-legal-badge">Legal</span>
               
               
             </div>
@@ -416,7 +420,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 48</span>
               
-              <span class="badge ok">Legal</span>
+              <span class="badge ok card-legal-badge">Legal</span>
               
               
             </div>
@@ -456,7 +460,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 55</span>
               
-              <span class="badge ok">Legal</span>
+              <span class="badge ok card-legal-badge">Legal</span>
               
               
             </div>
@@ -496,7 +500,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 48</span>
               
-              <span class="badge ok">Legal</span>
+              <span class="badge ok card-legal-badge">Legal</span>
               
               
             </div>
@@ -536,7 +540,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 48</span>
               
-              <span class="badge ok">Legal</span>
+              <span class="badge ok card-legal-badge">Legal</span>
               
               
             </div>
@@ -576,7 +580,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 48</span>
               
-              <span class="badge ok">Legal</span>
+              <span class="badge ok card-legal-badge">Legal</span>
               
               
               <span class="badge luxury">Smart</span>
@@ -618,7 +622,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 48</span>
               
-              <span class="badge ok">Legal</span>
+              <span class="badge ok card-legal-badge">Legal</span>
               
               
             </div>
@@ -658,7 +662,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 55</span>
               
-              <span class="badge ok">Legal</span>
+              <span class="badge ok card-legal-badge">Legal</span>
               
               
             </div>
@@ -698,7 +702,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 55</span>
               
-              <span class="badge ok">Legal</span>
+              <span class="badge ok card-legal-badge">Legal</span>
               
               
             </div>
@@ -738,7 +742,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 50</span>
               
-              <span class="badge danger">✗</span>
+              <span class="badge danger card-legal-badge">✗</span>
               
               
               <span class="badge luxury">Smart</span>
@@ -780,7 +784,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 48</span>
               
-              <span class="badge ok">Legal</span>
+              <span class="badge ok card-legal-badge">Legal</span>
               
               
             </div>
@@ -820,7 +824,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 50</span>
               
-              <span class="badge danger">✗</span>
+              <span class="badge danger card-legal-badge">✗</span>
               
               
             </div>
@@ -860,7 +864,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 50</span>
               
-              <span class="badge danger">✗</span>
+              <span class="badge danger card-legal-badge">✗</span>
               
               
             </div>
@@ -900,7 +904,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 50</span>
               
-              <span class="badge danger">✗</span>
+              <span class="badge danger card-legal-badge">✗</span>
               
               
             </div>
@@ -940,7 +944,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 50</span>
               
-              <span class="badge danger">✗</span>
+              <span class="badge danger card-legal-badge">✗</span>
               
               
             </div>
@@ -980,7 +984,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 63</span>
               
-              <span class="badge ok">Legal</span>
+              <span class="badge ok card-legal-badge">Legal</span>
               
               
             </div>
@@ -1020,7 +1024,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 58</span>
               
-              <span class="badge ok">Legal</span>
+              <span class="badge ok card-legal-badge">Legal</span>
               
               
             </div>
@@ -1060,7 +1064,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 48</span>
               
-              <span class="badge ok">Legal</span>
+              <span class="badge ok card-legal-badge">Legal</span>
               
               
             </div>
@@ -1100,7 +1104,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 91</span>
               
-              <span class="badge ok">OK</span>
+              <span class="badge ok card-legal-badge">OK</span>
               
               
               <span class="badge luxury">Smart</span>
@@ -1142,7 +1146,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 99</span>
               
-              <span class="badge ok">OK</span>
+              <span class="badge ok card-legal-badge">OK</span>
               
               
               <span class="badge luxury">Smart</span>
@@ -1184,7 +1188,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 99</span>
               
-              <span class="badge ok">OK</span>
+              <span class="badge ok card-legal-badge">OK</span>
               
               
               <span class="badge luxury">Smart</span>
@@ -1226,7 +1230,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 99</span>
               
-              <span class="badge ok">OK</span>
+              <span class="badge ok card-legal-badge">OK</span>
               
               
               <span class="badge luxury">Smart</span>
@@ -1268,7 +1272,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 85</span>
               
-              <span class="badge ok">OK</span>
+              <span class="badge ok card-legal-badge">OK</span>
               
               
               <span class="badge luxury">Smart</span>
@@ -1310,7 +1314,7 @@
             <div class="badges badges-compact">
               <span class="badge ok">Safety 84</span>
               
-              <span class="badge ok">OK</span>
+              <span class="badge ok card-legal-badge">OK</span>
               
               
               <span class="badge luxury">Smart</span>
@@ -1397,7 +1401,7 @@
             <th data-sort="weight" data-type="number">Weight</th>
             <th data-sort="class" data-type="string">Type</th>
             <th data-sort="luxury" data-type="number">Smart</th>
-            <th data-sort="legal" data-type="string">Legal</th>
+            <th data-sort="legal" data-type="string" id="tableLegalHeader">Legal (age 12)</th>
             <th data-sort="speed" data-type="number">Max mph</th>
             <th data-sort="range" data-type="number">Range mi</th>
             <th data-sort="battery" data-type="number">Battery</th>
@@ -1437,7 +1441,7 @@
             <td>58 lb</td>
             <td>Class 2</td>
             <td>—</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>25 mi PAS · 18 mi throttle</td>
             <td>36V · 10Ah · 360Wh</td>
@@ -1477,7 +1481,7 @@
             <td>77 lb</td>
             <td>Class 2</td>
             <td>12</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>40 mi PAS · 25 mi throttle</td>
             <td>48V · 10.4Ah · 499Wh</td>
@@ -1520,7 +1524,7 @@
             <td>48.5 lb</td>
             <td>Class 2</td>
             <td>3</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>34 mi PAS · 22 mi throttle</td>
             <td>36V · 10.4Ah · 374Wh</td>
@@ -1563,7 +1567,7 @@
             <td>55 lb</td>
             <td>Class 2</td>
             <td>—</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>35 mi PAS · 22 mi throttle</td>
             <td>36V · 10Ah · 360Wh</td>
@@ -1606,7 +1610,7 @@
             <td>70 lb</td>
             <td>Class 2</td>
             <td>—</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>35 mi PAS · 25 mi throttle</td>
             <td>48V · 12Ah · 576Wh</td>
@@ -1649,7 +1653,7 @@
             <td>49 lb</td>
             <td>Class 2</td>
             <td>20</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>45 mi PAS · 28 mi throttle</td>
             <td>48V · 10.4Ah · 499Wh</td>
@@ -1692,7 +1696,7 @@
             <td>59 lb</td>
             <td>Class 2</td>
             <td>3</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>32 mi PAS · 20 mi throttle</td>
             <td>48V · 10.4Ah (or 13.4Ah) · 499Wh</td>
@@ -1735,7 +1739,7 @@
             <td>44 lb</td>
             <td>Class 2</td>
             <td>17</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>46 mi PAS · 30 mi throttle</td>
             <td>36V · 10Ah · 360Wh</td>
@@ -1778,7 +1782,7 @@
             <td>48 lb</td>
             <td>Class 2</td>
             <td>12</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>45 mi PAS · 25 mi throttle</td>
             <td>48V · 10Ah · 480Wh</td>
@@ -1818,7 +1822,7 @@
             <td>73 lb</td>
             <td>Class 2</td>
             <td>24</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>55 mi PAS · 35 mi throttle</td>
             <td>48V · 10.4Ah · 499Wh</td>
@@ -1861,7 +1865,7 @@
             <td>64 lb</td>
             <td>Class 2</td>
             <td>20</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>60 mi PAS · 35 mi throttle</td>
             <td>48V · 14Ah · 672Wh</td>
@@ -1904,7 +1908,7 @@
             <td>77 lb</td>
             <td>Class 2</td>
             <td>12</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>45 mi PAS · 28 mi throttle</td>
             <td>48V · 14Ah · 672Wh</td>
@@ -1947,7 +1951,7 @@
             <td>44 lb</td>
             <td>Class 1</td>
             <td>—</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>30 mi PAS · 20 mi throttle</td>
             <td>36V · 7Ah · 252Wh</td>
@@ -1990,7 +1994,7 @@
             <td>54 lb</td>
             <td>Class 3</td>
             <td>29</td>
-            <td>No</td>
+            <td class="table-legal-cell">No</td>
             <td>28</td>
             <td>70 mi PAS · 40 mi throttle</td>
             <td>48V · 14.8Ah · 710Wh</td>
@@ -2033,7 +2037,7 @@
             <td>51 lb</td>
             <td>Class 2</td>
             <td>—</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>40 mi PAS · 28 mi throttle</td>
             <td>48V · 10.4Ah · 499Wh</td>
@@ -2076,7 +2080,7 @@
             <td>65 lb</td>
             <td>Class 3</td>
             <td>4</td>
-            <td>No</td>
+            <td class="table-legal-cell">No</td>
             <td>28</td>
             <td>40 mi PAS · 25 mi throttle</td>
             <td>52V · 15Ah · 780Wh</td>
@@ -2119,7 +2123,7 @@
             <td>70 lb</td>
             <td>Class 3</td>
             <td>4</td>
-            <td>No</td>
+            <td class="table-legal-cell">No</td>
             <td>28</td>
             <td>60 mi PAS · 35 mi throttle</td>
             <td>52V · 25Ah · 1300Wh</td>
@@ -2162,7 +2166,7 @@
             <td>72 lb</td>
             <td>Class 3</td>
             <td>4</td>
-            <td>No</td>
+            <td class="table-legal-cell">No</td>
             <td>28</td>
             <td>55 mi PAS · 32 mi throttle</td>
             <td>52V · 25Ah · 1300Wh</td>
@@ -2205,7 +2209,7 @@
             <td>75 lb</td>
             <td>Class 3</td>
             <td>4</td>
-            <td>No</td>
+            <td class="table-legal-cell">No</td>
             <td>28</td>
             <td>55 mi PAS · 32 mi throttle</td>
             <td>52V · 25Ah · 1300Wh</td>
@@ -2248,7 +2252,7 @@
             <td>34 lb</td>
             <td>Class 2</td>
             <td>12</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>15.5</td>
             <td>30 mi PAS · 15 mi throttle</td>
             <td>36V · 6Ah · 216Wh</td>
@@ -2291,7 +2295,7 @@
             <td>38 lb</td>
             <td>Class 2</td>
             <td>—</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>15.5</td>
             <td>25 mi PAS · 15 mi throttle</td>
             <td>36V · 7.8Ah · 281Wh</td>
@@ -2334,7 +2338,7 @@
             <td>65 lb</td>
             <td>Class 2</td>
             <td>12</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>35 mi PAS · 22 mi throttle</td>
             <td>48V · 10Ah · 480Wh</td>
@@ -2377,7 +2381,7 @@
             <td>36.3 lb</td>
             <td>Scooter</td>
             <td>23</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>28 mi PAS · 25 mi throttle</td>
             <td>36V · 10.4Ah · 374Wh</td>
@@ -2420,7 +2424,7 @@
             <td>41.9 lb</td>
             <td>Scooter</td>
             <td>51</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>25 mi PAS · 22 mi throttle</td>
             <td>36V · 10.2Ah · 367Wh</td>
@@ -2463,7 +2467,7 @@
             <td>47.6 lb</td>
             <td>Scooter</td>
             <td>67</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>43 mi PAS · 35 mi throttle</td>
             <td>36V · 17Ah · 612Wh</td>
@@ -2506,7 +2510,7 @@
             <td>44.5 lb</td>
             <td>Scooter</td>
             <td>81</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>31 mi PAS · 26 mi throttle</td>
             <td>48V · 7.8Ah · 374Wh</td>
@@ -2549,7 +2553,7 @@
             <td>52 lb</td>
             <td>Scooter</td>
             <td>80</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>25</td>
             <td>38 mi PAS · 30 mi throttle</td>
             <td>52V · 15Ah · 780Wh</td>
@@ -2592,7 +2596,7 @@
             <td>28.5 lb</td>
             <td>Scooter</td>
             <td>49</td>
-            <td>Yes</td>
+            <td class="table-legal-cell">Yes</td>
             <td>20</td>
             <td>12 mi PAS · 10 mi throttle</td>
             <td>36V · 9Ah · 324Wh</td>
@@ -2878,6 +2882,6 @@
   <script id="legal-rules-data" type="application/json">{"disclaimer": "Research summary for family discussion \u2014 not medical or legal advice. Verify at official sources.", "last_reviewed": "2026-07-12", "california": [{"id": "cvc-21213a", "title": "Under 16 cannot operate Class 3 e-bike", "summary": "A person under 16 years of age shall not operate a class 3 electric bicycle.", "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=21213.", "applies_to_age_12": true, "severity": "illegal"}, {"id": "cvc-21212a", "title": "Under 18 helmet required", "summary": "Riders under 18 must wear an ASTM or CPSC approved helmet on streets and bikeways.", "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21212.&lawCode=VEH", "applies_to_age_12": true, "severity": "required"}, {"id": "cvc-21201", "title": "Lights and reflectors required at night", "summary": "Bicycles operated at night need a white front light, red rear reflector/light, and side reflectors.", "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21201.&lawCode=VEH", "applies_to_age_12": true, "severity": "required"}], "huntington_beach": [{"id": "hb-path-10mph", "title": "Beach/park paths: 10 mph max", "summary": "Beach bicycle path and city parks: 10 mph maximum; 5 mph when pedestrians present.", "source": "https://www.huntingtonbeachca.gov/departments/police/about_us/pd_division/alternative_vehicle_safety.php", "severity": "local_limit"}, {"id": "hb-training", "title": "HBPD free e-bike training", "summary": "Huntington Beach Police offer free youth e-bike safety training with parent participation.", "source": "https://bit.ly/eBikeRiderTraining", "severity": "recommended"}], "scooters": [{"id": "cvc-scooter-helmet", "title": "E-scooter helmet under 18", "summary": "California requires helmets for riders under 18 on motorized scooters (same helmet rule as bikes on bikeways).", "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21212.&lawCode=VEH", "severity": "required"}, {"id": "hb-scooter-paths", "title": "HB paths & sidewalks", "summary": "Slow to 10 mph on beach/park paths; many areas prohibit sidewalk riding \u2014 use bike lanes or streets.", "source": "https://www.huntingtonbeachca.gov/departments/police/about_us/pd_division/alternative_vehicle_safety.php", "severity": "local_limit"}], "jurisdictions": [{"id": "huntington_beach", "label": "Huntington Beach, CA", "aliases": ["huntington beach", "huntington", "hb", "surf city", "92646", "92647", "92648", "92649"], "local_rules_key": "huntington_beach", "scooter_rule_ids": ["hb-scooter-paths"]}], "classes": {"1": {"max_mph": 20, "legal_under_16": true, "description": "Pedal-assist, motor stops at 20 mph"}, "2": {"max_mph": 20, "legal_under_16": true, "description": "Throttle-assisted, motor stops at 20 mph"}, "3": {"max_mph": 28, "legal_under_16": false, "description": "Pedal-assist, motor stops at 28 mph \u2014 illegal for under 16"}}}</script>
   <script id="safety-data" type="application/json">{"disclaimer": "Published research cited below. This is not medical advice. Correlation in studies does not prove any single bike causes injury.", "stats": [{"id": "choc-rady-2026", "headline": "Pediatric e-bike trauma linked to speed factors", "detail": "Rady Children's-led study (Feb 2026) examines how speed relates to e-bike injury severity in children and teens, as ED visits continue to rise.", "does_not_mean": "Does not mean every e-bike is dangerous \u2014 it highlights speed as a risk factor worth weighing for a 12-year-old.", "source": "CHOC / Rady Children's", "url": "https://care.choc.org/new-rady-childrens-led-e-bike-study-addresses-speed-related-trauma-risk-for-kids-and-teens/", "date": "2026-02-06"}, {"id": "cpsc-micromobility", "headline": "CPSC tracks e-bike deaths and injuries nationally", "detail": "CPSC micromobility report (2017\u20132024) documents deaths, injuries, and hazard patterns across e-bikes and related products.", "does_not_mean": "Does not mean your neighborhood has the same rate \u2014 national data sets context, not personal odds.", "source": "U.S. Consumer Product Safety Commission", "url": "https://www.cpsc.gov/s3fs-public/Micromobility_Products-Related_Deaths_Injuries_and_Hazard_Patterns_2017-2024.pdf", "date": "2024"}, {"id": "pediatric-rise", "headline": "Children's hospitals report rising pediatric e-bike injuries", "detail": "Multiple pediatric trauma centers report sharp increases in e-bike-related injuries among kids and teens, with many crashes involving vehicles.", "does_not_mean": "Does not mean walking or a pedal bike is risk-free \u2014 it means e-bike speed and traffic exposure need planning.", "source": "Children's Hospital Colorado / national pediatric reports", "url": "https://www.huntingtonbeachca.gov/departments/police/about_us/pd_division/alternative_vehicle_safety.php", "date": "2025"}], "glossary": {"Class 1": "Pedal-assist only, stops assisting at 20 mph", "Class 2": "Throttle allowed, motor stops at 20 mph", "Class 3": "Pedal-assist, stops at 28 mph \u2014 illegal to operate under age 16 in California", "ED visit": "Emergency department visit \u2014 serious but not the same as a fatality"}}</script>
   <script id="faq-data" type="application/json">{"disclaimer": "General guidance for Surf City HB \u2014 not legal or medical advice. Verify rules at official sources.", "ebike": [{"id": "what-is-class", "q": "What do Class 1, 2, and 3 e-bikes mean?", "a": "Class 1 is pedal-assist only (motor stops at 20 mph). Class 2 adds a throttle but still caps at 20 mph. Class 3 is pedal-assist up to 28 mph \u2014 illegal for riders under 16 in California."}, {"id": "helmet-ca", "q": "Does a 12-year-old need a helmet on an e-bike?", "a": "Yes. California requires riders under 18 to wear an ASTM- or CPSC-approved helmet on streets and bikeways."}, {"id": "hb-paths", "q": "How fast can you ride on Huntington Beach paths?", "a": "Beach bicycle paths and city parks are 10 mph max \u2014 5 mph when pedestrians are nearby. Many e-bikes can go faster, so speed limiting and route choice matter."}, {"id": "ul-battery", "q": "What is UL battery certification?", "a": "UL 2849 (or related UL listings) means the battery system was tested for electrical and fire safety. It reduces \u2014 but does not eliminate \u2014 battery fire risk. Always charge per manufacturer instructions."}, {"id": "pas-vs-throttle", "q": "What is pedal-assist vs throttle?", "a": "Pedal-assist boosts you only while pedaling. Throttle lets you ride without pedaling (Class 2). Throttle-only riding can drain the battery faster and may be restricted on some paths."}], "scooter": [{"id": "scooter-legal", "q": "Are e-scooters legal for a 12-year-old in California?", "a": "Motorized scooters can be ridden on bikeways where local rules allow, but riders under 18 must wear a helmet. Sidewalk rules vary \u2014 in Huntington Beach, slow down on paths and check HBPD guidance."}, {"id": "scooter-ul", "q": "Why does UL certification matter on scooters?", "a": "UL 2272 covers the electrical system of personal e-mobility devices. A listed scooter has passed standardized fire and electrical safety tests \u2014 worth prioritizing for daily charging at home."}, {"id": "scooter-app", "q": "What do smart scooter features actually do?", "a": "Companion apps often provide ride history, firmware updates, GPS tracking, remote lock, and anti-theft alarms. They help recovery and maintenance but do not replace a physical lock."}], "shared": [{"id": "safety-score", "q": "How should I read the safety score?", "a": "The score weights brakes, lights, reflectors, UL battery certification, and speed limiter. Higher is better for a young rider, but it is a checklist summary \u2014 not a crash prediction."}, {"id": "landed-price", "q": "What does landed price mean?", "a": "Landed price is item price plus estimated shipping to your door. We pick the lowest landed source as the default buy link when multiple stores are listed."}, {"id": "weight-carry", "q": "How heavy is too heavy for a 12-year-old to carry?", "a": "Under 40 lb is usually solo-carry territory for a strong tween. 41\u201355 lb is manageable with two hands but awkward on stairs. Above 55 lb, plan on adult help for curbs, cars, and storage. E-bikes are almost always heavier than a pedal beach cruiser."}]}</script>
-  <script src="app.js?v=202607130008" defer></script>
+  <script src="app.js?v=202607130019" defer></script>
 </body>
 </html>
