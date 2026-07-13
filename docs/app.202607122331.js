@@ -668,7 +668,7 @@
     bubble.id = "chatThinkingBubble";
     bubble.setAttribute("aria-live", "polite");
     bubble.setAttribute("aria-busy", "true");
-    bubble.innerHTML = `<p class="chat-thinking"><span class="chat-thinking-name">${CHAT_AGENT_NAME}</span><span class="ai-agent-badge ai-agent-badge--inline">AI</span> is thinking<span class="chat-thinking-dots" aria-hidden="true"><span>.</span><span>.</span><span>.</span></span></p>`;
+    bubble.innerHTML = `<p class="chat-thinking"><span class="chat-thinking-name">${CHAT_AGENT_NAME}</span> is thinking<span class="chat-thinking-dots" aria-hidden="true"><span>.</span><span>.</span><span>.</span></span></p>`;
     chatMessages.appendChild(bubble);
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
@@ -1043,8 +1043,8 @@
     const bike = chatContextBike();
     if (sub) {
       sub.textContent = bike
-        ? `AI ride advisor · ${productLabel(bike)}`
-        : "AI ride advisor — bikes, scooters & safety";
+        ? `${CHAT_AGENT_NAME} · answering about ${productLabel(bike)}`
+        : `${CHAT_AGENT_NAME} · bikes, scooters & safety`;
     }
     updateChatLocationUi();
     renderChatSuggestions();
