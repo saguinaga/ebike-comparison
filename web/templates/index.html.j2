@@ -290,6 +290,7 @@
     <section class="section" id="charts-section">
       <h2 class="section-title">Safety &amp; Energy Snapshots</h2>
       <p class="section-note">Based on visible bikes (respects hide &amp; filters). Energy uses manufacturer PAS range ÷ pack Wh — lower Wh/mi means less draw per mile.</p>
+      <div class="charts-panel">
       <div class="charts-grid">
         <div class="chart-card"><h4>Safety vs price</h4><div id="chartSafetyPrice" class="chart-area"></div></div>
         <div class="chart-card"><h4>Safety by tier</h4><div id="chartSafetyTier" class="chart-area"></div></div>
@@ -299,6 +300,7 @@
         <div class="chart-card"><h4>Efficiency vs price</h4><div id="chartEfficiencyPrice" class="chart-area"></div></div>
         <div class="chart-card"><h4>Wh/mi by tier</h4><div id="chartEfficiencyTier" class="chart-area"></div></div>
         <div class="chart-card"><h4>Smart score vs price</h4><div id="chartLuxuryPrice" class="chart-area"></div></div>
+      </div>
       </div>
     </section>
 
@@ -315,6 +317,7 @@
         <label>Legal <select id="tableLegalFilter"><option value="all">All</option><option value="yes">Legal</option><option value="no">Illegal</option></select></label>
         <label><input type="checkbox" id="tableColorFilter"> Highlight beach tones <span class="filter-hint">(white, sand, vanilla, light wood)</span></label>
       </div>
+      <div class="table-scroll">
       <table class="compare" id="compareTable">
         <thead>
           <tr>
@@ -382,6 +385,7 @@
           {% endfor %}
         </tbody>
       </table>
+      </div>
     </section>
 
     <section class="section" id="about">
