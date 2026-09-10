@@ -8,51 +8,6 @@ batteries:
     charge_method: none
     charge_notes: "Pedal only — no battery"
 
-  amazon-budget-step-1:
-    voltage_v: 36
-    capacity_ah: 10
-    range_miles_pas: 25
-    range_miles_throttle: 18
-    charge_hours: 4
-    charge_method: removable
-    charge_notes: "Typical 36V 10Ah pack; wall charger included"
-
-  amazon-budget-step-2:
-    voltage_v: 48
-    capacity_ah: 10.4
-    range_miles_pas: 40
-    range_miles_throttle: 25
-    charge_hours: 5
-    charge_method: removable
-    charge_notes: "Samsung-cell pack; key-lock removable battery"
-
-  aliexpress-budget-folder:
-    voltage_v: 36
-    capacity_ah: 10.4
-    range_miles_pas: 34
-    range_miles_throttle: 22
-    charge_hours: 5
-    charge_method: removable
-    charge_notes: "iScooter U4 — 36V 10.4Ah removable pack; charge off bike"
-
-  nakto-camel:
-    voltage_v: 36
-    capacity_ah: 10
-    range_miles_pas: 35
-    range_miles_throttle: 22
-    charge_hours: 4
-    charge_method: removable
-    charge_notes: "Removable 36V battery; charge on or off bike"
-
-  wallke-h7:
-    voltage_v: 48
-    capacity_ah: 12
-    range_miles_pas: 35
-    range_miles_throttle: 25
-    charge_hours: 5
-    charge_method: removable
-    charge_notes: "Hidden-in-frame pack; removable for charging"
-
   lectric-xp-lite:
     voltage_v: 48
     capacity_ah: 10.4
@@ -99,6 +54,15 @@ batteries:
     charge_method: removable_keyed
     charge_notes: "Removable with key; IPX6-rated pack"
 
+  lectric-xp4:
+    voltage_v: 48
+    capacity_ah: 10.4
+    range_miles_pas: 50
+    range_miles_throttle: 28
+    charge_hours: 5
+    charge_method: removable
+    charge_notes: "XP4 500W ST: 48V 10.4Ah UL 2271; 750 long-range is 17.5Ah"
+
   lectric-xp-3:
     voltage_v: 48
     capacity_ah: 14
@@ -107,6 +71,15 @@ batteries:
     charge_hours: 5
     charge_method: removable_keyed
     charge_notes: "48V 672Wh; keyed removable battery"
+
+  aventon-pace-4:
+    voltage_v: 36
+    capacity_ah: 20
+    range_miles_pas: 70
+    range_miles_throttle: 40
+    charge_hours: 5
+    charge_method: removable
+    charge_notes: "36V 20Ah 733Wh LG cells; UL 2271"
 
   radrunner-plus:
     voltage_v: 48
@@ -179,24 +152,6 @@ batteries:
     charge_hours: 8
     charge_method: removable
     charge_notes: "Same 52V 25Ah platform as Ultra Urban"
-
-  jetson-bolt-pro:
-    voltage_v: 36
-    capacity_ah: 6
-    range_miles_pas: 30
-    range_miles_throttle: 15
-    charge_hours: 5
-    charge_method: onboard
-    charge_notes: "36V 6Ah integrated; charge on bike"
-
-  hoverfly-ecompact:
-    voltage_v: 36
-    capacity_ah: 7.8
-    range_miles_pas: 25
-    range_miles_throttle: 15
-    charge_hours: 4
-    charge_method: removable
-    charge_notes: "Compact folding pack; removable"
 
   super73-zg:
     voltage_v: 48

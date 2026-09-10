@@ -36,7 +36,7 @@ def cmd_deploy(args):
 def cmd_all(args):
     cmd_scrape(args)
     if not hasattr(args, "min_bikes"):
-        args.min_bikes = 18
+        args.min_bikes = 16
     cmd_build(args)
 
 

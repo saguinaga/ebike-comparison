@@ -1,13 +1,12 @@
 # Smart / app features for e-bikes (scooters use scooters.yaml features block).
 features:
-  amazon-budget-step-2:
+  lectric-xp-lite:
     companion_app: true
     ride_history: true
-
-  aliexpress-budget-folder:
+    firmware_ota: true
     fold_compact: true
 
-  lectric-xp-lite:
+  lectric-xp4:
     companion_app: true
     ride_history: true
     firmware_ota: true
@@ -23,6 +22,12 @@ features:
     companion_app: true
     ride_history: true
     firmware_ota: true
+
+  aventon-pace-4:
+    companion_app: true
+    ride_history: true
+    firmware_ota: true
+    gps_tracking: true
 
   aventon-level:
     companion_app: true
@@ -48,10 +53,6 @@ features:
 
   ride1up-roadster:
     fold_compact: false
-
-  jetson-bolt-pro:
-    companion_app: true
-    ride_history: true
 
   super73-zg:
     companion_app: true

@@ -48,16 +48,17 @@ products:
       url: "https://www.target.com/p/segway-ninebot-f2-electric-scooter/-/A-1003836140"
       in_store_only: true
 
-  jetson-bolt-pro:
-    - retailer: target
-      url: "https://www.target.com/p/jetson-bolt-pro-electric-bike-black/-/A-94645848"
-      in_store_only: true
-
   aventon-soltera:
     - retailer: hb_electric
       url: "https://hbelectricbike.com/collections/aventon"
       in_store_only: true
       note: Aventon Signature Dealer — call for model availability
+
+  aventon-pace-4:
+    - retailer: hb_electric
+      url: "https://hbelectricbike.com/collections/aventon"
+      in_store_only: true
+      note: Aventon Signature Dealer — call for Pace 4 ST S/M
 
   aventon-level:
     - retailer: hb_electric

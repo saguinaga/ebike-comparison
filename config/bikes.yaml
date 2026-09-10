@@ -1,104 +1,6 @@
 # Per-source price_usd + shipping_usd = landed cost. Lowest landed = best buy link.
+# deemphasize + catalog_note: still in the grid, hidden unless "Show skip list" is on.
 bikes:
-  # Tier 1: $300-600
-  - id: amazon-budget-step-1
-    tier: budget
-    brand: Generic
-    model: "26\" Step-Through Budget E-Bike"
-    parser: generic
-    e_bike_class: 2
-    max_speed_mph: 20
-    motor_w: 350
-    brake_type: rim
-    lights: {front: false, rear: false}
-    colors:
-      - {name: White, family: white}
-    manual:
-      price_usd: 399
-      image_url: "https://nakto.com/cdn/shop/files/7ffd919d332e404348a14ea30d0bbf23_cbe3c91b-0750-404a-bb90-971ed8fd5b8e.png?v=1748420526"
-
-  - id: amazon-budget-step-2
-    tier: value
-    brand: Heybike
-    model: "Mars 2.0"
-    parser: generic
-    e_bike_class: 2
-    max_speed_mph: 20
-    motor_w: 750
-    brake_type: mechanical_disc
-    lights: {front: true, rear: true}
-    sources:
-      - platform: manufacturer
-        url: "https://www.heybike.com/products/mars-2-0"
-        price_usd: 999
-        shipping_usd: 0
-    colors:
-      - {name: White, family: white}
-    manual:
-      image_url: "https://www.heybike.com/cdn/shop/files/Mars_2.0_HS-2.png?v=1774418893"
-
-  - id: aliexpress-budget-folder
-    tier: budget
-    brand: iScooter
-    model: "U4 Step-Through Folder"
-    parser: generic
-    e_bike_class: 2
-    max_speed_mph: 20
-    motor_w: 350
-    brake_type: mechanical_disc
-    lights: {front: true, rear: true}
-    sources:
-      - platform: manufacturer
-        url: "https://www.iscooterglobal.eu/products/u4-low-step-through-foldable-electric-bike"
-        price_usd: 549
-        shipping_usd: 0
-    colors:
-      - {name: White, family: white}
-      - {name: Black, family: black}
-    manual:
-      image_url: "https://www.iscooterglobal.co.uk/cdn/shop/files/U4WhiteNew.jpg?v=1775547475"
-
-  - id: nakto-camel
-    tier: budget
-    brand: Nakto
-    model: "Camel 26\" Step-Through"
-    parser: generic
-    e_bike_class: 2
-    max_speed_mph: 20
-    motor_w: 350
-    brake_type: mechanical_disc
-    lights: {front: true, rear: true}
-    sources:
-      - platform: manufacturer
-        url: "https://nakto.com/products/camel-step-thru"
-        price_usd: 795
-        shipping_usd: 0
-    colors:
-      - {name: White, family: white}
-    manual:
-      image_url: "https://nakto.com/cdn/shop/files/7ffd919d332e404348a14ea30d0bbf23_cbe3c91b-0750-404a-bb90-971ed8fd5b8e.png?v=1748420526"
-
-  - id: wallke-h7
-    tier: value
-    brand: Wallke
-    model: "H7 26\""
-    parser: generic
-    e_bike_class: 2
-    max_speed_mph: 20
-    motor_w: 500
-    brake_type: hydraulic_disc
-    lights: {front: true, rear: true}
-    sources:
-      - platform: manufacturer
-        url: "https://wallkeebike.com/products/wallke-h7-step-thru"
-        price_usd: 1449
-        shipping_usd: 0
-    colors:
-      - {name: White, family: white}
-    manual:
-      image_url: "https://www.heybike.com/cdn/shop/files/MARS2.0_Grey-Right.png?v=1774418893"
-
-  # Tier 2: $600-1200
   - id: lectric-xp-lite
     tier: value
     brand: Lectric
@@ -107,8 +9,9 @@ bikes:
     e_bike_class: 2
     max_speed_mph: 20
     motor_w: 720
-    brake_type: mechanical_disc
+    brake_type: hydraulic_disc
     lights: {front: true, rear: true}
+    ul_certified: true
     sources:
       - platform: manufacturer
         url: "https://lectricebikes.com/products/xp-lite-lectric-blue-long-range-ebike"
@@ -116,19 +19,42 @@ bikes:
         shipping_usd: 0
     colors:
       - {name: White, family: white}
+
+  - id: lectric-xp4
+    tier: value
+    brand: Lectric
+    model: "XP4 Step-Thru"
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 20
+    motor_w: 500
+    brake_type: hydraulic_disc
+    lights: {front: true, rear: true}
+    ul_certified: true
+    speed_limiter: true
+    catalog_note: "Ships as Class 2. Do not unlock Class 3 for this rider. 4'10\"–6'3\"."
+    sources:
+      - platform: manufacturer
+        url: "https://lectricebikes.com/products/xp-step-thru-white"
+        price_usd: 999
+        shipping_usd: 0
+    colors:
+      - {name: Stratus White, family: white}
     manual:
-      image_url: "https://lectricebikes.com/cdn/shop/files/lightweight_77c2d493-4576-4a88-b116-297f80706615.webp?v=1732040414"
+      image_url: "https://lectricebikes.com/cdn/shop/files/XP4-T-WST.jpg?v=1759897225"
 
   - id: ride1up-portola
     tier: value
     brand: Ride1Up
-    model: "Portola"
+    model: "Portola 02"
     parser: generic
     e_bike_class: 2
     max_speed_mph: 20
     motor_w: 750
     brake_type: hydraulic_disc
     lights: {front: true, rear: true}
+    speed_limiter: true
+    catalog_note: "Keep Class 2 / 20 mph. Folder reviews still treat this as the sub-$1k pick."
     sources:
       - platform: manufacturer
         url: "https://ride1up.com/product/portola/"
@@ -157,6 +83,49 @@ bikes:
     manual:
       image_url: "https://aventon-images.imgix.net/files/01_Soltera.2.jpg?v=1756958410"
 
+  - id: aventon-pace-4
+    tier: mid
+    brand: Aventon
+    model: "Pace 4 Step-Through"
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 20
+    motor_w: 500
+    brake_type: hydraulic_disc
+    lights: {front: true, rear: true}
+    ul_certified: true
+    speed_limiter: true
+    catalog_note: "S/M fits 4'11\"–5'7\". Ships Class 2; leave Class 3 locked off."
+    sources:
+      - platform: manufacturer
+        url: "https://www.aventon.com/products/pace-4-step-through-ebike"
+        price_usd: 1599
+        shipping_usd: 0
+    colors:
+      - {name: White, family: white}
+
+  - id: lectric-xp-3
+    tier: mid
+    brand: Lectric
+    model: "XP 3.0"
+    parser: generic
+    e_bike_class: 2
+    max_speed_mph: 20
+    motor_w: 720
+    brake_type: mechanical_disc
+    lights: {front: true, rear: true}
+    deemphasize: true
+    catalog_note: "Previous gen. Prefer XP4 Step-Thru at the same price."
+    sources:
+      - platform: manufacturer
+        url: "https://lectricebikes.com/products/xp-green-long-range"
+        price_usd: 1299
+        shipping_usd: 0
+    colors:
+      - {name: White, family: white}
+    manual:
+      image_url: "https://lectricebikes.com/cdn/shop/files/lightweight_77c2d493-4576-4a88-b116-297f80706615.webp?v=1732040414"
+
   - id: rad-mission-1
     tier: value
     brand: Rad Power
@@ -167,6 +136,8 @@ bikes:
     motor_w: 500
     brake_type: mechanical_disc
     lights: {front: true, rear: true}
+    deemphasize: true
+    catalog_note: "Brand went through bankruptcy (Life EV, 2026). Warranty/support risk. Not a kid buy."
     colors:
       - {name: White, family: white}
     manual:
@@ -183,6 +154,8 @@ bikes:
     motor_w: 500
     brake_type: mechanical_disc
     lights: {front: true, rear: true}
+    deemphasize: true
+    catalog_note: "Heavy fat-tire. Fine as 'too much bike,' not a school commute pick."
     sources:
       - platform: manufacturer
         url: "https://www.velotricbike.com/products/velotric-nomad-1"
@@ -190,27 +163,6 @@ bikes:
         shipping_usd: 0
     colors:
       - {name: Sand, family: sand}
-
-  # Tier 3: $1200-2000
-  - id: lectric-xp-3
-    tier: mid
-    brand: Lectric
-    model: "XP 3.0"
-    parser: generic
-    e_bike_class: 2
-    max_speed_mph: 20
-    motor_w: 720
-    brake_type: mechanical_disc
-    lights: {front: true, rear: true}
-    sources:
-      - platform: manufacturer
-        url: "https://lectricebikes.com/products/xp-green-long-range"
-        price_usd: 1299
-        shipping_usd: 0
-    colors:
-      - {name: White, family: white}
-    manual:
-      image_url: "https://lectricebikes.com/cdn/shop/files/lightweight_77c2d493-4576-4a88-b116-297f80706615.webp?v=1732040414"
 
   - id: radrunner-plus
     tier: mid
@@ -222,6 +174,8 @@ bikes:
     motor_w: 750
     brake_type: hydraulic_disc
     lights: {front: true, rear: true}
+    deemphasize: true
+    catalog_note: "CPSC battery warning on some RadRunner packs. Cargo bike, not this rider."
     sources:
       - platform: manufacturer
         url: "https://www.radpowerbikes.com/products/radrunner-plus-electric-cargo-utility-bike"
@@ -242,6 +196,7 @@ bikes:
     motor_w: 500
     brake_type: hydraulic_disc
     lights: {front: true, rear: true}
+    catalog_note: "Light (~40–44 lb). Confirm low-step standover for 5'2\". Keep Class 2 unlock off if offered."
     sources:
       - platform: manufacturer
         url: "https://ride1up.com/product/roadster-v3/"
@@ -260,6 +215,8 @@ bikes:
     motor_w: 500
     brake_type: hydraulic_disc
     lights: {front: true, rear: true}
+    deemphasize: true
+    catalog_note: "Class 3. Parent/commuter comparison only. Illegal for under 16 in California."
     sources:
       - platform: manufacturer
         url: "https://www.aventon.com/products/level-3-commuter-ebike"
@@ -290,7 +247,6 @@ bikes:
     manual:
       image_url: "https://lectricebikes.com/cdn/shop/files/Commuter_-_June_2026_16e79811-eb36-4547-85f7-44c19b9bf9f8.webp?v=1782513926"
 
-  # Tier 4: $2000+ Zooz
   - id: zooz-ultra-ripster
     tier: premium
     brand: Zooz
@@ -301,6 +257,9 @@ bikes:
     motor_w: 750
     brake_type: hydraulic_disc
     lights: {front: true, rear: true}
+    friend_recommended: true
+    deemphasize: true
+    catalog_note: "Moto geometry, Class 3. Friend-recommended adult bike, not a school commute."
     sources:
       - platform: manufacturer
         url: "https://zoozbikes.com/products/ultra-ripster-gen-2"
@@ -308,7 +267,6 @@ bikes:
         shipping_usd: 0
     colors:
       - {name: Spark White, family: white}
-    friend_recommended: true
 
   - id: zooz-ultra-urban
     tier: premium
@@ -320,6 +278,8 @@ bikes:
     motor_w: 750
     brake_type: hydraulic_disc
     lights: {front: true, rear: true}
+    friend_recommended: true
+    catalog_note: "Local shop bike. Class 3, 16+. What grown-ups at HB Electric ride, not a school commute."
     sources:
       - platform: manufacturer
         url: "https://zoozbikes.com/products/uu-gen4"
@@ -328,7 +288,6 @@ bikes:
     colors:
       - {name: Glow Worm, family: light_wood}
       - {name: Chrome, family: light_wood}
-    friend_recommended: true
 
   - id: zooz-ultra-flex
     tier: premium
@@ -340,6 +299,7 @@ bikes:
     motor_w: 750
     brake_type: hydraulic_disc
     lights: {front: true, rear: true}
+    catalog_note: "Class 3. Local comparison only."
     sources:
       - platform: manufacturer
         url: "https://zoozbikes.com/products/ultra-flex-g2-low-bar"
@@ -359,6 +319,7 @@ bikes:
     motor_w: 750
     brake_type: hydraulic_disc
     lights: {front: true, rear: true}
+    catalog_note: "Real bike, wrong class for a 12-year-old. Friend-shop context only."
     sources:
       - platform: manufacturer
         url: "https://zoozbikes.com/products/ultra-cush"
@@ -366,60 +327,6 @@ bikes:
         shipping_usd: 0
     colors:
       - {name: Ultra Cush, family: other}
-
-  - id: jetson-bolt-pro
-    tier: budget
-    brand: Jetson
-    model: "Bolt Pro"
-    parser: generic
-    e_bike_class: 2
-    max_speed_mph: 15.5
-    motor_w: 350
-    brake_type: mechanical_disc
-    brakes_front: true
-    brakes_rear: true
-    lights: {front: true, rear: true}
-    reflectors: true
-    ul_certified: true
-    tire_width_in: 2.0
-    speed_limiter: true
-    sources:
-      - platform: manufacturer
-        url: "https://ridejetson.com/products/bolt-electric-bike-pro"
-        price_usd: 500
-        shipping_usd: 10
-      - platform: amazon
-        url: "https://www.amazon.com/dp/B0D3NGHMQC"
-        price_usd: 500
-        shipping_usd: 0
-    colors:
-      - {name: Blue, family: white}
-      - {name: Black, family: other}
-    manual:
-      image_url: "https://ridejetson.com/cdn/shop/products/MicrosoftTeams-image_21.png?v=1762526059"
-
-  - id: hoverfly-ecompact
-    tier: budget
-    brand: Hoverfly
-    model: "E-Compact 16\""
-    parser: generic
-    e_bike_class: 2
-    max_speed_mph: 15.5
-    motor_w: 350
-    brake_type: mechanical_disc
-    brakes_front: true
-    brakes_rear: true
-    lights: {front: true, rear: true}
-    reflectors: true
-    sources:
-      - platform: amazon
-        url: "https://www.amazon.com/dp/B0FDWZV38C"
-        price_usd: 500
-        shipping_usd: 0
-    colors:
-      - {name: White, family: white}
-    manual:
-      image_url: "https://ridejetson.com/cdn/shop/products/MicrosoftTeams-image_21.png?v=1762526059"
 
   - id: super73-zg
     tier: premium
@@ -431,6 +338,8 @@ bikes:
     motor_w: 500
     brake_type: mechanical_disc
     lights: {front: true, rear: true}
+    deemphasize: true
+    catalog_note: "Adult moto geometry. Fun, wrong rider."
     sources:
       - platform: manufacturer
         url: "https://super73.com/products/super73-z-miami-core-legacy"

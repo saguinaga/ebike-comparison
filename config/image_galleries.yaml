@@ -41,6 +41,13 @@ galleries:
       - "https://lectricebikes.com/cdn/shop/files/white-front.webp?v=1776061626"
       - "https://lectricebikes.com/cdn/shop/files/XPL-White_f9e208a7-9b91-4c18-941b-d377f251cb05.jpg?v=1768990516"
 
+  lectric-xp4:
+    image_url: "https://lectricebikes.com/cdn/shop/files/XP4-T-WST.jpg?v=1759897225"
+    image_urls:
+      - "https://lectricebikes.com/cdn/shop/files/XP4-T-BXP_114a4807-a772-4a64-9699-348d007460c7.png?v=1768038905"
+      - "https://lectricebikes.com/cdn/shop/files/BXP-side2.png?v=1776060550"
+      - "https://lectricebikes.com/cdn/shop/files/BXP-folded.jpg?v=1775105952"
+
   ride1up-portola:
     image_url: "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp"
     image_urls:
@@ -54,6 +61,11 @@ galleries:
       - "https://aventon-images.imgix.net/files/Baja-Soltera-2.5-6.jpg?v=1756958410"
       - "https://aventon-images.imgix.net/files/Soltera-2.5-Midnight-02.jpg?v=1756958410"
       - "https://aventon-images.imgix.net/files/Soltera2.5lifestyle01.jpg?v=1756958412"
+
+  aventon-pace-4:
+    image_url: "https://aventon-images.imgix.net/files/01_Level.3_Matte-Aurora_Side_1-bike.jpg?v=1739400464"
+    image_urls:
+      - "https://aventon-images.imgix.net/files/01_Soltera.2.jpg?v=1756958410"
 
   rad-mission-1:
     image_url: "https://ride1up.com/wp-content/uploads/2026/03/RV3-MedLrg_Grn-scaled.webp"

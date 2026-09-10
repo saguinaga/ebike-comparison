@@ -4,33 +4,17 @@ weights:
     weight_lb: 32.5
     notes: "Firmstrong product spec"
 
-  amazon-budget-step-1:
-    weight_lb: 58
-    notes: "Typical 26\" step-through budget e-bike"
-
-  amazon-budget-step-2:
-    weight_lb: 77
-    notes: "Heybike Mars 2.0 — fat-tire, heavy pack"
-
-  aliexpress-budget-folder:
-    weight_lb: 48.5
-    notes: "iScooter U4 folding step-through"
-
-  nakto-camel:
-    weight_lb: 55
-    notes: "Nakto Camel step-through"
-
-  wallke-h7:
-    weight_lb: 70
-    notes: "Wallke H7"
-
   lectric-xp-lite:
     weight_lb: 49
     notes: "Lectric XP Lite 2.0"
 
+  lectric-xp4:
+    weight_lb: 69
+    notes: "Lectric XP4 Step-Thru ~69 lb"
+
   ride1up-portola:
-    weight_lb: 59
-    notes: "Ride1Up Portola"
+    weight_lb: 61
+    notes: "Ride1Up Portola 02"
 
   aventon-soltera:
     weight_lb: 44
@@ -56,6 +40,10 @@ weights:
     weight_lb: 44
     notes: "Ride1Up Roadster V3"
 
+  aventon-pace-4:
+    weight_lb: 55
+    notes: "Aventon Pace 4 ST; S/M 4'11\"–5'7\""
+
   aventon-level:
     weight_lb: 54
     notes: "Aventon Level 3"
@@ -79,14 +67,6 @@ weights:
   zooz-ultra-cush:
     weight_lb: 75
     notes: "Zooz Ultra Cush"
-
-  jetson-bolt-pro:
-    weight_lb: 34
-    notes: "Jetson Bolt Pro — compact frame"
-
-  hoverfly-ecompact:
-    weight_lb: 38
-    notes: "Hoverfly E-Compact 16\""
 
   super73-zg:
     weight_lb: 65

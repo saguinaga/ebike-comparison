@@ -52,1343 +52,6 @@
     }
   },
   {
-    "id": "amazon-budget-step-1",
-    "tier": "budget",
-    "brand": "Generic",
-    "model": "26\" Step-Through Budget E-Bike",
-    "parser": "generic",
-    "e_bike_class": 2,
-    "max_speed_mph": 20,
-    "motor_w": 350,
-    "brake_type": "rim",
-    "lights": {
-      "front": false,
-      "rear": false
-    },
-    "colors": [
-      {
-        "name": "White",
-        "family": "white"
-      },
-      {
-        "name": "Black",
-        "family": "black"
-      }
-    ],
-    "vehicle_type": "ebike",
-    "price_usd": 399,
-    "image_url": "https://lectricebikes.com/cdn/shop/files/white-side_2e68dfc9-b660-4559-9a17-133fb42e0792.webp?v=1776061626",
-    "image_urls": [
-      "https://lectricebikes.com/cdn/shop/files/white-front.webp?v=1776061626",
-      "https://nakto.com/cdn/shop/files/15.png?v=1748420526"
-    ],
-    "battery_voltage_v": 36,
-    "battery_capacity_ah": 10,
-    "battery_range_miles_pas": 25,
-    "battery_range_miles_throttle": 18,
-    "battery_charge_hours": 4,
-    "battery_charge_method": "removable",
-    "battery_charge_notes": "Typical 36V 10Ah pack; wall charger included",
-    "battery_wh": 360,
-    "weight_lb": 58,
-    "weight_notes": "Typical 26\" step-through budget e-bike",
-    "sources": [
-      {
-        "platform": "local",
-        "url": "https://hbelectricbike.com/",
-        "retailer": "hb_electric",
-        "retailer_label": "HB Electric Bike",
-        "in_store_only": true,
-        "note": null
-      }
-    ],
-    "price_sources": [
-      {
-        "platform": "manual",
-        "platform_label": "Listed",
-        "url": null,
-        "item_price_usd": 399,
-        "shipping_usd": 0,
-        "landed_usd": 399,
-        "delivery_note": "Price estimate",
-        "rewards_note": null,
-        "is_search_url": false,
-        "in_store_only": false
-      },
-      {
-        "platform": "local",
-        "platform_label": "HB Electric Bike",
-        "retailer": "hb_electric",
-        "url": "https://hbelectricbike.com/",
-        "item_price_usd": null,
-        "shipping_usd": 0,
-        "landed_usd": null,
-        "delivery_note": "In-store \u00b7 Huntington Beach",
-        "rewards_note": null,
-        "is_search_url": false,
-        "in_store_only": true,
-        "price_display": "Check store"
-      }
-    ],
-    "landed_price_usd": 399,
-    "best_buy_url": null,
-    "best_buy_platform": "Listed",
-    "best_buy_shipping_usd": 0,
-    "best_buy_delivery": "Price estimate",
-    "safety_score": 18,
-    "safety_checklist": [
-      {
-        "key": "brake_type",
-        "row_label": "Brakes",
-        "label": "Rim Brake",
-        "value": "rim",
-        "ok": false
-      },
-      {
-        "key": "front_brake",
-        "row_label": "Front brake",
-        "label": "Front brake",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "rear_brake",
-        "row_label": "Rear brake",
-        "label": "Rear brake",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "front_light",
-        "row_label": "Front light",
-        "label": "Front light",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "rear_light",
-        "row_label": "Rear light",
-        "label": "Rear light",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "reflectors",
-        "row_label": "Reflectors",
-        "label": "Reflectors",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "ul_cert",
-        "row_label": "UL battery cert",
-        "label": "UL battery cert",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "tires",
-        "row_label": "Tire width \u2265 2.0\"",
-        "label": "Wide tires (\u2265 2.0\")",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "speed_limiter",
-        "row_label": "Speed limiter",
-        "label": "Speed limiter",
-        "value": null,
-        "ok": true
-      }
-    ],
-    "feature_checklist": [],
-    "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
-      "by_group": {
-        "security": 0,
-        "tracking": 0,
-        "app": 0,
-        "audio": 0,
-        "luxury": 0
-      },
-      "perks_label": "\u2014",
-      "has_app": false,
-      "has_tracking": false,
-      "has_security": false,
-      "has_audio": false,
-      "is_smart": false
-    },
-    "legal": {
-      "legal_for_age": true,
-      "issues": [
-        "Missing integrated lights \u2014 add before night rides (CVC \u00a721201)",
-        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
-      ],
-      "badges": [
-        {
-          "type": "warning",
-          "text": "Add lights for night"
-        }
-      ],
-      "e_bike_class": 2
-    },
-    "vs_baseline": {
-      "price_multiplier": 1.4,
-      "speed_delta_mph": 5,
-      "weight_delta_lb": 25.5,
-      "brake_upgrade": false,
-      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289,
-      "baseline_weight_lb": 32.5
-    },
-    "friend_recommended": false
-  },
-  {
-    "id": "amazon-budget-step-2",
-    "tier": "value",
-    "brand": "Heybike",
-    "model": "Mars 2.0",
-    "parser": "generic",
-    "e_bike_class": 2,
-    "max_speed_mph": 20,
-    "motor_w": 750,
-    "brake_type": "mechanical_disc",
-    "lights": {
-      "front": true,
-      "rear": true
-    },
-    "sources": [
-      {
-        "platform": "manufacturer",
-        "url": "https://www.heybike.com/products/mars-2-0",
-        "price_usd": 1199.0,
-        "shipping_usd": 0
-      },
-      {
-        "platform": "local",
-        "url": "https://hbelectricbike.com/",
-        "retailer": "hb_electric",
-        "retailer_label": "HB Electric Bike",
-        "in_store_only": true,
-        "note": null
-      }
-    ],
-    "colors": [
-      {
-        "name": "White",
-        "family": "white"
-      },
-      {
-        "name": "Gray",
-        "family": "gray"
-      },
-      {
-        "name": "Orange",
-        "family": "orange"
-      }
-    ],
-    "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.8
-    },
-    "price_usd": 1199.0,
-    "image_url": "https://www.heybike.com/cdn/shop/files/Mars_2.0_HS-2.png?v=1774418893",
-    "image_urls": [
-      "https://www.heybike.com/cdn/shop/files/MARS2.0_Grey-Right.png?v=1774418893",
-      "https://www.heybike.com/cdn/shop/files/Mars_2.0_Folding_Size_d7c65dd9-a694-4135-a82d-512a63d1b143.png?v=1774418893",
-      "https://www.heybike.com/cdn/shop/files/Mars_2.0_CD.png?v=1774418893"
-    ],
-    "battery_voltage_v": 48,
-    "battery_capacity_ah": 10.4,
-    "battery_range_miles_pas": 40,
-    "battery_range_miles_throttle": 25,
-    "battery_charge_hours": 5,
-    "battery_charge_method": "removable",
-    "battery_charge_notes": "Samsung-cell pack; key-lock removable battery",
-    "battery_wh": 499,
-    "weight_lb": 77,
-    "weight_notes": "Heybike Mars 2.0 \u2014 fat-tire, heavy pack",
-    "features": {
-      "companion_app": true,
-      "ride_history": true
-    },
-    "price_sources": [
-      {
-        "platform": "manufacturer",
-        "platform_label": "Direct",
-        "retailer": null,
-        "url": "https://www.heybike.com/products/mars-2-0",
-        "item_price_usd": 1199.0,
-        "shipping_usd": 0.0,
-        "landed_usd": 1199.0,
-        "delivery_note": "Direct ship",
-        "rewards_note": null,
-        "is_search_url": false,
-        "in_store_only": false
-      },
-      {
-        "platform": "local",
-        "platform_label": "HB Electric Bike",
-        "retailer": "hb_electric",
-        "url": "https://hbelectricbike.com/",
-        "item_price_usd": null,
-        "shipping_usd": 0,
-        "landed_usd": null,
-        "delivery_note": "In-store \u00b7 Huntington Beach",
-        "rewards_note": null,
-        "is_search_url": false,
-        "in_store_only": true,
-        "price_display": "Check store"
-      }
-    ],
-    "landed_price_usd": 1199.0,
-    "best_buy_url": "https://www.heybike.com/products/mars-2-0",
-    "best_buy_platform": "Direct",
-    "best_buy_shipping_usd": 0.0,
-    "best_buy_delivery": "Direct ship",
-    "safety_score": 48,
-    "safety_checklist": [
-      {
-        "key": "brake_type",
-        "row_label": "Brakes",
-        "label": "Mechanical Disc",
-        "value": "mechanical_disc",
-        "ok": true
-      },
-      {
-        "key": "front_brake",
-        "row_label": "Front brake",
-        "label": "Front brake",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "rear_brake",
-        "row_label": "Rear brake",
-        "label": "Rear brake",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "front_light",
-        "row_label": "Front light",
-        "label": "Front light",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "rear_light",
-        "row_label": "Rear light",
-        "label": "Rear light",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "reflectors",
-        "row_label": "Reflectors",
-        "label": "Reflectors",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "ul_cert",
-        "row_label": "UL battery cert",
-        "label": "UL battery cert",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "tires",
-        "row_label": "Tire width \u2265 2.0\"",
-        "label": "Wide tires (\u2265 2.0\")",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "speed_limiter",
-        "row_label": "Speed limiter",
-        "label": "Speed limiter",
-        "value": null,
-        "ok": true
-      }
-    ],
-    "feature_checklist": [
-      {
-        "key": "lock_builtin",
-        "group": "security",
-        "group_label": "Security",
-        "label": "Built-in lock",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "lock_cable",
-        "group": "security",
-        "group_label": "Security",
-        "label": "Cable / U-lock mount",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "alarm",
-        "group": "security",
-        "group_label": "Security",
-        "label": "Anti-theft alarm",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "immobilizer",
-        "group": "security",
-        "group_label": "Security",
-        "label": "Motor immobilizer",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "gps_tracking",
-        "group": "tracking",
-        "group_label": "Tracking",
-        "label": "GPS live tracking",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "find_my",
-        "group": "tracking",
-        "group_label": "Tracking",
-        "label": "Find My / location history",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "geofence",
-        "group": "tracking",
-        "group_label": "Tracking",
-        "label": "Geofence alerts",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "companion_app",
-        "group": "app",
-        "group_label": "App & connectivity",
-        "label": "Companion app (iOS/Android)",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "ride_history",
-        "group": "app",
-        "group_label": "App & connectivity",
-        "label": "Ride stats & history",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "firmware_ota",
-        "group": "app",
-        "group_label": "App & connectivity",
-        "label": "Over-the-air firmware updates",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "remote_lock",
-        "group": "app",
-        "group_label": "App & connectivity",
-        "label": "Remote lock / unlock",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "bluetooth_speaker",
-        "group": "audio",
-        "group_label": "Audio & phone",
-        "label": "Built-in Bluetooth speaker",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "phone_mount",
-        "group": "audio",
-        "group_label": "Audio & phone",
-        "label": "Phone mount included",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "suspension",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Suspension (front or dual)",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "regen_braking",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Regenerative braking",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "cruise_control",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Cruise control",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "turn_signals",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Turn signals",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "keyless_start",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Keyless / NFC start",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "fold_compact",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Compact fold",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "ip_rating",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Water resistance IPX5+",
-        "value": "\u2014",
-        "ok": false
-      }
-    ],
-    "feature_display": {
-      "luxury_score": 12,
-      "feature_count": 2,
-      "by_group": {
-        "security": 0,
-        "tracking": 0,
-        "app": 2,
-        "audio": 0,
-        "luxury": 0
-      },
-      "perks_label": "Companion app (iOS/Android) \u00b7 Ride stats & history",
-      "has_app": true,
-      "has_tracking": false,
-      "has_security": false,
-      "has_audio": false,
-      "is_smart": false
-    },
-    "legal": {
-      "legal_for_age": true,
-      "issues": [
-        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
-      ],
-      "badges": [],
-      "e_bike_class": 2
-    },
-    "vs_baseline": {
-      "price_multiplier": 4.1,
-      "speed_delta_mph": 5,
-      "weight_delta_lb": 44.5,
-      "brake_upgrade": true,
-      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289,
-      "baseline_weight_lb": 32.5
-    },
-    "friend_recommended": false
-  },
-  {
-    "id": "aliexpress-budget-folder",
-    "tier": "budget",
-    "brand": "iScooter",
-    "model": "U4 Step-Through Folder",
-    "parser": "generic",
-    "e_bike_class": 2,
-    "max_speed_mph": 20,
-    "motor_w": 350,
-    "brake_type": "mechanical_disc",
-    "lights": {
-      "front": true,
-      "rear": true
-    },
-    "sources": [
-      {
-        "platform": "manufacturer",
-        "url": "https://www.iscooterglobal.eu/products/u4-low-step-through-foldable-electric-bike",
-        "price_usd": 558.99,
-        "shipping_usd": 0
-      },
-      {
-        "platform": "local",
-        "url": "https://hbelectricbike.com/",
-        "retailer": "hb_electric",
-        "retailer_label": "HB Electric Bike",
-        "in_store_only": true,
-        "note": null
-      }
-    ],
-    "colors": [
-      {
-        "name": "White",
-        "family": "white"
-      },
-      {
-        "name": "Black",
-        "family": "black"
-      },
-      {
-        "name": "Green",
-        "family": "green"
-      }
-    ],
-    "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.8
-    },
-    "price_usd": 558.99,
-    "image_url": "https://www.iscooterglobal.co.uk/cdn/shop/files/U4WhiteNew.jpg?v=1775547475",
-    "image_urls": [
-      "https://www.iscooterglobal.co.uk/cdn/shop/files/u4easyfold.jpg?v=1776654035",
-      "https://www.iscooterglobal.co.uk/cdn/shop/files/u4removablebattery.jpg?v=1776654035",
-      "https://www.iscooterglobal.co.uk/cdn/shop/files/u4light.jpg?v=1776654035"
-    ],
-    "battery_voltage_v": 36,
-    "battery_capacity_ah": 10.4,
-    "battery_range_miles_pas": 34,
-    "battery_range_miles_throttle": 22,
-    "battery_charge_hours": 5,
-    "battery_charge_method": "removable",
-    "battery_charge_notes": "iScooter U4 \u2014 36V 10.4Ah removable pack; charge off bike",
-    "battery_wh": 374,
-    "weight_lb": 48.5,
-    "weight_notes": "iScooter U4 folding step-through",
-    "features": {
-      "fold_compact": true
-    },
-    "price_sources": [
-      {
-        "platform": "manufacturer",
-        "platform_label": "Direct",
-        "retailer": null,
-        "url": "https://www.iscooterglobal.eu/products/u4-low-step-through-foldable-electric-bike",
-        "item_price_usd": 558.99,
-        "shipping_usd": 0.0,
-        "landed_usd": 558.99,
-        "delivery_note": "Direct ship",
-        "rewards_note": null,
-        "is_search_url": false,
-        "in_store_only": false
-      },
-      {
-        "platform": "local",
-        "platform_label": "HB Electric Bike",
-        "retailer": "hb_electric",
-        "url": "https://hbelectricbike.com/",
-        "item_price_usd": null,
-        "shipping_usd": 0,
-        "landed_usd": null,
-        "delivery_note": "In-store \u00b7 Huntington Beach",
-        "rewards_note": null,
-        "is_search_url": false,
-        "in_store_only": true,
-        "price_display": "Check store"
-      }
-    ],
-    "landed_price_usd": 558.99,
-    "best_buy_url": "https://www.iscooterglobal.eu/products/u4-low-step-through-foldable-electric-bike",
-    "best_buy_platform": "Direct",
-    "best_buy_shipping_usd": 0.0,
-    "best_buy_delivery": "Direct ship",
-    "safety_score": 48,
-    "safety_checklist": [
-      {
-        "key": "brake_type",
-        "row_label": "Brakes",
-        "label": "Mechanical Disc",
-        "value": "mechanical_disc",
-        "ok": true
-      },
-      {
-        "key": "front_brake",
-        "row_label": "Front brake",
-        "label": "Front brake",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "rear_brake",
-        "row_label": "Rear brake",
-        "label": "Rear brake",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "front_light",
-        "row_label": "Front light",
-        "label": "Front light",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "rear_light",
-        "row_label": "Rear light",
-        "label": "Rear light",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "reflectors",
-        "row_label": "Reflectors",
-        "label": "Reflectors",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "ul_cert",
-        "row_label": "UL battery cert",
-        "label": "UL battery cert",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "tires",
-        "row_label": "Tire width \u2265 2.0\"",
-        "label": "Wide tires (\u2265 2.0\")",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "speed_limiter",
-        "row_label": "Speed limiter",
-        "label": "Speed limiter",
-        "value": null,
-        "ok": true
-      }
-    ],
-    "feature_checklist": [
-      {
-        "key": "lock_builtin",
-        "group": "security",
-        "group_label": "Security",
-        "label": "Built-in lock",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "lock_cable",
-        "group": "security",
-        "group_label": "Security",
-        "label": "Cable / U-lock mount",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "alarm",
-        "group": "security",
-        "group_label": "Security",
-        "label": "Anti-theft alarm",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "immobilizer",
-        "group": "security",
-        "group_label": "Security",
-        "label": "Motor immobilizer",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "gps_tracking",
-        "group": "tracking",
-        "group_label": "Tracking",
-        "label": "GPS live tracking",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "find_my",
-        "group": "tracking",
-        "group_label": "Tracking",
-        "label": "Find My / location history",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "geofence",
-        "group": "tracking",
-        "group_label": "Tracking",
-        "label": "Geofence alerts",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "companion_app",
-        "group": "app",
-        "group_label": "App & connectivity",
-        "label": "Companion app (iOS/Android)",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "ride_history",
-        "group": "app",
-        "group_label": "App & connectivity",
-        "label": "Ride stats & history",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "firmware_ota",
-        "group": "app",
-        "group_label": "App & connectivity",
-        "label": "Over-the-air firmware updates",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "remote_lock",
-        "group": "app",
-        "group_label": "App & connectivity",
-        "label": "Remote lock / unlock",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "bluetooth_speaker",
-        "group": "audio",
-        "group_label": "Audio & phone",
-        "label": "Built-in Bluetooth speaker",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "phone_mount",
-        "group": "audio",
-        "group_label": "Audio & phone",
-        "label": "Phone mount included",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "suspension",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Suspension (front or dual)",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "regen_braking",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Regenerative braking",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "cruise_control",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Cruise control",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "turn_signals",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Turn signals",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "keyless_start",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Keyless / NFC start",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "fold_compact",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Compact fold",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "ip_rating",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Water resistance IPX5+",
-        "value": "\u2014",
-        "ok": false
-      }
-    ],
-    "feature_display": {
-      "luxury_score": 3,
-      "feature_count": 1,
-      "by_group": {
-        "security": 0,
-        "tracking": 0,
-        "app": 0,
-        "audio": 0,
-        "luxury": 1
-      },
-      "perks_label": "Compact fold",
-      "has_app": false,
-      "has_tracking": false,
-      "has_security": false,
-      "has_audio": false,
-      "is_smart": false
-    },
-    "legal": {
-      "legal_for_age": true,
-      "issues": [
-        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
-      ],
-      "badges": [],
-      "e_bike_class": 2
-    },
-    "vs_baseline": {
-      "price_multiplier": 1.9,
-      "speed_delta_mph": 5,
-      "weight_delta_lb": 16.0,
-      "brake_upgrade": true,
-      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289,
-      "baseline_weight_lb": 32.5
-    },
-    "friend_recommended": false
-  },
-  {
-    "id": "nakto-camel",
-    "tier": "budget",
-    "brand": "Nakto",
-    "model": "Camel 26\" Step-Through",
-    "parser": "generic",
-    "e_bike_class": 2,
-    "max_speed_mph": 20,
-    "motor_w": 350,
-    "brake_type": "mechanical_disc",
-    "lights": {
-      "front": true,
-      "rear": true
-    },
-    "sources": [
-      {
-        "platform": "manufacturer",
-        "url": "https://nakto.com/products/camel-step-thru",
-        "price_usd": 795.0,
-        "shipping_usd": 0
-      },
-      {
-        "platform": "local",
-        "url": "https://hbelectricbike.com/",
-        "retailer": "hb_electric",
-        "retailer_label": "HB Electric Bike",
-        "in_store_only": true,
-        "note": null
-      }
-    ],
-    "colors": [
-      {
-        "name": "White",
-        "family": "white"
-      },
-      {
-        "name": "Black",
-        "family": "black"
-      },
-      {
-        "name": "Green",
-        "family": "green"
-      },
-      {
-        "name": "Red",
-        "family": "red"
-      }
-    ],
-    "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.8
-    },
-    "price_usd": 795.0,
-    "image_url": "https://nakto.com/cdn/shop/files/7ffd919d332e404348a14ea30d0bbf23_cbe3c91b-0750-404a-bb90-971ed8fd5b8e.png?v=1748420526",
-    "image_urls": [
-      "https://nakto.com/cdn/shop/files/15.png?v=1748420526",
-      "https://nakto.com/cdn/shop/files/Camelstep-thrublack_d7b89c8c-8834-4957-b8da-273924f17a3a.png?v=1748420526",
-      "https://nakto.com/cdn/shop/files/camel_1.png?v=1748420500"
-    ],
-    "battery_voltage_v": 36,
-    "battery_capacity_ah": 10,
-    "battery_range_miles_pas": 35,
-    "battery_range_miles_throttle": 22,
-    "battery_charge_hours": 4,
-    "battery_charge_method": "removable",
-    "battery_charge_notes": "Removable 36V battery; charge on or off bike",
-    "battery_wh": 360,
-    "weight_lb": 55,
-    "weight_notes": "Nakto Camel step-through",
-    "price_sources": [
-      {
-        "platform": "manufacturer",
-        "platform_label": "Direct",
-        "retailer": null,
-        "url": "https://nakto.com/products/camel-step-thru",
-        "item_price_usd": 795.0,
-        "shipping_usd": 0.0,
-        "landed_usd": 795.0,
-        "delivery_note": "Direct ship",
-        "rewards_note": null,
-        "is_search_url": false,
-        "in_store_only": false
-      },
-      {
-        "platform": "local",
-        "platform_label": "HB Electric Bike",
-        "retailer": "hb_electric",
-        "url": "https://hbelectricbike.com/",
-        "item_price_usd": null,
-        "shipping_usd": 0,
-        "landed_usd": null,
-        "delivery_note": "In-store \u00b7 Huntington Beach",
-        "rewards_note": null,
-        "is_search_url": false,
-        "in_store_only": true,
-        "price_display": "Check store"
-      }
-    ],
-    "landed_price_usd": 795.0,
-    "best_buy_url": "https://nakto.com/products/camel-step-thru",
-    "best_buy_platform": "Direct",
-    "best_buy_shipping_usd": 0.0,
-    "best_buy_delivery": "Direct ship",
-    "safety_score": 48,
-    "safety_checklist": [
-      {
-        "key": "brake_type",
-        "row_label": "Brakes",
-        "label": "Mechanical Disc",
-        "value": "mechanical_disc",
-        "ok": true
-      },
-      {
-        "key": "front_brake",
-        "row_label": "Front brake",
-        "label": "Front brake",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "rear_brake",
-        "row_label": "Rear brake",
-        "label": "Rear brake",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "front_light",
-        "row_label": "Front light",
-        "label": "Front light",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "rear_light",
-        "row_label": "Rear light",
-        "label": "Rear light",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "reflectors",
-        "row_label": "Reflectors",
-        "label": "Reflectors",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "ul_cert",
-        "row_label": "UL battery cert",
-        "label": "UL battery cert",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "tires",
-        "row_label": "Tire width \u2265 2.0\"",
-        "label": "Wide tires (\u2265 2.0\")",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "speed_limiter",
-        "row_label": "Speed limiter",
-        "label": "Speed limiter",
-        "value": null,
-        "ok": true
-      }
-    ],
-    "feature_checklist": [],
-    "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
-      "by_group": {
-        "security": 0,
-        "tracking": 0,
-        "app": 0,
-        "audio": 0,
-        "luxury": 0
-      },
-      "perks_label": "\u2014",
-      "has_app": false,
-      "has_tracking": false,
-      "has_security": false,
-      "has_audio": false,
-      "is_smart": false
-    },
-    "legal": {
-      "legal_for_age": true,
-      "issues": [
-        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
-      ],
-      "badges": [],
-      "e_bike_class": 2
-    },
-    "vs_baseline": {
-      "price_multiplier": 2.8,
-      "speed_delta_mph": 5,
-      "weight_delta_lb": 22.5,
-      "brake_upgrade": true,
-      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289,
-      "baseline_weight_lb": 32.5
-    },
-    "friend_recommended": false
-  },
-  {
-    "id": "wallke-h7",
-    "tier": "value",
-    "brand": "Wallke",
-    "model": "H7 26\"",
-    "parser": "generic",
-    "e_bike_class": 2,
-    "max_speed_mph": 20,
-    "motor_w": 500,
-    "brake_type": "hydraulic_disc",
-    "lights": {
-      "front": true,
-      "rear": true
-    },
-    "sources": [
-      {
-        "platform": "manufacturer",
-        "url": "https://wallkeebike.com/products/wallke-h7-step-thru",
-        "price_usd": 1299.0,
-        "shipping_usd": 0
-      },
-      {
-        "platform": "local",
-        "url": "https://hbelectricbike.com/",
-        "retailer": "hb_electric",
-        "retailer_label": "HB Electric Bike",
-        "in_store_only": true,
-        "note": null
-      }
-    ],
-    "colors": [
-      {
-        "name": "White",
-        "family": "white"
-      },
-      {
-        "name": "Black",
-        "family": "black"
-      },
-      {
-        "name": "Blue",
-        "family": "blue"
-      }
-    ],
-    "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.8
-    },
-    "price_usd": 1299.0,
-    "image_url": "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
-    "image_urls": [
-      "https://www.heybike.com/cdn/shop/files/MARS2.0_Grey-Right.png?v=1774418893",
-      "https://lectricebikes.com/cdn/shop/files/white-side_2e68dfc9-b660-4559-9a17-133fb42e0792.webp?v=1776061626"
-    ],
-    "battery_voltage_v": 48,
-    "battery_capacity_ah": 12,
-    "battery_range_miles_pas": 35,
-    "battery_range_miles_throttle": 25,
-    "battery_charge_hours": 5,
-    "battery_charge_method": "removable",
-    "battery_charge_notes": "Hidden-in-frame pack; removable for charging",
-    "battery_wh": 576,
-    "weight_lb": 70,
-    "weight_notes": "Wallke H7",
-    "price_sources": [
-      {
-        "platform": "manufacturer",
-        "platform_label": "Direct",
-        "retailer": null,
-        "url": "https://wallkeebike.com/products/wallke-h7-step-thru",
-        "item_price_usd": 1299.0,
-        "shipping_usd": 0.0,
-        "landed_usd": 1299.0,
-        "delivery_note": "Direct ship",
-        "rewards_note": null,
-        "is_search_url": false,
-        "in_store_only": false
-      },
-      {
-        "platform": "local",
-        "platform_label": "HB Electric Bike",
-        "retailer": "hb_electric",
-        "url": "https://hbelectricbike.com/",
-        "item_price_usd": null,
-        "shipping_usd": 0,
-        "landed_usd": null,
-        "delivery_note": "In-store \u00b7 Huntington Beach",
-        "rewards_note": null,
-        "is_search_url": false,
-        "in_store_only": true,
-        "price_display": "Check store"
-      }
-    ],
-    "landed_price_usd": 1299.0,
-    "best_buy_url": "https://wallkeebike.com/products/wallke-h7-step-thru",
-    "best_buy_platform": "Direct",
-    "best_buy_shipping_usd": 0.0,
-    "best_buy_delivery": "Direct ship",
-    "safety_score": 55,
-    "safety_checklist": [
-      {
-        "key": "brake_type",
-        "row_label": "Brakes",
-        "label": "Hydraulic Disc",
-        "value": "hydraulic_disc",
-        "ok": true
-      },
-      {
-        "key": "front_brake",
-        "row_label": "Front brake",
-        "label": "Front brake",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "rear_brake",
-        "row_label": "Rear brake",
-        "label": "Rear brake",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "front_light",
-        "row_label": "Front light",
-        "label": "Front light",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "rear_light",
-        "row_label": "Rear light",
-        "label": "Rear light",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "reflectors",
-        "row_label": "Reflectors",
-        "label": "Reflectors",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "ul_cert",
-        "row_label": "UL battery cert",
-        "label": "UL battery cert",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "tires",
-        "row_label": "Tire width \u2265 2.0\"",
-        "label": "Wide tires (\u2265 2.0\")",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "speed_limiter",
-        "row_label": "Speed limiter",
-        "label": "Speed limiter",
-        "value": null,
-        "ok": true
-      }
-    ],
-    "feature_checklist": [],
-    "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
-      "by_group": {
-        "security": 0,
-        "tracking": 0,
-        "app": 0,
-        "audio": 0,
-        "luxury": 0
-      },
-      "perks_label": "\u2014",
-      "has_app": false,
-      "has_tracking": false,
-      "has_security": false,
-      "has_audio": false,
-      "is_smart": false
-    },
-    "legal": {
-      "legal_for_age": true,
-      "issues": [
-        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
-      ],
-      "badges": [],
-      "e_bike_class": 2
-    },
-    "vs_baseline": {
-      "price_multiplier": 4.5,
-      "speed_delta_mph": 5,
-      "weight_delta_lb": 37.5,
-      "brake_upgrade": true,
-      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289,
-      "baseline_weight_lb": 32.5
-    },
-    "friend_recommended": false
-  },
-  {
     "id": "lectric-xp-lite",
     "tier": "value",
     "brand": "Lectric",
@@ -1397,11 +60,12 @@
     "e_bike_class": 2,
     "max_speed_mph": 20,
     "motor_w": 720,
-    "brake_type": "mechanical_disc",
+    "brake_type": "hydraulic_disc",
     "lights": {
       "front": true,
       "rear": true
     },
+    "ul_certified": true,
     "sources": [
       {
         "platform": "manufacturer",
@@ -1431,7 +95,7 @@
     "vehicle_type": "ebike",
     "field_confidence": {
       "price_usd": 0.9,
-      "image_url": 0.8
+      "image_url": 0.5
     },
     "price_usd": 999.0,
     "image_url": "https://lectricebikes.com/cdn/shop/files/lite-white_a6ef01c7-4607-4639-b0c4-09846a407fc9.png?v=1768990516",
@@ -1491,13 +155,13 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 48,
+    "safety_score": 60,
     "safety_checklist": [
       {
         "key": "brake_type",
         "row_label": "Brakes",
-        "label": "Mechanical Disc",
-        "value": "mechanical_disc",
+        "label": "Hydraulic Disc",
+        "value": "hydraulic_disc",
         "ok": true
       },
       {
@@ -1539,8 +203,8 @@
         "key": "ul_cert",
         "row_label": "UL battery cert",
         "label": "UL battery cert",
-        "value": null,
-        "ok": false
+        "value": true,
+        "ok": true
       },
       {
         "key": "tires",
@@ -1756,10 +420,383 @@
     "friend_recommended": false
   },
   {
+    "id": "lectric-xp4",
+    "tier": "value",
+    "brand": "Lectric",
+    "model": "XP4 Step-Thru",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 20,
+    "motor_w": 500,
+    "brake_type": "hydraulic_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "ul_certified": true,
+    "speed_limiter": true,
+    "catalog_note": "Ships as Class 2. Do not unlock Class 3 for this rider. 4'10\"\u20136'3\".",
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://lectricebikes.com/products/xp-step-thru-white",
+        "price_usd": 999.0,
+        "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
+      }
+    ],
+    "colors": [
+      {
+        "name": "Stratus White",
+        "family": "white"
+      },
+      {
+        "name": "Tempest Grey",
+        "family": "gray"
+      },
+      {
+        "name": "Raindrop Blue",
+        "family": "blue"
+      }
+    ],
+    "vehicle_type": "ebike",
+    "field_confidence": {
+      "price_usd": 0.9,
+      "image_url": 0.8
+    },
+    "price_usd": 999.0,
+    "image_url": "https://lectricebikes.com/cdn/shop/files/XP4-T-WST.jpg?v=1759897225",
+    "image_urls": [
+      "https://lectricebikes.com/cdn/shop/files/XP4-T-BXP_114a4807-a772-4a64-9699-348d007460c7.png?v=1768038905",
+      "https://lectricebikes.com/cdn/shop/files/BXP-side2.png?v=1776060550",
+      "https://lectricebikes.com/cdn/shop/files/BXP-folded.jpg?v=1775105952"
+    ],
+    "battery_voltage_v": 48,
+    "battery_capacity_ah": 10.4,
+    "battery_range_miles_pas": 50,
+    "battery_range_miles_throttle": 28,
+    "battery_charge_hours": 5,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "XP4 500W ST: 48V 10.4Ah UL 2271; 750 long-range is 17.5Ah",
+    "battery_wh": 499,
+    "weight_lb": 69,
+    "weight_notes": "Lectric XP4 Step-Thru ~69 lb",
+    "features": {
+      "companion_app": true,
+      "ride_history": true,
+      "firmware_ota": true,
+      "fold_compact": true
+    },
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "platform_label": "Direct",
+        "retailer": null,
+        "url": "https://lectricebikes.com/products/xp-step-thru-white",
+        "item_price_usd": 999.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 999.0,
+        "delivery_note": "Direct ship",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
+      }
+    ],
+    "landed_price_usd": 999.0,
+    "best_buy_url": "https://lectricebikes.com/products/xp-step-thru-white",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
+    "safety_score": 60,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "row_label": "Brakes",
+        "label": "Hydraulic Disc",
+        "value": "hydraulic_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "row_label": "Front brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "row_label": "Rear brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "row_label": "Front light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "row_label": "Rear light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "row_label": "Reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "row_label": "UL battery cert",
+        "label": "UL battery cert",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "tires",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "row_label": "Speed limiter",
+        "label": "Speed limiter",
+        "value": true,
+        "ok": true
+      }
+    ],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
+    "feature_display": {
+      "luxury_score": 20,
+      "feature_count": 4,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 3,
+        "audio": 0,
+        "luxury": 1
+      },
+      "perks_label": "Companion app (iOS/Android) \u00b7 Ride stats & history \u00b7 Over-the-air firmware updates \u00b7 Compact fold",
+      "has_app": true,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 3.5,
+      "speed_delta_mph": 5,
+      "weight_delta_lb": 36.5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
+    },
+    "friend_recommended": false
+  },
+  {
     "id": "ride1up-portola",
     "tier": "value",
     "brand": "Ride1Up",
-    "model": "Portola",
+    "model": "Portola 02",
     "parser": "generic",
     "e_bike_class": 2,
     "max_speed_mph": 20,
@@ -1769,6 +806,8 @@
       "front": true,
       "rear": true
     },
+    "speed_limiter": true,
+    "catalog_note": "Keep Class 2 / 20 mph. Folder reviews still treat this as the sub-$1k pick.",
     "sources": [
       {
         "platform": "manufacturer",
@@ -1824,8 +863,8 @@
     "battery_charge_method": "removable",
     "battery_charge_notes": "10.4Ah or 13.4Ah options; removable pack",
     "battery_wh": 499,
-    "weight_lb": 59,
-    "weight_notes": "Ride1Up Portola",
+    "weight_lb": 61,
+    "weight_notes": "Ride1Up Portola 02",
     "features": {
       "fold_compact": true
     },
@@ -1925,7 +964,7 @@
         "key": "speed_limiter",
         "row_label": "Speed limiter",
         "label": "Speed limiter",
-        "value": null,
+        "value": true,
         "ok": true
       }
     ],
@@ -2119,7 +1158,7 @@
     "vs_baseline": {
       "price_multiplier": 3.3,
       "speed_delta_mph": 5,
-      "weight_delta_lb": 26.5,
+      "weight_delta_lb": 28.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
       "baseline_price": 289,
@@ -2527,380 +1566,39 @@
     "friend_recommended": false
   },
   {
-    "id": "rad-mission-1",
-    "tier": "value",
-    "brand": "Rad Power",
-    "model": "RadMission 1",
-    "parser": "generic",
-    "e_bike_class": 2,
-    "max_speed_mph": 20,
-    "motor_w": 500,
-    "brake_type": "mechanical_disc",
-    "lights": {
-      "front": true,
-      "rear": true
-    },
-    "colors": [
-      {
-        "name": "Charcoal",
-        "family": "black"
-      },
-      {
-        "name": "White",
-        "family": "white"
-      }
-    ],
-    "vehicle_type": "ebike",
-    "price_usd": 1199,
-    "image_url": "https://ride1up.com/wp-content/uploads/2026/03/RV3-MedLrg_Grn-scaled.webp",
-    "image_urls": [
-      "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
-      "https://lectricebikes.com/cdn/shop/files/XP4-TEMPEST_GREY_STEP_OVER-BF-STUDIO_CAROUSEL.jpg?v=1774327498"
-    ],
-    "battery_voltage_v": 48,
-    "battery_capacity_ah": 10,
-    "battery_range_miles_pas": 45,
-    "battery_range_miles_throttle": 25,
-    "battery_charge_hours": 5,
-    "battery_charge_method": "removable",
-    "battery_charge_notes": "Rad Power 48V pack; charge on or off frame",
-    "battery_wh": 480,
-    "weight_lb": 48,
-    "weight_notes": "Rad Power RadMission 1",
-    "features": {
-      "companion_app": true,
-      "ride_history": true
-    },
-    "sources": [
-      {
-        "platform": "local",
-        "url": "https://hbelectricbike.com/",
-        "retailer": "hb_electric",
-        "retailer_label": "HB Electric Bike",
-        "in_store_only": true,
-        "note": null
-      }
-    ],
-    "price_sources": [
-      {
-        "platform": "manual",
-        "platform_label": "Listed",
-        "url": null,
-        "item_price_usd": 1199,
-        "shipping_usd": 0,
-        "landed_usd": 1199,
-        "delivery_note": "Price estimate",
-        "rewards_note": null,
-        "is_search_url": false,
-        "in_store_only": false
-      },
-      {
-        "platform": "local",
-        "platform_label": "HB Electric Bike",
-        "retailer": "hb_electric",
-        "url": "https://hbelectricbike.com/",
-        "item_price_usd": null,
-        "shipping_usd": 0,
-        "landed_usd": null,
-        "delivery_note": "In-store \u00b7 Huntington Beach",
-        "rewards_note": null,
-        "is_search_url": false,
-        "in_store_only": true,
-        "price_display": "Check store"
-      }
-    ],
-    "landed_price_usd": 1199,
-    "best_buy_url": null,
-    "best_buy_platform": "Listed",
-    "best_buy_shipping_usd": 0,
-    "best_buy_delivery": "Price estimate",
-    "safety_score": 48,
-    "safety_checklist": [
-      {
-        "key": "brake_type",
-        "row_label": "Brakes",
-        "label": "Mechanical Disc",
-        "value": "mechanical_disc",
-        "ok": true
-      },
-      {
-        "key": "front_brake",
-        "row_label": "Front brake",
-        "label": "Front brake",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "rear_brake",
-        "row_label": "Rear brake",
-        "label": "Rear brake",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "front_light",
-        "row_label": "Front light",
-        "label": "Front light",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "rear_light",
-        "row_label": "Rear light",
-        "label": "Rear light",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "reflectors",
-        "row_label": "Reflectors",
-        "label": "Reflectors",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "ul_cert",
-        "row_label": "UL battery cert",
-        "label": "UL battery cert",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "tires",
-        "row_label": "Tire width \u2265 2.0\"",
-        "label": "Wide tires (\u2265 2.0\")",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "speed_limiter",
-        "row_label": "Speed limiter",
-        "label": "Speed limiter",
-        "value": null,
-        "ok": true
-      }
-    ],
-    "feature_checklist": [
-      {
-        "key": "lock_builtin",
-        "group": "security",
-        "group_label": "Security",
-        "label": "Built-in lock",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "lock_cable",
-        "group": "security",
-        "group_label": "Security",
-        "label": "Cable / U-lock mount",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "alarm",
-        "group": "security",
-        "group_label": "Security",
-        "label": "Anti-theft alarm",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "immobilizer",
-        "group": "security",
-        "group_label": "Security",
-        "label": "Motor immobilizer",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "gps_tracking",
-        "group": "tracking",
-        "group_label": "Tracking",
-        "label": "GPS live tracking",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "find_my",
-        "group": "tracking",
-        "group_label": "Tracking",
-        "label": "Find My / location history",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "geofence",
-        "group": "tracking",
-        "group_label": "Tracking",
-        "label": "Geofence alerts",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "companion_app",
-        "group": "app",
-        "group_label": "App & connectivity",
-        "label": "Companion app (iOS/Android)",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "ride_history",
-        "group": "app",
-        "group_label": "App & connectivity",
-        "label": "Ride stats & history",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "firmware_ota",
-        "group": "app",
-        "group_label": "App & connectivity",
-        "label": "Over-the-air firmware updates",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "remote_lock",
-        "group": "app",
-        "group_label": "App & connectivity",
-        "label": "Remote lock / unlock",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "bluetooth_speaker",
-        "group": "audio",
-        "group_label": "Audio & phone",
-        "label": "Built-in Bluetooth speaker",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "phone_mount",
-        "group": "audio",
-        "group_label": "Audio & phone",
-        "label": "Phone mount included",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "suspension",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Suspension (front or dual)",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "regen_braking",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Regenerative braking",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "cruise_control",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Cruise control",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "turn_signals",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Turn signals",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "keyless_start",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Keyless / NFC start",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "fold_compact",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Compact fold",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "ip_rating",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Water resistance IPX5+",
-        "value": "\u2014",
-        "ok": false
-      }
-    ],
-    "feature_display": {
-      "luxury_score": 12,
-      "feature_count": 2,
-      "by_group": {
-        "security": 0,
-        "tracking": 0,
-        "app": 2,
-        "audio": 0,
-        "luxury": 0
-      },
-      "perks_label": "Companion app (iOS/Android) \u00b7 Ride stats & history",
-      "has_app": true,
-      "has_tracking": false,
-      "has_security": false,
-      "has_audio": false,
-      "is_smart": false
-    },
-    "legal": {
-      "legal_for_age": true,
-      "issues": [
-        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
-      ],
-      "badges": [],
-      "e_bike_class": 2
-    },
-    "vs_baseline": {
-      "price_multiplier": 4.1,
-      "speed_delta_mph": 5,
-      "weight_delta_lb": 15.5,
-      "brake_upgrade": true,
-      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289,
-      "baseline_weight_lb": 32.5
-    },
-    "friend_recommended": false
-  },
-  {
-    "id": "velotric-nomad-1",
+    "id": "aventon-pace-4",
     "tier": "mid",
-    "brand": "Velotric",
-    "model": "Nomad 1",
+    "brand": "Aventon",
+    "model": "Pace 4 Step-Through",
     "parser": "generic",
     "e_bike_class": 2,
     "max_speed_mph": 20,
     "motor_w": 500,
-    "brake_type": "mechanical_disc",
+    "brake_type": "hydraulic_disc",
     "lights": {
       "front": true,
       "rear": true
     },
+    "ul_certified": true,
+    "speed_limiter": true,
+    "catalog_note": "S/M fits 4'11\"\u20135'7\". Ships Class 2; leave Class 3 locked off.",
     "sources": [
       {
         "platform": "manufacturer",
-        "url": "https://www.velotricbike.com/products/velotric-nomad-1",
-        "price_usd": 1899.0,
+        "url": "https://www.aventon.com/products/pace-4-step-through-ebike",
+        "price_usd": 1599.0,
         "shipping_usd": 0
       },
       {
         "platform": "local",
+        "url": "https://hbelectricbike.com/collections/aventon",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": "Aventon Signature Dealer \u2014 call for Pace 4 ST S/M"
+      },
+      {
+        "platform": "local",
         "url": "https://hbelectricbike.com/",
         "retailer": "hb_electric",
         "retailer_label": "HB Electric Bike",
@@ -2910,20 +1608,12 @@
     ],
     "colors": [
       {
-        "name": "Indigo Grey",
-        "family": "gray"
+        "name": "White",
+        "family": "white"
       },
       {
-        "name": "Forest Green",
-        "family": "green"
-      },
-      {
-        "name": "Caramel",
-        "family": "sand"
-      },
-      {
-        "name": "Mango",
-        "family": "orange"
+        "name": "Black",
+        "family": "black"
       }
     ],
     "vehicle_type": "ebike",
@@ -2931,26 +1621,25 @@
       "price_usd": 0.9,
       "image_url": 0.5
     },
-    "price_usd": 1899.0,
-    "image_url": "https://www.velotricbike.com/cdn/shop/files/N1_Plus_HS_forest_1.png?v=1722237926&width=1200",
+    "price_usd": 1599.0,
+    "image_url": "https://aventon-images.imgix.net/files/01_Level.3_Matte-Aurora_Side_1-bike.jpg?v=1739400464",
     "image_urls": [
-      "https://www.velotricbike.com/cdn/shop/files/N1_Plus_ST_forest_1_grande.png?v=1722237925",
-      "https://www.velotricbike.com/cdn/shop/files/N1_Plus_HS_indigogrey_2_grande.png?v=1722237926",
-      "https://www.velotricbike.com/cdn/shop/files/N1_Plus_ST_indigogrey_1_grande.png?v=1722237926"
+      "https://aventon-images.imgix.net/files/01_Soltera.2.jpg?v=1756958410"
     ],
-    "battery_voltage_v": 48,
-    "battery_capacity_ah": 10.4,
-    "battery_range_miles_pas": 55,
-    "battery_range_miles_throttle": 35,
-    "battery_charge_hours": 6,
-    "battery_charge_method": "removable_keyed",
-    "battery_charge_notes": "Removable with key; IPX6-rated pack",
-    "battery_wh": 499,
-    "weight_lb": 73,
-    "weight_notes": "Velotric Nomad 1",
+    "battery_voltage_v": 36,
+    "battery_capacity_ah": 20,
+    "battery_range_miles_pas": 70,
+    "battery_range_miles_throttle": 40,
+    "battery_charge_hours": 5,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "36V 20Ah 733Wh LG cells; UL 2271",
+    "battery_wh": 720,
+    "weight_lb": 55,
+    "weight_notes": "Aventon Pace 4 ST; S/M 4'11\"\u20135'7\"",
     "features": {
       "companion_app": true,
       "ride_history": true,
+      "firmware_ota": true,
       "gps_tracking": true
     },
     "price_sources": [
@@ -2958,10 +1647,10 @@
         "platform": "manufacturer",
         "platform_label": "Direct",
         "retailer": null,
-        "url": "https://www.velotricbike.com/products/velotric-nomad-1",
-        "item_price_usd": 1899.0,
+        "url": "https://www.aventon.com/products/pace-4-step-through-ebike",
+        "item_price_usd": 1599.0,
         "shipping_usd": 0.0,
-        "landed_usd": 1899.0,
+        "landed_usd": 1599.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
         "is_search_url": false,
@@ -2971,6 +1660,20 @@
         "platform": "local",
         "platform_label": "HB Electric Bike",
         "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/collections/aventon",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach \u2014 Aventon Signature Dealer \u2014 call for Pace 4 ST S/M",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
         "url": "https://hbelectricbike.com/",
         "item_price_usd": null,
         "shipping_usd": 0,
@@ -2982,18 +1685,18 @@
         "price_display": "Check store"
       }
     ],
-    "landed_price_usd": 1899.0,
-    "best_buy_url": "https://www.velotricbike.com/products/velotric-nomad-1",
+    "landed_price_usd": 1599.0,
+    "best_buy_url": "https://www.aventon.com/products/pace-4-step-through-ebike",
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 48,
+    "safety_score": 60,
     "safety_checklist": [
       {
         "key": "brake_type",
         "row_label": "Brakes",
-        "label": "Mechanical Disc",
-        "value": "mechanical_disc",
+        "label": "Hydraulic Disc",
+        "value": "hydraulic_disc",
         "ok": true
       },
       {
@@ -3035,8 +1738,8 @@
         "key": "ul_cert",
         "row_label": "UL battery cert",
         "label": "UL battery cert",
-        "value": null,
-        "ok": false
+        "value": true,
+        "ok": true
       },
       {
         "key": "tires",
@@ -3049,7 +1752,7 @@
         "key": "speed_limiter",
         "row_label": "Speed limiter",
         "label": "Speed limiter",
-        "value": null,
+        "value": true,
         "ok": true
       }
     ],
@@ -3131,8 +1834,8 @@
         "group": "app",
         "group_label": "App & connectivity",
         "label": "Over-the-air firmware updates",
-        "value": false,
-        "ok": false
+        "value": true,
+        "ok": true
       },
       {
         "key": "remote_lock",
@@ -3216,16 +1919,16 @@
       }
     ],
     "feature_display": {
-      "luxury_score": 24,
-      "feature_count": 3,
+      "luxury_score": 29,
+      "feature_count": 4,
       "by_group": {
         "security": 0,
         "tracking": 1,
-        "app": 2,
+        "app": 3,
         "audio": 0,
         "luxury": 0
       },
-      "perks_label": "GPS live tracking \u00b7 Companion app (iOS/Android) \u00b7 Ride stats & history",
+      "perks_label": "GPS live tracking \u00b7 Companion app (iOS/Android) \u00b7 Ride stats & history \u00b7 Over-the-air firmware updates",
       "has_app": true,
       "has_tracking": true,
       "has_security": false,
@@ -3241,9 +1944,9 @@
       "e_bike_class": 2
     },
     "vs_baseline": {
-      "price_multiplier": 6.6,
+      "price_multiplier": 5.5,
       "speed_delta_mph": 5,
-      "weight_delta_lb": 40.5,
+      "weight_delta_lb": 22.5,
       "brake_upgrade": true,
       "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
       "baseline_price": 289,
@@ -3265,6 +1968,8 @@
       "front": true,
       "rear": true
     },
+    "deemphasize": true,
+    "catalog_note": "Previous gen. Prefer XP4 Step-Thru at the same price.",
     "sources": [
       {
         "platform": "manufacturer",
@@ -3635,6 +2340,735 @@
     "friend_recommended": false
   },
   {
+    "id": "rad-mission-1",
+    "tier": "value",
+    "brand": "Rad Power",
+    "model": "RadMission 1",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 20,
+    "motor_w": 500,
+    "brake_type": "mechanical_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "deemphasize": true,
+    "catalog_note": "Brand went through bankruptcy (Life EV, 2026). Warranty/support risk. Not a kid buy.",
+    "colors": [
+      {
+        "name": "Charcoal",
+        "family": "black"
+      },
+      {
+        "name": "White",
+        "family": "white"
+      }
+    ],
+    "vehicle_type": "ebike",
+    "price_usd": 1199,
+    "image_url": "https://ride1up.com/wp-content/uploads/2026/03/RV3-MedLrg_Grn-scaled.webp",
+    "image_urls": [
+      "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
+      "https://lectricebikes.com/cdn/shop/files/XP4-TEMPEST_GREY_STEP_OVER-BF-STUDIO_CAROUSEL.jpg?v=1774327498"
+    ],
+    "battery_voltage_v": 48,
+    "battery_capacity_ah": 10,
+    "battery_range_miles_pas": 45,
+    "battery_range_miles_throttle": 25,
+    "battery_charge_hours": 5,
+    "battery_charge_method": "removable",
+    "battery_charge_notes": "Rad Power 48V pack; charge on or off frame",
+    "battery_wh": 480,
+    "weight_lb": 48,
+    "weight_notes": "Rad Power RadMission 1",
+    "features": {
+      "companion_app": true,
+      "ride_history": true
+    },
+    "sources": [
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
+      }
+    ],
+    "price_sources": [
+      {
+        "platform": "manual",
+        "platform_label": "Listed",
+        "url": null,
+        "item_price_usd": 1199,
+        "shipping_usd": 0,
+        "landed_usd": 1199,
+        "delivery_note": "Price estimate",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
+      }
+    ],
+    "landed_price_usd": 1199,
+    "best_buy_url": null,
+    "best_buy_platform": "Listed",
+    "best_buy_shipping_usd": 0,
+    "best_buy_delivery": "Price estimate",
+    "safety_score": 48,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "row_label": "Brakes",
+        "label": "Mechanical Disc",
+        "value": "mechanical_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "row_label": "Front brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "row_label": "Rear brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "row_label": "Front light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "row_label": "Rear light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "row_label": "Reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "row_label": "UL battery cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "row_label": "Speed limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
+    "feature_display": {
+      "luxury_score": 12,
+      "feature_count": 2,
+      "by_group": {
+        "security": 0,
+        "tracking": 0,
+        "app": 2,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "Companion app (iOS/Android) \u00b7 Ride stats & history",
+      "has_app": true,
+      "has_tracking": false,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": false
+    },
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 4.1,
+      "speed_delta_mph": 5,
+      "weight_delta_lb": 15.5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
+    },
+    "friend_recommended": false
+  },
+  {
+    "id": "velotric-nomad-1",
+    "tier": "mid",
+    "brand": "Velotric",
+    "model": "Nomad 1",
+    "parser": "generic",
+    "e_bike_class": 2,
+    "max_speed_mph": 20,
+    "motor_w": 500,
+    "brake_type": "mechanical_disc",
+    "lights": {
+      "front": true,
+      "rear": true
+    },
+    "deemphasize": true,
+    "catalog_note": "Heavy fat-tire. Fine as 'too much bike,' not a school commute pick.",
+    "sources": [
+      {
+        "platform": "manufacturer",
+        "url": "https://www.velotricbike.com/products/velotric-nomad-1",
+        "price_usd": 1899.0,
+        "shipping_usd": 0
+      },
+      {
+        "platform": "local",
+        "url": "https://hbelectricbike.com/",
+        "retailer": "hb_electric",
+        "retailer_label": "HB Electric Bike",
+        "in_store_only": true,
+        "note": null
+      }
+    ],
+    "colors": [
+      {
+        "name": "Indigo Grey",
+        "family": "gray"
+      },
+      {
+        "name": "Forest Green",
+        "family": "green"
+      },
+      {
+        "name": "Caramel",
+        "family": "sand"
+      },
+      {
+        "name": "Mango",
+        "family": "orange"
+      }
+    ],
+    "vehicle_type": "ebike",
+    "field_confidence": {
+      "price_usd": 0.9,
+      "image_url": 0.5
+    },
+    "price_usd": 1899.0,
+    "image_url": "https://www.velotricbike.com/cdn/shop/files/N1_Plus_HS_forest_1.png?v=1722237926&width=1200",
+    "image_urls": [
+      "https://www.velotricbike.com/cdn/shop/files/N1_Plus_ST_forest_1_grande.png?v=1722237925",
+      "https://www.velotricbike.com/cdn/shop/files/N1_Plus_HS_indigogrey_2_grande.png?v=1722237926",
+      "https://www.velotricbike.com/cdn/shop/files/N1_Plus_ST_indigogrey_1_grande.png?v=1722237926"
+    ],
+    "battery_voltage_v": 48,
+    "battery_capacity_ah": 10.4,
+    "battery_range_miles_pas": 55,
+    "battery_range_miles_throttle": 35,
+    "battery_charge_hours": 6,
+    "battery_charge_method": "removable_keyed",
+    "battery_charge_notes": "Removable with key; IPX6-rated pack",
+    "battery_wh": 499,
+    "weight_lb": 73,
+    "weight_notes": "Velotric Nomad 1",
+    "features": {
+      "companion_app": true,
+      "ride_history": true,
+      "gps_tracking": true
+    },
+    "price_sources": [
+      {
+        "platform": "manufacturer",
+        "platform_label": "Direct",
+        "retailer": null,
+        "url": "https://www.velotricbike.com/products/velotric-nomad-1",
+        "item_price_usd": 1899.0,
+        "shipping_usd": 0.0,
+        "landed_usd": 1899.0,
+        "delivery_note": "Direct ship",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
+        "platform": "local",
+        "platform_label": "HB Electric Bike",
+        "retailer": "hb_electric",
+        "url": "https://hbelectricbike.com/",
+        "item_price_usd": null,
+        "shipping_usd": 0,
+        "landed_usd": null,
+        "delivery_note": "In-store \u00b7 Huntington Beach",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": true,
+        "price_display": "Check store"
+      }
+    ],
+    "landed_price_usd": 1899.0,
+    "best_buy_url": "https://www.velotricbike.com/products/velotric-nomad-1",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 0.0,
+    "best_buy_delivery": "Direct ship",
+    "safety_score": 48,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "row_label": "Brakes",
+        "label": "Mechanical Disc",
+        "value": "mechanical_disc",
+        "ok": true
+      },
+      {
+        "key": "front_brake",
+        "row_label": "Front brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "row_label": "Rear brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "row_label": "Front light",
+        "label": "Front light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "rear_light",
+        "row_label": "Rear light",
+        "label": "Rear light",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "reflectors",
+        "row_label": "Reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "row_label": "UL battery cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Wide tires (\u2265 2.0\")",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "speed_limiter",
+        "row_label": "Speed limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ],
+    "feature_checklist": [
+      {
+        "key": "lock_builtin",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Built-in lock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "lock_cable",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Cable / U-lock mount",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "alarm",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Anti-theft alarm",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "immobilizer",
+        "group": "security",
+        "group_label": "Security",
+        "label": "Motor immobilizer",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "gps_tracking",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "GPS live tracking",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "find_my",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Find My / location history",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "geofence",
+        "group": "tracking",
+        "group_label": "Tracking",
+        "label": "Geofence alerts",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "companion_app",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Companion app (iOS/Android)",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "ride_history",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Ride stats & history",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "firmware_ota",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Over-the-air firmware updates",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "remote_lock",
+        "group": "app",
+        "group_label": "App & connectivity",
+        "label": "Remote lock / unlock",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "bluetooth_speaker",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Built-in Bluetooth speaker",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "phone_mount",
+        "group": "audio",
+        "group_label": "Audio & phone",
+        "label": "Phone mount included",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "suspension",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Suspension (front or dual)",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "regen_braking",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Regenerative braking",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "cruise_control",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Cruise control",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "turn_signals",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Turn signals",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "keyless_start",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Keyless / NFC start",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "fold_compact",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Compact fold",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "ip_rating",
+        "group": "luxury",
+        "group_label": "Comfort & premium",
+        "label": "Water resistance IPX5+",
+        "value": "\u2014",
+        "ok": false
+      }
+    ],
+    "feature_display": {
+      "luxury_score": 24,
+      "feature_count": 3,
+      "by_group": {
+        "security": 0,
+        "tracking": 1,
+        "app": 2,
+        "audio": 0,
+        "luxury": 0
+      },
+      "perks_label": "GPS live tracking \u00b7 Companion app (iOS/Android) \u00b7 Ride stats & history",
+      "has_app": true,
+      "has_tracking": true,
+      "has_security": false,
+      "has_audio": false,
+      "is_smart": true
+    },
+    "legal": {
+      "legal_for_age": true,
+      "issues": [
+        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
+      ],
+      "badges": [],
+      "e_bike_class": 2
+    },
+    "vs_baseline": {
+      "price_multiplier": 6.6,
+      "speed_delta_mph": 5,
+      "weight_delta_lb": 40.5,
+      "brake_upgrade": true,
+      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
+      "baseline_price": 289,
+      "baseline_weight_lb": 32.5
+    },
+    "friend_recommended": false
+  },
+  {
     "id": "radrunner-plus",
     "tier": "mid",
     "brand": "Rad Power",
@@ -3648,6 +3082,8 @@
       "front": true,
       "rear": true
     },
+    "deemphasize": true,
+    "catalog_note": "CPSC battery warning on some RadRunner packs. Cargo bike, not this rider.",
     "sources": [
       {
         "platform": "manufacturer",
@@ -4019,6 +3455,7 @@
       "front": true,
       "rear": true
     },
+    "catalog_note": "Light (~40\u201344 lb). Confirm low-step standover for 5'2\". Keep Class 2 unlock off if offered.",
     "sources": [
       {
         "platform": "manufacturer",
@@ -4385,6 +3822,8 @@
       "front": true,
       "rear": true
     },
+    "deemphasize": true,
+    "catalog_note": "Class 3. Parent/commuter comparison only. Illegal for under 16 in California.",
     "sources": [
       {
         "platform": "manufacturer",
@@ -4989,6 +4428,9 @@
       "front": true,
       "rear": true
     },
+    "friend_recommended": true,
+    "deemphasize": true,
+    "catalog_note": "Moto geometry, Class 3. Friend-recommended adult bike, not a school commute.",
     "sources": [
       {
         "platform": "manufacturer",
@@ -5023,7 +4465,6 @@
         "family": "black"
       }
     ],
-    "friend_recommended": true,
     "vehicle_type": "ebike",
     "field_confidence": {
       "price_usd": 0.85,
@@ -5367,6 +4808,8 @@
       "front": true,
       "rear": true
     },
+    "friend_recommended": true,
+    "catalog_note": "Local shop bike. Class 3, 16+. What grown-ups at HB Electric ride, not a school commute.",
     "sources": [
       {
         "platform": "manufacturer",
@@ -5401,7 +4844,6 @@
         "family": "black"
       }
     ],
-    "friend_recommended": true,
     "vehicle_type": "ebike",
     "field_confidence": {
       "price_usd": 0.85,
@@ -5745,6 +5187,7 @@
       "front": true,
       "rear": true
     },
+    "catalog_note": "Class 3. Local comparison only.",
     "sources": [
       {
         "platform": "manufacturer",
@@ -6123,6 +5566,7 @@
       "front": true,
       "rear": true
     },
+    "catalog_note": "Real bike, wrong class for a 12-year-old. Friend-shop context only.",
     "sources": [
       {
         "platform": "manufacturer",
@@ -6484,616 +5928,6 @@
     "friend_recommended": false
   },
   {
-    "id": "jetson-bolt-pro",
-    "tier": "budget",
-    "brand": "Jetson",
-    "model": "Bolt Pro",
-    "parser": "generic",
-    "e_bike_class": 2,
-    "max_speed_mph": 15.5,
-    "motor_w": 350,
-    "brake_type": "mechanical_disc",
-    "brakes_front": true,
-    "brakes_rear": true,
-    "lights": {
-      "front": true,
-      "rear": true
-    },
-    "reflectors": true,
-    "ul_certified": true,
-    "tire_width_in": 2.0,
-    "speed_limiter": true,
-    "sources": [
-      {
-        "platform": "manufacturer",
-        "url": "https://ridejetson.com/products/bolt-electric-bike-pro",
-        "price_usd": 399.99,
-        "shipping_usd": 10
-      },
-      {
-        "platform": "amazon",
-        "url": "https://www.amazon.com/dp/B0D3NGHMQC",
-        "price_usd": 500,
-        "shipping_usd": 0
-      },
-      {
-        "platform": "target",
-        "url": "https://www.target.com/p/jetson-bolt-pro-electric-bike-black/-/A-94645848",
-        "retailer": "target",
-        "retailer_label": "Target",
-        "in_store_only": true,
-        "note": null
-      },
-      {
-        "platform": "local",
-        "url": "https://hbelectricbike.com/",
-        "retailer": "hb_electric",
-        "retailer_label": "HB Electric Bike",
-        "in_store_only": true,
-        "note": null
-      }
-    ],
-    "colors": [
-      {
-        "name": "Blue",
-        "family": "blue"
-      },
-      {
-        "name": "Black",
-        "family": "black"
-      },
-      {
-        "name": "Silver",
-        "family": "gray"
-      }
-    ],
-    "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.8
-    },
-    "price_usd": 399.99,
-    "image_url": "https://ridejetson.com/cdn/shop/products/MicrosoftTeams-image_21.png?v=1762526059",
-    "image_urls": [
-      "https://ridejetson.com/cdn/shop/products/JBLTP-BLK_LS_01_418fe14f-ed07-4190-bbb0-b2279f115c89.jpg?v=1745265756",
-      "https://ridejetson.com/cdn/shop/products/JBLTP-SBL_04.jpg?v=1745265756",
-      "https://ridejetson.com/cdn/shop/products/JBLTP-FGR_02.jpg?v=1745265756"
-    ],
-    "battery_voltage_v": 36,
-    "battery_capacity_ah": 6,
-    "battery_range_miles_pas": 30,
-    "battery_range_miles_throttle": 15,
-    "battery_charge_hours": 5,
-    "battery_charge_method": "onboard",
-    "battery_charge_notes": "36V 6Ah integrated; charge on bike",
-    "battery_wh": 216,
-    "weight_lb": 34,
-    "weight_notes": "Jetson Bolt Pro \u2014 compact frame",
-    "features": {
-      "companion_app": true,
-      "ride_history": true
-    },
-    "price_sources": [
-      {
-        "platform": "manufacturer",
-        "platform_label": "Direct",
-        "retailer": null,
-        "url": "https://ridejetson.com/products/bolt-electric-bike-pro",
-        "item_price_usd": 399.99,
-        "shipping_usd": 10.0,
-        "landed_usd": 409.99,
-        "delivery_note": "Direct ship",
-        "rewards_note": null,
-        "is_search_url": false,
-        "in_store_only": false
-      },
-      {
-        "platform": "amazon",
-        "platform_label": "Amazon",
-        "retailer": null,
-        "url": "https://www.amazon.com/dp/B0D3NGHMQC",
-        "item_price_usd": 500.0,
-        "shipping_usd": 0.0,
-        "landed_usd": 500.0,
-        "delivery_note": "Prime ~1\u20133 days",
-        "rewards_note": "5% back on some Chase/Amazon cards",
-        "is_search_url": false,
-        "in_store_only": false
-      },
-      {
-        "platform": "local",
-        "platform_label": "HB Electric Bike",
-        "retailer": "hb_electric",
-        "url": "https://hbelectricbike.com/",
-        "item_price_usd": null,
-        "shipping_usd": 0,
-        "landed_usd": null,
-        "delivery_note": "In-store \u00b7 Huntington Beach",
-        "rewards_note": null,
-        "is_search_url": false,
-        "in_store_only": true,
-        "price_display": "Check store"
-      },
-      {
-        "platform": "target",
-        "platform_label": "Target",
-        "retailer": "target",
-        "url": "https://www.target.com/p/jetson-bolt-pro-electric-bike-black/-/A-94645848",
-        "item_price_usd": null,
-        "shipping_usd": 0,
-        "landed_usd": null,
-        "delivery_note": "Target \u00b7 pick up in HB or ship",
-        "rewards_note": null,
-        "is_search_url": false,
-        "in_store_only": true,
-        "price_display": "Check store"
-      }
-    ],
-    "landed_price_usd": 409.99,
-    "best_buy_url": "https://ridejetson.com/products/bolt-electric-bike-pro",
-    "best_buy_platform": "Direct",
-    "best_buy_shipping_usd": 10.0,
-    "best_buy_delivery": "Direct ship",
-    "safety_score": 63,
-    "safety_checklist": [
-      {
-        "key": "brake_type",
-        "row_label": "Brakes",
-        "label": "Mechanical Disc",
-        "value": "mechanical_disc",
-        "ok": true
-      },
-      {
-        "key": "front_brake",
-        "row_label": "Front brake",
-        "label": "Front brake",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "rear_brake",
-        "row_label": "Rear brake",
-        "label": "Rear brake",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "front_light",
-        "row_label": "Front light",
-        "label": "Front light",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "rear_light",
-        "row_label": "Rear light",
-        "label": "Rear light",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "reflectors",
-        "row_label": "Reflectors",
-        "label": "Reflectors",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "ul_cert",
-        "row_label": "UL battery cert",
-        "label": "UL battery cert",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "tires",
-        "row_label": "Tire width \u2265 2.0\"",
-        "label": "Tires 2.0\" wide",
-        "value": 2.0,
-        "ok": true
-      },
-      {
-        "key": "speed_limiter",
-        "row_label": "Speed limiter",
-        "label": "Speed limiter",
-        "value": true,
-        "ok": true
-      }
-    ],
-    "feature_checklist": [
-      {
-        "key": "lock_builtin",
-        "group": "security",
-        "group_label": "Security",
-        "label": "Built-in lock",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "lock_cable",
-        "group": "security",
-        "group_label": "Security",
-        "label": "Cable / U-lock mount",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "alarm",
-        "group": "security",
-        "group_label": "Security",
-        "label": "Anti-theft alarm",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "immobilizer",
-        "group": "security",
-        "group_label": "Security",
-        "label": "Motor immobilizer",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "gps_tracking",
-        "group": "tracking",
-        "group_label": "Tracking",
-        "label": "GPS live tracking",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "find_my",
-        "group": "tracking",
-        "group_label": "Tracking",
-        "label": "Find My / location history",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "geofence",
-        "group": "tracking",
-        "group_label": "Tracking",
-        "label": "Geofence alerts",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "companion_app",
-        "group": "app",
-        "group_label": "App & connectivity",
-        "label": "Companion app (iOS/Android)",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "ride_history",
-        "group": "app",
-        "group_label": "App & connectivity",
-        "label": "Ride stats & history",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "firmware_ota",
-        "group": "app",
-        "group_label": "App & connectivity",
-        "label": "Over-the-air firmware updates",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "remote_lock",
-        "group": "app",
-        "group_label": "App & connectivity",
-        "label": "Remote lock / unlock",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "bluetooth_speaker",
-        "group": "audio",
-        "group_label": "Audio & phone",
-        "label": "Built-in Bluetooth speaker",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "phone_mount",
-        "group": "audio",
-        "group_label": "Audio & phone",
-        "label": "Phone mount included",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "suspension",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Suspension (front or dual)",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "regen_braking",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Regenerative braking",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "cruise_control",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Cruise control",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "turn_signals",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Turn signals",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "keyless_start",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Keyless / NFC start",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "fold_compact",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Compact fold",
-        "value": false,
-        "ok": false
-      },
-      {
-        "key": "ip_rating",
-        "group": "luxury",
-        "group_label": "Comfort & premium",
-        "label": "Water resistance IPX5+",
-        "value": "\u2014",
-        "ok": false
-      }
-    ],
-    "feature_display": {
-      "luxury_score": 12,
-      "feature_count": 2,
-      "by_group": {
-        "security": 0,
-        "tracking": 0,
-        "app": 2,
-        "audio": 0,
-        "luxury": 0
-      },
-      "perks_label": "Companion app (iOS/Android) \u00b7 Ride stats & history",
-      "has_app": true,
-      "has_tracking": false,
-      "has_security": false,
-      "has_audio": false,
-      "is_smart": false
-    },
-    "legal": {
-      "legal_for_age": true,
-      "issues": [
-        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
-      ],
-      "badges": [],
-      "e_bike_class": 2
-    },
-    "vs_baseline": {
-      "price_multiplier": 1.4,
-      "speed_delta_mph": 0.5,
-      "weight_delta_lb": 1.5,
-      "brake_upgrade": true,
-      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289,
-      "baseline_weight_lb": 32.5
-    },
-    "friend_recommended": false
-  },
-  {
-    "id": "hoverfly-ecompact",
-    "tier": "budget",
-    "brand": "Hoverfly",
-    "model": "E-Compact 16\"",
-    "parser": "generic",
-    "e_bike_class": 2,
-    "max_speed_mph": 15.5,
-    "motor_w": 350,
-    "brake_type": "mechanical_disc",
-    "brakes_front": true,
-    "brakes_rear": true,
-    "lights": {
-      "front": true,
-      "rear": true
-    },
-    "reflectors": true,
-    "sources": [
-      {
-        "platform": "amazon",
-        "url": "https://www.amazon.com/dp/B0FDWZV38C",
-        "price_usd": 500,
-        "shipping_usd": 0
-      },
-      {
-        "platform": "local",
-        "url": "https://hbelectricbike.com/",
-        "retailer": "hb_electric",
-        "retailer_label": "HB Electric Bike",
-        "in_store_only": true,
-        "note": null
-      }
-    ],
-    "colors": [
-      {
-        "name": "White",
-        "family": "white"
-      },
-      {
-        "name": "Black",
-        "family": "black"
-      }
-    ],
-    "vehicle_type": "ebike",
-    "image_url": "https://ridejetson.com/cdn/shop/products/MicrosoftTeams-image_21.png?v=1762526059",
-    "image_urls": [
-      "https://www.heybike.com/cdn/shop/files/Mars_2.0_HS-2.png?v=1774418893"
-    ],
-    "battery_voltage_v": 36,
-    "battery_capacity_ah": 7.8,
-    "battery_range_miles_pas": 25,
-    "battery_range_miles_throttle": 15,
-    "battery_charge_hours": 4,
-    "battery_charge_method": "removable",
-    "battery_charge_notes": "Compact folding pack; removable",
-    "battery_wh": 281,
-    "weight_lb": 38,
-    "weight_notes": "Hoverfly E-Compact 16\"",
-    "price_sources": [
-      {
-        "platform": "amazon",
-        "platform_label": "Amazon",
-        "retailer": null,
-        "url": "https://www.amazon.com/dp/B0FDWZV38C",
-        "item_price_usd": 500.0,
-        "shipping_usd": 0.0,
-        "landed_usd": 500.0,
-        "delivery_note": "Prime ~1\u20133 days",
-        "rewards_note": "5% back on some Chase/Amazon cards",
-        "is_search_url": false,
-        "in_store_only": false
-      },
-      {
-        "platform": "local",
-        "platform_label": "HB Electric Bike",
-        "retailer": "hb_electric",
-        "url": "https://hbelectricbike.com/",
-        "item_price_usd": null,
-        "shipping_usd": 0,
-        "landed_usd": null,
-        "delivery_note": "In-store \u00b7 Huntington Beach",
-        "rewards_note": null,
-        "is_search_url": false,
-        "in_store_only": true,
-        "price_display": "Check store"
-      }
-    ],
-    "landed_price_usd": 500.0,
-    "best_buy_url": "https://www.amazon.com/dp/B0FDWZV38C",
-    "best_buy_platform": "Amazon",
-    "best_buy_shipping_usd": 0.0,
-    "best_buy_delivery": "Prime ~1\u20133 days",
-    "safety_score": 58,
-    "safety_checklist": [
-      {
-        "key": "brake_type",
-        "row_label": "Brakes",
-        "label": "Mechanical Disc",
-        "value": "mechanical_disc",
-        "ok": true
-      },
-      {
-        "key": "front_brake",
-        "row_label": "Front brake",
-        "label": "Front brake",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "rear_brake",
-        "row_label": "Rear brake",
-        "label": "Rear brake",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "front_light",
-        "row_label": "Front light",
-        "label": "Front light",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "rear_light",
-        "row_label": "Rear light",
-        "label": "Rear light",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "reflectors",
-        "row_label": "Reflectors",
-        "label": "Reflectors",
-        "value": true,
-        "ok": true
-      },
-      {
-        "key": "ul_cert",
-        "row_label": "UL battery cert",
-        "label": "UL battery cert",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "tires",
-        "row_label": "Tire width \u2265 2.0\"",
-        "label": "Wide tires (\u2265 2.0\")",
-        "value": null,
-        "ok": false
-      },
-      {
-        "key": "speed_limiter",
-        "row_label": "Speed limiter",
-        "label": "Speed limiter",
-        "value": null,
-        "ok": true
-      }
-    ],
-    "feature_checklist": [],
-    "feature_display": {
-      "luxury_score": 0,
-      "feature_count": 0,
-      "by_group": {
-        "security": 0,
-        "tracking": 0,
-        "app": 0,
-        "audio": 0,
-        "luxury": 0
-      },
-      "perks_label": "\u2014",
-      "has_app": false,
-      "has_tracking": false,
-      "has_security": false,
-      "has_audio": false,
-      "is_smart": false
-    },
-    "legal": {
-      "legal_for_age": true,
-      "issues": [
-        "Exceeds 10 mph HB beach/park path limit \u2014 slow down on paths"
-      ],
-      "badges": [],
-      "e_bike_class": 2
-    },
-    "vs_baseline": {
-      "price_multiplier": 1.7,
-      "speed_delta_mph": 0.5,
-      "weight_delta_lb": 5.5,
-      "brake_upgrade": true,
-      "baseline_model": "Urban Lady Single Speed - Women's 26\" Beach Cruiser",
-      "baseline_price": 289,
-      "baseline_weight_lb": 32.5
-    },
-    "friend_recommended": false
-  },
-  {
     "id": "super73-zg",
     "tier": "premium",
     "brand": "Super73",
@@ -7107,6 +5941,8 @@
       "front": true,
       "rear": true
     },
+    "deemphasize": true,
+    "catalog_note": "Adult moto geometry. Fun, wrong rider.",
     "sources": [
       {
         "platform": "manufacturer",

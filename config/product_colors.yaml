@@ -37,6 +37,11 @@ colors:
     - {name: White, family: white}
     - {name: Black, family: black}
 
+  lectric-xp4:
+    - {name: Stratus White, family: white}
+    - {name: Tempest Grey, family: gray}
+    - {name: Raindrop Blue, family: blue}
+
   ride1up-portola:
     - {name: Indigo, family: blue}
     - {name: Silver, family: gray}
@@ -49,6 +54,10 @@ colors:
     - {name: Midnight, family: black}
     - {name: Sage, family: green}
     - {name: White, family: white}
+
+  aventon-pace-4:
+    - {name: White, family: white}
+    - {name: Black, family: black}
 
   rad-mission-1:
     - {name: Charcoal, family: black}

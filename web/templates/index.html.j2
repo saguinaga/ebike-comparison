@@ -194,6 +194,7 @@
           </select>
         </label>
         <label><input type="checkbox" id="efficiencyFilter"> Highlight efficient <span class="filter-hint">(≤12 Wh/mi PAS)</span></label>
+        <label><input type="checkbox" id="skipListFilter"> Show skip list <span class="filter-hint">(previous gen, Class 3 adult, or brand/support risk)</span></label>
       </div>
       <div class="tier-tabs" id="tierTabs">
         <button class="tier-tab active" data-tier="all">All</button>
@@ -223,7 +224,8 @@
           data-efficiency="{{ bike.battery_display.wh_per_mile_pas or '' }}"
           data-vehicle="{{ bike.vehicle_type or 'ebike' }}"
           data-luxury="{{ bike.feature_display.luxury_score if bike.feature_display else 0 }}"
-          data-smart="{{ 'yes' if bike.feature_display and bike.feature_display.is_smart else 'no' }}">
+          data-smart="{{ 'yes' if bike.feature_display and bike.feature_display.is_smart else 'no' }}"
+          data-deemphasize="{{ 'yes' if bike.deemphasize else 'no' }}">
           <button type="button" class="card-open" data-id="{{ bike.id }}" aria-label="View {{ bike.brand }} {{ bike.model }} details">
             <div class="bike-media">
               <div class="bike-thumb bike-thumb-compact">
@@ -237,6 +239,8 @@
               </div>
             </div>
             <h3>{{ bike.brand }} {{ bike.model }}{% if bike.vehicle_type == 'scooter' %} <span class="badge vehicle-scooter">Scooter</span>{% endif %}</h3>
+            {% if bike.deemphasize %}<div class="card-skip">Skip list</div>{% endif %}
+            {% if bike.catalog_note %}<p class="card-note">{{ bike.catalog_note }}</p>{% endif %}
             <div class="price-big">${{ bike.landed_price_usd or bike.price_usd }}</div>
             {% if bike.weight_lb %}
             <div class="card-weight card-weight--js" data-weight="{{ bike.weight_lb }}">{{ bike.weight_lb }} lb</div>

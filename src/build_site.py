@@ -102,6 +102,8 @@ def build(root: Path, min_bikes: int = 18) -> None:
             "image_gallery": b.get("image_gallery", []),
             "vs_baseline": b.get("vs_baseline", {}),
             "friend_recommended": b.get("friend_recommended", False),
+            "deemphasize": bool(b.get("deemphasize")),
+            "catalog_note": b.get("catalog_note") or "",
             "best_buy_url": best_url,
             "best_buy_platform": b.get("best_buy_platform"),
             "best_buy_delivery": b.get("best_buy_delivery"),
