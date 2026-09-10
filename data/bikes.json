@@ -262,7 +262,7 @@
       {
         "platform": "manufacturer",
         "url": "https://www.heybike.com/products/mars-2-0",
-        "price_usd": 999.0,
+        "price_usd": 1199.0,
         "shipping_usd": 0
       },
       {
@@ -293,7 +293,7 @@
       "price_usd": 0.9,
       "image_url": 0.8
     },
-    "price_usd": 999.0,
+    "price_usd": 1199.0,
     "image_url": "https://www.heybike.com/cdn/shop/files/Mars_2.0_HS-2.png?v=1774418893",
     "image_urls": [
       "https://www.heybike.com/cdn/shop/files/MARS2.0_Grey-Right.png?v=1774418893",
@@ -320,9 +320,9 @@
         "platform_label": "Direct",
         "retailer": null,
         "url": "https://www.heybike.com/products/mars-2-0",
-        "item_price_usd": 999.0,
+        "item_price_usd": 1199.0,
         "shipping_usd": 0.0,
-        "landed_usd": 999.0,
+        "landed_usd": 1199.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
         "is_search_url": false,
@@ -343,7 +343,7 @@
         "price_display": "Check store"
       }
     ],
-    "landed_price_usd": 999.0,
+    "landed_price_usd": 1199.0,
     "best_buy_url": "https://www.heybike.com/products/mars-2-0",
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
@@ -602,7 +602,7 @@
       "e_bike_class": 2
     },
     "vs_baseline": {
-      "price_multiplier": 3.5,
+      "price_multiplier": 4.1,
       "speed_delta_mph": 5,
       "weight_delta_lb": 44.5,
       "brake_upgrade": true,
@@ -630,7 +630,7 @@
       {
         "platform": "manufacturer",
         "url": "https://www.iscooterglobal.eu/products/u4-low-step-through-foldable-electric-bike",
-        "price_usd": 548.99,
+        "price_usd": 558.99,
         "shipping_usd": 0
       },
       {
@@ -661,7 +661,7 @@
       "price_usd": 0.9,
       "image_url": 0.8
     },
-    "price_usd": 548.99,
+    "price_usd": 558.99,
     "image_url": "https://www.iscooterglobal.co.uk/cdn/shop/files/U4WhiteNew.jpg?v=1775547475",
     "image_urls": [
       "https://www.iscooterglobal.co.uk/cdn/shop/files/u4easyfold.jpg?v=1776654035",
@@ -687,9 +687,9 @@
         "platform_label": "Direct",
         "retailer": null,
         "url": "https://www.iscooterglobal.eu/products/u4-low-step-through-foldable-electric-bike",
-        "item_price_usd": 548.99,
+        "item_price_usd": 558.99,
         "shipping_usd": 0.0,
-        "landed_usd": 548.99,
+        "landed_usd": 558.99,
         "delivery_note": "Direct ship",
         "rewards_note": null,
         "is_search_url": false,
@@ -710,7 +710,7 @@
         "price_display": "Check store"
       }
     ],
-    "landed_price_usd": 548.99,
+    "landed_price_usd": 558.99,
     "best_buy_url": "https://www.iscooterglobal.eu/products/u4-low-step-through-foldable-electric-bike",
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
@@ -1204,7 +1204,7 @@
       {
         "platform": "manufacturer",
         "url": "https://wallkeebike.com/products/wallke-h7-step-thru",
-        "price_usd": 1449.0,
+        "price_usd": 1299.0,
         "shipping_usd": 0
       },
       {
@@ -1235,7 +1235,7 @@
       "price_usd": 0.9,
       "image_url": 0.8
     },
-    "price_usd": 1449.0,
+    "price_usd": 1299.0,
     "image_url": "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
     "image_urls": [
       "https://www.heybike.com/cdn/shop/files/MARS2.0_Grey-Right.png?v=1774418893",
@@ -1257,9 +1257,9 @@
         "platform_label": "Direct",
         "retailer": null,
         "url": "https://wallkeebike.com/products/wallke-h7-step-thru",
-        "item_price_usd": 1449.0,
+        "item_price_usd": 1299.0,
         "shipping_usd": 0.0,
-        "landed_usd": 1449.0,
+        "landed_usd": 1299.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
         "is_search_url": false,
@@ -1280,7 +1280,7 @@
         "price_display": "Check store"
       }
     ],
-    "landed_price_usd": 1449.0,
+    "landed_price_usd": 1299.0,
     "best_buy_url": "https://wallkeebike.com/products/wallke-h7-step-thru",
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
@@ -1378,7 +1378,7 @@
       "e_bike_class": 2
     },
     "vs_baseline": {
-      "price_multiplier": 5.0,
+      "price_multiplier": 4.5,
       "speed_delta_mph": 5,
       "weight_delta_lb": 37.5,
       "brake_upgrade": true,
@@ -1773,7 +1773,7 @@
       {
         "platform": "manufacturer",
         "url": "https://ride1up.com/product/portola/",
-        "price_usd": 945.0,
+        "price_usd": 945,
         "shipping_usd": 0
       },
       {
@@ -1805,7 +1805,7 @@
     ],
     "vehicle_type": "ebike",
     "field_confidence": {
-      "price_usd": 0.88,
+      "price_usd": 0.35,
       "image_url": 0.5
     },
     "price_usd": 945.0,
@@ -4054,7 +4054,7 @@
       "price_usd": 0.35,
       "image_url": 0.5
     },
-    "price_usd": 210.0,
+    "price_usd": 1495.0,
     "image_url": "https://ride1up.com/wp-content/uploads/2026/03/RV3-MedLrg_Grn-scaled.webp",
     "image_urls": [
       "https://ride1up.com/wp-content/uploads/2026/04/RV3_Sus_-MedLrg_Blk--scaled.webp",
@@ -6507,7 +6507,7 @@
       {
         "platform": "manufacturer",
         "url": "https://ridejetson.com/products/bolt-electric-bike-pro",
-        "price_usd": 499.99,
+        "price_usd": 399.99,
         "shipping_usd": 10
       },
       {
@@ -6552,7 +6552,7 @@
       "price_usd": 0.9,
       "image_url": 0.8
     },
-    "price_usd": 499.99,
+    "price_usd": 399.99,
     "image_url": "https://ridejetson.com/cdn/shop/products/MicrosoftTeams-image_21.png?v=1762526059",
     "image_urls": [
       "https://ridejetson.com/cdn/shop/products/JBLTP-BLK_LS_01_418fe14f-ed07-4190-bbb0-b2279f115c89.jpg?v=1745265756",
@@ -6575,6 +6575,19 @@
     },
     "price_sources": [
       {
+        "platform": "manufacturer",
+        "platform_label": "Direct",
+        "retailer": null,
+        "url": "https://ridejetson.com/products/bolt-electric-bike-pro",
+        "item_price_usd": 399.99,
+        "shipping_usd": 10.0,
+        "landed_usd": 409.99,
+        "delivery_note": "Direct ship",
+        "rewards_note": null,
+        "is_search_url": false,
+        "in_store_only": false
+      },
+      {
         "platform": "amazon",
         "platform_label": "Amazon",
         "retailer": null,
@@ -6584,19 +6597,6 @@
         "landed_usd": 500.0,
         "delivery_note": "Prime ~1\u20133 days",
         "rewards_note": "5% back on some Chase/Amazon cards",
-        "is_search_url": false,
-        "in_store_only": false
-      },
-      {
-        "platform": "manufacturer",
-        "platform_label": "Direct",
-        "retailer": null,
-        "url": "https://ridejetson.com/products/bolt-electric-bike-pro",
-        "item_price_usd": 499.99,
-        "shipping_usd": 10.0,
-        "landed_usd": 509.99,
-        "delivery_note": "Direct ship",
-        "rewards_note": null,
         "is_search_url": false,
         "in_store_only": false
       },
@@ -6629,11 +6629,11 @@
         "price_display": "Check store"
       }
     ],
-    "landed_price_usd": 500.0,
-    "best_buy_url": "https://www.amazon.com/dp/B0D3NGHMQC",
-    "best_buy_platform": "Amazon",
-    "best_buy_shipping_usd": 0.0,
-    "best_buy_delivery": "Prime ~1\u20133 days",
+    "landed_price_usd": 409.99,
+    "best_buy_url": "https://ridejetson.com/products/bolt-electric-bike-pro",
+    "best_buy_platform": "Direct",
+    "best_buy_shipping_usd": 10.0,
+    "best_buy_delivery": "Direct ship",
     "safety_score": 63,
     "safety_checklist": [
       {
@@ -6888,7 +6888,7 @@
       "e_bike_class": 2
     },
     "vs_baseline": {
-      "price_multiplier": 1.7,
+      "price_multiplier": 1.4,
       "speed_delta_mph": 0.5,
       "weight_delta_lb": 1.5,
       "brake_upgrade": true,
@@ -7111,7 +7111,7 @@
       {
         "platform": "manufacturer",
         "url": "https://super73.com/products/super73-z-miami-core-legacy",
-        "price_usd": 2445.0,
+        "price_usd": 2195.0,
         "shipping_usd": 0
       },
       {
@@ -7142,7 +7142,7 @@
       "price_usd": 0.9,
       "image_url": 0.8
     },
-    "price_usd": 2445.0,
+    "price_usd": 2195.0,
     "image_url": "https://super73.com/cdn/shop/files/25YMZMIAMI_CORE_FRONTHERO_de5b8c0a-fb02-4386-bf97-10d95025e36d_1800x.jpg?v=1772738545",
     "image_urls": [
       "https://super73.com/cdn/shop/files/25YMZMIAMI_CORE_RIGHT_1800x.jpg?v=1772738545",
@@ -7168,9 +7168,9 @@
         "platform_label": "Direct",
         "retailer": null,
         "url": "https://super73.com/products/super73-z-miami-core-legacy",
-        "item_price_usd": 2445.0,
+        "item_price_usd": 2195.0,
         "shipping_usd": 0.0,
-        "landed_usd": 2445.0,
+        "landed_usd": 2195.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
         "is_search_url": false,
@@ -7191,7 +7191,7 @@
         "price_display": "Check store"
       }
     ],
-    "landed_price_usd": 2445.0,
+    "landed_price_usd": 2195.0,
     "best_buy_url": "https://super73.com/products/super73-z-miami-core-legacy",
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
@@ -7450,7 +7450,7 @@
       "e_bike_class": 2
     },
     "vs_baseline": {
-      "price_multiplier": 8.5,
+      "price_multiplier": 7.6,
       "speed_delta_mph": 5,
       "weight_delta_lb": 32.5,
       "brake_upgrade": true,
@@ -7929,6 +7929,7 @@
     "battery_wh": 367,
     "weight_lb": 41.9,
     "weight_notes": "Segway Ninebot F2",
+    "price_usd": 599.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -8338,6 +8339,7 @@
     "battery_wh": 612,
     "weight_lb": 47.6,
     "weight_notes": "Segway Ninebot Max G2",
+    "price_usd": 899.0,
     "price_sources": [
       {
         "platform": "manufacturer",

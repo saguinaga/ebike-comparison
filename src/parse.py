@@ -176,6 +176,12 @@ def parse_all(root: Path, scrape_live: bool = True) -> list:
             retail_cfg,
         )
         apply_scraped_prices(bike, entry.get("sources", []))
+        conf = (bike.get("field_confidence") or {}).get("price_usd", 0)
+        if conf < 0.8:
+            for src in entry.get("sources", []):
+                if src.get("platform") == "manufacturer" and src.get("price_usd") is not None:
+                    bike["price_usd"] = float(src["price_usd"])
+                    break
         bike.update(compute_landed_prices({**entry, **bike, "sources": bike["sources"]}))
         bike["safety_score"] = compute_safety_score(bike)
         bike["safety_checklist"] = build_checklist(bike)
