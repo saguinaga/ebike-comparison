@@ -1,10 +1,11 @@
 from .formatting import format_brake
 
 BRAKE_SCORES = {
-    "coaster": 5,
-    "rim": 8,
-    "mechanical_disc": 18,
-    "hydraulic_disc": 25,
+    "coaster": 0,
+    "rim": 4,
+    "mechanical_disc": 12,
+    "hydraulic_disc": 24,
+    "electronic_disc": 18,
 }
 
 CHECKLIST_ROW_LABELS = {
@@ -95,57 +96,75 @@ def build_checklist(bike: dict) -> list:
     ]
 
 
+def _has_front_brake(bike: dict) -> bool:
+    if bike.get("brakes_front") is True:
+        return True
+    if bike.get("brakes_front") is False:
+        return False
+    return bike.get("brake_type") in ("mechanical_disc", "hydraulic_disc", "electronic_disc")
+
+
 def compute_safety_score(bike: dict) -> int:
+    """Family-weighted score. UL, hydraulic brakes, and 20 mph cap move the needle.
+
+    Typical spread: cruiser baseline ~20, mid Class 2 with UL ~75-88, Class 3 without limiter ~55-65.
+    """
     if bike.get("vehicle_type") == "scooter":
         return _compute_scooter_safety_score(bike)
-    score = 0
+    score = 4
     brake = bike.get("brake_type", "rim")
-    score += BRAKE_SCORES.get(brake, 5)
-
+    score += BRAKE_SCORES.get(brake, 4)
+    if _has_front_brake(bike):
+        score += 8
     lights = bike.get("lights") or {}
     if lights.get("front"):
-        score += 10
+        score += 7
     if lights.get("rear"):
-        score += 10
+        score += 7
     if bike.get("reflectors"):
-        score += 5
-    if (bike.get("tire_width_in") or 0) >= 2.4:
-        score += 5
+        score += 4
+    tire_w = bike.get("tire_width_in") or 0
+    if tire_w >= 2.4:
+        score += 6
+    elif tire_w >= 2.0:
+        score += 3
+    if bike.get("ul_certified"):
+        score += 20
     max_spd = bike.get("max_speed_mph") or 20
-    if max_spd <= 20:
+    if max_spd <= 15:
+        score += 12
+    elif max_spd <= 20:
         score += 10
     elif max_spd <= 28:
-        score += 5
-    if bike.get("ul_certified"):
-        score += 5
-    if bike.get("brakes_front"):
-        score += 5
-    return min(score, 100)
+        score += 2
+    cls = bike.get("e_bike_class")
+    if cls == 3 or str(cls) == "3":
+        score -= 8
+    if bike.get("speed_limiter") is True:
+        score += 6
+    return max(5, min(score, 100))
 
 
 def _compute_scooter_safety_score(bike: dict) -> int:
-    score = 15
+    score = 10
     brake = bike.get("brake_type", "rim")
-    if brake == "electronic_disc":
-        score += 20
-    elif brake in ("mechanical_disc", "hydraulic_disc"):
-        score += 18
+    score += BRAKE_SCORES.get(brake, 4)
     lights = bike.get("lights") or {}
     if lights.get("front"):
-        score += 12
+        score += 10
     if lights.get("rear"):
-        score += 12
+        score += 10
     if bike.get("ul_certified"):
-        score += 15
+        score += 22
     max_spd = bike.get("max_speed_mph") or 20
-    if max_spd <= 20:
+    if max_spd <= 15:
         score += 12
-    elif max_spd <= 25:
-        score += 6
+    elif max_spd <= 20:
+        score += 10
     feats = bike.get("features") or {}
     ip = (feats.get("ip_rating") or "").upper()
     if any(x in ip for x in ("IPX5", "IPX6", "IPX7", "IP54", "IP55", "IP65")):
         score += 8
     if feats.get("alarm") or feats.get("lock_builtin"):
-        score += 5
-    return min(score, 100)
+        score += 6
+    return max(5, min(score, 100))

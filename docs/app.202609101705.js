@@ -1221,23 +1221,24 @@
       if (bike.features?.alarm || bike.features?.lock_builtin) score += 6;
       return Math.max(5, Math.min(score, 100));
     }
-    let score = 4;
+    let score = 8;
     score += BRAKE_SCORES[bike.brake_type] || 4;
-    if (hasFrontBrake(bike)) score += 8;
+    if (hasFrontBrake(bike)) score += 10;
     const lights = bike.lights || {};
-    if (lights.front) score += 7;
-    if (lights.rear) score += 7;
+    if (lights.front) score += 8;
+    if (lights.rear) score += 8;
     if (bike.reflectors) score += 4;
     const tireW = bike.tire_width_in || 0;
-    if (tireW >= 2.4) score += 6;
-    else if (tireW >= 2.0) score += 3;
-    if (bike.ul_certified) score += 20;
+    if (tireW >= 2.4) score += 8;
+    else if (tireW >= 2.0) score += 4;
+    if (bike.ul_certified) score += 22;
     const maxSpd = bike.max_speed_mph || 20;
-    if (maxSpd <= 15) score += 12;
-    else if (maxSpd <= 20) score += 10;
-    else if (maxSpd <= 28) score += 2;
+    if (maxSpd <= 15) score += 14;
+    else if (maxSpd <= 20) score += 12;
+    else if (maxSpd <= 28) score += 3;
     if (bike.e_bike_class === 3 || String(bike.e_bike_class) === "3") score -= 8;
-    if (bike.speed_limiter === true) score += 6;
+    const limiter = bike.speed_limiter;
+    if (limiter === true || (limiter == null && maxSpd <= 20)) score += 8;
     return Math.max(5, Math.min(score, 100));
   }
 

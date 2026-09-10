@@ -46,10 +46,72 @@
     "battery_charge_notes": "Pedal only \u2014 no battery",
     "battery_wh": null,
     "weight_notes": "Firmstrong product spec",
-    "field_confidence": {
-      "weight_lb": 0.85,
-      "image_url": 0.85
-    }
+    "safety_score": 19,
+    "safety_checklist": [
+      {
+        "key": "brake_type",
+        "row_label": "Brakes",
+        "label": "Coaster",
+        "value": "coaster",
+        "ok": false
+      },
+      {
+        "key": "front_brake",
+        "row_label": "Front brake",
+        "label": "Front brake",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_brake",
+        "row_label": "Rear brake",
+        "label": "Rear brake",
+        "value": true,
+        "ok": true
+      },
+      {
+        "key": "front_light",
+        "row_label": "Front light",
+        "label": "Front light",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "rear_light",
+        "row_label": "Rear light",
+        "label": "Rear light",
+        "value": false,
+        "ok": false
+      },
+      {
+        "key": "reflectors",
+        "row_label": "Reflectors",
+        "label": "Reflectors",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "ul_cert",
+        "row_label": "UL battery cert",
+        "label": "UL battery cert",
+        "value": null,
+        "ok": false
+      },
+      {
+        "key": "tires",
+        "row_label": "Tire width \u2265 2.0\"",
+        "label": "Tires 2.125\" wide",
+        "value": 2.125,
+        "ok": true
+      },
+      {
+        "key": "speed_limiter",
+        "row_label": "Speed limiter",
+        "label": "Speed limiter",
+        "value": null,
+        "ok": true
+      }
+    ]
   },
   {
     "id": "lectric-xp-lite",
@@ -70,7 +132,7 @@
       {
         "platform": "manufacturer",
         "url": "https://lectricebikes.com/products/xp-lite-lectric-blue-long-range-ebike",
-        "price_usd": 999.0,
+        "price_usd": 999,
         "shipping_usd": 0
       },
       {
@@ -93,11 +155,6 @@
       }
     ],
     "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.5
-    },
-    "price_usd": 999.0,
     "image_url": "https://lectricebikes.com/cdn/shop/files/lite-white_a6ef01c7-4607-4639-b0c4-09846a407fc9.png?v=1768990516",
     "image_urls": [
       "https://lectricebikes.com/cdn/shop/files/white-side_2e68dfc9-b660-4559-9a17-133fb42e0792.webp?v=1776061626",
@@ -121,6 +178,7 @@
       "firmware_ota": true,
       "fold_compact": true
     },
+    "price_usd": 999.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -155,7 +213,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 60,
+    "safety_score": 80,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -440,7 +498,7 @@
       {
         "platform": "manufacturer",
         "url": "https://lectricebikes.com/products/xp-step-thru-white",
-        "price_usd": 999.0,
+        "price_usd": 999,
         "shipping_usd": 0
       },
       {
@@ -467,11 +525,6 @@
       }
     ],
     "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.8
-    },
-    "price_usd": 999.0,
     "image_url": "https://lectricebikes.com/cdn/shop/files/XP4-T-WST.jpg?v=1759897225",
     "image_urls": [
       "https://lectricebikes.com/cdn/shop/files/XP4-T-BXP_114a4807-a772-4a64-9699-348d007460c7.png?v=1768038905",
@@ -494,6 +547,7 @@
       "firmware_ota": true,
       "fold_compact": true
     },
+    "price_usd": 999.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -528,7 +582,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 60,
+    "safety_score": 86,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -806,6 +860,7 @@
       "front": true,
       "rear": true
     },
+    "ul_certified": true,
     "speed_limiter": true,
     "catalog_note": "Keep Class 2 / 20 mph. Folder reviews still treat this as the sub-$1k pick.",
     "sources": [
@@ -843,11 +898,6 @@
       }
     ],
     "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.35,
-      "image_url": 0.5
-    },
-    "price_usd": 945.0,
     "image_url": "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
     "image_urls": [
       "https://ride1up.com/wp-content/uploads/2023/07/Portola-Gallery-01-jpg.webp",
@@ -868,6 +918,7 @@
     "features": {
       "fold_compact": true
     },
+    "price_usd": 945.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -902,7 +953,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 55,
+    "safety_score": 86,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -950,8 +1001,8 @@
         "key": "ul_cert",
         "row_label": "UL battery cert",
         "label": "UL battery cert",
-        "value": null,
-        "ok": false
+        "value": true,
+        "ok": true
       },
       {
         "key": "tires",
@@ -1180,11 +1231,12 @@
       "front": true,
       "rear": true
     },
+    "ul_certified": true,
     "sources": [
       {
         "platform": "manufacturer",
         "url": "https://www.aventon.com/products/soltera-2-5-ebike",
-        "price_usd": 1199.0,
+        "price_usd": 1199,
         "shipping_usd": 0
       },
       {
@@ -1227,11 +1279,6 @@
       }
     ],
     "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.8
-    },
-    "price_usd": 1199.0,
     "image_url": "https://aventon-images.imgix.net/files/01_Soltera.2.jpg?v=1756958410",
     "image_urls": [
       "https://aventon-images.imgix.net/files/Baja-Soltera-2.5-6.jpg?v=1756958410",
@@ -1253,6 +1300,7 @@
       "ride_history": true,
       "firmware_ota": true
     },
+    "price_usd": 1199.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -1301,7 +1349,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 48,
+    "safety_score": 68,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -1349,8 +1397,8 @@
         "key": "ul_cert",
         "row_label": "UL battery cert",
         "label": "UL battery cert",
-        "value": null,
-        "ok": false
+        "value": true,
+        "ok": true
       },
       {
         "key": "tires",
@@ -1586,7 +1634,7 @@
       {
         "platform": "manufacturer",
         "url": "https://www.aventon.com/products/pace-4-step-through-ebike",
-        "price_usd": 1599.0,
+        "price_usd": 1599,
         "shipping_usd": 0
       },
       {
@@ -1617,11 +1665,6 @@
       }
     ],
     "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.5
-    },
-    "price_usd": 1599.0,
     "image_url": "https://aventon-images.imgix.net/files/01_Level.3_Matte-Aurora_Side_1-bike.jpg?v=1739400464",
     "image_urls": [
       "https://aventon-images.imgix.net/files/01_Soltera.2.jpg?v=1756958410"
@@ -1642,6 +1685,7 @@
       "firmware_ota": true,
       "gps_tracking": true
     },
+    "price_usd": 1599.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -1690,7 +1734,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 60,
+    "safety_score": 86,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -1968,13 +2012,14 @@
       "front": true,
       "rear": true
     },
+    "ul_certified": true,
     "deemphasize": true,
     "catalog_note": "Previous gen. Prefer XP4 Step-Thru at the same price.",
     "sources": [
       {
         "platform": "manufacturer",
         "url": "https://lectricebikes.com/products/xp-green-long-range",
-        "price_usd": 1299.0,
+        "price_usd": 1299,
         "shipping_usd": 0
       },
       {
@@ -2013,11 +2058,6 @@
       }
     ],
     "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.8
-    },
-    "price_usd": 1299.0,
     "image_url": "https://lectricebikes.com/cdn/shop/files/XP4-T-BXP_114a4807-a772-4a64-9699-348d007460c7.png?v=1768038905",
     "image_urls": [
       "https://lectricebikes.com/cdn/shop/files/BXP-side2.png?v=1776060550",
@@ -2041,6 +2081,7 @@
       "firmware_ota": true,
       "fold_compact": true
     },
+    "price_usd": 1299.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -2075,7 +2116,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 48,
+    "safety_score": 68,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -2123,8 +2164,8 @@
         "key": "ul_cert",
         "row_label": "UL battery cert",
         "label": "UL battery cert",
-        "value": null,
-        "ok": false
+        "value": true,
+        "ok": true
       },
       {
         "key": "tires",
@@ -2707,13 +2748,14 @@
       "front": true,
       "rear": true
     },
+    "ul_certified": true,
     "deemphasize": true,
     "catalog_note": "Heavy fat-tire. Fine as 'too much bike,' not a school commute pick.",
     "sources": [
       {
         "platform": "manufacturer",
         "url": "https://www.velotricbike.com/products/velotric-nomad-1",
-        "price_usd": 1899.0,
+        "price_usd": 1899,
         "shipping_usd": 0
       },
       {
@@ -2744,11 +2786,6 @@
       }
     ],
     "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.5
-    },
-    "price_usd": 1899.0,
     "image_url": "https://www.velotricbike.com/cdn/shop/files/N1_Plus_HS_forest_1.png?v=1722237926&width=1200",
     "image_urls": [
       "https://www.velotricbike.com/cdn/shop/files/N1_Plus_ST_forest_1_grande.png?v=1722237925",
@@ -2770,6 +2807,7 @@
       "ride_history": true,
       "gps_tracking": true
     },
+    "price_usd": 1899.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -2804,7 +2842,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 48,
+    "safety_score": 68,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -2852,8 +2890,8 @@
         "key": "ul_cert",
         "row_label": "UL battery cert",
         "label": "UL battery cert",
-        "value": null,
-        "ok": false
+        "value": true,
+        "ok": true
       },
       {
         "key": "tires",
@@ -3088,7 +3126,7 @@
       {
         "platform": "manufacturer",
         "url": "https://www.radpowerbikes.com/products/radrunner-plus-electric-cargo-utility-bike",
-        "price_usd": 1799.0,
+        "price_usd": 1799,
         "shipping_usd": 0
       },
       {
@@ -3119,11 +3157,6 @@
       }
     ],
     "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.8
-    },
-    "price_usd": 1799.0,
     "image_url": "https://lectricebikes.com/cdn/shop/files/XP4-T-BXP_114a4807-a772-4a64-9699-348d007460c7.png?v=1768038905",
     "image_urls": [
       "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
@@ -3143,6 +3176,7 @@
       "companion_app": true,
       "ride_history": true
     },
+    "price_usd": 1799.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -3177,7 +3211,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 55,
+    "safety_score": 60,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -3455,6 +3489,7 @@
       "front": true,
       "rear": true
     },
+    "ul_certified": true,
     "catalog_note": "Light (~40\u201344 lb). Confirm low-step standover for 5'2\". Keep Class 2 unlock off if offered.",
     "sources": [
       {
@@ -3487,11 +3522,6 @@
       }
     ],
     "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.35,
-      "image_url": 0.5
-    },
-    "price_usd": 1495.0,
     "image_url": "https://ride1up.com/wp-content/uploads/2026/03/RV3-MedLrg_Grn-scaled.webp",
     "image_urls": [
       "https://ride1up.com/wp-content/uploads/2026/04/RV3_Sus_-MedLrg_Blk--scaled.webp",
@@ -3510,6 +3540,7 @@
     "features": {
       "fold_compact": false
     },
+    "price_usd": 1495.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -3544,7 +3575,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 55,
+    "safety_score": 80,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -3592,8 +3623,8 @@
         "key": "ul_cert",
         "row_label": "UL battery cert",
         "label": "UL battery cert",
-        "value": null,
-        "ok": false
+        "value": true,
+        "ok": true
       },
       {
         "key": "tires",
@@ -3822,13 +3853,14 @@
       "front": true,
       "rear": true
     },
+    "ul_certified": true,
     "deemphasize": true,
     "catalog_note": "Class 3. Parent/commuter comparison only. Illegal for under 16 in California.",
     "sources": [
       {
         "platform": "manufacturer",
         "url": "https://www.aventon.com/products/level-3-commuter-ebike",
-        "price_usd": 1699.0,
+        "price_usd": 1699,
         "shipping_usd": 0
       },
       {
@@ -3867,11 +3899,6 @@
       }
     ],
     "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.8
-    },
-    "price_usd": 1699.0,
     "image_url": "https://aventon-images.imgix.net/files/01_Level.3_Matte-Aurora_Side_1-bike.jpg?v=1739400464",
     "image_urls": [
       "https://aventon-images.imgix.net/files/01_Level.3_Matte-Black_Side_1-bike.jpg?v=1739400464",
@@ -3894,6 +3921,7 @@
       "firmware_ota": true,
       "gps_tracking": true
     },
+    "price_usd": 1699.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -3942,7 +3970,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 50,
+    "safety_score": 64,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -3990,8 +4018,8 @@
         "key": "ul_cert",
         "row_label": "UL battery cert",
         "label": "UL battery cert",
-        "value": null,
-        "ok": false
+        "value": true,
+        "ok": true
       },
       {
         "key": "tires",
@@ -4226,11 +4254,12 @@
       "front": true,
       "rear": true
     },
+    "ul_certified": true,
     "sources": [
       {
         "platform": "manufacturer",
         "url": "https://www.batchbicycles.com/ecb-3/",
-        "price_usd": 1599.99,
+        "price_usd": 1600,
         "shipping_usd": 0
       },
       {
@@ -4257,11 +4286,6 @@
       }
     ],
     "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.88,
-      "image_url": 0.8
-    },
-    "price_usd": 1599.99,
     "image_url": "https://aventon-images.imgix.net/files/01_Soltera.2.jpg?v=1756958410",
     "image_urls": [
       "https://lectricebikes.com/cdn/shop/files/XP4-TEMPEST_GREY_STEP_OVER-BF-STUDIO_CAROUSEL.jpg?v=1774327498",
@@ -4277,15 +4301,16 @@
     "battery_wh": 499,
     "weight_lb": 51,
     "weight_notes": "Batch E-Bike Commuter",
+    "price_usd": 1600.0,
     "price_sources": [
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
         "retailer": null,
         "url": "https://www.batchbicycles.com/ecb-3/",
-        "item_price_usd": 1599.99,
+        "item_price_usd": 1600.0,
         "shipping_usd": 0.0,
-        "landed_usd": 1599.99,
+        "landed_usd": 1600.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
         "is_search_url": false,
@@ -4306,12 +4331,12 @@
         "price_display": "Check store"
       }
     ],
-    "landed_price_usd": 1599.99,
+    "landed_price_usd": 1600.0,
     "best_buy_url": "https://www.batchbicycles.com/ecb-3/",
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 48,
+    "safety_score": 68,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -4359,8 +4384,8 @@
         "key": "ul_cert",
         "row_label": "UL battery cert",
         "label": "UL battery cert",
-        "value": null,
-        "ok": false
+        "value": true,
+        "ok": true
       },
       {
         "key": "tires",
@@ -4418,7 +4443,7 @@
     "id": "zooz-ultra-ripster",
     "tier": "premium",
     "brand": "Zooz",
-    "model": "Ultra Ripster - Gen 2",
+    "model": "Ultra Ripster Gen 2",
     "parser": "zooz",
     "e_bike_class": 3,
     "max_speed_mph": 28,
@@ -4428,6 +4453,7 @@
       "front": true,
       "rear": true
     },
+    "ul_certified": true,
     "friend_recommended": true,
     "deemphasize": true,
     "catalog_note": "Moto geometry, Class 3. Friend-recommended adult bike, not a school commute.",
@@ -4435,7 +4461,7 @@
       {
         "platform": "manufacturer",
         "url": "https://zoozbikes.com/products/ultra-ripster-gen-2",
-        "price_usd": 2195.0,
+        "price_usd": 2195,
         "shipping_usd": 0
       },
       {
@@ -4466,13 +4492,6 @@
       }
     ],
     "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.85,
-      "motor_w": 0.7,
-      "brake_type": 0.6,
-      "image_url": 0.8
-    },
-    "price_usd": 2195.0,
     "image_url": "https://zoozbikes.com/cdn/shop/files/URGEN2-CHROME-FRONT.png?v=1782772196",
     "image_urls": [
       "https://zoozbikes.com/cdn/shop/files/URGEN2-CHROME-SIDE.png?v=1782772320",
@@ -4491,6 +4510,7 @@
     "features": {
       "keyless_start": true
     },
+    "price_usd": 2195.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -4525,7 +4545,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 50,
+    "safety_score": 64,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -4573,8 +4593,8 @@
         "key": "ul_cert",
         "row_label": "UL battery cert",
         "label": "UL battery cert",
-        "value": null,
-        "ok": false
+        "value": true,
+        "ok": true
       },
       {
         "key": "tires",
@@ -4808,13 +4828,14 @@
       "front": true,
       "rear": true
     },
+    "ul_certified": true,
     "friend_recommended": true,
     "catalog_note": "Local shop bike. Class 3, 16+. What grown-ups at HB Electric ride, not a school commute.",
     "sources": [
       {
         "platform": "manufacturer",
         "url": "https://zoozbikes.com/products/uu-gen4",
-        "price_usd": 2595.0,
+        "price_usd": 2595,
         "shipping_usd": 0
       },
       {
@@ -4845,13 +4866,6 @@
       }
     ],
     "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.85,
-      "motor_w": 0.7,
-      "brake_type": 0.6,
-      "image_url": 0.8
-    },
-    "price_usd": 2595.0,
     "image_url": "https://zoozbikes.com/cdn/shop/files/UUGEN5-GLOWWORM-FRONT.jpg?v=1782842327",
     "image_urls": [
       "https://zoozbikes.com/cdn/shop/files/UUGEN5-CHROME-FRONT.jpg?v=1782842327",
@@ -4870,6 +4884,7 @@
     "features": {
       "keyless_start": true
     },
+    "price_usd": 2595.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -4904,7 +4919,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 50,
+    "safety_score": 64,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -4952,8 +4967,8 @@
         "key": "ul_cert",
         "row_label": "UL battery cert",
         "label": "UL battery cert",
-        "value": null,
-        "ok": false
+        "value": true,
+        "ok": true
       },
       {
         "key": "tires",
@@ -5187,12 +5202,13 @@
       "front": true,
       "rear": true
     },
+    "ul_certified": true,
     "catalog_note": "Class 3. Local comparison only.",
     "sources": [
       {
         "platform": "manufacturer",
         "url": "https://zoozbikes.com/products/ultra-flex-g2-low-bar",
-        "price_usd": 3195.0,
+        "price_usd": 3195,
         "shipping_usd": 0
       },
       {
@@ -5223,13 +5239,6 @@
       }
     ],
     "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.85,
-      "motor_w": 0.7,
-      "brake_type": 0.6,
-      "image_url": 0.8
-    },
-    "price_usd": 3195.0,
     "image_url": "https://zoozbikes.com/cdn/shop/files/UFGEN3-LOW-CHRM-FRONT.jpg?v=1782769660",
     "image_urls": [
       "https://zoozbikes.com/cdn/shop/files/UFGEN3-LOW-CHRM-SIDE.jpg?v=1782769634",
@@ -5248,6 +5257,7 @@
     "features": {
       "keyless_start": true
     },
+    "price_usd": 3195.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -5282,7 +5292,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 50,
+    "safety_score": 64,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -5330,8 +5340,8 @@
         "key": "ul_cert",
         "row_label": "UL battery cert",
         "label": "UL battery cert",
-        "value": null,
-        "ok": false
+        "value": true,
+        "ok": true
       },
       {
         "key": "tires",
@@ -5566,12 +5576,13 @@
       "front": true,
       "rear": true
     },
+    "ul_certified": true,
     "catalog_note": "Real bike, wrong class for a 12-year-old. Friend-shop context only.",
     "sources": [
       {
         "platform": "manufacturer",
         "url": "https://zoozbikes.com/products/ultra-cush",
-        "price_usd": 2795.0,
+        "price_usd": 2795,
         "shipping_usd": 0
       },
       {
@@ -5598,13 +5609,6 @@
       }
     ],
     "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.85,
-      "motor_w": 0.7,
-      "brake_type": 0.6,
-      "image_url": 0.8
-    },
-    "price_usd": 2795.0,
     "image_url": "https://zoozbikes.com/cdn/shop/files/ULTRACUSH-FRONT.jpg?v=1782778274",
     "image_urls": [
       "https://zoozbikes.com/cdn/shop/files/ULTRACUSH-SIDE.jpg?v=1782778285",
@@ -5623,6 +5627,7 @@
     "features": {
       "keyless_start": true
     },
+    "price_usd": 2795.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -5657,7 +5662,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 50,
+    "safety_score": 64,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -5705,8 +5710,8 @@
         "key": "ul_cert",
         "row_label": "UL battery cert",
         "label": "UL battery cert",
-        "value": null,
-        "ok": false
+        "value": true,
+        "ok": true
       },
       {
         "key": "tires",
@@ -5947,7 +5952,7 @@
       {
         "platform": "manufacturer",
         "url": "https://super73.com/products/super73-z-miami-core-legacy",
-        "price_usd": 2195.0,
+        "price_usd": 2445,
         "shipping_usd": 0
       },
       {
@@ -5974,11 +5979,6 @@
       }
     ],
     "vehicle_type": "ebike",
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.8
-    },
-    "price_usd": 2195.0,
     "image_url": "https://super73.com/cdn/shop/files/25YMZMIAMI_CORE_FRONTHERO_de5b8c0a-fb02-4386-bf97-10d95025e36d_1800x.jpg?v=1772738545",
     "image_urls": [
       "https://super73.com/cdn/shop/files/25YMZMIAMI_CORE_RIGHT_1800x.jpg?v=1772738545",
@@ -5998,15 +5998,16 @@
       "companion_app": true,
       "ride_history": true
     },
+    "price_usd": 2445.0,
     "price_sources": [
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
         "retailer": null,
         "url": "https://super73.com/products/super73-z-miami-core-legacy",
-        "item_price_usd": 2195.0,
+        "item_price_usd": 2445.0,
         "shipping_usd": 0.0,
-        "landed_usd": 2195.0,
+        "landed_usd": 2445.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
         "is_search_url": false,
@@ -6027,7 +6028,7 @@
         "price_display": "Check store"
       }
     ],
-    "landed_price_usd": 2195.0,
+    "landed_price_usd": 2445.0,
     "best_buy_url": "https://super73.com/products/super73-z-miami-core-legacy",
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
@@ -6286,7 +6287,7 @@
       "e_bike_class": 2
     },
     "vs_baseline": {
-      "price_multiplier": 7.6,
+      "price_multiplier": 8.5,
       "speed_delta_mph": 5,
       "weight_delta_lb": 32.5,
       "brake_upgrade": true,
@@ -6315,7 +6316,7 @@
       {
         "platform": "manufacturer",
         "url": "https://gotrax.com/products/g4-electric-scooter-for-adults",
-        "price_usd": 449.0,
+        "price_usd": 469,
         "shipping_usd": 0
       },
       {
@@ -6352,11 +6353,6 @@
       "fold_compact": true,
       "ip_rating": "IPX4"
     },
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.8
-    },
-    "price_usd": 449.0,
     "image_url": "https://gotrax.com/cdn/shop/files/g4-electric-scooter-for-adults-9284598.jpg?v=1776169808",
     "image_urls": [
       "https://gotrax.com/cdn/shop/files/g4-electric-scooter-for-adults-6755758.jpg?v=1776112319",
@@ -6372,15 +6368,16 @@
     "battery_wh": 374,
     "weight_lb": 36.3,
     "weight_notes": "Gotrax G4",
+    "price_usd": 469.0,
     "price_sources": [
       {
         "platform": "manufacturer",
         "platform_label": "Direct",
         "retailer": null,
         "url": "https://gotrax.com/products/g4-electric-scooter-for-adults",
-        "item_price_usd": 449.0,
+        "item_price_usd": 469.0,
         "shipping_usd": 0.0,
-        "landed_usd": 449.0,
+        "landed_usd": 469.0,
         "delivery_note": "Direct ship",
         "rewards_note": null,
         "is_search_url": false,
@@ -6415,12 +6412,12 @@
         "price_display": "Check store"
       }
     ],
-    "landed_price_usd": 449.0,
+    "landed_price_usd": 469.0,
     "best_buy_url": "https://gotrax.com/products/g4-electric-scooter-for-adults",
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 91,
+    "safety_score": 86,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -6751,9 +6748,6 @@
       "cruise_control": true,
       "ip_rating": "IPX5"
     },
-    "field_confidence": {
-      "image_url": 0.8
-    },
     "image_url": "https://segway.imgix.net/catalog/product/cache/d3ec3723470ff918c92e447639eaf984/f/2/f2-1_2.png",
     "battery_voltage_v": 36,
     "battery_capacity_ah": 10.2,
@@ -6828,7 +6822,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 99,
+    "safety_score": 94,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -7161,9 +7155,6 @@
       "fold_compact": true,
       "ip_rating": "IPX5"
     },
-    "field_confidence": {
-      "image_url": 0.8
-    },
     "image_url": "https://segway.imgix.net/catalog/product/cache/d3ec3723470ff918c92e447639eaf984/m/a/max_g2-1_2.png",
     "battery_voltage_v": 36,
     "battery_capacity_ah": 17,
@@ -7238,7 +7229,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 99,
+    "safety_score": 94,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -7519,7 +7510,7 @@
       {
         "platform": "manufacturer",
         "url": "https://shop.niu.com/products/niu-kqi3-max-electric-kick-scooter-for-adults",
-        "price_usd": 999.0,
+        "price_usd": 999,
         "shipping_usd": 0
       },
       {
@@ -7573,11 +7564,6 @@
       "fold_compact": true,
       "ip_rating": "IPX5"
     },
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.8
-    },
-    "price_usd": 999.0,
     "image_url": "https://shop.niu.com/cdn/shop/files/KQi3_Max.png?v=1773998080&width=1500",
     "image_urls": [
       "https://shop.niu.com/cdn/shop/products/1500_2.jpg?v=1773998080&width=1500",
@@ -7593,6 +7579,7 @@
     "battery_wh": 374,
     "weight_lb": 44.5,
     "weight_notes": "NIU KQi3 Max",
+    "price_usd": 999.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -7641,7 +7628,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 99,
+    "safety_score": 94,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -7922,7 +7909,7 @@
       {
         "platform": "manufacturer",
         "url": "https://apolloscooters.co/products/apollo-city-pro",
-        "price_usd": 1299.0,
+        "price_usd": 1299,
         "shipping_usd": 0
       },
       {
@@ -7968,11 +7955,6 @@
       "fold_compact": true,
       "ip_rating": "IP66"
     },
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.8
-    },
-    "price_usd": 1299.0,
     "image_url": "https://apolloscooters.co/cdn/shop/files/CityPro-new2023_afc1bb3a-4cea-4b53-bfdb-0530456272c0.png?v=1773931277",
     "image_urls": [
       "https://apolloscooters.co/cdn/shop/files/IMGL0742.jpg?v=1773931277",
@@ -7988,6 +7970,7 @@
     "battery_wh": 780,
     "weight_lb": 52,
     "weight_notes": "Apollo City Pro",
+    "price_usd": 1299.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -8036,7 +8019,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 85,
+    "safety_score": 76,
     "safety_checklist": [
       {
         "key": "brake_type",
@@ -8322,7 +8305,7 @@
       {
         "platform": "manufacturer",
         "url": "https://shop.unagiscooters.com/products/the-scooter",
-        "price_usd": 990.0,
+        "price_usd": 990,
         "shipping_usd": 0
       },
       {
@@ -8369,11 +8352,6 @@
       "fold_compact": true,
       "ip_rating": "IP54"
     },
-    "field_confidence": {
-      "price_usd": 0.9,
-      "image_url": 0.8
-    },
-    "price_usd": 990.0,
     "image_url": "https://cdn.sanity.io/images/xl8ls2xi/production/ae1d806aa557fb789a836aee113dcc8c58143689-1276x596.png?q=85&auto=format",
     "image_urls": [
       "https://cdn.sanity.io/images/xl8ls2xi/production/b3acf12d4f49894c574635beaa502329b83f3628-1276x596.png?q=85&auto=format"
@@ -8388,6 +8366,7 @@
     "battery_wh": 324,
     "weight_lb": 28.5,
     "weight_notes": "Unagi Model One Classic",
+    "price_usd": 990.0,
     "price_sources": [
       {
         "platform": "manufacturer",
@@ -8436,7 +8415,7 @@
     "best_buy_platform": "Direct",
     "best_buy_shipping_usd": 0.0,
     "best_buy_delivery": "Direct ship",
-    "safety_score": 84,
+    "safety_score": 72,
     "safety_checklist": [
       {
         "key": "brake_type",

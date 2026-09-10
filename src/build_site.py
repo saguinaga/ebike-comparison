@@ -164,6 +164,10 @@ def build(root: Path, min_bikes: int = 18) -> None:
 
     (docs / "index.html").write_text(html, encoding="utf-8")
 
+    favicon = root / "web" / "favicon.svg"
+    if favicon.exists():
+        shutil.copy(favicon, docs / "favicon.svg")
+
     for asset in ("styles.css", "app.js"):
         src = root / "web" / asset
         if not src.exists():

@@ -53,6 +53,7 @@ bikes:
     motor_w: 750
     brake_type: hydraulic_disc
     lights: {front: true, rear: true}
+    ul_certified: true
     speed_limiter: true
     catalog_note: "Keep Class 2 / 20 mph. Folder reviews still treat this as the sub-$1k pick."
     sources:
@@ -73,6 +74,7 @@ bikes:
     motor_w: 350
     brake_type: mechanical_disc
     lights: {front: true, rear: true}
+    ul_certified: true
     sources:
       - platform: manufacturer
         url: "https://www.aventon.com/products/soltera-2-5-ebike"
@@ -114,6 +116,7 @@ bikes:
     motor_w: 720
     brake_type: mechanical_disc
     lights: {front: true, rear: true}
+    ul_certified: true
     deemphasize: true
     catalog_note: "Previous gen. Prefer XP4 Step-Thru at the same price."
     sources:
@@ -154,6 +157,7 @@ bikes:
     motor_w: 500
     brake_type: mechanical_disc
     lights: {front: true, rear: true}
+    ul_certified: true
     deemphasize: true
     catalog_note: "Heavy fat-tire. Fine as 'too much bike,' not a school commute pick."
     sources:
@@ -196,6 +200,7 @@ bikes:
     motor_w: 500
     brake_type: hydraulic_disc
     lights: {front: true, rear: true}
+    ul_certified: true
     catalog_note: "Light (~40–44 lb). Confirm low-step standover for 5'2\". Keep Class 2 unlock off if offered."
     sources:
       - platform: manufacturer
@@ -215,6 +220,7 @@ bikes:
     motor_w: 500
     brake_type: hydraulic_disc
     lights: {front: true, rear: true}
+    ul_certified: true
     deemphasize: true
     catalog_note: "Class 3. Parent/commuter comparison only. Illegal for under 16 in California."
     sources:
@@ -237,6 +243,7 @@ bikes:
     motor_w: 500
     brake_type: mechanical_disc
     lights: {front: true, rear: true}
+    ul_certified: true
     sources:
       - platform: manufacturer
         url: "https://www.batchbicycles.com/ecb-3/"
@@ -257,6 +264,7 @@ bikes:
     motor_w: 750
     brake_type: hydraulic_disc
     lights: {front: true, rear: true}
+    ul_certified: true
     friend_recommended: true
     deemphasize: true
     catalog_note: "Moto geometry, Class 3. Friend-recommended adult bike, not a school commute."
@@ -278,6 +286,7 @@ bikes:
     motor_w: 750
     brake_type: hydraulic_disc
     lights: {front: true, rear: true}
+    ul_certified: true
     friend_recommended: true
     catalog_note: "Local shop bike. Class 3, 16+. What grown-ups at HB Electric ride, not a school commute."
     sources:
@@ -299,6 +308,7 @@ bikes:
     motor_w: 750
     brake_type: hydraulic_disc
     lights: {front: true, rear: true}
+    ul_certified: true
     catalog_note: "Class 3. Local comparison only."
     sources:
       - platform: manufacturer
@@ -319,6 +329,7 @@ bikes:
     motor_w: 750
     brake_type: hydraulic_disc
     lights: {front: true, rear: true}
+    ul_certified: true
     catalog_note: "Real bike, wrong class for a 12-year-old. Friend-shop context only."
     sources:
       - platform: manufacturer

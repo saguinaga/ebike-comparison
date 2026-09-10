@@ -129,6 +129,8 @@ def parse_all(root: Path, scrape_live: bool = True) -> list:
             baseline_bike = _merge(baseline_bike, parsed)
         except Exception:
             pass
+    baseline_bike["safety_score"] = compute_safety_score(baseline_bike)
+    baseline_bike["safety_checklist"] = build_checklist(baseline_bike)
     results.append(baseline_bike)
 
     all_entries = list(bikes_cfg.get("bikes", [])) + load_scooters(root)
